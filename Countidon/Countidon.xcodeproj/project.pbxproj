@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D1DEE011BAC9CA800E448DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1DEE001BAC9CA800E448DE /* AppDelegate.swift */; };
+		3D1DEE031BAC9CA800E448DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1DEE021BAC9CA800E448DE /* ViewController.swift */; };
+		3D1DEE061BAC9CA800E448DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D1DEE041BAC9CA800E448DE /* Main.storyboard */; };
+		3D1DEE081BAC9CA800E448DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D1DEE071BAC9CA800E448DE /* Assets.xcassets */; };
+		3D1DEE0B1BAC9CA800E448DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D1DEE091BAC9CA800E448DE /* LaunchScreen.storyboard */; };
+		3D1DEE161BAC9CA800E448DE /* CountidonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1DEE151BAC9CA800E448DE /* CountidonTests.swift */; };
+		3D1DEE211BAC9CA800E448DE /* CountidonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1DEE201BAC9CA800E448DE /* CountidonUITests.swift */; };
+		3D1DEE2F1BAC9D1200E448DE /* PushButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1DEE2E1BAC9D1200E448DE /* PushButtonView.swift */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3D1DEE121BAC9CA800E448DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D1DEDF51BAC9CA800E448DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D1DEDFC1BAC9CA800E448DE;
+			remoteInfo = Countidon;
+		};
+		3D1DEE1D1BAC9CA800E448DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D1DEDF51BAC9CA800E448DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D1DEDFC1BAC9CA800E448DE;
+			remoteInfo = Countidon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3D1DEDFD1BAC9CA800E448DE /* Countidon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countidon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D1DEE001BAC9CA800E448DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3D1DEE021BAC9CA800E448DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3D1DEE051BAC9CA800E448DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3D1DEE071BAC9CA800E448DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3D1DEE0A1BAC9CA800E448DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3D1DEE0C1BAC9CA800E448DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D1DEE111BAC9CA800E448DE /* CountidonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountidonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D1DEE151BAC9CA800E448DE /* CountidonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountidonTests.swift; sourceTree = "<group>"; };
+		3D1DEE171BAC9CA800E448DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D1DEE1C1BAC9CA800E448DE /* CountidonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountidonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D1DEE201BAC9CA800E448DE /* CountidonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountidonUITests.swift; sourceTree = "<group>"; };
+		3D1DEE221BAC9CA800E448DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D1DEE2E1BAC9D1200E448DE /* PushButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushButtonView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D1DEDFA1BAC9CA800E448DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D1DEE0E1BAC9CA800E448DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D1DEE191BAC9CA800E448DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D1DEDF41BAC9CA800E448DE = {
+			isa = PBXGroup;
+			children = (
+				3D1DEDFF1BAC9CA800E448DE /* Countidon */,
+				3D1DEE141BAC9CA800E448DE /* CountidonTests */,
+				3D1DEE1F1BAC9CA800E448DE /* CountidonUITests */,
+				3D1DEDFE1BAC9CA800E448DE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3D1DEDFE1BAC9CA800E448DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D1DEDFD1BAC9CA800E448DE /* Countidon.app */,
+				3D1DEE111BAC9CA800E448DE /* CountidonTests.xctest */,
+				3D1DEE1C1BAC9CA800E448DE /* CountidonUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D1DEDFF1BAC9CA800E448DE /* Countidon */ = {
+			isa = PBXGroup;
+			children = (
+				3D1DEE001BAC9CA800E448DE /* AppDelegate.swift */,
+				3D1DEE021BAC9CA800E448DE /* ViewController.swift */,
+				3D1DEE041BAC9CA800E448DE /* Main.storyboard */,
+				3D1DEE071BAC9CA800E448DE /* Assets.xcassets */,
+				3D1DEE091BAC9CA800E448DE /* LaunchScreen.storyboard */,
+				3D1DEE0C1BAC9CA800E448DE /* Info.plist */,
+				3D1DEE2E1BAC9D1200E448DE /* PushButtonView.swift */,
+			);
+			path = Countidon;
+			sourceTree = "<group>";
+		};
+		3D1DEE141BAC9CA800E448DE /* CountidonTests */ = {
+			isa = PBXGroup;
+			children = (
+				3D1DEE151BAC9CA800E448DE /* CountidonTests.swift */,
+				3D1DEE171BAC9CA800E448DE /* Info.plist */,
+			);
+			path = CountidonTests;
+			sourceTree = "<group>";
+		};
+		3D1DEE1F1BAC9CA800E448DE /* CountidonUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3D1DEE201BAC9CA800E448DE /* CountidonUITests.swift */,
+				3D1DEE221BAC9CA800E448DE /* Info.plist */,
+			);
+			path = CountidonUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D1DEDFC1BAC9CA800E448DE /* Countidon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D1DEE251BAC9CA800E448DE /* Build configuration list for PBXNativeTarget "Countidon" */;
+			buildPhases = (
+				3D1DEDF91BAC9CA800E448DE /* Sources */,
+				3D1DEDFA1BAC9CA800E448DE /* Frameworks */,
+				3D1DEDFB1BAC9CA800E448DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Countidon;
+			productName = Countidon;
+			productReference = 3D1DEDFD1BAC9CA800E448DE /* Countidon.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3D1DEE101BAC9CA800E448DE /* CountidonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D1DEE281BAC9CA800E448DE /* Build configuration list for PBXNativeTarget "CountidonTests" */;
+			buildPhases = (
+				3D1DEE0D1BAC9CA800E448DE /* Sources */,
+				3D1DEE0E1BAC9CA800E448DE /* Frameworks */,
+				3D1DEE0F1BAC9CA800E448DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D1DEE131BAC9CA800E448DE /* PBXTargetDependency */,
+			);
+			name = CountidonTests;
+			productName = CountidonTests;
+			productReference = 3D1DEE111BAC9CA800E448DE /* CountidonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3D1DEE1B1BAC9CA800E448DE /* CountidonUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D1DEE2B1BAC9CA800E448DE /* Build configuration list for PBXNativeTarget "CountidonUITests" */;
+			buildPhases = (
+				3D1DEE181BAC9CA800E448DE /* Sources */,
+				3D1DEE191BAC9CA800E448DE /* Frameworks */,
+				3D1DEE1A1BAC9CA800E448DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D1DEE1E1BAC9CA800E448DE /* PBXTargetDependency */,
+			);
+			name = CountidonUITests;
+			productName = CountidonUITests;
+			productReference = 3D1DEE1C1BAC9CA800E448DE /* CountidonUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D1DEDF51BAC9CA800E448DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Closure One";
+				TargetAttributes = {
+					3D1DEDFC1BAC9CA800E448DE = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					3D1DEE101BAC9CA800E448DE = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 3D1DEDFC1BAC9CA800E448DE;
+					};
+					3D1DEE1B1BAC9CA800E448DE = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 3D1DEDFC1BAC9CA800E448DE;
+					};
+				};
+			};
+			buildConfigurationList = 3D1DEDF81BAC9CA800E448DE /* Build configuration list for PBXProject "Countidon" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3D1DEDF41BAC9CA800E448DE;
+			productRefGroup = 3D1DEDFE1BAC9CA800E448DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D1DEDFC1BAC9CA800E448DE /* Countidon */,
+				3D1DEE101BAC9CA800E448DE /* CountidonTests */,
+				3D1DEE1B1BAC9CA800E448DE /* CountidonUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D1DEDFB1BAC9CA800E448DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D1DEE0B1BAC9CA800E448DE /* LaunchScreen.storyboard in Resources */,
+				3D1DEE081BAC9CA800E448DE /* Assets.xcassets in Resources */,
+				3D1DEE061BAC9CA800E448DE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D1DEE0F1BAC9CA800E448DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D1DEE1A1BAC9CA800E448DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D1DEDF91BAC9CA800E448DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D1DEE031BAC9CA800E448DE /* ViewController.swift in Sources */,
+				3D1DEE2F1BAC9D1200E448DE /* PushButtonView.swift in Sources */,
+				3D1DEE011BAC9CA800E448DE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D1DEE0D1BAC9CA800E448DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D1DEE161BAC9CA800E448DE /* CountidonTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D1DEE181BAC9CA800E448DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D1DEE211BAC9CA800E448DE /* CountidonUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3D1DEE131BAC9CA800E448DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D1DEDFC1BAC9CA800E448DE /* Countidon */;
+			targetProxy = 3D1DEE121BAC9CA800E448DE /* PBXContainerItemProxy */;
+		};
+		3D1DEE1E1BAC9CA800E448DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D1DEDFC1BAC9CA800E448DE /* Countidon */;
+			targetProxy = 3D1DEE1D1BAC9CA800E448DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3D1DEE041BAC9CA800E448DE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D1DEE051BAC9CA800E448DE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3D1DEE091BAC9CA800E448DE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D1DEE0A1BAC9CA800E448DE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3D1DEE231BAC9CA800E448DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3D1DEE241BAC9CA800E448DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3D1DEE261BAC9CA800E448DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Countidon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = CLO.Countidon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3D1DEE271BAC9CA800E448DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Countidon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = CLO.Countidon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3D1DEE291BAC9CA800E448DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CountidonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = CLO.CountidonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Countidon.app/Countidon";
+			};
+			name = Debug;
+		};
+		3D1DEE2A1BAC9CA800E448DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CountidonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = CLO.CountidonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Countidon.app/Countidon";
+			};
+			name = Release;
+		};
+		3D1DEE2C1BAC9CA800E448DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CountidonUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = CLO.CountidonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Countidon;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		3D1DEE2D1BAC9CA800E448DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CountidonUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = CLO.CountidonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Countidon;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D1DEDF81BAC9CA800E448DE /* Build configuration list for PBXProject "Countidon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D1DEE231BAC9CA800E448DE /* Debug */,
+				3D1DEE241BAC9CA800E448DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D1DEE251BAC9CA800E448DE /* Build configuration list for PBXNativeTarget "Countidon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D1DEE261BAC9CA800E448DE /* Debug */,
+				3D1DEE271BAC9CA800E448DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3D1DEE281BAC9CA800E448DE /* Build configuration list for PBXNativeTarget "CountidonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D1DEE291BAC9CA800E448DE /* Debug */,
+				3D1DEE2A1BAC9CA800E448DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3D1DEE2B1BAC9CA800E448DE /* Build configuration list for PBXNativeTarget "CountidonUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D1DEE2C1BAC9CA800E448DE /* Debug */,
+				3D1DEE2D1BAC9CA800E448DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3D1DEDF51BAC9CA800E448DE /* Project object */;
+}
