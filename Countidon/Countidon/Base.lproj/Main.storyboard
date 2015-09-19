@@ -29,11 +29,26 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isAddButton" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txv-AP-AzL" customClass="PushButtonView" customModule="Countidon" customModuleProvider="target">
+                                <rect key="frame" x="275" y="401" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="ME0-LO-2jv"/>
+                                    <constraint firstAttribute="height" constant="50" id="tGz-F3-leX"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAddButton" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="txv-AP-AzL" firstAttribute="top" secondItem="8vP-yC-ipl" secondAttribute="bottom" constant="51" id="1Wx-jY-rTe"/>
                             <constraint firstItem="8vP-yC-ipl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LIy-ZW-1Rr"/>
                             <constraint firstItem="8vP-yC-ipl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="b3K-a8-5dr"/>
+                            <constraint firstItem="txv-AP-AzL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ngg-6h-mzj"/>
                         </constraints>
                     </view>
                 </viewController>
