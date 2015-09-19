@@ -10,6 +10,10 @@ import UIKit
 
 @IBDesignable
 class PushButtonView: UIButton {
+  
+  @IBInspectable var fillColor: UIColor = UIColor.redColor()
+  @IBInspectable var isAddButton: Bool = true
+  
 
     /*
     // Only override drawRect: if you perform custom drawing.
@@ -21,7 +25,7 @@ class PushButtonView: UIButton {
   
   override func drawRect(rect: CGRect) {
     let path = UIBezierPath(ovalInRect: rect)
-    UIColor.redColor().setFill()
+    fillColor.setFill()
     path.fill()
     // line thickness
     let plusHeight: CGFloat = 0.7
@@ -34,15 +38,20 @@ class PushButtonView: UIButton {
     
     plusPath.addLineToPoint(CGPoint(x: bounds.width/2 + plusWidth/2 + 0.5, y: bounds.height/2 + 0.5))
 
-    //move to the start of the vertical stroke
-    plusPath.moveToPoint(CGPoint(
-      x:bounds.width/2 + 0.5,
-      y:bounds.height/2 - plusWidth/2 + 0.5))
+
     
-    //add the end point to the vertical stroke
-    plusPath.addLineToPoint(CGPoint(
-      x:bounds.width/2 + 0.5,
-      y:bounds.height/2 + plusWidth/2 + 0.5))
+    if isAddButton {
+      //move to the start of the vertical stroke
+      plusPath.moveToPoint(CGPoint(
+        x:bounds.width/2 + 0.5,
+        y:bounds.height/2 - plusWidth/2 + 0.5))
+      
+      //add the end point to the vertical stroke
+      plusPath.addLineToPoint(CGPoint(
+        x:bounds.width/2 + 0.5,
+        y:bounds.height/2 + plusWidth/2 + 0.5))
+      
+    }
     
     UIColor.whiteColor().setStroke()
     plusPath.stroke()
