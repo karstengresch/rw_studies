@@ -31,6 +31,8 @@ class PushButtonView: UIButton {
     let plusPath = UIBezierPath()
     plusPath.lineWidth = plusHeight
     plusPath.moveToPoint(CGPoint(x: bounds.width/2 - plusWidth/2 + 0.5, y: bounds.height/2 + 0.5))
+    
+    plusPath.addLineToPoint(CGPoint(x: bounds.width/2 + plusWidth/2 + 0.5, y: bounds.height/2 + 0.5))
 
     //move to the start of the vertical stroke
     plusPath.moveToPoint(CGPoint(
@@ -41,8 +43,6 @@ class PushButtonView: UIButton {
     plusPath.addLineToPoint(CGPoint(
       x:bounds.width/2 + 0.5,
       y:bounds.height/2 + plusWidth/2 + 0.5))
-    
-    
     
     UIColor.whiteColor().setStroke()
     plusPath.stroke()
