@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -36,19 +36,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vP-yC-ipl" customClass="PushButtonView" customModule="Countidon" customModuleProvider="target">
-                                <rect key="frame" x="250" y="328" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="8gV-9r-Rke"/>
-                                    <constraint firstAttribute="width" constant="100" id="mhR-Sm-rdr"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                        <color key="value" red="0.36078431370000003" green="0.53333333329999999" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAddButton" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txv-AP-AzL" customClass="PushButtonView" customModule="Countidon" customModuleProvider="target">
                                 <rect key="frame" x="275" y="479" width="50" height="50"/>
                                 <constraints>
@@ -62,17 +49,36 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isAddButton" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vP-yC-ipl" customClass="PushButtonView" customModule="Countidon" customModuleProvider="target">
+                                <rect key="frame" x="250" y="308" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Q8m-mb-yMu"/>
+                                    <constraint firstAttribute="height" constant="100" id="ppk-cO-hhr"/>
+                                    <constraint firstAttribute="width" secondItem="8vP-yC-ipl" secondAttribute="height" multiplier="1:1" id="xMs-W2-jj6"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" red="0.36078431370000003" green="0.53333333329999999" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAddButton" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="XKW-au-jvy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="97B-BK-d9y"/>
+                            <constraint firstItem="8vP-yC-ipl" firstAttribute="top" secondItem="XKW-au-jvy" secondAttribute="bottom" constant="8" id="9gy-lv-pCH"/>
                             <constraint firstItem="8vP-yC-ipl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="308" id="U5a-d8-1PD"/>
-                            <constraint firstItem="txv-AP-AzL" firstAttribute="top" secondItem="8vP-yC-ipl" secondAttribute="bottom" constant="51" id="VUn-M6-3da"/>
-                            <constraint firstItem="8vP-yC-ipl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="230" id="XW3-Om-G33"/>
-                            <constraint firstItem="8vP-yC-ipl" firstAttribute="top" secondItem="XKW-au-jvy" secondAttribute="bottom" constant="28" id="fbP-D1-QUZ"/>
-                            <constraint firstItem="8vP-yC-ipl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hFT-Yn-VCg"/>
+                            <constraint firstItem="8vP-yC-ipl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="288" id="cWF-JR-WWF"/>
+                            <constraint firstItem="8vP-yC-ipl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g5T-ub-Xjf"/>
+                            <constraint firstItem="txv-AP-AzL" firstAttribute="top" secondItem="8vP-yC-ipl" secondAttribute="bottom" constant="71" id="imX-6Y-Lvh"/>
                             <constraint firstItem="txv-AP-AzL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w7j-B0-PTd"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="U5a-d8-1PD"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
