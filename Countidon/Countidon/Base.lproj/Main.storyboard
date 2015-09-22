@@ -51,8 +51,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XKW-au-jvy" customClass="CounterView" customModule="Countidon" customModuleProvider="target">
                                 <rect key="frame" x="185" y="62" width="230" height="230"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxv-xa-NVw">
-                                        <rect key="frame" x="107" y="98" width="17" height="32.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="4" translatesAutoresizingMaskIntoConstraints="NO" id="pxv-xa-NVw">
+                                        <rect key="frame" x="96.5" y="96.5" width="37" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="37" id="Ihr-aL-zc3"/>
+                                            <constraint firstAttribute="width" constant="37" id="U6W-tq-Vvq"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="19"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -60,6 +64,8 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="pxv-xa-NVw" firstAttribute="centerX" secondItem="XKW-au-jvy" secondAttribute="centerX" id="0bL-fe-4Rn"/>
+                                    <constraint firstItem="pxv-xa-NVw" firstAttribute="centerY" secondItem="XKW-au-jvy" secondAttribute="centerY" id="9dQ-he-a9M"/>
                                     <constraint firstAttribute="width" constant="230" id="uIm-eV-Bh9"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>

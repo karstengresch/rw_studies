@@ -27,14 +27,20 @@ class ViewController: UIViewController {
   
   @IBAction func pushButtonPressed(button: PushButtonView) {
     if button.isAddButton {
+      if counterView?.counter <= NumberOfGlasses {
       counterView?.counter++
+      }
     } else {
       if counterView?.counter > 0 {
         counterView?.counter--
       }
     }
     
-    counterLabel?.text = String(counterView?.counter)
+    if let currentCounter = counterView?.counter
+    {
+      print(currentCounter)
+      counterLabel!.text = String(currentCounter)
+    }
   }
 
   
