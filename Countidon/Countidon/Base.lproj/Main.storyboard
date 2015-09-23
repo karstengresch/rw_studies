@@ -16,54 +16,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XKW-au-jvy" customClass="CounterView" customModule="Countidon" customModuleProvider="target">
-                                <rect key="frame" x="185" y="62" width="230" height="230"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a3X-gS-LWi" userLabel="ContainerView">
+                                <rect key="frame" x="150" y="28" width="300" height="300"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="4" translatesAutoresizingMaskIntoConstraints="NO" id="pxv-xa-NVw">
-                                        <rect key="frame" x="96" y="96" width="37" height="37"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XKW-au-jvy" customClass="CounterView" customModule="Countidon" customModuleProvider="target">
+                                        <rect key="frame" x="35" y="35" width="230" height="230"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="4" translatesAutoresizingMaskIntoConstraints="NO" id="pxv-xa-NVw">
+                                                <rect key="frame" x="96" y="96" width="37" height="37"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="37" id="Ihr-aL-zc3"/>
+                                                    <constraint firstAttribute="width" constant="37" id="U6W-tq-Vvq"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="19"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="37" id="Ihr-aL-zc3"/>
-                                            <constraint firstAttribute="width" constant="37" id="U6W-tq-Vvq"/>
+                                            <constraint firstAttribute="trailing" secondItem="pxv-xa-NVw" secondAttribute="trailing" constant="97" id="1md-22-kBQ"/>
+                                            <constraint firstItem="pxv-xa-NVw" firstAttribute="leading" secondItem="XKW-au-jvy" secondAttribute="leading" constant="96" id="5hv-7R-KqC"/>
+                                            <constraint firstItem="pxv-xa-NVw" firstAttribute="top" secondItem="XKW-au-jvy" secondAttribute="top" constant="96" id="8pK-BA-o9Z"/>
+                                            <constraint firstAttribute="bottom" secondItem="pxv-xa-NVw" secondAttribute="bottom" constant="97" id="HLD-75-UcE"/>
+                                            <constraint firstItem="pxv-xa-NVw" firstAttribute="top" secondItem="XKW-au-jvy" secondAttribute="top" constant="96" id="HUx-wQ-jwm"/>
+                                            <constraint firstItem="pxv-xa-NVw" firstAttribute="centerY" secondItem="XKW-au-jvy" secondAttribute="centerY" id="M0G-zx-SWg"/>
+                                            <constraint firstItem="pxv-xa-NVw" firstAttribute="leading" secondItem="XKW-au-jvy" secondAttribute="leading" constant="96" id="Z3r-sN-mE4"/>
+                                            <constraint firstItem="pxv-xa-NVw" firstAttribute="leading" secondItem="XKW-au-jvy" secondAttribute="leading" constant="96" id="eFM-Yu-vua"/>
+                                            <constraint firstItem="pxv-xa-NVw" firstAttribute="centerX" secondItem="XKW-au-jvy" secondAttribute="centerX" id="sbM-yC-DIB"/>
+                                            <constraint firstItem="pxv-xa-NVw" firstAttribute="top" secondItem="XKW-au-jvy" secondAttribute="top" constant="96" id="wlj-Pg-Rhb"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="19"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="pxv-xa-NVw" firstAttribute="centerX" secondItem="XKW-au-jvy" secondAttribute="centerX" id="0bL-fe-4Rn"/>
-                                    <constraint firstItem="pxv-xa-NVw" firstAttribute="centerY" secondItem="XKW-au-jvy" secondAttribute="centerY" id="9dQ-he-a9M"/>
-                                    <constraint firstAttribute="width" constant="230" id="uIm-eV-Bh9"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="counter">
-                                        <integer key="value" value="0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="counterColor">
-                                        <color key="value" red="0.27479079365730286" green="0.5571715235710144" blue="0.89757764339447021" alpha="0.72999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="outlineColor">
-                                        <color key="value" red="0.15751093537320002" green="0.2354173264365863" blue="0.38897989570675096" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a3X-gS-LWi">
-                                <rect key="frame" x="150" y="150" width="300" height="300"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Idn-wY-Q9F" customClass="GraphView" customModule="Countidon" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="counter">
+                                                <integer key="value" value="0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="counterColor">
+                                                <color key="value" red="0.27479079365730286" green="0.5571715235710144" blue="0.89757764339447021" alpha="0.72999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="outlineColor">
+                                                <color key="value" red="0.15751093537320002" green="0.2354173264365863" blue="0.38897989570675096" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Idn-wY-Q9F" customClass="GraphView" customModule="Countidon" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="25" width="300" height="250"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="XKW-au-jvy" firstAttribute="centerX" secondItem="Idn-wY-Q9F" secondAttribute="centerX" id="1MB-Lq-Dsd"/>
                                     <constraint firstAttribute="height" constant="300" id="9SX-1V-kCW"/>
+                                    <constraint firstItem="XKW-au-jvy" firstAttribute="centerY" secondItem="a3X-gS-LWi" secondAttribute="centerY" id="B7F-g1-Nuh"/>
+                                    <constraint firstItem="XKW-au-jvy" firstAttribute="centerX" secondItem="a3X-gS-LWi" secondAttribute="centerX" id="HFP-GS-VDM"/>
                                     <constraint firstAttribute="width" constant="300" id="IDw-pJ-tZ5"/>
+                                    <constraint firstItem="Idn-wY-Q9F" firstAttribute="top" secondItem="a3X-gS-LWi" secondAttribute="top" constant="25" id="POV-KN-evx"/>
+                                    <constraint firstItem="Idn-wY-Q9F" firstAttribute="top" secondItem="a3X-gS-LWi" secondAttribute="top" constant="25" id="S1R-cY-DbZ"/>
+                                    <constraint firstItem="Idn-wY-Q9F" firstAttribute="leading" secondItem="a3X-gS-LWi" secondAttribute="leading" id="ozQ-hD-faN"/>
+                                    <constraint firstItem="XKW-au-jvy" firstAttribute="centerY" secondItem="Idn-wY-Q9F" secondAttribute="centerY" id="rw3-7i-Arh"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vP-yC-ipl" customClass="PushButtonView" customModule="Countidon" customModuleProvider="target">
-                                <rect key="frame" x="250" y="308" width="100" height="100"/>
+                                <rect key="frame" x="250" y="353" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="UON-xp-xjJ"/>
                                     <constraint firstAttribute="width" constant="100" id="VQ6-Cf-2f0"/>
@@ -79,7 +93,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txv-AP-AzL" customClass="PushButtonView" customModule="Countidon" customModuleProvider="target">
-                                <rect key="frame" x="278" y="479" width="44" height="45"/>
+                                <rect key="frame" x="278" y="483" width="44" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="44" id="5xD-xN-oUa"/>
                                     <constraint firstAttribute="height" constant="45" id="MMS-DL-Fsm"/>
@@ -100,17 +114,28 @@
                             <constraint firstItem="8vP-yC-ipl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D4O-EO-JHC"/>
                             <constraint firstItem="txv-AP-AzL" firstAttribute="top" secondItem="8vP-yC-ipl" secondAttribute="bottom" constant="71" id="NSy-Bh-wRL"/>
                             <constraint firstItem="a3X-gS-LWi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VJo-SW-lXA"/>
-                            <constraint firstItem="XKW-au-jvy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kbV-gd-jlp"/>
-                            <constraint firstItem="8vP-yC-ipl" firstAttribute="top" secondItem="XKW-au-jvy" secondAttribute="bottom" constant="16" id="ksN-hy-37z"/>
+                            <constraint firstItem="a3X-gS-LWi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="hwW-35-9zO"/>
+                            <constraint firstItem="8vP-yC-ipl" firstAttribute="top" secondItem="a3X-gS-LWi" secondAttribute="bottom" constant="8" symbolic="YES" id="jCu-v3-TrR"/>
+                            <constraint firstItem="txv-AP-AzL" firstAttribute="top" secondItem="8vP-yC-ipl" secondAttribute="bottom" constant="30" id="jf9-8Q-XDA"/>
                             <constraint firstItem="txv-AP-AzL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lGR-Tt-GrG"/>
                             <constraint firstItem="8vP-yC-ipl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="288" id="rZX-rV-ae4"/>
+                            <constraint firstItem="8vP-yC-ipl" firstAttribute="top" secondItem="a3X-gS-LWi" secondAttribute="bottom" constant="25" id="vGL-3E-9Z2"/>
                             <constraint firstItem="a3X-gS-LWi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vO6-uc-whl"/>
-                            <constraint firstItem="XKW-au-jvy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="42" id="y6I-8W-u9e"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="VJo-SW-lXA"/>
+                                <exclude reference="jCu-v3-TrR"/>
+                                <exclude reference="rZX-rV-ae4"/>
+                                <exclude reference="NSy-Bh-wRL"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="containerView" destination="a3X-gS-LWi" id="rHF-d4-EB2"/>
                         <outlet property="counterLabel" destination="pxv-xa-NVw" id="e0n-Vz-Idt"/>
                         <outlet property="counterView" destination="XKW-au-jvy" id="aFl-T4-7zN"/>
+                        <outlet property="graphView" destination="Idn-wY-Q9F" id="o25-Ql-LVz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

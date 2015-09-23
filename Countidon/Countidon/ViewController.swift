@@ -13,6 +13,9 @@ class ViewController: UIViewController {
 
   @IBOutlet weak var counterView: CounterView?
   @IBOutlet weak var counterLabel: UILabel?
+  @IBOutlet weak var containerView: UIView?
+  @IBOutlet weak var graphView: GraphView?
+  
 
   override func viewDidLoad() {
     super.viewDidLoad()
