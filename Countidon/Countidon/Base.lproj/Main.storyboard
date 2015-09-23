@@ -64,6 +64,7 @@
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="XKW-au-jvy" firstAttribute="centerX" secondItem="Idn-wY-Q9F" secondAttribute="centerX" id="1MB-Lq-Dsd"/>
                                     <constraint firstAttribute="height" constant="300" id="9SX-1V-kCW"/>
@@ -75,6 +76,9 @@
                                     <constraint firstItem="Idn-wY-Q9F" firstAttribute="leading" secondItem="a3X-gS-LWi" secondAttribute="leading" id="ozQ-hD-faN"/>
                                     <constraint firstItem="XKW-au-jvy" firstAttribute="centerY" secondItem="Idn-wY-Q9F" secondAttribute="centerY" id="rw3-7i-Arh"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="f1U-Q1-VLC" appends="YES" id="okp-rS-eIB"/>
+                                </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vP-yC-ipl" customClass="PushButtonView" customModule="Countidon" customModuleProvider="target">
                                 <rect key="frame" x="250" y="353" width="100" height="100"/>
@@ -112,24 +116,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="8vP-yC-ipl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D4O-EO-JHC"/>
-                            <constraint firstItem="txv-AP-AzL" firstAttribute="top" secondItem="8vP-yC-ipl" secondAttribute="bottom" constant="71" id="NSy-Bh-wRL"/>
-                            <constraint firstItem="a3X-gS-LWi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VJo-SW-lXA"/>
                             <constraint firstItem="a3X-gS-LWi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="hwW-35-9zO"/>
-                            <constraint firstItem="8vP-yC-ipl" firstAttribute="top" secondItem="a3X-gS-LWi" secondAttribute="bottom" constant="8" symbolic="YES" id="jCu-v3-TrR"/>
                             <constraint firstItem="txv-AP-AzL" firstAttribute="top" secondItem="8vP-yC-ipl" secondAttribute="bottom" constant="30" id="jf9-8Q-XDA"/>
                             <constraint firstItem="txv-AP-AzL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lGR-Tt-GrG"/>
-                            <constraint firstItem="8vP-yC-ipl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="288" id="rZX-rV-ae4"/>
                             <constraint firstItem="8vP-yC-ipl" firstAttribute="top" secondItem="a3X-gS-LWi" secondAttribute="bottom" constant="25" id="vGL-3E-9Z2"/>
                             <constraint firstItem="a3X-gS-LWi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vO6-uc-whl"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="VJo-SW-lXA"/>
-                                <exclude reference="jCu-v3-TrR"/>
-                                <exclude reference="rZX-rV-ae4"/>
-                                <exclude reference="NSy-Bh-wRL"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="containerView" destination="a3X-gS-LWi" id="rHF-d4-EB2"/>
@@ -139,6 +131,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="f1U-Q1-VLC"/>
             </objects>
         </scene>
     </scenes>
