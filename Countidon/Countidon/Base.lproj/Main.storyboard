@@ -77,7 +77,7 @@
                                     <constraint firstItem="XKW-au-jvy" firstAttribute="centerY" secondItem="Idn-wY-Q9F" secondAttribute="centerY" id="rw3-7i-Arh"/>
                                 </constraints>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="f1U-Q1-VLC" appends="YES" id="okp-rS-eIB"/>
+                                    <outletCollection property="gestureRecognizers" destination="2hb-me-Z02" appends="YES" id="u8L-PI-XfZ"/>
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vP-yC-ipl" customClass="PushButtonView" customModule="Countidon" customModuleProvider="target">
@@ -131,7 +131,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="f1U-Q1-VLC"/>
+                <tapGestureRecognizer id="2hb-me-Z02">
+                    <connections>
+                        <action selector="counterViewTap:" destination="BYZ-38-t0r" id="F3e-vv-aGA"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
         </scene>
     </scenes>

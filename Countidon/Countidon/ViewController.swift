@@ -13,15 +13,19 @@ class ViewController: UIViewController {
   
   @IBOutlet weak var counterView: CounterView?
   @IBOutlet weak var counterLabel: UILabel?
-  @IBOutlet weak var containerView: UIView?
-  @IBOutlet weak var graphView: GraphView?
+  @IBOutlet weak var containerView: UIView!
+  @IBOutlet weak var graphView: GraphView!
   
-  var isGraphViewShowing = false
+  var isGraphViewShowing = true
   
   
   override func viewDidLoad() {
     super.viewDidLoad()
     counterLabel?.text = String(counterView?.counter)
+    
+    let tapGR = UITapGestureRecognizer(target: self, action: "counterViewTap:")
+    self.containerView.addGestureRecognizer(tapGR)
+    
     // Do any additional setup after loading the view, typically from a nib.
   }
   
@@ -48,20 +52,26 @@ class ViewController: UIViewController {
       print(currentCounter)
       counterLabel!.text = String(currentCounter)
     }
+      
+    if isGraphViewShowing {
+      counterViewTap(nil)
+    }
+    
   }
   
   @IBAction func counterViewTap(gestureRecognizer: UITapGestureRecognizer?) {
-    
-    if let counterView = counterView, let graphView = graphView
-    {
+    print("******* in tapped 1")
+    // if let counterViewTapped = counterView, let graphViewTapped = graphView
+    // {
+      print("******* in tapped 2")
       if (isGraphViewShowing) {
-        UIView.transitionFromView(graphView, toView: counterView, duration: 1.0, options: UIViewAnimationOptions.TransitionFlipFromLeft, completion: nil)
+        UIView.transitionFromView(graphView!, toView: counterView!, duration: 1.0, options: UIViewAnimationOptions.TransitionFlipFromLeft, completion: nil)
         
       } else {
-        UIView.transitionFromView(counterView, toView: graphView, duration: 1.0, options: [UIViewAnimationOptions.TransitionFlipFromRight, UIViewAnimationOptions.ShowHideTransitionViews], completion: nil)
+        UIView.transitionFromView(counterView!, toView: graphView!, duration: 1.0, options: [UIViewAnimationOptions.TransitionFlipFromRight, UIViewAnimationOptions.ShowHideTransitionViews], completion: nil)
       }
       isGraphViewShowing = !isGraphViewShowing
-    }
+ //    }
     
     
   }
