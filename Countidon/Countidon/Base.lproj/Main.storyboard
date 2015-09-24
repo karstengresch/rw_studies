@@ -33,7 +33,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="pxv-xa-NVw" secondAttribute="trailing" constant="97" id="1md-22-kBQ"/>
                                             <constraint firstItem="pxv-xa-NVw" firstAttribute="leading" secondItem="XKW-au-jvy" secondAttribute="leading" constant="96" id="5hv-7R-KqC"/>
@@ -61,9 +61,18 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Idn-wY-Q9F" customClass="GraphView" customModule="Countidon" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="25" width="300" height="250"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                <color key="value" red="0.29019607843137257" green="0.44313725490196076" blue="0.84705882352941175" alpha="0.42999999999999999" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                <color key="value" red="0.29019607843137257" green="0.44313725490196076" blue="0.84705882352941175" alpha="0.85999999999999999" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="XKW-au-jvy" firstAttribute="centerX" secondItem="Idn-wY-Q9F" secondAttribute="centerX" id="1MB-Lq-Dsd"/>
@@ -82,6 +91,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vP-yC-ipl" customClass="PushButtonView" customModule="Countidon" customModuleProvider="target">
                                 <rect key="frame" x="250" y="353" width="100" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="UON-xp-xjJ"/>
                                     <constraint firstAttribute="width" constant="100" id="VQ6-Cf-2f0"/>
@@ -98,6 +108,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txv-AP-AzL" customClass="PushButtonView" customModule="Countidon" customModuleProvider="target">
                                 <rect key="frame" x="278" y="483" width="44" height="45"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="44" id="5xD-xN-oUa"/>
                                     <constraint firstAttribute="height" constant="45" id="MMS-DL-Fsm"/>
