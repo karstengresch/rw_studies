@@ -57,9 +57,21 @@ class GraphView: UIButton {
         yValue = graphHeight + topBorder - yValue
         }
         return yValue
-        
-      
       }
+      
+      UIColor.whiteColor().setFill()
+      UIColor.whiteColor().setStroke()
+      
+      var graphPath = UIBezierPath()
+      graphPath.moveToPoint(CGPoint(x: columnXPoint(0), y: columnYPoint(graphPoints[0])))
+      
+        for i in 1..<graphPoints.count {
+          let nextPoint = CGPoint(x: columnXPoint(i), y: columnYPoint(graphPoints[i]))
+          graphPath.addLineToPoint(nextPoint)
+      }
+      
+      graphPath.stroke()
+
       
       
   }
