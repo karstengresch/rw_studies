@@ -22,7 +22,7 @@ class GraphView: UIButton {
       let width = rect.width
       let height = rect.height
       
-      var path = UIBezierPath(roundedRect: rect, byRoundingCorners: UIRectCorner.AllCorners, cornerRadii: CGSize(width: 8.0, height: 8.0))
+      let path = UIBezierPath(roundedRect: rect, byRoundingCorners: UIRectCorner.AllCorners, cornerRadii: CGSize(width: 8.0, height: 8.0))
       path.addClip()
       
       let context = UIGraphicsGetCurrentContext()
@@ -36,9 +36,12 @@ class GraphView: UIButton {
       let endPoint = CGPoint(x: 0, y: self.bounds.height)
       
       CGContextDrawLinearGradient(context, gradient, startPoint, endPoint, CGGradientDrawingOptions())
+      
       // x-point calculation
       let margin: CGFloat = 20.0
-      var columnXPoint = { (column:Int)->CGFloat in
+      let columnXPoint =
+      {
+        (column:Int)->CGFloat in
         // gap between points
         let spacer = (width - margin*2 - 4) / CGFloat((self.graphPoints.count - 1))
         var xValue:CGFloat = CGFloat(column) * spacer
@@ -49,23 +52,25 @@ class GraphView: UIButton {
       let topBorder: CGFloat = 60
       let bottomBorder: CGFloat = 60
       let graphHeight = height - topBorder - bottomBorder
-      var columnYPoint = { (graphPoint: Int) -> CGFloat in
-        var yValue: CGFloat = CGFloat(0)
-        if let maxValue = self.graphPoints.maxElement()
-        {
-        var yValue: CGFloat = CGFloat(graphPoint) / CGFloat(maxValue) * graphHeight
-        yValue = graphHeight + topBorder - yValue
+      let maxValue = self.graphPoints.maxElement()!
+      
+      let columnYPoint =
+      { (graphPoint: Int) -> CGFloat in
+        print("Max element: \(self.graphPoints.maxElement())")
+          var yValue: CGFloat = CGFloat(graphPoint) / CGFloat(maxValue) * graphHeight
+          yValue = graphHeight + topBorder - yValue
+          return yValue
         }
-        return yValue
-      }
+      
       
       UIColor.whiteColor().setFill()
       UIColor.whiteColor().setStroke()
       
-      var graphPath = UIBezierPath()
+      let graphPath = UIBezierPath()
+      
       graphPath.moveToPoint(CGPoint(x: columnXPoint(0), y: columnYPoint(graphPoints[0])))
       
-        for i in 1..<graphPoints.count {
+      for i in 1..<graphPoints.count {
           let nextPoint = CGPoint(x: columnXPoint(i), y: columnYPoint(graphPoints[i]))
           graphPath.addLineToPoint(nextPoint)
       }
