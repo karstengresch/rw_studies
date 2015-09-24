@@ -124,16 +124,16 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="containerView" destination="a3X-gS-LWi" id="rHF-d4-EB2"/>
+                        <outlet property="containerView" destination="a3X-gS-LWi" id="Tz2-mR-M0V"/>
                         <outlet property="counterLabel" destination="pxv-xa-NVw" id="e0n-Vz-Idt"/>
                         <outlet property="counterView" destination="XKW-au-jvy" id="aFl-T4-7zN"/>
-                        <outlet property="graphView" destination="Idn-wY-Q9F" id="o25-Ql-LVz"/>
+                        <outlet property="graphView" destination="Idn-wY-Q9F" id="m47-QR-2LQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="2hb-me-Z02">
                     <connections>
-                        <action selector="counterViewTap:" destination="BYZ-38-t0r" id="F3e-vv-aGA"/>
+                        <action selector="counterViewTap:" destination="BYZ-38-t0r" id="RWy-Zw-0YS"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

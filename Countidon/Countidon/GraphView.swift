@@ -8,14 +8,30 @@
 
 import UIKit
 
+@IBDesignable
 class GraphView: UIButton {
+  
+  @IBInspectable var startColor: UIColor = UIColor.redColor()
+  @IBInspectable var endColor: UIColor = UIColor.greenColor()
+  
 
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
     override func drawRect(rect: CGRect) {
         // Drawing code
+      
+      let context = UIGraphicsGetCurrentContext()
+      let colors = [startColor.CGColor, endColor.CGColor]
+      let colorSpace = CGColorSpaceCreateDeviceRGB()
+      
+      let colorLocations: [CGFloat] = [0.0, 1.0]
+      
+      let gradient = CGGradientCreateWithColors(colorSpace, colors, colorLocations)
+      let startPoint = CGPoint.zero
+      let endPoint = CGPoint(x: 0, y: self.bounds.height)
+      
+      CGContextDrawLinearGradient(context, gradient, startPoint, endPoint, CGGradientDrawingOptions())
+      
+      
     }
-    */
+
 
 }
