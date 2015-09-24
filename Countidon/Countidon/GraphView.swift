@@ -16,7 +16,12 @@ class GraphView: UIButton {
   
 
     override func drawRect(rect: CGRect) {
-        // Drawing code
+
+      let width = rect.width
+      let height = rect.height
+      
+      var path = UIBezierPath(roundedRect: rect, byRoundingCorners: UIRectCorner.AllCorners, cornerRadii: CGSize(width: 8.0, height: 8.0))
+      path.addClip()
       
       let context = UIGraphicsGetCurrentContext()
       let colors = [startColor.CGColor, endColor.CGColor]
