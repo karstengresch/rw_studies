@@ -75,7 +75,7 @@ class GraphView: UIButton {
           graphPath.addLineToPoint(nextPoint)
       }
       
-      graphPath.stroke()
+      // graphPath.stroke()
       
       // clipping path for graph 
 //      CGContextSaveGState(context)
@@ -89,6 +89,9 @@ class GraphView: UIButton {
       startPoint = CGPoint(x: margin, y: highestYPoint)
       endPoint = CGPoint(x: margin, y: self.bounds.height)
       CGContextDrawLinearGradient(context, gradient, startPoint, endPoint, CGGradientDrawingOptions())
+      // CGContextRestoreGState(context)
+      graphPath.lineWidth = 2.0
+      graphPath.stroke()
       
    
       
