@@ -32,8 +32,8 @@ class GraphView: UIButton {
       let colorLocations: [CGFloat] = [0.0, 1.0]
       
       let gradient = CGGradientCreateWithColors(colorSpace, colors, colorLocations)
-      let startPoint = CGPoint.zero
-      let endPoint = CGPoint(x: 0, y: self.bounds.height)
+      var startPoint = CGPoint.zero
+      var endPoint = CGPoint(x: 0, y: self.bounds.height)
       
       CGContextDrawLinearGradient(context, gradient, startPoint, endPoint, CGGradientDrawingOptions())
       
@@ -79,14 +79,16 @@ class GraphView: UIButton {
       
       // clipping path for graph 
 //      CGContextSaveGState(context)
-      var clippingPath = graphPath.copy() as! UIBezierPath
+      let clippingPath = graphPath.copy() as! UIBezierPath
       clippingPath.addLineToPoint(CGPoint(x: columnXPoint(graphPoints.count - 1), y: height))
       clippingPath.addLineToPoint(CGPoint(x: columnXPoint(0), y: height))
       clippingPath.closePath()
       clippingPath.addClip()
-      UIColor.greenColor().setFill()
-      let rectPath = UIBezierPath(rect: self.bounds)
-      rectPath.fill()
+      //
+      let highestYPoint = columnYPoint(maxValue)
+      startPoint = CGPoint(x: margin, y: highestYPoint)
+      endPoint = CGPoint(x: margin, y: self.bounds.height)
+      CGContextDrawLinearGradient(context, gradient, startPoint, endPoint, CGGradientDrawingOptions())
       
    
       
