@@ -78,20 +78,33 @@ class GraphView: UIButton {
       // graphPath.stroke()
       
       // clipping path for graph 
-//      CGContextSaveGState(context)
+      CGContextSaveGState(context)
+      
       let clippingPath = graphPath.copy() as! UIBezierPath
       clippingPath.addLineToPoint(CGPoint(x: columnXPoint(graphPoints.count - 1), y: height))
       clippingPath.addLineToPoint(CGPoint(x: columnXPoint(0), y: height))
       clippingPath.closePath()
       clippingPath.addClip()
-      //
+      // Add gradient to area below the value line
       let highestYPoint = columnYPoint(maxValue)
       startPoint = CGPoint(x: margin, y: highestYPoint)
       endPoint = CGPoint(x: margin, y: self.bounds.height)
       CGContextDrawLinearGradient(context, gradient, startPoint, endPoint, CGGradientDrawingOptions())
-      // CGContextRestoreGState(context)
+      CGContextRestoreGState(context)
       graphPath.lineWidth = 2.0
       graphPath.stroke()
+      // add value circles on the progress line
+      for i in 0..<graphPoints.count {
+        var point = CGPoint(x: columnXPoint(i), y: columnYPoint(graphPoints[i]))
+        point.x -= 5.0/2
+        point.y -= 5.0/2
+        
+        let circle = UIBezierPath(ovalInRect: CGRect(origin: point, size: CGSize(width: 5.0, height: 5.0)))
+        circle.fill()
+        
+        
+      }
+      
       
    
       
