@@ -76,7 +76,19 @@ class GraphView: UIButton {
       }
       
       graphPath.stroke()
-
+      
+      // clipping path for graph 
+//      CGContextSaveGState(context)
+      var clippingPath = graphPath.copy() as! UIBezierPath
+      clippingPath.addLineToPoint(CGPoint(x: columnXPoint(graphPoints.count - 1), y: height))
+      clippingPath.addLineToPoint(CGPoint(x: columnXPoint(0), y: height))
+      clippingPath.closePath()
+      clippingPath.addClip()
+      UIColor.greenColor().setFill()
+      let rectPath = UIBezierPath(rect: self.bounds)
+      rectPath.fill()
+      
+   
       
       
   }
