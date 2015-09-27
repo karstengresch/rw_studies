@@ -15,6 +15,9 @@ class ViewController: UIViewController {
   @IBOutlet weak var counterLabel: UILabel?
   @IBOutlet weak var containerView: UIView!
   @IBOutlet weak var graphView: GraphView!
+  // dynamic labels
+  @IBOutlet weak var averageWaterDrunk: UILabel?
+  @IBOutlet weak var maxLabel: UILabel?
   
   var isGraphViewShowing = true
   
