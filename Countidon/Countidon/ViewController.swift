@@ -19,12 +19,19 @@ class ViewController: UIViewController {
   @IBOutlet weak var averageWaterDrunk: UILabel?
   @IBOutlet weak var maxLabel: UILabel?
   
-  var isGraphViewShowing = true
+  var isGraphViewShowing = false
   
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    counterLabel?.text = String(counterView?.counter)
+    
+    if let counterValue = counterView?.counter
+    {
+     counterLabel?.text = "\(counterValue)"
+    } else {
+     counterLabel?.text = "0"
+    }
+    
     
     // let tapGR = UITapGestureRecognizer(target: self, action: "counterViewTap:")
 //     self.containerView.addGestureRecognizer(tapGR)
@@ -41,7 +48,7 @@ class ViewController: UIViewController {
   
   // MARK: Inidivual stuff
   func setupGraphDisplay() {
-    let numberOfDays: Int = 7
+    // let numberOfDays: Int = 7
     
     // replace last day w/ today's data
     graphView.graphPoints[graphView.graphPoints.count-1] = counterView.counter
@@ -50,6 +57,27 @@ class ViewController: UIViewController {
     // average from graphPoints
     let average = graphView.graphPoints.reduce(0, combine: +) / graphView.graphPoints.count
     averageWaterDrunk?.text = "\(average)"
+    
+    // today's day number
+    // let dateFormatter = NSDateFormatter()
+    let calendar = NSCalendar.currentCalendar()
+    let componentOptions: NSCalendarUnit = .Weekday
+    let components = calendar.components(componentOptions, fromDate: NSDate())
+
+    var weekday = components.weekday
+    let days = ["S", "S", "M", "T", "W", "T", "F"]
+    
+    for i in (1...days.count).reverse() {
+      if let labelView = graphView.viewWithTag(i) as? UILabel {
+        if weekday == 7 {
+          weekday = 0
+        }
+        labelView.text = days[weekday--]
+        if weekday < 0 {
+          weekday = days.count - 1
+        }
+      }
+    }
     
     
     
@@ -92,6 +120,7 @@ class ViewController: UIViewController {
         
       } else {
         UIView.transitionFromView(counterView, toView: graphView, duration: 1.0, options: [UIViewAnimationOptions.TransitionFlipFromRight, UIViewAnimationOptions.ShowHideTransitionViews], completion: nil)
+          setupGraphDisplay()
       }
       isGraphViewShowing = !isGraphViewShowing
   }

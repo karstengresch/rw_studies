@@ -214,7 +214,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="2hb-me-Z02">
                     <connections>
-                        <action selector="counterViewTap:" destination="BYZ-38-t0r" id="RWy-Zw-0YS"/>
+                        <action selector="counterViewTap:" destination="BYZ-38-t0r" id="Utf-0h-uk3"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
