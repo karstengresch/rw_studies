@@ -3,7 +3,7 @@ Study projects from raywenderlich.com - All credits + copyrights at their side.
 You won't find any interesting stuff here. Head over to http://www.raywenderlich.com and check out the great iOS et al. tutorials!
 
 ## AutoLayout
-From the AutoLayout course
+From the AutoLayout video course ( http://www.raywenderlich.com/video-tutorials#autolayout subscribers only...)
 
 ## Playgrounds
 Different playgrounds
