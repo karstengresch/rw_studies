@@ -39,6 +39,24 @@ class ViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
   
+  // MARK: Inidivual stuff
+  func setupGraphDisplay() {
+    let numberOfDays: Int = 7
+    
+    // replace last day w/ today's data
+    graphView.graphPoints[graphView.graphPoints.count-1] = counterView.counter
+    graphView.setNeedsDisplay()
+    maxLabel?.text = "\(graphView.graphPoints.maxElement())"
+    // average from graphPoints
+    let average = graphView.graphPoints.reduce(0, combine: +) / graphView.graphPoints.count
+    averageWaterDrunk?.text = "\(average)"
+    
+    
+    
+  }
+  
+  
+  
   // MARK: Actions
   
   @IBAction func pushButtonPressed(button: PushButtonView) {
