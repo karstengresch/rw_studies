@@ -53,8 +53,32 @@ class CounterView: UIView {
     
     outlinePath.closePath()
     outlineColor.setStroke()
-    outlinePath.lineWidth = 3.0
+    outlinePath.lineWidth = 2.0
     outlinePath.stroke()
+    
+    // glasses drunken markers
+    let context = UIGraphicsGetCurrentContext()
+    // 1 save state
+    CGContextSaveGState(context)
+    outlineColor.setFill()
+    
+    let markerWidth: CGFloat = 5.0
+    let markerSize: CGFloat = 10.0
+    
+    // marker top left
+    let markerPath = UIBezierPath(rect: CGRect(x: -markerWidth/2, y: -10.5*π, width: markerWidth, height: markerSize))
+    CGContextTranslateCTM(context, rect.width/2, rect.height/2)
+    
+    for i in 1...NumberOfGlasses {
+      CGContextSaveGState(context)
+      let angle = arcLengthPerGlass * CGFloat(i) + startAngle - π/2
+      CGContextRotateCTM(context, angle)
+      CGContextTranslateCTM(context, 0, rect.height/2 - markerSize)
+      markerPath.fill()
+      CGContextRestoreGState(context)
+    }
+    
+      CGContextRestoreGState(context)
     
     
   }
