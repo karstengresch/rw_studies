@@ -24,6 +24,12 @@ class BackgroundView: UIView {
       CGContextFillRect(context, rect)
       // pattern
       let drawSize = CGSize(width: patternSize, height: patternSize)
+      
+      UIGraphicsBeginImageContextWithOptions(drawSize, true, 0.0)
+      let drawingContext = UIGraphicsGetCurrentContext()
+      darkColor.setFill()
+      CGContextFillRect(drawingContext, CGRectMake(0, 0, drawSize.width, drawSize.height))
+      
       let trianglePath = UIBezierPath()
       
       trianglePath.moveToPoint(CGPoint(x: drawSize.width/2, y: 0))
