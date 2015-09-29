@@ -46,6 +46,13 @@ class BackgroundView: UIView {
       
       lightColor.setFill()
       trianglePath.fill()
+      
+      let image = UIGraphicsGetImageFromCurrentImageContext()
+      UIGraphicsEndImageContext()
+      
+      UIColor(patternImage: image).setFill()
+      CGContextFillRect(context, rect)
+      
 
     }
 
