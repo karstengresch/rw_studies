@@ -16,6 +16,7 @@
 		3D1DEE211BAC9CA800E448DE /* CountidonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1DEE201BAC9CA800E448DE /* CountidonUITests.swift */; };
 		3D1DEE2F1BAC9D1200E448DE /* PushButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1DEE2E1BAC9D1200E448DE /* PushButtonView.swift */; settings = {ASSET_TAGS = (); }; };
 		3D494C811BB26B6800381DCF /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D494C801BB26B6800381DCF /* GraphView.swift */; settings = {ASSET_TAGS = (); }; };
+		3D57234F1BBB168500497A22 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D57234E1BBB168500497A22 /* BackgroundView.swift */; settings = {ASSET_TAGS = (); }; };
 		3D9EF0911BADF8C00037B042 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9EF0901BADF8C00037B042 /* CounterView.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		3D1DEE221BAC9CA800E448DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D1DEE2E1BAC9D1200E448DE /* PushButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushButtonView.swift; sourceTree = "<group>"; };
 		3D494C801BB26B6800381DCF /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		3D57234E1BBB168500497A22 /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		3D9EF0901BADF8C00037B042 /* CounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +114,7 @@
 				3D1DEE2E1BAC9D1200E448DE /* PushButtonView.swift */,
 				3D9EF0901BADF8C00037B042 /* CounterView.swift */,
 				3D494C801BB26B6800381DCF /* GraphView.swift */,
+				3D57234E1BBB168500497A22 /* BackgroundView.swift */,
 			);
 			path = Countidon;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D57234F1BBB168500497A22 /* BackgroundView.swift in Sources */,
 				3D494C811BB26B6800381DCF /* GraphView.swift in Sources */,
 				3D1DEE031BAC9CA800E448DE /* ViewController.swift in Sources */,
 				3D1DEE2F1BAC9D1200E448DE /* PushButtonView.swift in Sources */,
