@@ -201,6 +201,17 @@
                             <constraint firstItem="8vP-yC-ipl" firstAttribute="top" secondItem="a3X-gS-LWi" secondAttribute="bottom" constant="25" id="vGL-3E-9Z2"/>
                             <constraint firstItem="a3X-gS-LWi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vO6-uc-whl"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
+                                <color key="value" red="0.98040093035107012" green="0.97821613955934372" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="darkColor">
+                                <color key="value" red="0.85536090811625964" green="0.94339989119181233" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="patternSize">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="averageWaterDrunk" destination="8ZG-5i-gQf" id="IWd-4d-C5g"/>
