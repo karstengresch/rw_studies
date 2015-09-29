@@ -25,11 +25,12 @@ class BackgroundView: UIView {
       // pattern
       let drawSize = CGSize(width: patternSize, height: patternSize)
       let trianglePath = UIBezierPath()
+      
       trianglePath.moveToPoint(CGPoint(x: drawSize.width/2, y: 0))
       trianglePath.addLineToPoint(CGPoint(x: 0, y: drawSize.height/2))
       trianglePath.addLineToPoint(CGPoint(x: drawSize.width, y: drawSize.height/2))
       
-      trianglePath.moveToPoint(CGPoint(x: drawSize.width/2, y: 0))
+      trianglePath.moveToPoint(CGPoint(x: 0, y: drawSize.height/2))
       trianglePath.addLineToPoint(CGPoint(x: drawSize.width/2, y: drawSize.height))
       trianglePath.addLineToPoint(CGPoint(x: 0, y: drawSize.height))
       
