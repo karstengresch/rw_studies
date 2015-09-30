@@ -36,11 +36,11 @@ claspPath.stroke()
 
 
 var medallionPath = UIBezierPath(ovalInRect: CGRect(origin: CGPointMake(8, 72), size: CGSizeMake(100, 100)))
-// CGContextSaveGState(context)
-// medallionPath.addClip()
+CGContextSaveGState(context)
+medallionPath.addClip()
 let gradient = CGGradientCreateWithColors(CGColorSpaceCreateDeviceRGB(), [darkGoldColor.CGColor, midGoldColor.CGColor, lightColdColor.CGColor], [0, 0.51, 1])
-CGContextDrawLinearGradient(context, gradient, CGPointMake(40, 40), CGPointMake(40, 162),  CGGradientDrawingOptions())
-// CGContextSaveGState(context)
+CGContextDrawLinearGradient(context, gradient, CGPointMake(40, 40), CGPointMake(100, 160),  CGGradientDrawingOptions())
+CGContextSaveGState(context)
 
 
 
