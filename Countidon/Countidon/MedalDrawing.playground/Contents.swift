@@ -14,6 +14,8 @@ let darkGoldColor = UIColor(red: 0.6, green: 0.5, blue: 0.15, alpha: 1.0)
 let midGoldColor = UIColor(red: 0.86, green: 0.73, blue: 0.3, alpha: 1.0)
 let lightColdColor = UIColor(red: 1.0, green: 0.98, blue: 0.9, alpha: 1.0)
 
+
+// CGContextBeginTransparencyLayer(context, nil)
 // lower ribbon
 var lowerRibbonPath = UIBezierPath()
 lowerRibbonPath.moveToPoint(CGPointMake(0, 0))
@@ -37,14 +39,28 @@ CGContextSaveGState(context)
 medallionPath.addClip()
 let gradient = CGGradientCreateWithColors(CGColorSpaceCreateDeviceRGB(), [darkGoldColor.CGColor, midGoldColor.CGColor, lightColdColor.CGColor], [0, 0.51, 1])
 CGContextDrawLinearGradient(context, gradient, CGPointMake(40, 40), CGPointMake(100, 160),  CGGradientDrawingOptions())
-CGContextSaveGState(context)
+CGContextRestoreGState(context)
 
 // medallion's inner edge
-var transform = CGAffineTransformMakeScale(0.80, 0.80)
+var transform = CGAffineTransformMakeScale(0.8, 0.8)
 transform = CGAffineTransformTranslate(transform, 15, 30)
-medallionPath.lineWidth = 1.85
+medallionPath.lineWidth = 2.0
 medallionPath.applyTransform(transform)
 medallionPath.stroke()
+
+// upper ribbon
+var upperRibbonPath = UIBezierPath()
+upperRibbonPath.moveToPoint(CGPointMake(68, 0))
+upperRibbonPath.addLineToPoint(CGPointMake(108, 0))
+upperRibbonPath.addLineToPoint(CGPointMake(78, 70))
+upperRibbonPath.addLineToPoint(CGPointMake(38, 70))
+upperRibbonPath.closePath()
+
+UIColor(red: 0.5, green: 0.7, blue: 0.88, alpha: 0.8).setFill()
+// UIColor.blueColor().setFill()
+upperRibbonPath.fill()
+
+// CGContextEndTransparencyLayer(context)
 
 // keep @ end!
 let image = UIGraphicsGetImageFromCurrentImageContext()
