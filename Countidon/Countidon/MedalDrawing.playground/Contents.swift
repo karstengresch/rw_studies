@@ -31,10 +31,7 @@ claspPath.lineWidth = 5
 darkGoldColor.setStroke()
 claspPath.stroke()
 
-
-
-
-
+// medallion
 var medallionPath = UIBezierPath(ovalInRect: CGRect(origin: CGPointMake(8, 72), size: CGSizeMake(100, 100)))
 CGContextSaveGState(context)
 medallionPath.addClip()
@@ -42,7 +39,12 @@ let gradient = CGGradientCreateWithColors(CGColorSpaceCreateDeviceRGB(), [darkGo
 CGContextDrawLinearGradient(context, gradient, CGPointMake(40, 40), CGPointMake(100, 160),  CGGradientDrawingOptions())
 CGContextSaveGState(context)
 
-
+// medallion's inner edge
+var transform = CGAffineTransformMakeScale(0.80, 0.80)
+transform = CGAffineTransformTranslate(transform, 15, 30)
+medallionPath.lineWidth = 1.85
+medallionPath.applyTransform(transform)
+medallionPath.stroke()
 
 // keep @ end!
 let image = UIGraphicsGetImageFromCurrentImageContext()
