@@ -18,6 +18,7 @@ class ViewController: UIViewController {
   // dynamic labels
   @IBOutlet weak var averageWaterDrunk: UILabel?
   @IBOutlet weak var maxLabel: UILabel?
+  @IBOutlet weak var medalView: MedalView?
   
   var isGraphViewShowing = false
   
@@ -31,6 +32,8 @@ class ViewController: UIViewController {
     } else {
      counterLabel?.text = "0"
     }
+    checkTotal()
+    
     
     
     // let tapGR = UITapGestureRecognizer(target: self, action: "counterViewTap:")
@@ -78,14 +81,23 @@ class ViewController: UIViewController {
         }
       }
     }
-    
-    
-    
   }
   
+  func checkTotal() {
+   
+     if let checkedMedalView = medalView  {
+   if counterView.counter >= 8 {
+      checkedMedalView.showMedal(true)
+          }
+    else {
+   
+     checkedMedalView.showMedal(false)
+    }
+    }
+   
+  }
   
-  
-  // MARK: Actions
+    // MARK: Actions
   
   @IBAction func pushButtonPressed(button: PushButtonView) {
     if button.isAddButton {
@@ -107,6 +119,8 @@ class ViewController: UIViewController {
     if isGraphViewShowing {
       counterViewTap(nil)
     }
+    
+    checkTotal()
     
   }
   

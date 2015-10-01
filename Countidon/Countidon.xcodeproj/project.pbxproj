@@ -18,6 +18,7 @@
 		3D494C811BB26B6800381DCF /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D494C801BB26B6800381DCF /* GraphView.swift */; settings = {ASSET_TAGS = (); }; };
 		3D57234F1BBB168500497A22 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D57234E1BBB168500497A22 /* BackgroundView.swift */; settings = {ASSET_TAGS = (); }; };
 		3D9EF0911BADF8C00037B042 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9EF0901BADF8C00037B042 /* CounterView.swift */; settings = {ASSET_TAGS = (); }; };
+		3DCAC1A31BBD0F2A00E5DFBE /* MedalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCAC1A21BBD0F2A00E5DFBE /* MedalView.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		3D494C801BB26B6800381DCF /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		3D57234E1BBB168500497A22 /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		3D9EF0901BADF8C00037B042 /* CounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		3DCAC1A21BBD0F2A00E5DFBE /* MedalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				3D9EF0901BADF8C00037B042 /* CounterView.swift */,
 				3D494C801BB26B6800381DCF /* GraphView.swift */,
 				3D57234E1BBB168500497A22 /* BackgroundView.swift */,
+				3DCAC1A21BBD0F2A00E5DFBE /* MedalView.swift */,
 			);
 			path = Countidon;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				TargetAttributes = {
 					3D1DEDFC1BAC9CA800E448DE = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = BD2TPDQG5D;
 					};
 					3D1DEE101BAC9CA800E448DE = {
 						CreatedOnToolsVersion = 7.0;
@@ -269,6 +273,7 @@
 			files = (
 				3D57234F1BBB168500497A22 /* BackgroundView.swift in Sources */,
 				3D494C811BB26B6800381DCF /* GraphView.swift in Sources */,
+				3DCAC1A31BBD0F2A00E5DFBE /* MedalView.swift in Sources */,
 				3D1DEE031BAC9CA800E448DE /* ViewController.swift in Sources */,
 				3D1DEE2F1BAC9D1200E448DE /* PushButtonView.swift in Sources */,
 				3D1DEE011BAC9CA800E448DE /* AppDelegate.swift in Sources */,
@@ -412,10 +417,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Countidon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CLO.Countidon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -423,10 +431,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Countidon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CLO.Countidon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
