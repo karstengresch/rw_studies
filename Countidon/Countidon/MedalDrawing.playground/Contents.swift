@@ -14,8 +14,15 @@ let darkGoldColor = UIColor(red: 0.6, green: 0.5, blue: 0.15, alpha: 1.0)
 let midGoldColor = UIColor(red: 0.86, green: 0.73, blue: 0.3, alpha: 1.0)
 let lightColdColor = UIColor(red: 1.0, green: 0.98, blue: 0.9, alpha: 1.0)
 
+// Add shadow
+let shadow: UIColor = UIColor.blackColor().colorWithAlphaComponent(0.3)
+let shadowOffset = CGSizeMake(2.0, 2.0)
+let shadowBlurRadius: CGFloat = 4
 
-// CGContextBeginTransparencyLayer(context, nil)
+CGContextSetShadowWithColor(context, shadowOffset, shadowBlurRadius, shadow.CGColor)
+
+CGContextBeginTransparencyLayer(context, nil)
+
 // lower ribbon
 var lowerRibbonPath = UIBezierPath()
 lowerRibbonPath.moveToPoint(CGPointMake(0, 0))
@@ -70,11 +77,7 @@ if let numberOneFont = font {
   number.drawInRect(numberOneRect, withAttributes: numberOneAttributes)
 }
 
-
-
-
-
-// CGContextEndTransparencyLayer(context)
+CGContextEndTransparencyLayer(context)
 
 // keep @ end!
 let image = UIGraphicsGetImageFromCurrentImageContext()
