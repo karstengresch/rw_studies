@@ -60,6 +60,20 @@ UIColor(red: 0.5, green: 0.7, blue: 0.88, alpha: 0.8).setFill()
 // UIColor.blueColor().setFill()
 upperRibbonPath.fill()
 
+// number 1a´
+let number = "1"
+let numberOneRect = CGRectMake(47, 100, 50, 50)
+let font = UIFont(name: "Academy Engraved LET", size: 60)
+let textStyle = NSMutableParagraphStyle.defaultParagraphStyle()
+if let numberOneFont = font {
+  let numberOneAttributes = [NSFontAttributeName: numberOneFont, NSForegroundColorAttributeName: darkGoldColor]
+  number.drawInRect(numberOneRect, withAttributes: numberOneAttributes)
+}
+
+
+
+
+
 // CGContextEndTransparencyLayer(context)
 
 // keep @ end!
