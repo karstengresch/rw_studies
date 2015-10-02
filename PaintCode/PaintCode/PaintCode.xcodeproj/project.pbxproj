@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3DA0877F1BBE68D40048B9D3 /* PaintCodeTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA0877E1BBE68D40048B9D3 /* PaintCodeTutorial.swift */; settings = {ASSET_TAGS = (); }; };
+		3DA087811BBE69EB0048B9D3 /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA087801BBE69EB0048B9D3 /* Stopwatch.swift */; settings = {ASSET_TAGS = (); }; };
+		3DA6AF371BBE6ACA00028281 /* StopwatchHand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6AF361BBE6ACA00028281 /* StopwatchHand.swift */; settings = {ASSET_TAGS = (); }; };
 		55F43C251A6893CF00AA5D27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F43C241A6893CF00AA5D27 /* AppDelegate.swift */; };
 		55F43C271A6893CF00AA5D27 /* AssetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F43C261A6893CF00AA5D27 /* AssetViewController.swift */; };
 		55F43C291A6893CF00AA5D27 /* ControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F43C281A6893CF00AA5D27 /* ControlViewController.swift */; };
@@ -28,6 +31,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3DA0877E1BBE68D40048B9D3 /* PaintCodeTutorial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PaintCodeTutorial.swift; path = ../../StopwatchPaintCode/PaintCodeTutorial.swift; sourceTree = "<group>"; };
+		3DA087801BBE69EB0048B9D3 /* Stopwatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
+		3DA6AF361BBE6ACA00028281 /* StopwatchHand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StopwatchHand.swift; path = ../StopwatchHand.swift; sourceTree = "<group>"; };
 		55F43C1F1A6893CF00AA5D27 /* PaintCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaintCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55F43C231A6893CF00AA5D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55F43C241A6893CF00AA5D27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +66,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3DA6AF381BBE6B4600028281 /* Stopwatch */ = {
+			isa = PBXGroup;
+			children = (
+				3DA0877E1BBE68D40048B9D3 /* PaintCodeTutorial.swift */,
+				3DA087801BBE69EB0048B9D3 /* Stopwatch.swift */,
+				3DA6AF361BBE6ACA00028281 /* StopwatchHand.swift */,
+			);
+			name = Stopwatch;
+			sourceTree = "<group>";
+		};
 		55F43C161A6893CF00AA5D27 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +101,7 @@
 				55F43C461A68959500AA5D27 /* Resources */,
 				55F43C471A6895A000AA5D27 /* View Controllers */,
 				55F43C221A6893CF00AA5D27 /* Supporting Files */,
+				3DA6AF381BBE6B4600028281 /* Stopwatch */,
 			);
 			path = PaintCode;
 			sourceTree = "<group>";
@@ -179,7 +196,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Ray Wenderlich";
 				TargetAttributes = {
 					55F43C1E1A6893CF00AA5D27 = {
@@ -236,9 +253,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				55F43C291A6893CF00AA5D27 /* ControlViewController.swift in Sources */,
+				3DA087811BBE69EB0048B9D3 /* Stopwatch.swift in Sources */,
 				55F43C251A6893CF00AA5D27 /* AppDelegate.swift in Sources */,
 				55F43C491A6895BB00AA5D27 /* ArrowViewController.swift in Sources */,
 				55F43C271A6893CF00AA5D27 /* AssetViewController.swift in Sources */,
+				3DA0877F1BBE68D40048B9D3 /* PaintCodeTutorial.swift in Sources */,
+				3DA6AF371BBE6ACA00028281 /* StopwatchHand.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +320,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -363,6 +384,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PaintCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.closureone.PaintCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -373,6 +395,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PaintCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.closureone.PaintCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -391,6 +414,7 @@
 				);
 				INFOPLIST_FILE = PaintCodeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.closureone.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PaintCode.app/PaintCode";
 			};
@@ -406,6 +430,7 @@
 				);
 				INFOPLIST_FILE = PaintCodeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.closureone.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PaintCode.app/PaintCode";
 			};

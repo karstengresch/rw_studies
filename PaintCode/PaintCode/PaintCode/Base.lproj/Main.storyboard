@@ -17,23 +17,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="First View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <rect key="frame" x="222" y="279" width="157.5" height="41.5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5D6-DX-5m6" customClass="Stopwatch" customModule="PaintCode" customModuleProvider="target">
+                                <rect key="frame" x="175" y="175" width="250" height="250"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hhh-qX-iU6" customClass="StopwatchHand" customModule="PaintCode" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="250" height="222"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="hjb-pZ-IbJ"/>
+                                            <constraint firstAttribute="height" constant="222" id="ocv-M8-Czg"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="hhh-qX-iU6" secondAttribute="bottom" id="TYf-j6-FTs"/>
+                                    <constraint firstAttribute="width" constant="250" id="bjw-3I-CqR"/>
+                                    <constraint firstAttribute="height" constant="250" id="kaM-LU-iih"/>
+                                    <constraint firstItem="hhh-qX-iU6" firstAttribute="centerX" secondItem="5D6-DX-5m6" secondAttribute="centerX" id="pdX-Nf-RAg"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="upF-5w-Mto"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
-                            <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
+                            <constraint firstItem="5D6-DX-5m6" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="duJ-Wl-9vK"/>
+                            <constraint firstItem="5D6-DX-5m6" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="lD4-cS-Fcn"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Asset" image="ClockIcon" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="stopWatchHandView" destination="hhh-qX-iU6" id="tKJ-9D-Rzp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
