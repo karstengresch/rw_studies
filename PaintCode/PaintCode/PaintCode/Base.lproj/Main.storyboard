@@ -43,10 +43,14 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="5D6-DX-5m6" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="duJ-Wl-9vK"/>
                             <constraint firstItem="5D6-DX-5m6" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="lD4-cS-Fcn"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="KTc-7e-HxK" appends="YES" id="djD-rw-cfy"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Asset" image="ClockIcon" id="acW-dT-cKf"/>
                     <connections>
@@ -54,6 +58,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="KTc-7e-HxK">
+                    <connections>
+                        <action selector="rotateStopWatchHand" destination="9pv-A4-QxB" id="C4q-sC-a4a"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="720" y="-710"/>
         </scene>
