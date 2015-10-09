@@ -22,6 +22,8 @@ class BookViewController : UIViewController {
 
   override func viewWillAppear(animated: Bool) {
     
+    doneButton.layer.cornerRadius = CGRectGetHeight(doneButton.bounds) / 2
+    
     if let book = book {
       bookImageView.image = book.cover
       bookTitleLabel.text = book.title

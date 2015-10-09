@@ -21,7 +21,7 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    followButton.layer.cornerRadius = 8.35
+    followButton.layer.cornerRadius = CGRectGetHeight(followButton.bounds) / 2
 
   }
   
