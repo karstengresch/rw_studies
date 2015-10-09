@@ -41,6 +41,7 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
     
     cell.imageView.layer.shadowRadius = 4
     cell.imageView.layer.shadowOpacity = 0.5
+    cell.imageView.layer.shadowOffset = CGSize.zero
     
     return cell
   }
