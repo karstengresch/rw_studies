@@ -39,6 +39,9 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
     let book = books[indexPath.row]
     cell.imageView.image = book.cover
     
+    cell.imageView.layer.shadowRadius = 4
+    cell.imageView.layer.shadowOpacity = 0.5
+    
     return cell
   }
   
