@@ -33,7 +33,8 @@ class StatView: UIView {
   var range = CGFloat(10)
   var curValue = CGFloat(0) {
     didSet {
-      configure()
+      // configure()
+      animateCircle()
     }
   }
   let margin = CGFloat(10)
@@ -61,14 +62,13 @@ class StatView: UIView {
     // Setup circle foreground layer
     circleForegroundLayer.lineWidth = CGFloat(20.0)
     circleForegroundLayer.fillColor = UIColor.clearColor().CGColor
-    circleForegroundLayer.strokeEnd = 0.5
+    circleForegroundLayer.strokeEnd = 0
     layer.addSublayer(circleForegroundLayer)
     
     
     // Setup percent label
     percentLabel.font = UIFont(name: "Avenir Next", size: 26)
     percentLabel.textColor = UIColor.whiteColor()
-    percentLabel.text = "0/0"
     percentLabel.translatesAutoresizingMaskIntoConstraints = false
     addSubview(percentLabel)
     
@@ -101,8 +101,6 @@ class StatView: UIView {
     super.layoutSubviews()
     setupShapeLayer(circleBackgroundLayer)
     setupShapeLayer(circleForegroundLayer)
-    
-    
   }
   
   
@@ -113,13 +111,33 @@ class StatView: UIView {
     let radius = CGFloat(CGRectGetWidth(self.bounds) * 0.35)
     let startAngle = DegreesToRadians(135.0)
     let endAngle = DegreesToRadians(45.0)
-    
     let path = UIBezierPath(arcCenter: center, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: true)
-    
+
     shapeLayer.path = path.CGPath
-    
   }
   
+  func animateCircle() {
+    percentLabel.text = String(format: "%.0f/%.0f",curValue, range)
+    // setup values
+    var fromValue = circleForegroundLayer.strokeEnd
+    let toValue = curValue / range
+    if let _ = circleForegroundLayer.presentationLayer() as? CAShapeLayer {
+      fromValue = (circleForegroundLayer.presentationLayer()?.strokeEnd)!
+    }
+    let percentageChange = abs(fromValue - toValue)
+    // setup animation
+    let animation = CABasicAnimation(keyPath: "strokeEnd")
+    animation.fromValue = fromValue
+    animation.toValue = toValue
+    animation.duration = CFTimeInterval(percentageChange * 4)
+    circleForegroundLayer.removeAnimationForKey("stroke")
+    circleForegroundLayer.addAnimation(animation, forKey: "stroke")
+    CATransaction.begin()
+    CATransaction.setDisableActions(true)
+    circleForegroundLayer.strokeEnd = toValue
+    CATransaction.commit()
+    
+  }
   
   
 }
