@@ -11,8 +11,24 @@ import UIKit
 @IBDesignable
 class StatView: UIView {
 
+  let circleBackgroundLayer = CAShapeLayer()
+  let circleForegroundLayer = CAShapeLayer()
+  
   let percentLabel = UILabel()
   let captionLabel = UILabel()
+  
+  
+  @IBInspectable var circleBackgroundColor: UIColor = UIColor.grayColor() {
+    didSet {
+      configure()
+    }
+  }
+
+  @IBInspectable var circleForegroundColor: UIColor = UIColor.whiteColor() {
+    didSet {
+      configure()
+    }
+  }
   
   var range = CGFloat(10)
   var curValue = CGFloat(0) {
@@ -35,6 +51,19 @@ class StatView: UIView {
   }
   
   func setup() {
+    
+    // Setup circle background layer
+    circleBackgroundLayer.lineWidth = CGFloat(20.0)
+    circleBackgroundLayer.fillColor = UIColor.clearColor().CGColor
+    circleBackgroundLayer.strokeEnd = 1
+    layer.addSublayer(circleBackgroundLayer)
+
+    // Setup circle foreground layer
+    circleForegroundLayer.lineWidth = CGFloat(20.0)
+    circleForegroundLayer.fillColor = UIColor.clearColor().CGColor
+    circleForegroundLayer.strokeEnd = 0.5
+    layer.addSublayer(circleForegroundLayer)
+    
     
     // Setup percent label
     percentLabel.font = UIFont(name: "Avenir Next", size: 26)
@@ -63,10 +92,34 @@ class StatView: UIView {
   
   func configure() {
     percentLabel.text = String(format: "%.0f/%.0f", curValue, range)
+    circleBackgroundLayer.strokeColor = circleBackgroundColor.CGColor
+    circleForegroundLayer.strokeColor = circleForegroundColor.CGColor
+    
   }
   
   override func layoutSubviews() {
+    super.layoutSubviews()
+    setupShapeLayer(circleBackgroundLayer)
+    setupShapeLayer(circleForegroundLayer)
+    
     
   }
+  
+  
+  func setupShapeLayer(shapeLayer: CAShapeLayer) {
+    shapeLayer.frame = self.bounds
+    
+    let center = percentLabel.center
+    let radius = CGFloat(CGRectGetWidth(self.bounds) * 0.35)
+    let startAngle = DegreesToRadians(135.0)
+    let endAngle = DegreesToRadians(45.0)
+    
+    let path = UIBezierPath(arcCenter: center, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: true)
+    
+    shapeLayer.path = path.CGPath
+    
+  }
+  
+  
   
 }

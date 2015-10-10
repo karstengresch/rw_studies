@@ -52,6 +52,14 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="FrY-YO-eCw" secondAttribute="height" multiplier="1:1" id="v5X-bf-cfX"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="circleBackgroundColor">
+                                                <color key="value" red="0.45357125997543335" green="0.74172431230545044" blue="0.94323915243148804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="circleForegroundColor">
+                                                <color key="value" red="0.081572435796260834" green="0.48035269975662231" blue="0.76580077409744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="snP-Pr-6mj">
                                         <rect key="frame" x="253" y="290" width="94" height="29"/>
