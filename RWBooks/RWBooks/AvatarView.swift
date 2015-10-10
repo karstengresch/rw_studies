@@ -14,7 +14,7 @@ class AvatarView: UIView {
   let margin = CGFloat(10.0)
   let labelName = UILabel()
   let imageView = UIImageView()
-  let strokeColor = UIColor.darkGrayColor()
+  let strokeColor = UIColor(red:0.314,  green:0.314,  blue:0.314, alpha:1)
   
   
   @IBInspectable var imageAvatar: UIImage? {
