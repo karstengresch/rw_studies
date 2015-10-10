@@ -16,7 +16,7 @@ class AvatarView: UIView {
   let imageView = UIImageView()
   let layerGradient = CAGradientLayer()
   
-  let strokeColor = UIColor(red:0.314,  green:0.314,  blue:0.314, alpha:1)
+  let strokeColor = UIColor(red:1,  green:1,  blue:1, alpha:1)
   
   @IBInspectable var startColor: UIColor = UIColor.whiteColor()
   @IBInspectable var endColor: UIColor = UIColor.blackColor()
