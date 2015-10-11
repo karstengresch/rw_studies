@@ -19,6 +19,7 @@
 		35C4506B1B03E02700A4B07C /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C4506A1B03E02700A4B07C /* Book.swift */; };
 		35C450711B03E9CC00A4B07C /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C450701B03E9CC00A4B07C /* AvatarView.swift */; };
 		35C450731B03EE3200A4B07C /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C450721B03EE3200A4B07C /* BookViewController.swift */; };
+		3D15AFA81BCA621800785E65 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D15AFA71BCA621800785E65 /* RoundedView.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		35C4506A1B03E02700A4B07C /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		35C450701B03E9CC00A4B07C /* AvatarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		35C450721B03EE3200A4B07C /* BookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
+		3D15AFA71BCA621800785E65 /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		40A975645E5D11EC93DDD0FB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		46F3FFAB50DB839B5B0A98E0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FDB46D5ACBBE1F2EC42D5AC5 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +138,7 @@
 				35C450701B03E9CC00A4B07C /* AvatarView.swift */,
 				35C450681B03DFB200A4B07C /* BookCell.swift */,
 				35C450621B03D6E100A4B07C /* StatView.swift */,
+				3D15AFA71BCA621800785E65 /* RoundedView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 			files = (
 				35C450691B03DFB200A4B07C /* BookCell.swift in Sources */,
 				35C450671B03D72E00A4B07C /* DegreesToRadians.swift in Sources */,
+				3D15AFA81BCA621800785E65 /* RoundedView.swift in Sources */,
 				35C4506B1B03E02700A4B07C /* Book.swift in Sources */,
 				35C450631B03D6E100A4B07C /* StatView.swift in Sources */,
 				35C450451B03CA1300A4B07C /* ProfileViewController.swift in Sources */,

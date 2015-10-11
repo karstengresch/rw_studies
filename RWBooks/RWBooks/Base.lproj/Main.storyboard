@@ -42,7 +42,7 @@
                                 <color key="textColor" red="0.44705882352941179" green="0.44705882352941179" blue="0.44705882352941179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aWE-l1-N7w">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aWE-l1-N7w" customClass="RoundedView" customModule="RWBooks" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="211" width="600" height="389"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="FrY-YO-eCw" customClass="StatView" customModule="RWBooks" customModuleProvider="target">
