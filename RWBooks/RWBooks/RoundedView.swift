@@ -12,4 +12,11 @@ import UIKit
 class RoundedView: UIView {
   
   
+  override func layoutSubviews() {
+    let shapeLayer = CAShapeLayer()
+    shapeLayer.path = UIBezierPath(roundedRect: bounds, byRoundingCorners: [UIRectCorner.TopLeft,  UIRectCorner.TopRight], cornerRadii: CGSize(width: 30, height: 30)).CGPath
+    
+    layer.mask = shapeLayer
+  }
+  
 }
