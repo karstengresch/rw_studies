@@ -13,7 +13,8 @@ class AvatarView: UIView {
   
   let margin = CGFloat(10.0)
   let labelName = UILabel()
-  let imageView = UIImageView()
+  // let imageView = UIImageView()
+  var layerMaskAvatar = CAShapeLayer()
   let layerGradient = CAGradientLayer()
   
   let strokeColor = UIColor(red:1,  green:1,  blue:1, alpha:1)
@@ -33,13 +34,18 @@ class AvatarView: UIView {
     layer.addSublayer(layerGradient)
 
     // Setup image view
-    imageView.layer.borderColor = strokeColor.CGColor
+/*    imageView.layer.borderColor = strokeColor.CGColor
     imageView.layer.borderWidth = 2.75
     imageView.layer.masksToBounds = true
     
     imageView.contentMode = .ScaleAspectFit
     imageView.translatesAutoresizingMaskIntoConstraints = false
-    addSubview(imageView)
+    addSubview(imageView)*/
+    layerMaskAvatar.fillColor = UIColor.clearColor().CGColor
+    layerMaskAvatar.lineWidth = 10
+    layerMaskAvatar.contentsGravity = kCAGravityResizeAspectFill
+    self.layer.addSublayer(layerMaskAvatar)
+    
     
     // Setup label
     labelName.font = UIFont(name: "AvenirNext-Bold", size: 26.0)
@@ -55,22 +61,31 @@ class AvatarView: UIView {
     let labelNameBottomY = NSLayoutConstraint(item: labelName, attribute: .Bottom, relatedBy: .Equal, toItem: self, attribute: .Bottom, multiplier: 1, constant: 0)
     NSLayoutConstraint.activateConstraints([labelNameCenterX, labelNameBottomY])
 
+    /*
     let imageViewCenterX = NSLayoutConstraint(item: imageView, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 1, constant: 0)
     let imageViewTopY = NSLayoutConstraint(item: imageView, attribute: .Top, relatedBy: .Equal, toItem: self, attribute: .Top, multiplier: 1, constant: margin)
     let imageViewBottomY = NSLayoutConstraint(item: imageView, attribute: .Bottom, relatedBy: .Equal, toItem: labelName, attribute: .Top, multiplier: 1, constant: -margin)
     let imageViewWidth = NSLayoutConstraint(item: imageView, attribute: .Width, relatedBy: .Equal, toItem: imageView, attribute: .Height, multiplier: 1, constant: 0)
-    NSLayoutConstraint.activateConstraints([imageViewCenterX, imageViewTopY, imageViewBottomY, imageViewWidth])
 
+    NSLayoutConstraint.activateConstraints([imageViewCenterX, imageViewTopY, imageViewBottomY, imageViewWidth])
+ */
+    
   }
   
   func configure() {
     
     // Configure image view
-    imageView.image = imageAvatar
+    // imageView.image = imageAvatar
+
     layerGradient.colors = [startColor.CGColor, endColor.CGColor]
     layerGradient.startPoint = CGPoint(x: 0.5, y: 0)
     layerGradient.endPoint = CGPoint(x: 0.5, y: 1)
     
+    if let _ = imageAvatar {
+      layerMaskAvatar.contents = imageAvatar?.CGImage
+    }
+    
+    layerMaskAvatar.strokeColor = strokeColor.CGColor
     
   }
   
@@ -89,10 +104,18 @@ class AvatarView: UIView {
   override func layoutSubviews() {
     super.layoutSubviews()
     
-    layerGradient.frame = CGRectMake(0, 0, CGRectGetWidth(self.bounds), CGRectGetMidY(self.bounds))
+    let layerMaskAvatarHeight = bounds.height - margin - labelName.bounds.height
+    layerMaskAvatar.frame = CGRectMake(CGRectGetHeight(self.bounds)/2 - layerMaskAvatarHeight / 2, margin, layerMaskAvatarHeight, layerMaskAvatarHeight)
+    
+    let maskLayer = CAShapeLayer()
+    maskLayer.path = UIBezierPath(ovalInRect: layerMaskAvatar.bounds).CGPath
+    layerMaskAvatar.mask = maskLayer
+    layerMaskAvatar.path = maskLayer.path
+    
+    layerGradient.frame = CGRectMake(0, 0, CGRectGetWidth(self.bounds), CGRectGetMidY(layerMaskAvatar.frame))
     
     
-    imageView.layer.cornerRadius = CGRectGetHeight(imageView.bounds) / 2
+    // imageView.layer.cornerRadius = CGRectGetHeight(imageView.bounds) / 2
   }
   
 }
