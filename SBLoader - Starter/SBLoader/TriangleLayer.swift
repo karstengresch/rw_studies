@@ -12,7 +12,7 @@ class TriangleLayer: CAShapeLayer {
   
   let innerPadding: CGFloat = 30.0
   
-  override init!() {
+  override init() {
     super.init()
     fillColor = Colors.red.CGColor
     strokeColor = Colors.red.CGColor
@@ -22,12 +22,12 @@ class TriangleLayer: CAShapeLayer {
     path = trianglePathSmall.CGPath
   }
   
-  required init(coder aDecoder: NSCoder) {
+  required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
   
   var trianglePathSmall: UIBezierPath {
-    var trianglePath = UIBezierPath()
+    let trianglePath = UIBezierPath()
     trianglePath.moveToPoint(CGPoint(x: 5.0 + innerPadding, y: 95.0))
     trianglePath.addLineToPoint(CGPoint(x: 50.0, y: 12.5 + innerPadding))
     trianglePath.addLineToPoint(CGPoint(x: 95.0 - innerPadding, y: 95.0))
@@ -36,7 +36,7 @@ class TriangleLayer: CAShapeLayer {
   }
   
   var trianglePathLeftExtension: UIBezierPath {
-    var trianglePath = UIBezierPath()
+    let trianglePath = UIBezierPath()
     trianglePath.moveToPoint(CGPoint(x: 5.0, y: 95.0))
     trianglePath.addLineToPoint(CGPoint(x: 50.0, y: 12.5 + innerPadding))
     trianglePath.addLineToPoint(CGPoint(x: 95.0 - innerPadding, y: 95.0))
@@ -45,7 +45,7 @@ class TriangleLayer: CAShapeLayer {
   }
   
   var trianglePathRightExtension: UIBezierPath {
-    var trianglePath = UIBezierPath()
+    let trianglePath = UIBezierPath()
     trianglePath.moveToPoint(CGPoint(x: 5.0, y: 95.0))
     trianglePath.addLineToPoint(CGPoint(x: 50.0, y: 12.5 + innerPadding))
     trianglePath.addLineToPoint(CGPoint(x: 95.0, y: 95.0))
@@ -54,7 +54,7 @@ class TriangleLayer: CAShapeLayer {
   }
   
   var trianglePathTopExtension: UIBezierPath {
-    var trianglePath = UIBezierPath()
+    let trianglePath = UIBezierPath()
     trianglePath.moveToPoint(CGPoint(x: 5.0, y: 95.0))
     trianglePath.addLineToPoint(CGPoint(x: 50.0, y: 12.5))
     trianglePath.addLineToPoint(CGPoint(x: 95.0, y: 95.0))

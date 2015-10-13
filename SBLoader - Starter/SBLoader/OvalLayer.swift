@@ -12,13 +12,13 @@ class OvalLayer: CAShapeLayer {
   
   let animationDuration: CFTimeInterval = 0.3
   
-  override init!() {
+  override init() {
     super.init()
     fillColor = Colors.red.CGColor
     path = ovalPathSmall.CGPath
   }
   
-  required init(coder aDecoder: NSCoder) {
+  required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
   

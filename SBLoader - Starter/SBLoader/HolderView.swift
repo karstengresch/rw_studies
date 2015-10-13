@@ -22,7 +22,7 @@ class HolderView: UIView {
     backgroundColor = Colors.clear
   }
   
-  required init(coder: NSCoder) {
+  required init?(coder: NSCoder) {
     super.init(coder: coder)
   }
 }

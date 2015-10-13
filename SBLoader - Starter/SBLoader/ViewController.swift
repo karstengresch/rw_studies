@@ -49,7 +49,7 @@ class ViewController: UIViewController, HolderViewDelegate {
   
   func buttonPressed(sender: UIButton!) {
     view.backgroundColor = Colors.white
-    view.subviews.map({ $0.removeFromSuperview() })
+    view.subviews.forEach({ $0.removeFromSuperview() })
     holderView = HolderView(frame: CGRectZero)
     addHolderView()
   }
