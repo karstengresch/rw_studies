@@ -34,6 +34,7 @@ class ViewController: UIViewController, HolderViewDelegate {
     holderView.parentFrame = view.frame
     holderView.delegate = self
     view.addSubview(holderView)
+    holderView.addOval()
   }
   
   func animateLabel() {

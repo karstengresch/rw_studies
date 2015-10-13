@@ -40,6 +40,15 @@ class OvalLayer: CAShapeLayer {
   
   func expand() {
     
+    let expandAnimation: CABasicAnimation = CABasicAnimation(keyPath: "path")
+    expandAnimation.fromValue = ovalPathSmall.CGPath
+    expandAnimation.toValue = ovalPathLarge.CGPath
+    expandAnimation.duration = animationDuration
+    expandAnimation.fillMode = kCAFillModeForwards
+    expandAnimation.removedOnCompletion = false
+    addAnimation(expandAnimation, forKey: nil)
+    
+    
   }
   
   func wobble() {
