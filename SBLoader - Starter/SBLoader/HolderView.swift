@@ -14,6 +14,8 @@ protocol HolderViewDelegate:class {
 
 class HolderView: UIView {
 
+  let ovalLayer = OvalLayer()
+  
   var parentFrame :CGRect = CGRectZero
   weak var delegate:HolderViewDelegate?
   
@@ -25,4 +27,10 @@ class HolderView: UIView {
   required init?(coder: NSCoder) {
     super.init(coder: coder)
   }
+  
+  func addOval() {
+    layer.addSublayer(ovalLayer)
+    ovalLayer.expand()
+  }
+  
 }
