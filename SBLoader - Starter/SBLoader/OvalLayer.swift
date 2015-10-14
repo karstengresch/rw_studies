@@ -52,9 +52,10 @@ class OvalLayer: CAShapeLayer {
   }
   
   func wobble() {
+    
     let wobbleAnimation1: CABasicAnimation = CABasicAnimation(keyPath: "path")
     wobbleAnimation1.fromValue = ovalPathLarge.CGPath
-    wobbleAnimation1.toValue = ovalPathSquishVertical
+    wobbleAnimation1.toValue = ovalPathSquishVertical.CGPath
     wobbleAnimation1.beginTime = 0.0
     wobbleAnimation1.duration = animationDuration
     
