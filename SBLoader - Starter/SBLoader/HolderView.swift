@@ -12,9 +12,10 @@ protocol HolderViewDelegate:class {
   func animateLabel()
 }
 
-class HolderView: UIView {
+class HolderView: UIView {  
 
   let ovalLayer = OvalLayer()
+  let triangleLayer = TriangleLayer()
   
   var parentFrame :CGRect = CGRectZero
   weak var delegate:HolderViewDelegate?
@@ -37,7 +38,14 @@ class HolderView: UIView {
   }
   
   func wobbleOval() {
+    layer.addSublayer(triangleLayer)
     ovalLayer.wobble()
+    
+    NSTimer.scheduledTimerWithTimeInterval(0.9, target: self, selector: "drawAnimatedTriangle", userInfo: nil, repeats: false)
+  }
+  
+  func drawAnimatedTriangle() {
+    triangleLayer.animate()
   }
   
 }
