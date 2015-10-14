@@ -31,6 +31,13 @@ class HolderView: UIView {
   func addOval() {
     layer.addSublayer(ovalLayer)
     ovalLayer.expand()
+    NSTimer.scheduledTimerWithTimeInterval(0.3, target: self, selector: "wobbleOval", userInfo: nil, repeats: false)
+    
+    
+  }
+  
+  func wobbleOval() {
+    ovalLayer.wobble()
   }
   
 }

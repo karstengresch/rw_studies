@@ -33,6 +33,7 @@ class ViewController: UIViewController, HolderViewDelegate {
                               height: boxSize)
     holderView.parentFrame = view.frame
     holderView.delegate = self
+    
     view.addSubview(holderView)
     holderView.addOval()
   }
