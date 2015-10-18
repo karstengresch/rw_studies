@@ -51,6 +51,13 @@ class HolderView: UIView {
   }
   
   func spinAndTransform() {
+    layer.anchorPoint = CGPointMake(0.5, 0.6)
+    let rotationAnimation: CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
+    rotationAnimation.toValue = CGFloat(M_PI * 2.0)
+    rotationAnimation.duration = 0.45
+    rotationAnimation.removedOnCompletion = true
+    layer.addAnimation(rotationAnimation, forKey: nil)
+    ovalLayer.contract()
     
   }
   
