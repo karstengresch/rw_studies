@@ -46,6 +46,14 @@ class HolderView: UIView {
   
   func drawAnimatedTriangle() {
     triangleLayer.animate()
+    NSTimer.scheduledTimerWithTimeInterval(0.9, target: self, selector: "spinAndTransform", userInfo: nil, repeats: false)
+    
   }
+  
+  func spinAndTransform() {
+    
+  }
+  
+  
   
 }
