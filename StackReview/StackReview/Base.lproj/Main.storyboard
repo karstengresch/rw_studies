@@ -108,15 +108,15 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="100" height="99"/>
                                                     <animations/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="PancakeHouseName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqK-3G-Pt6">
-                                                    <rect key="frame" x="113" y="39.5" width="321" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="PancakeHouseName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqK-3G-Pt6">
+                                                    <rect key="frame" x="113" y="39" width="321" height="20.5"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pancake_rate_5_small" translatesAutoresizingMaskIntoConstraints="NO" id="sWM-yO-s49">
-                                                    <rect key="frame" x="447" y="24.5" width="100" height="50"/>
+                                                    <rect key="frame" x="447" y="24" width="100" height="50"/>
                                                     <animations/>
                                                 </imageView>
                                             </subviews>
@@ -173,8 +173,52 @@
                     <view key="view" contentMode="scaleToFill" id="eWp-El-gqf">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5Mu-cV-Ykv">
+                                <rect key="frame" x="8" y="72" width="584" height="520"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Sel-4o-z2y">
+                                        <rect key="frame" x="0.0" y="0.0" width="584" height="520"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="StackReview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTt-zz-D9W">
+                                                <rect key="frame" x="206" y="0.0" width="171" height="170"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="31"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pancake_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Zvg-Kf-8w9">
+                                                <rect key="frame" x="167" y="170" width="250" height="181"/>
+                                                <animations/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show/Hide Copyright Notice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sx1-Q3-wVF">
+                                                <rect key="frame" x="196" y="351" width="192" height="169"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="15"/>
+                                                <color key="textColor" red="0.89741402864456177" green="0.44588696956634521" blue="0.20917734503746033" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstItem="LTt-zz-D9W" firstAttribute="top" secondItem="Sel-4o-z2y" secondAttribute="top" id="27X-qv-eFL"/>
+                                            <constraint firstItem="Zvg-Kf-8w9" firstAttribute="centerY" secondItem="Sel-4o-z2y" secondAttribute="centerY" id="FtC-CJ-e9D"/>
+                                            <constraint firstAttribute="bottom" secondItem="sx1-Q3-wVF" secondAttribute="bottom" id="NvP-8e-mxu"/>
+                                            <constraint firstItem="Zvg-Kf-8w9" firstAttribute="centerX" secondItem="Sel-4o-z2y" secondAttribute="centerX" id="mVV-rg-2ZJ"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <animations/>
+                            </stackView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5Mu-cV-Ykv" firstAttribute="leading" secondItem="eWp-El-gqf" secondAttribute="leading" constant="8" id="3lV-IE-djv"/>
+                            <constraint firstItem="W0t-mM-Gfl" firstAttribute="top" secondItem="5Mu-cV-Ykv" secondAttribute="bottom" constant="8" id="916-va-L8s"/>
+                            <constraint firstItem="5Mu-cV-Ykv" firstAttribute="top" secondItem="8ay-dw-mIO" secondAttribute="bottom" constant="8" id="LNa-2L-3U2"/>
+                            <constraint firstAttribute="trailing" secondItem="5Mu-cV-Ykv" secondAttribute="trailing" constant="8" id="N8W-MQ-aBE"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="53q-4S-cfQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -204,6 +248,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="pancake_logo" width="250" height="181"/>
         <image name="pancake_rate_5_small" width="50" height="50"/>
         <image name="placeholder_thumb" width="100" height="100"/>
     </resources>
