@@ -16,6 +16,9 @@ class HolderView: UIView {
 
   let ovalLayer = OvalLayer()
   let triangleLayer = TriangleLayer()
+  let redRectangleLayer = RectangleLayer()
+  let blueRectangleLayer = RectangleLayer()
+  
   
   var parentFrame :CGRect = CGRectZero
   weak var delegate:HolderViewDelegate?
@@ -58,9 +61,19 @@ class HolderView: UIView {
     rotationAnimation.removedOnCompletion = true
     layer.addAnimation(rotationAnimation, forKey: nil)
     ovalLayer.contract()
+    NSTimer.scheduledTimerWithTimeInterval(0.45, target: self, selector: "drawRedAnimatedRectangle", userInfo: nil, repeats: false)
+    NSTimer.scheduledTimerWithTimeInterval(0.65, target: self, selector: "drawBlueAnimatedRectangle", userInfo: nil, repeats: false)
     
   }
   
+  func drawRedAnimatedRectangle() {
+    layer.addSublayer(redRectangleLayer)
+    redRectangleLayer.animateStrokeWithColor(Colors.red)
+  }
   
+  func drawBlueAnimatedRectangle() {
+    layer.addSublayer(blueRectangleLayer)
+    redRectangleLayer.animateStrokeWithColor(Colors.blue)
+  }
   
 }
