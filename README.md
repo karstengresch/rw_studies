@@ -1,5 +1,5 @@
 # rw_studies
-Study projects from raywenderlich.com - All credits + copyrights at their side. Go and check their free tutorials, paid books and video courses!
+Study projects from raywenderlich.com - All credits + copyrights at their side. Go and check their free tutorials, paid books and video courses - it's excellent, permanently updated good stuff, easy to follows!
 
 You won't find any interesting stuff here. 
 
@@ -16,3 +16,6 @@ From the excellent Core Graphics tutorial from http://www.raywenderlich.com/9069
 
 ## CALayers
 From a Ray-Wenderlich-the-master-himself course on CALayers ( http://www.raywenderlich.com/?p=107229 - subscribers only...)
+
+## StackReviews
+From a [Sam Davies](https://twitter.com/@iwantmyrealname) tutorial ( http://www.raywenderlich.com/video-tutorials#stackviews - subscribers only...) on - yes! - Stack Views.
