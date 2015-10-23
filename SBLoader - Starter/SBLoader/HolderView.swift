@@ -18,6 +18,8 @@ class HolderView: UIView {
   let triangleLayer = TriangleLayer()
   let redRectangleLayer = RectangleLayer()
   let blueRectangleLayer = RectangleLayer()
+  let arcLayer = ArcLayer()
+  
   
   
   var parentFrame :CGRect = CGRectZero
@@ -74,6 +76,13 @@ class HolderView: UIView {
   func drawBlueAnimatedRectangle() {
     layer.addSublayer(blueRectangleLayer)
     blueRectangleLayer.animateStrokeWithColor(Colors.blue)
+    NSTimer.scheduledTimerWithTimeInterval(0.40, target: self, selector: "drawArc", userInfo: nil, repeats: false)
+  }
+  
+  func drawArc() {
+    layer.addSublayer(arcLayer)
+    arcLayer.animate()
+    
   }
   
 }

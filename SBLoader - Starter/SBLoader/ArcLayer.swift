@@ -90,5 +90,9 @@ class ArcLayer: CAShapeLayer {
   
   func animate() {
     
+    
+    
+    
+    
   }
 }
