@@ -89,6 +89,46 @@ class ArcLayer: CAShapeLayer {
   }
   
   func animate() {
+    let arcAnimationPre: CABasicAnimation = CABasicAnimation(keyPath: "path")
+    arcAnimationPre.fromValue = arcPathPre.CGPath
+    arcAnimationPre.toValue = arcPathStarting.CGPath
+    arcAnimationPre.beginTime = 0.0
+    arcAnimationPre.duration = animationDuration
+    
+    
+    
+    let arcAnimationLow: CABasicAnimation = CABasicAnimation(keyPath: "path")
+    arcAnimationLow.fromValue = arcPathStarting.CGPath
+      arcAnimationLow.toValue = arcPathLow.CGPath
+      arcAnimationLow.beginTime = arcAnimationPre.beginTime + arcAnimationPre.duration
+      arcAnimationLow.duration = animationDuration
+    
+    let arcAnimationMid: CABasicAnimation = CABasicAnimation(keyPath: "path")
+    arcAnimationMid.fromValue = arcPathLow.CGPath
+      arcAnimationMid.toValue = arcPathMid.CGPath
+      arcAnimationMid.beginTime = arcAnimationLow.beginTime + arcAnimationLow.duration
+      arcAnimationMid.duration = animationDuration
+    
+    let arcAnimationHigh: CABasicAnimation = CABasicAnimation(keyPath: "path")
+    arcAnimationHigh.fromValue = arcPathMid.CGPath
+      arcAnimationHigh.toValue = arcPathHigh.CGPath
+      arcAnimationHigh.beginTime = arcAnimationMid.beginTime + arcAnimationMid.duration
+      arcAnimationHigh.duration = animationDuration
+    
+    let arcAnimationComplete: CABasicAnimation = CABasicAnimation(keyPath: "path")
+    arcAnimationComplete.fromValue = arcPathHigh.CGPath
+      arcAnimationComplete.toValue = arcPathComplete.CGPath
+      arcAnimationComplete.beginTime = arcAnimationHigh.beginTime + arcAnimationHigh.duration
+      arcAnimationComplete.duration = animationDuration
+    
+    let arcAnimationGroup: CAAnimationGroup = CAAnimationGroup()
+    arcAnimationGroup.animations = [arcAnimationPre, arcAnimationLow, arcAnimationMid, arcAnimationHigh, arcAnimationComplete]
+    arcAnimationGroup.duration = arcAnimationComplete.beginTime + arcAnimationComplete.duration
+    arcAnimationGroup.fillMode = kCAFillModeForwards
+    arcAnimationGroup.removedOnCompletion = false
+    addAnimation(arcAnimationGroup, forKey: nil)
+    
+    
     
     
     
