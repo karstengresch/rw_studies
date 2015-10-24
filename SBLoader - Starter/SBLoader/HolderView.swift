@@ -87,8 +87,19 @@ class HolderView: UIView {
   }
   
   func expandView() {
+    backgroundColor = Colors.blue
+    frame = CGRectMake(frame.origin.x - blueRectangleLayer.lineWidth,
+                      frame.origin.y - blueRectangleLayer.lineWidth,
+                      frame.size.width + blueRectangleLayer.lineWidth * 2,
+                      frame.size.height + blueRectangleLayer.lineWidth * 2)
+    layer.sublayers = nil
+    UIView.animateWithDuration(0.3, delay: 0.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { self.frame = self.parentFrame }, completion: { finished in self.addLabel()})
     
     
+  }
+  
+  func addLabel() {
+    delegate?.animateLabel()
   }
   
 }
