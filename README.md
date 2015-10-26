@@ -19,3 +19,6 @@ From a Ray-Wenderlich-the-master-himself course on CALayers ( http://www.raywend
 
 ## StackReviews
 From a [Sam Davies](https://twitter.com/@iwantmyrealname) tutorial ( http://www.raywenderlich.com/video-tutorials#stackviews - subscribers only...) on - yes! - Stack Views.
+
+## Knob
+From a [Mikael Konutgan](http://kmikael.com/) tutorial ( http://www.raywenderlich.com/82058/custom-control-tutorial-ios-swift-reusable-knob - freely available) on creating custom controls.
