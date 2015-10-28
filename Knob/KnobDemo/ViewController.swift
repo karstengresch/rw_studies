@@ -13,6 +13,10 @@ class ViewController: UIViewController {
     @IBOutlet var valueLabel: UILabel!
     @IBOutlet var valueSlider: UISlider!
     @IBOutlet var animateSwitch: UISwitch!
+  
+    var knob: Knob!
+  
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
