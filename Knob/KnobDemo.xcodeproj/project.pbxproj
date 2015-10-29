@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D8022351BDFFED8008C7E5B /* Knob.Swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8022341BDFFED8008C7E5B /* Knob.Swift */; };
+		3D790EA61BE2D4A400F64981 /* Knob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D790EA51BE2D4A400F64981 /* Knob.swift */; };
 		6478EDA919B9EE0100F6F618 /* ApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6478EDA819B9EE0100F6F618 /* ApplicationDelegate.swift */; };
 		6478EDAB19B9EE0100F6F618 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6478EDAA19B9EE0100F6F618 /* ViewController.swift */; };
 		6478EDAE19B9EE0100F6F618 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6478EDAC19B9EE0100F6F618 /* Main.storyboard */; };
@@ -26,7 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3D8022341BDFFED8008C7E5B /* Knob.Swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Knob.Swift; sourceTree = "<group>"; };
+		3D790EA51BE2D4A400F64981 /* Knob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Knob.swift; sourceTree = "<group>"; };
 		6478EDA319B9EE0100F6F618 /* KnobDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnobDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6478EDA719B9EE0100F6F618 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6478EDA819B9EE0100F6F618 /* ApplicationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDelegate.swift; sourceTree = "<group>"; };
@@ -77,12 +77,12 @@
 		6478EDA519B9EE0100F6F618 /* KnobDemo */ = {
 			isa = PBXGroup;
 			children = (
-				3D8022341BDFFED8008C7E5B /* Knob.Swift */,
 				6478EDA819B9EE0100F6F618 /* ApplicationDelegate.swift */,
 				6478EDAA19B9EE0100F6F618 /* ViewController.swift */,
 				6478EDAC19B9EE0100F6F618 /* Main.storyboard */,
 				6478EDAF19B9EE0100F6F618 /* Images.xcassets */,
 				6478EDA619B9EE0100F6F618 /* Supporting Files */,
+				3D790EA51BE2D4A400F64981 /* Knob.swift */,
 			);
 			path = KnobDemo;
 			sourceTree = "<group>";
@@ -212,8 +212,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D8022351BDFFED8008C7E5B /* Knob.Swift in Sources */,
 				6478EDAB19B9EE0100F6F618 /* ViewController.swift in Sources */,
+				3D790EA61BE2D4A400F64981 /* Knob.swift in Sources */,
 				6478EDA919B9EE0100F6F618 /* ApplicationDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
