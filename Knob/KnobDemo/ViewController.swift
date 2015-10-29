@@ -20,7 +20,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        knob = Knob(frame: knobPlaceholder.bounds)
+        knobPlaceholder.addSubview(knob)
     }
     
     @IBAction func sliderValueChanged(slider: UISlider) {
