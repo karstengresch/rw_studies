@@ -43,3 +43,9 @@ public class Knob: UIControl {
 
 
 }
+
+private class KnobRenderer {
+  
+  
+  
+}
