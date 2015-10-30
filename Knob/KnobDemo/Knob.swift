@@ -52,7 +52,9 @@ private class KnobRenderer {
   var endAngle: CGFloat = 0.0
   
   let pointerLayer = CAShapeLayer()
+  var pointerLength: CGFloat = 0.0
   var backingPointerAngle: CGFloat = 0.0
+  
   
   var pointerAngle: CGFloat {
     get { return backingPointerAngle }
