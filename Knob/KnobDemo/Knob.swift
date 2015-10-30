@@ -99,6 +99,16 @@ private class KnobRenderer {
     pointerLayer.path = path.CGPath
   }
   
+  func update() {
+    trackLayer.lineWidth = lineWidth
+    pointerLayer.lineWidth = lineWidth
+    
+    updateTrackLayerPath()
+    updatePointerLayerPath()
+  }
+  
+  
+  
   
   
   
