@@ -93,7 +93,10 @@ private class KnobRenderer {
   }
   
   func updatePointerLayerPath() {
-    
+    let path = UIBezierPath()
+    path.moveToPoint(CGPoint(x: pointerLayer.bounds.width - pointerLength - pointerLayer.lineWidth / 2.0, y: pointerLayer.bounds.height / 2.0))
+    path.addLineToPoint(CGPoint(x: pointerLayer.bounds.width, y: pointerLayer.bounds.height / 2.0 ))
+    pointerLayer.path = path.CGPath
   }
   
   
