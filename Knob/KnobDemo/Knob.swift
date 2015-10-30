@@ -85,7 +85,13 @@ private class KnobRenderer {
   }
   
   
+  func updateTrackLayerPath() {
+    
+  }
   
+  func updatePointerLayerPath() {
+    
+  }
   
   
   
