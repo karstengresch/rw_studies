@@ -45,6 +45,27 @@ public class Knob: UIControl {
 }
 
 private class KnobRenderer {
+  var lineWidth: CGFloat = 1.0
+  
+  let trackLayer = CAShapeLayer()
+  var startAngle: CGFloat = 0.0
+  var endAngle: CGFloat = 0.0
+  
+  let pointerLayer = CAShapeLayer()
+  
+  
+  var strokeColor: UIColor {
+    get {
+      return UIColor(CGColor: trackLayer.strokeColor!)
+    }
+    
+    set(strokeColor) {
+      trackLayer.strokeColor = strokeColor.CGColor
+      pointerLayer.strokeColor = strokeColor.CGColor
+    }
+  }
+  
+  
   
   
   
