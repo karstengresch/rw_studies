@@ -52,7 +52,16 @@ private class KnobRenderer {
   var endAngle: CGFloat = 0.0
   
   let pointerLayer = CAShapeLayer()
+  var backingPointerAngle: CGFloat = 0.0
   
+  var pointerAngle: CGFloat {
+    get { return backingPointerAngle }
+    set { setPointerAngle(newValue, animated: false) }
+  }
+  
+  func setPointerAngle(pointerAngle: CGFloat, animated: Bool) {
+    self.backingPointerAngle = pointerAngle
+  }
   
   var strokeColor: UIColor {
     get {
@@ -64,6 +73,8 @@ private class KnobRenderer {
       pointerLayer.strokeColor = strokeColor.CGColor
     }
   }
+  
+  
   
   
   
