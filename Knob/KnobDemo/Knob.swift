@@ -23,7 +23,7 @@ public class Knob: UIControl {
     }
   }
   
-  /** */
+  /** The knob's minimum value. */ 
   public var minimumValue: Float = 0.0
   /** */
   public var maximumValue: Float = 1.0
