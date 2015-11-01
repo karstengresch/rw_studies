@@ -47,14 +47,26 @@ public class Knob: UIControl {
 private class KnobRenderer {
   
   
-  var lineWidth: CGFloat = 1.0
+  var lineWidth: CGFloat = 1.0 {
+    didSet { update() }
+  }
   
   let trackLayer = CAShapeLayer()
-  var startAngle: CGFloat = 0.0
-  var endAngle: CGFloat = 0.0
+  
+  var startAngle: CGFloat = 0.0 {
+    didSet { update() }
+  }
+  
+  var endAngle: CGFloat = 0.0 {
+    didSet { update() }
+  }
   
   let pointerLayer = CAShapeLayer()
-  var pointerLength: CGFloat = 0.0
+  
+  var pointerLength: CGFloat = 0.0 {
+    didSet { update() }
+  }
+  
   var backingPointerAngle: CGFloat = 0.0
   
   
@@ -107,6 +119,7 @@ private class KnobRenderer {
     updatePointerLayerPath()
   }
   
+
   
   
   
