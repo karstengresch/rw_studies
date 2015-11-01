@@ -119,6 +119,19 @@ private class KnobRenderer {
     updatePointerLayerPath()
   }
   
+  func update(bounds: CGRect) {
+    let position = CGPoint(x: bounds.width / 2.0, y: bounds.height / 2.0)
+    
+    trackLayer.bounds = bounds
+    trackLayer.position = position
+    
+    pointerLayer.bounds = bounds
+    pointerLayer.position = position
+    
+    update()
+    
+  }
+  
 
   
   
