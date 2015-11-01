@@ -11,6 +11,8 @@ import UIKit
 public class Knob: UIControl {
   private var backingValue: Float = 0.0
   
+  private let knobRenderer = KnobRenderer()
+  
   
   public var value: Float {
     get { return backingValue }
@@ -33,12 +35,27 @@ public class Knob: UIControl {
 
   public override init(frame: CGRect) {
     super.init(frame: frame)
-    backgroundColor = tintColor
+//     backgroundColor = tintColor
+    createSublayers()
     
   }
   
   public required init(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented!")
+  }
+  
+  func createSublayers() {
+    knobRenderer.update(bounds)
+    knobRenderer.strokeColor = tintColor
+    knobRenderer.startAngle = -CGFloat(M_PI * 11.0 / 8.0)
+    knobRenderer.endAngle = CGFloat(M_PI * 3.0 / 8.0)
+    knobRenderer.pointerAngle = knobRenderer.startAngle
+    knobRenderer.lineWidth = 2.0
+    knobRenderer.pointerLength = 6.0
+    
+    layer.addSublayer(knobRenderer.trackLayer)
+    layer.addSublayer(knobRenderer.pointerLayer)
+    
   }
 
 
