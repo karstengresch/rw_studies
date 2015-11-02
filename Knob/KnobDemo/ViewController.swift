@@ -25,6 +25,8 @@ class ViewController: UIViewController {
         knob.lineWidth = 4.0
         knob.pointerLength = 12.0
       
+        view.tintColor = UIColor.orangeColor()
+      
     }
     
     @IBAction func sliderValueChanged(slider: UISlider) {
