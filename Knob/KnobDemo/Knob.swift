@@ -81,6 +81,10 @@ public class Knob: UIControl {
     
   }
   
+  public override func tintColorDidChange() {
+    knobRenderer.strokeColor = tintColor
+  }
+  
   
 }
 
