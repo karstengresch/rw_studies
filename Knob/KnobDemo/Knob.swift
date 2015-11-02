@@ -126,6 +126,8 @@ private class KnobRenderer {
   }
   
   func setPointerAngle(pointerAngle: CGFloat, animated: Bool) {
+    pointerLayer.transform = CATransform3DMakeRotation(pointerAngle, 0.0, 0.0, 0.1)
+    
     self.backingPointerAngle = pointerAngle
   }
   
