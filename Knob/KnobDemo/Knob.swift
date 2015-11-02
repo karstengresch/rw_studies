@@ -45,8 +45,14 @@ public class Knob: UIControl {
   }
   
   public func setValue(value: Float, animated: Bool) {
-    if value != backingValue {
-      backingValue = min(maximumValue, max(minimumValue, value))
+    if value != self.value {
+      // Limit to requested bounds.
+      self.backingValue = min(self.maximumValue, max(self.minimumValue, value))
+      // Update Knob w/ correct angle
+      let angleRange = endAngle - startAngle
+      let valueRange = CGFloat(self.maximumValue - self.minimumValue)
+      let angle = CGFloat(value - minimumValue) / valueRange * angleRange + startAngle
+      knobRenderer.setPointerAngle(angle, animated: animated)
     }
   }
   
