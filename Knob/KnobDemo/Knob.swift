@@ -13,6 +13,31 @@ public class Knob: UIControl {
   
   private let knobRenderer = KnobRenderer()
   
+  // MARK: Knob API
+  
+  /** Knob control's start angle. Default: -11π/8 */
+  public var startAngle: CGFloat {
+    get { return knobRenderer.startAngle }
+    set { knobRenderer.startAngle = newValue }
+  }
+  
+  /** Knob control's end angle. Default: 3π/8 */
+  public var endAngle: CGFloat {
+    get { return knobRenderer.endAngle }
+    set { knobRenderer.endAngle = newValue }
+  }
+  
+  /** Knob control's width (in points). Default: 2.0 */
+  public var lineWidth: CGFloat {
+    get { return knobRenderer.lineWidth }
+    set { knobRenderer.lineWidth = newValue }
+  }
+  
+  /** Specifies the length in points of the pointer on the knob. Defaults to 6.0 */
+  public var pointerLength: CGFloat {
+    get { return knobRenderer.pointerLength }
+    set { knobRenderer.pointerLength = newValue }
+  }
   
   public var value: Float {
     get { return backingValue }
@@ -25,19 +50,17 @@ public class Knob: UIControl {
     }
   }
   
-  /** The knob's minimum value. */ 
+  /** The knob's minimum value. */
   public var minimumValue: Float = 0.0
   /** */
   public var maximumValue: Float = 1.0
   /** */
   public var continuous: Bool = true
   
-
+  
   public override init(frame: CGRect) {
     super.init(frame: frame)
-//     backgroundColor = tintColor
     createSublayers()
-    
   }
   
   public required init(coder aDecoder: NSCoder) {
@@ -57,8 +80,8 @@ public class Knob: UIControl {
     layer.addSublayer(knobRenderer.pointerLayer)
     
   }
-
-
+  
+  
 }
 
 private class KnobRenderer {
@@ -148,11 +171,5 @@ private class KnobRenderer {
     update()
     
   }
-  
-
-  
-  
-  
-  
   
 }
