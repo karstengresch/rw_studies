@@ -22,6 +22,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         knob = Knob(frame: knobPlaceholder.bounds)
         knobPlaceholder.addSubview(knob)
+        knob.lineWidth = 4.0
+        knob.pointerLength = 12.0
+      
     }
     
     @IBAction func sliderValueChanged(slider: UISlider) {
