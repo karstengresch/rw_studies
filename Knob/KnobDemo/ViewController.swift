@@ -30,6 +30,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func sliderValueChanged(slider: UISlider) {
+      knob.value = slider.value
     }
     
     @IBAction func randomButtonTouched(button: UIButton) {
