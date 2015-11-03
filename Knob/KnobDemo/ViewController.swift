@@ -31,13 +31,17 @@ class ViewController: UIViewController {
     
     @IBAction func sliderValueChanged(slider: UISlider) {
       knob.value = slider.value
+      updateLabel()
     }
     
     @IBAction func randomButtonTouched(button: UIButton) {
       let randomValue = Float(arc4random_uniform(101)) / 100.0
       knob.setValue(randomValue, animated: animateSwitch.on)
       valueSlider.setValue(randomValue, animated: animateSwitch.on)
-      
-      
+      updateLabel()
     }
+  
+  func updateLabel() {
+    valueLabel.text = NSNumberFormatter.localizedStringFromNumber(knob.value, numberStyle: .DecimalStyle)
+  }
 }
