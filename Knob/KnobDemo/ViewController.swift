@@ -34,5 +34,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func randomButtonTouched(button: UIButton) {
+      let randomValue = Float(arc4random_uniform(101)) / 100.0
+      knob.setValue(randomValue, animated: animateSwitch.on)
+      valueSlider.setValue(randomValue, animated: animateSwitch.on)
+      
+      
     }
 }
