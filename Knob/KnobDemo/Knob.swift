@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UIKit.UIGestureRecognizerSubclass
 
 
 public class Knob: UIControl {
@@ -201,14 +202,17 @@ private class KnobRenderer {
     
   }
   
-  // import UIKit.UIGestureRecognizerSubclass
   
   private class RotationGestureRecognizer: UIPanGestureRecognizer {
     var rotation: CGFloat = 0.0
     
-//    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-//     
-//    }
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent) {
+      
+    }
+    
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent) {
+      
+    }
     
   }
   
