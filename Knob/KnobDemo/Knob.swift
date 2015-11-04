@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 public class Knob: UIControl {
   private var backingValue: Float = 0.0
   
@@ -197,6 +198,10 @@ private class KnobRenderer {
     pointerLayer.position = position
     
     update()
+    
+  }
+  
+  private class RotationGestureRecognizer: UIPanGestureRecognizer {
     
   }
   
