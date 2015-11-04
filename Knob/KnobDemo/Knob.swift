@@ -201,7 +201,14 @@ private class KnobRenderer {
     
   }
   
+  // import UIKit.UIGestureRecognizerSubclass
+  
   private class RotationGestureRecognizer: UIPanGestureRecognizer {
+    var rotation: CGFloat = 0.0
+    
+//    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+//     
+//    }
     
   }
   
