@@ -206,6 +206,13 @@ private class KnobRenderer {
   private class RotationGestureRecognizer: UIPanGestureRecognizer {
     var rotation: CGFloat = 0.0
     
+    override init(target: AnyObject?, action: Selector) {
+      super.init(target: target, action: action)
+      minimumNumberOfTouches = 1
+      maximumNumberOfTouches = 1
+      
+    }
+    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent) {
       super.touchesBegan(touches, withEvent: event)
       
