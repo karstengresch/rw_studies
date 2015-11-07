@@ -26,8 +26,14 @@ class ViewController: UIViewController {
         knob.pointerLength = 12.0
       
         view.tintColor = UIColor.orangeColor()
+        knob.addTarget(self, action: "knobValueChanged:", forControlEvents: .ValueChanged)
       
     }
+  
+  func knobValueChanged(knob: Knob) {
+    valueSlider.value = knob.value
+    updateLabel()
+  }
     
     @IBAction func sliderValueChanged(slider: UISlider) {
       knob.value = slider.value

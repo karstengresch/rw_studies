@@ -115,6 +115,14 @@ public class Knob: UIControl {
     let valueForAngle = Float(boundedAngle - startAngle) / Float(angleRange) * valueRange + minimumValue
     
     self.value = valueForAngle
+    
+    if continuous {
+      sendActionsForControlEvents(.ValueChanged)
+    } else {
+      if (rotationGestureRecognizer.state == UIGestureRecognizerState.Ended) || (rotationGestureRecognizer.state == UIGestureRecognizerState.Cancelled) {
+        sendActionsForControlEvents(.ValueChanged)
+      }
+    }
   }
   
   
