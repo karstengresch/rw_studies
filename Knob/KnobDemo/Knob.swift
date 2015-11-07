@@ -97,6 +97,26 @@ public class Knob: UIControl {
     knobRenderer.strokeColor = tintColor
   }
   
+  func handleRotation(sender: AnyObject) {
+    let rotationGestureRecognizer = sender as! RotationGestureRecognizer
+    let midPointAngle = (2.0 * CGFloat(M_PI) + self.startAngle - self.endAngle) / 2.0 + self.endAngle
+    
+    var boundedAngle = rotationGestureRecognizer.rotation
+    if boundedAngle > midPointAngle {
+      boundedAngle -= 2.0 * CGFloat(M_PI)
+    } else if boundedAngle < (midPointAngle - 2.0 * CGFloat(M_PI)) {
+      boundedAngle += 2.0 * CGFloat(M_PI)
+    }
+    
+    boundedAngle = min(self.endAngle, max(self.startAngle, boundedAngle))
+    
+    let angleRange = endAngle - startAngle
+    let valueRange = maximumValue - minimumValue
+    let valueForAngle = Float(boundedAngle - startAngle) / Float(angleRange) * valueRange + minimumValue
+    
+    self.value = valueForAngle
+  }
+  
   
 }
 
