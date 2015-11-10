@@ -22,7 +22,13 @@ class ViewController: UIViewController {
 
   
   @IBAction func showAlert() {
+    let alertController = UIAlertController(title: "Hello world, again.", message: "This is roughly my 100th training app.", preferredStyle: .Alert)
     
+    let alertAction = UIAlertAction(title: "So what?", style: .Default, handler: nil)
+    
+    alertController.addAction(alertAction)
+    
+    presentViewController(alertController, animated: true, completion: nil )
     
   }
 
