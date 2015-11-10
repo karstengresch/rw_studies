@@ -286,6 +286,7 @@
 				3D04FFFA1BF10A9E0004AE2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
