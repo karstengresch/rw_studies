@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+  var currentValue: Int = 0
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -31,6 +32,13 @@ class ViewController: UIViewController {
     presentViewController(alertController, animated: true, completion: nil )
     
   }
+  
+  @IBAction func sliderMoved(sender: UISlider) {
+    print("Slider value: \(sender.value) ")
+    
+  }
+  
+  
 
 }
 
