@@ -33,9 +33,9 @@ class ViewController: UIViewController {
     
   }
   
-  @IBAction func sliderMoved(sender: UISlider) {
-    print("Slider value: \(sender.value) ")
-    
+  @IBAction func sliderMoved(slider: UISlider) {
+    currentValue = lroundf(slider.value)
+    print("Slider value: \(currentValue) ")
   }
   
   
