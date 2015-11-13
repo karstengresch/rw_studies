@@ -5,6 +5,9 @@ You won't find any interesting stuff here.
 
 Head over to http://www.raywenderlich.com and check out the great iOS et al. tutorials!
 
+## Apprentice
+From the iOS Apprentice Series. As I found so many best practice information in this (paid) book, I decided to go through the entire series though a lot of stuff is intended for complete programming beginners.
+
 ## AutoLayout
 From the AutoLayout video course ( http://www.raywenderlich.com/video-tutorials#autolayout - subscribers only...)
 
