@@ -27,11 +27,11 @@ class ViewController: UIViewController {
 
   
   @IBAction func showAlert() {
-    let message = "The value of the slider is: \(currentValue)"
+    let message = "The current slider value is: \(currentValue)"
     
-    let alertController = UIAlertController(title: "Hello world, again.", message: message, preferredStyle: .Alert)
+    let alertController = UIAlertController(title: "Slider information.", message: message, preferredStyle: .Alert)
     
-    let alertAction = UIAlertAction(title: "Thanks for the information", style: .Default, handler: nil)
+    let alertAction = UIAlertAction(title: "Ok", style: .Default, handler: nil)
     
     alertController.addAction(alertAction)
     
