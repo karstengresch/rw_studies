@@ -27,7 +27,16 @@ class ViewController: UIViewController {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
-
+  
+  // MARK: Custom funcs
+  func startNewRound() {
+    targetValue = 1 + Int(arc4random_uniform(100))
+    currentValue = 50
+    slider?.value = Float(currentValue)
+  }
+  
+  
+  // MARK: IBActions
   
   @IBAction func showAlert() {
     let message = "The current slider value is: \(currentValue) \nThe target value is: \(targetValue)"
@@ -46,6 +55,8 @@ class ViewController: UIViewController {
     currentValue = lroundf(slider.value)
     print("Slider value: \(currentValue) ")
   }
+  
+  
   
   
 
