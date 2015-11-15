@@ -26,7 +26,7 @@ class ViewController: UIViewController {
   // MARK: Custom funcs
   func startNewRound() {
     targetValue = 1 + Int(arc4random_uniform(100))
-    currentValue = 50
+    currentValue = 1 + Int(arc4random_uniform(100))
     slider?.value = Float(currentValue)
   }
   
@@ -37,23 +37,17 @@ class ViewController: UIViewController {
     let message = "The current slider value is: \(currentValue) \nThe target value is: \(targetValue)"
     
     let alertController = UIAlertController(title: "Slider information.", message: message, preferredStyle: .Alert)
-    
     let alertAction = UIAlertAction(title: "Ok", style: .Default, handler: nil)
-    
     alertController.addAction(alertAction)
-    
     presentViewController(alertController, animated: true, completion: nil )
-    
+
+    startNewRound()
   }
   
   @IBAction func sliderMoved(slider: UISlider) {
     currentValue = lroundf(slider.value)
     print("Slider value: \(currentValue) ")
   }
-  
-  
-  
-  
 
 }
 
