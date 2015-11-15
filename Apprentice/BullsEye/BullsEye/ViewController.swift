@@ -26,7 +26,7 @@ class ViewController: UIViewController {
   // MARK: Custom funcs
   func startNewRound() {
     targetValue = 1 + Int(arc4random_uniform(100))
-    currentValue = 1 + Int(arc4random_uniform(100))
+    currentValue = 50
     slider?.value = Float(currentValue)
   }
   
