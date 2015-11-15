@@ -27,9 +27,16 @@ class ViewController: UIViewController {
   // MARK: Custom funcs
   func startNewRound() {
     targetValue = 1 + Int(arc4random_uniform(100))
-    targetLabel?.text = "\(targetValue)" 
     currentValue = 50
     slider?.value = Float(currentValue)
+    updateLabels()
+  }
+  
+  func updateLabels() {
+    // wonder if that's better than 'targetLabel.text = String(targetValue)'
+    targetLabel?.text = "\(targetValue)"
+    print("targetValue: \(targetValue)")
+    
   }
   
   
@@ -42,7 +49,6 @@ class ViewController: UIViewController {
     let alertAction = UIAlertAction(title: "Ok", style: .Default, handler: nil)
     alertController.addAction(alertAction)
     presentViewController(alertController, animated: true, completion: nil )
-
     startNewRound()
   }
   
