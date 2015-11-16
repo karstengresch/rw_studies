@@ -12,7 +12,7 @@ class ViewController: UIViewController {
   var currentValue = 0
   var targetValue = 0
   var score = 0
-  var round = 0
+  var round = -1
   
   @IBOutlet weak var targetLabel: UILabel?
   @IBOutlet weak var slider: UISlider?
@@ -30,6 +30,7 @@ class ViewController: UIViewController {
   
   // MARK: Custom funcs
   func startNewRound() {
+    round += 1
     targetValue = 1 + Int(arc4random_uniform(100))
     currentValue = 50
     slider?.value = Float(currentValue)
@@ -41,8 +42,10 @@ class ViewController: UIViewController {
     targetLabel?.text = "\(targetValue)"
     scoreLabel?.text = "\(score)"
     roundLabel?.text = "\(round)"
-    // print("targetValue: \(targetValue)")    
+    // print("targetValue: \(targetValue)")
   }
+  
+  
   
   
   // MARK: IBActions
@@ -64,6 +67,17 @@ class ViewController: UIViewController {
   @IBAction func sliderMoved(slider: UISlider) {
     currentValue = lroundf(slider.value)
     print("Slider value: \(currentValue) ")
+  }
+  
+  
+  @IBAction func startOverButtonPressed(sender: UIButton) {
+    round = 0
+    score = 0
+    targetValue = 1 + Int(arc4random_uniform(100))
+    currentValue = 50
+    slider?.value = Float(currentValue)
+    updateLabels()
+    
   }
 
 }
