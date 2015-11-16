@@ -15,7 +15,7 @@ class ViewController: UIViewController {
   
   @IBOutlet weak var targetLabel: UILabel?
   @IBOutlet weak var slider: UISlider?
-  @IBOutlet weak var scoreLabel: UILabel!
+  @IBOutlet weak var scoreLabel: UILabel?
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -37,7 +37,7 @@ class ViewController: UIViewController {
   func updateLabels() {
     // wonder if that's better than 'targetLabel.text = String(targetValue)'
     targetLabel?.text = "\(targetValue)"
-    scoreLabel.text = "\(score)"
+    scoreLabel?.text = "\(score)"
     print("targetValue: \(targetValue)")
     
   }
