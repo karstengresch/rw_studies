@@ -52,19 +52,16 @@ class ViewController: UIViewController {
   
   @IBAction func showAlert() {
     let difference = abs(targetValue - currentValue)
-    let points = 100 - difference
-    score += points
-    
-    let message = "The current slider value is: \(currentValue).\nThe target value is: \(targetValue).\nThe difference was: \(difference).\nYou scored \(score) points."
-    
+    var points = 100 - difference
+
     let title: String
     if difference == 0 {
       title = "Perfect match!"
-      score += 100
+      points += 100
     } else if difference < 5 {
       title = "Almost, dude"
       if difference == 1 {
-        score += 50
+        points += 50
       }
       
     } else if difference >= 5 && difference < 10 {
@@ -73,6 +70,9 @@ class ViewController: UIViewController {
       title = "Not even close..."
     }
     
+    score += points
+    
+        let message = "The current slider value is: \(currentValue).\nThe target value is: \(targetValue).\nThe difference was: \(difference).\nYou scored \(score) points."
     
     let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
     let alertAction = UIAlertAction(title: "Ok", style: .Default, handler: nil)
