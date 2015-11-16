@@ -57,7 +57,24 @@ class ViewController: UIViewController {
     
     let message = "The current slider value is: \(currentValue).\nThe target value is: \(targetValue).\nThe difference was: \(difference).\nYou scored \(score) points."
     
-    let alertController = UIAlertController(title: "Slider information.", message: message, preferredStyle: .Alert)
+    let title: String
+    if difference == 0 {
+      title = "Perfect match!"
+      score += 100
+    } else if difference < 5 {
+      title = "Almost, dude"
+      if difference == 1 {
+        score += 50
+      }
+      
+    } else if difference >= 5 && difference < 10 {
+      title = "Pretty good"
+    } else {
+      title = "Not even close..."
+    }
+    
+    
+    let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
     let alertAction = UIAlertAction(title: "Ok", style: .Default, handler: nil)
     alertController.addAction(alertAction)
     presentViewController(alertController, animated: true, completion: nil )
