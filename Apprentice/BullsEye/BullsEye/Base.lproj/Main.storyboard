@@ -155,6 +155,7 @@ Your goal is to place the slider as close as possible to the target value. The c
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mHO-GF-Gkb" userLabel="First Responder" sceneMemberID="firstResponder"/>
