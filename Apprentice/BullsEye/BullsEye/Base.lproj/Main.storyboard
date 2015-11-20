@@ -17,6 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="H0b-ZX-h8B">
+                                <rect key="frame" x="176" y="159" width="240" height="128"/>
+                                <animations/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pull the Bull's Eye as close as you can to: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEc-ir-AvD">
                                 <rect key="frame" x="100" y="28" width="316" height="21"/>
                                 <animations/>
@@ -106,6 +110,12 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="H0b-ZX-h8B" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1NO-5m-Z0i"/>
+                            <constraint firstItem="H0b-ZX-h8B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4uO-2J-WW5"/>
+                            <constraint firstItem="H0b-ZX-h8B" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="NBi-Zs-tJ3"/>
+                            <constraint firstItem="H0b-ZX-h8B" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="zYF-gD-Bar"/>
+                        </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
