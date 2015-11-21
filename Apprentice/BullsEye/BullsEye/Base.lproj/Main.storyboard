@@ -92,8 +92,9 @@
                                 </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtc-gj-m7m">
-                                <rect key="frame" x="251" y="159" width="50" height="30"/>
+                                <rect key="frame" x="250" y="159" width="52" height="30"/>
                                 <animations/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
                                 <state key="normal" title="Hit me!">
                                     <color key="titleColor" red="0.99947279691696167" green="0.95710748434066772" blue="0.81575340032577515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
