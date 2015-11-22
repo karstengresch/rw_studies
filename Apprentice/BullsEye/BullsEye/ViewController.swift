@@ -36,7 +36,7 @@ class ViewController: UIViewController {
 
     if let trackRightImage = UIImage(named: "SliderTrackRight") {
       let trackRightResizable = trackRightImage.resizableImageWithCapInsets(insets)
-      slider?.setMinimumTrackImage(trackRightResizable, forState: .Normal)
+      slider?.setMaximumTrackImage(trackRightResizable, forState: .Normal)
     }
     
     
