@@ -13,6 +13,7 @@
 		3D04FFEF1BF10A9E0004AE2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D04FFED1BF10A9E0004AE2A /* Main.storyboard */; };
 		3D04FFF11BF10A9E0004AE2A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D04FFF01BF10A9E0004AE2A /* Images.xcassets */; };
 		3D04FFF41BF10A9E0004AE2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D04FFF21BF10A9E0004AE2A /* LaunchScreen.storyboard */; };
+		3DE8C46B1C01FA6F005681BF /* BullsEye.html in Resources */ = {isa = PBXBuildFile; fileRef = 3DE8C46A1C01FA6F005681BF /* BullsEye.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3D04FFF01BF10A9E0004AE2A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3D04FFF31BF10A9E0004AE2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D04FFF51BF10A9E0004AE2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DE8C46A1C01FA6F005681BF /* BullsEye.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = BullsEye.html; path = "../../../../../../../../../Downloads/2learn/Ray_Wenderlich_Books/The iOS Apprentice 1 - Getting Started/Resources/BullsEye.html"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		3D04FFE81BF10A9E0004AE2A /* BullsEye */ = {
 			isa = PBXGroup;
 			children = (
+				3DE8C46A1C01FA6F005681BF /* BullsEye.html */,
 				3D04FFE91BF10A9E0004AE2A /* AppDelegate.swift */,
 				3D04FFEB1BF10A9E0004AE2A /* ViewController.swift */,
 				3D04FFED1BF10A9E0004AE2A /* Main.storyboard */,
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D04FFF41BF10A9E0004AE2A /* LaunchScreen.storyboard in Resources */,
+				3DE8C46B1C01FA6F005681BF /* BullsEye.html in Resources */,
 				3D04FFF11BF10A9E0004AE2A /* Images.xcassets in Resources */,
 				3D04FFEF1BF10A9E0004AE2A /* Main.storyboard in Resources */,
 			);
