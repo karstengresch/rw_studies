@@ -45,7 +45,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7E6-J3-JAb">
-                                <rect key="frame" x="143" y="247" width="55" height="20"/>
+                                <rect key="frame" x="122" y="247" width="55" height="20"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
                                 <color key="textColor" red="0.99947279691696167" green="0.95710748434066772" blue="0.81575340032577515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -53,7 +53,7 @@
                                 <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rounds played:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PlE-dd-BGd">
-                                <rect key="frame" x="335" y="247" width="127" height="20"/>
+                                <rect key="frame" x="323" y="247" width="127" height="20"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
                                 <color key="textColor" red="0.99947279691696167" green="0.95710748434066772" blue="0.81575340032577515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -61,7 +61,7 @@
                                 <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="001" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Zb-gy-ItI">
-                                <rect key="frame" x="470" y="246" width="36" height="24"/>
+                                <rect key="frame" x="460" y="245" width="36" height="24"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
                                 <color key="textColor" red="0.99947279691696167" green="0.95710748434066772" blue="0.81575340032577515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -101,11 +101,11 @@
                                     <action selector="showAlert" destination="BYZ-38-t0r" eventType="touchUpInside" id="bvu-WH-9ut"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJo-xP-wWt">
-                                <rect key="frame" x="514" y="247" width="22" height="22"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJo-xP-wWt">
+                                <rect key="frame" x="516" y="241" width="32" height="32"/>
                                 <animations/>
                                 <color key="tintColor" red="0.99947267770767212" green="0.95658653974533081" blue="0.81608158349990845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal">
+                                <state key="normal" image="InfoButton" backgroundImage="SmallButton">
                                     <color key="titleColor" red="0.99947279691696167" green="0.95710748434066772" blue="0.81575340032577515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -113,7 +113,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8TW-7y-f5Y">
-                                <rect key="frame" x="66" y="241" width="32" height="32"/>
+                                <rect key="frame" x="44" y="241" width="32" height="32"/>
                                 <animations/>
                                 <state key="normal" image="StartOverIcon" backgroundImage="SmallButton">
                                     <color key="titleColor" red="0.99947279691696167" green="0.95710748434066772" blue="0.81575340032577515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -212,6 +212,7 @@ Your goal is to place the slider as close as possible to the target value. The c
         <image name="Background" width="568" height="320"/>
         <image name="Button-Highlighted" width="100" height="37"/>
         <image name="Button-Normal" width="100" height="37"/>
+        <image name="InfoButton" width="10" height="22"/>
         <image name="SmallButton" width="32" height="32"/>
         <image name="StartOverIcon" width="20" height="20"/>
     </resources>
