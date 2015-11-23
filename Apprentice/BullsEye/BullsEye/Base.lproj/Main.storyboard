@@ -167,8 +167,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                                 <animations/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vcu-Bh-q05">
-                                <rect key="frame" x="212" y="278" width="146" height="37"/>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hes-Vi-7Id">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vcu-Bh-q05">
+                                <rect key="frame" x="234" y="278" width="100" height="37"/>
                                 <animations/>
                                 <size key="titleShadowOffset" width="1" height="0.0"/>
                                 <state key="normal" title="Close" backgroundImage="Button-Normal">
@@ -179,23 +184,20 @@
                                     <action selector="close:" destination="vhL-aZ-HVy" eventType="touchUpInside" id="vqq-sd-4ke"/>
                                 </connections>
                             </button>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hes-Vi-7Id">
-                                <rect key="frame" x="0.0" y="0.0" width="568" height="270"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
-                            </webView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="NME-V2-QZc" firstAttribute="centerY" secondItem="gAP-K3-rfU" secondAttribute="centerY" id="03g-F9-OKC"/>
-                            <constraint firstItem="Hes-Vi-7Id" firstAttribute="height" secondItem="gAP-K3-rfU" secondAttribute="height" constant="-50" id="3QD-dp-cFG"/>
+                            <constraint firstItem="Hes-Vi-7Id" firstAttribute="height" secondItem="gAP-K3-rfU" secondAttribute="height" id="3QD-dp-cFG"/>
                             <constraint firstItem="Hes-Vi-7Id" firstAttribute="centerX" secondItem="gAP-K3-rfU" secondAttribute="centerX" id="Bit-SR-5dx"/>
                             <constraint firstItem="NME-V2-QZc" firstAttribute="height" secondItem="gAP-K3-rfU" secondAttribute="height" id="GI3-gm-Wsb"/>
                             <constraint firstItem="NME-V2-QZc" firstAttribute="width" secondItem="gAP-K3-rfU" secondAttribute="width" id="IUD-dP-bxE"/>
+                            <constraint firstItem="yp7-6E-JVm" firstAttribute="top" secondItem="Vcu-Bh-q05" secondAttribute="bottom" constant="5" id="KYv-87-cmL"/>
                             <constraint firstItem="Hes-Vi-7Id" firstAttribute="width" secondItem="gAP-K3-rfU" secondAttribute="width" id="La3-6l-Gbl"/>
                             <constraint firstItem="NME-V2-QZc" firstAttribute="centerX" secondItem="gAP-K3-rfU" secondAttribute="centerX" id="btO-xc-m1t"/>
-                            <constraint firstItem="Hes-Vi-7Id" firstAttribute="centerY" secondItem="gAP-K3-rfU" secondAttribute="centerY" constant="-25" id="qSM-yJ-lel"/>
+                            <constraint firstItem="Hes-Vi-7Id" firstAttribute="centerY" secondItem="gAP-K3-rfU" secondAttribute="centerY" id="qSM-yJ-lel"/>
+                            <constraint firstItem="Vcu-Bh-q05" firstAttribute="centerX" secondItem="gAP-K3-rfU" secondAttribute="centerX" id="zw3-HY-ARj"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
