@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QuartzCore
 
 class ViewController: UIViewController {
   var currentValue = 0
@@ -54,6 +55,14 @@ class ViewController: UIViewController {
     currentValue = 50
     slider?.value = Float(currentValue)
     updateLabels()
+  }
+  
+  func startNewGame() {
+    round = 0
+    score = 0
+    targetValue = 1 + Int(arc4random_uniform(100))
+    currentValue = 50
+    slider?.value = Float(currentValue)
   }
   
   func updateLabels() {
@@ -106,14 +115,12 @@ class ViewController: UIViewController {
   
   
   @IBAction func startOverButtonPressed(sender: UIButton) {
-    round = 0
-    score = 0
-    targetValue = 1 + Int(arc4random_uniform(100))
-    currentValue = 50
-    slider?.value = Float(currentValue)
+    startNewGame()
     updateLabels()
     
   }
+  
+  
   
 }
 
