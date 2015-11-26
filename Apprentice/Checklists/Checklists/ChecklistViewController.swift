@@ -31,20 +31,22 @@ class ChecklistViewController: UITableViewController {
 switch indexPath.row {
   
 case (0):
-  label?.text = ""
+  label?.text = "Walk the bird."
   
 case (1):
-  label?.text = ""
+  label?.text = "Brush your hair."
   
 case (2):
-  label?.text = ""
+  label?.text = "Learn singing."
   
 case (3):
-  label?.text = ""
+  label?.text = "Yoga practice."
   
 case (4):
-  label?.text = ""
+  label?.text = "Eat Filet Wellington."
   
+default:
+  label?.text = "Check the code."
     }
     
     return cell
