@@ -8,6 +8,12 @@ Head over to http://www.raywenderlich.com and check out the great iOS et al. tut
 ## Apprentice
 From the [iOS Apprentice](http://www.raywenderlich.com/store/ios-apprentice) Series. As I found so many best practice information in this (paid) book, I decided to go through the entire series though a lot of stuff is intended for complete programming beginners.
 
+### Bull's Eye
+A mini game. Contains everything needed to get up and running w/ iOS development w/ Swift. Can't remember to have read any programming tutorial as both funny and useful as this one. Many good laughs.
+
+### Checklists
+To-do app. Introduces UITableView and UINavigationController, MVC, data models. Very tense. And still easy to read, humorous, witty - a didactid masterpiece.
+
 ## AutoLayout
 From the AutoLayout video course ( http://www.raywenderlich.com/video-tutorials#autolayout - subscribers only...)
 
