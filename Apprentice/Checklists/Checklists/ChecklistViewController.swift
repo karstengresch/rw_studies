@@ -9,6 +9,13 @@
 import UIKit
 
 class ChecklistViewController: UITableViewController {
+  
+  var row0text = "Walk the bird."
+  var row1text = "Brush your hair."
+  var row2text = "Learn singing."
+  var row3text = "Yoga practice."
+  var row4text = "Eat Filet Wellington."
+  
 
   override func viewDidLoad() {
     super.viewDidLoad()
