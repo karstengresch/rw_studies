@@ -34,6 +34,32 @@ class ChecklistViewController: UITableViewController {
     // Dispose of any resources that can be recreated.
   }
   
+  // MARK: Content related methods
+  func configureCheckmarkForCell(cell: UITableViewCell, indexPath: NSIndexPath) {
+    var isChecked = false
+    
+    switch indexPath.row {
+    case (0):
+      isChecked = row0checked
+    case (1):
+      isChecked = row1checked
+    case (2):
+      isChecked = row2checked
+    case (3):
+      isChecked = row3checked
+    case (4):
+      isChecked = row4checked
+    default:
+      isChecked = true
+    }
+    
+    if isChecked {
+      cell.accessoryType = .Checkmark
+    } else {
+      cell.accessoryType = .None
+    }
+  }
+  
   // MARK: Data Source methods
   
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -67,32 +93,6 @@ class ChecklistViewController: UITableViewController {
     }
     
     return cell
-  }
-  
-    // MARK: Content related methods
-  func configureCheckmarkForCell(cell: UITableViewCell, indexPath: NSIndexPath) {
-    var isChecked = false
-    
-    switch indexPath.row {
-    case (0):
-      isChecked = row0checked
-    case (1):
-      isChecked = row1checked
-    case (2):
-      isChecked = row2checked
-    case (3):
-      isChecked = row3checked
-    case (4):
-      isChecked = row4checked
-    default:
-      isChecked = true
-    }
-    
-    if isChecked {
-      cell.accessoryType = .Checkmark
-    } else {
-      cell.accessoryType = .None
-    }
   }
   
   
