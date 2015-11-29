@@ -30,7 +30,7 @@ class ChecklistViewController: UITableViewController {
   // MARK: Data Source methods
   
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 100
+    return 5
   }
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -40,19 +40,19 @@ class ChecklistViewController: UITableViewController {
   switch indexPath.row % 5 {
   
     case (0):
-      label?.text = "Walk the bird."
+      label?.text = row0text
       
     case (1):
-      label?.text = "Brush your hair."
+      label?.text = row1text
       
     case (2):
-      label?.text = "Learn singing."
+      label?.text = row2text
       
     case (3):
-      label?.text = "Yoga practice."
+      label?.text = row3text
       
     case (4):
-      label?.text = "Eat Filet Wellington."
+      label?.text = row4text
       
     default:
       label?.text = "Check the code."
