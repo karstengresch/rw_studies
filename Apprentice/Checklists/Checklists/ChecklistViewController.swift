@@ -130,15 +130,8 @@ class ChecklistViewController: UITableViewController {
         isChecked = true
         
       }
+        configureCheckmarkForCell(cell, indexPath: indexPath)
       
-      if (isChecked) {
-        
-        if cell.accessoryType == .None {
-          cell.accessoryType = .Checkmark
-        } else {
-          cell.accessoryType = .None
-        }
-      }
     }
     tableView.deselectRowAtIndexPath(indexPath, animated: true)
   }
