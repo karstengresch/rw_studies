@@ -92,6 +92,8 @@ class ChecklistViewController: UITableViewController {
     
     }
     
+    configureCheckmarkForCell(cell, indexPath: indexPath)
+    
     return cell
   }
   
