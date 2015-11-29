@@ -16,6 +16,13 @@ class ChecklistViewController: UITableViewController {
   var row3text = "Yoga practice."
   var row4text = "Eat Filet Wellington."
   
+  var row0checked = false
+  var row1checked = false
+  var row2checked = false
+  var row3checked = false
+  var row4checked = false
+  
+  
 
   override func viewDidLoad() {
     super.viewDidLoad()
