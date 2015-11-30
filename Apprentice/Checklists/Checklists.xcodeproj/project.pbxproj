@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D73C1E41C0CFAD3006B02A2 /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D73C1E31C0CFAD3006B02A2 /* ChecklistItem.swift */; };
 		3D81515C1C065AE80041D012 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D81515B1C065AE80041D012 /* AppDelegate.swift */; };
 		3D81515E1C065AE80041D012 /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D81515D1C065AE80041D012 /* ChecklistViewController.swift */; };
 		3D8151611C065AE80041D012 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D81515F1C065AE80041D012 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D73C1E31C0CFAD3006B02A2 /* ChecklistItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
 		3D8151581C065AE80041D012 /* Checklists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checklists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D81515B1C065AE80041D012 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D81515D1C065AE80041D012 /* ChecklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				3D8151621C065AE80041D012 /* Assets.xcassets */,
 				3D8151641C065AE80041D012 /* LaunchScreen.storyboard */,
 				3D8151671C065AE80041D012 /* Info.plist */,
+				3D73C1E31C0CFAD3006B02A2 /* ChecklistItem.swift */,
 			);
 			path = Checklists;
 			sourceTree = "<group>";
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D81515E1C065AE80041D012 /* ChecklistViewController.swift in Sources */,
+				3D73C1E41C0CFAD3006B02A2 /* ChecklistItem.swift in Sources */,
 				3D81515C1C065AE80041D012 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +288,7 @@
 				3D81516C1C065AE80041D012 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
