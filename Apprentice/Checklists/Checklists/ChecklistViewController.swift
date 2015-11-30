@@ -64,6 +64,11 @@ class ChecklistViewController: UITableViewController {
     }
   }
   
+  func configureTextForCell(cell: UITableViewCell, withChecklistItem checklistItem: ChecklistItem) {
+    let label = cell.viewWithTag(1000) as? UILabel
+    label?.text =  checklistItem.text
+  }
+  
   // MARK: Data Source methods
   
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
