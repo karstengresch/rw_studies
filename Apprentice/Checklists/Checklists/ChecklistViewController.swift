@@ -78,10 +78,8 @@ class ChecklistViewController: UITableViewController {
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("ChecklistItem", forIndexPath: indexPath)
     let checklistItem = checkListItems[indexPath.row]
-    
-    let label = cell.viewWithTag(1000) as? UILabel
-    label?.text = checklistItem.text
-    
+
+    configureTextForCell(cell, withChecklistItem: checklistItem)
     configureCheckmarkForCell(cell, withChecklistItem: checklistItem)
     
     return cell
