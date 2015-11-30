@@ -10,17 +10,13 @@ import UIKit
 
 class ChecklistViewController: UITableViewController {
   
-  var row0text = "Walk the bird."
-  var row1text = "Brush your hair."
-  var row2text = "Learn singing."
-  var row3text = "Yoga practice."
-  var row4text = "Eat Filet Wellington."
+  var row0item: ChecklistItem
+  var row1item: ChecklistItem
+  var row2item: ChecklistItem
+  var row3item: ChecklistItem
+  var row4item: ChecklistItem
   
-  var row0checked = false
-  var row1checked = true
-  var row2checked = true
-  var row3checked = false
-  var row4checked = true
+ 
   
   
 
@@ -40,15 +36,15 @@ class ChecklistViewController: UITableViewController {
     
     switch indexPath.row {
     case (0):
-      isChecked = row0checked
+      isChecked = row0item.checked
     case (1):
-      isChecked = row1checked
+      isChecked = row1item.checked
     case (2):
-      isChecked = row2checked
+      isChecked = row2item.checked
     case (3):
-      isChecked = row3checked
+      isChecked = row3item.checked
     case (4):
-      isChecked = row4checked
+      isChecked = row4item.checked
     default:
       isChecked = true
     }
@@ -73,19 +69,19 @@ class ChecklistViewController: UITableViewController {
   switch indexPath.row % 5 {
   
     case (0):
-      label?.text = row0text
+      label?.text = row0item.text
       
     case (1):
-      label?.text = row1text
+      label?.text = row1item.text
       
     case (2):
-      label?.text = row2text
+      label?.text = row2item.text
       
     case (3):
-      label?.text = row3text
+      label?.text = row3item.text
       
     case (4):
-      label?.text = row4text
+      label?.text = row4item.text
       
     default:
       label?.text = "Check the code."
@@ -105,19 +101,19 @@ class ChecklistViewController: UITableViewController {
       switch indexPath.row {
         
       case (0):
-        row0checked = !row0checked
+        row0item.checked = !row0item.checked
         
       case (1):
-        row1checked = !row1checked
+        row1item.checked = !row1item.checked
 
       case (2):
-        row2checked = !row2checked
+        row2item.checked = !row2item.checked
         
       case (3):
-        row3checked = !row3checked
+        row3item.checked = !row3item.checked
         
       case (4):
-        row4checked = !row4checked
+        row4item.checked = !row4item.checked
       default: break
 
       }
