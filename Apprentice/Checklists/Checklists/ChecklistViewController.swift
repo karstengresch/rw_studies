@@ -16,7 +16,30 @@ class ChecklistViewController: UITableViewController {
   var row3item: ChecklistItem
   var row4item: ChecklistItem
   
- 
+  required init?(coder aDecoder: NSCoder) {
+    row0item = ChecklistItem()
+    row0item.text = "Walk the fish."
+    row0item.checked = false
+
+    row1item = ChecklistItem()
+    row1item.text = "Massage my neck."
+    row1item.checked = false
+    
+    row2item = ChecklistItem()
+    row2item.text = "Learn singing."
+    row2item.checked = false
+    
+    row3item = ChecklistItem()
+    row3item.text = "ASMR practice."
+    row3item.checked = false
+    
+    row4item = ChecklistItem()
+    row4item.text = "Eat File Wellington."
+    row4item.checked = false
+    
+    super.init(coder: aDecoder)
+    
+  }
   
   
 
