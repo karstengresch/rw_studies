@@ -102,33 +102,24 @@ class ChecklistViewController: UITableViewController {
   override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
     if let cell = tableView.cellForRowAtIndexPath(indexPath) {
       
-      var isChecked = false
-      
       switch indexPath.row {
         
       case (0):
         row0checked = !row0checked
-        isChecked = row0checked
         
       case (1):
         row1checked = !row1checked
-        isChecked = row1checked
-        
+
       case (2):
         row2checked = !row2checked
-        isChecked = row2checked
         
       case (3):
         row3checked = !row3checked
-        isChecked = row3checked
         
       case (4):
         row4checked = !row4checked
-        isChecked = row4checked
-        
-      default:
-        isChecked = true
-        
+      default: break
+
       }
         configureCheckmarkForCell(cell, indexPath: indexPath)
       
