@@ -103,7 +103,7 @@ class ChecklistViewController: UITableViewController {
     
     let checklistItem = ChecklistItem()
     checklistItem.text = "New to do"
-    checklistItem.checked = false
+    checklistItem.checked = true
     
     checkListItems.append(checklistItem)
     
