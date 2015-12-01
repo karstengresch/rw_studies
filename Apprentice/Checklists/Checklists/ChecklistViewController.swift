@@ -106,13 +106,9 @@ class ChecklistViewController: UITableViewController {
     checklistItem.checked = true
     
     checkListItems.append(checklistItem)
-       checkListItems.append(checklistItem)
-       checkListItems.append(checklistItem)
     
     let indexPath = NSIndexPath(forRow: newRowIndex, inSection: 0)
-    let indexPath2 = NSIndexPath(forRow: newRowIndex + 1, inSection: 0)
-    let indexPath3 = NSIndexPath(forRow: newRowIndex + 2 , inSection: 0)
-    let indexPaths = [indexPath, indexPath2, indexPath3]
+    let indexPaths = [indexPath, indexPath, indexPath]
     
     tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
     
