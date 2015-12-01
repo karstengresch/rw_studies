@@ -92,6 +92,7 @@ class ChecklistViewController: UITableViewController {
        let checklistItem = checkListItems[indexPath.row]
       checklistItem.checked = !checklistItem.checked
 
+   checklistItem.toggleChecked()
    configureCheckmarkForCell(cell, withChecklistItem: checklistItem)
       
     }
