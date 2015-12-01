@@ -21,22 +21,22 @@ class ChecklistViewController: UITableViewController {
     let row1item = ChecklistItem()
     row1item.text = "Massage my neck."
     row1item.checked = false
-    checkListItems.append(row0item)
+    checkListItems.append(row1item)
     
     let row2item = ChecklistItem()
     row2item.text = "Learn singing."
     row2item.checked = false
-    checkListItems.append(row0item)
+    checkListItems.append(row2item)
     
     let row3item = ChecklistItem()
     row3item.text = "ASMR practice."
     row3item.checked = false
-    checkListItems.append(row0item)
+    checkListItems.append(row3item)
     
     let row4item = ChecklistItem()
     row4item.text = "Eat File Wellington."
     row4item.checked = false
-    checkListItems.append(row0item)
+    checkListItems.append(row4item)
     
     super.init(coder: aDecoder)
     
@@ -90,8 +90,6 @@ class ChecklistViewController: UITableViewController {
   override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
     if let cell = tableView.cellForRowAtIndexPath(indexPath) {
        let checklistItem = checkListItems[indexPath.row]
-      checklistItem.checked = !checklistItem.checked
-
    checklistItem.toggleChecked()
    configureCheckmarkForCell(cell, withChecklistItem: checklistItem)
       
