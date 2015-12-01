@@ -97,6 +97,13 @@ class ChecklistViewController: UITableViewController {
     tableView.deselectRowAtIndexPath(indexPath, animated: true)
   }
   
+  override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    checkListItems.removeAtIndex(indexPath.row)
+    
+    let indexPaths = [indexPath]
+    tableView.deleteRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
+  }
+  
   // MARK: Action handlers
   @IBAction func addItem() {
     let newRowIndex = checkListItems.count
