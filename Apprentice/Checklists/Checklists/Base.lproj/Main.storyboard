@@ -80,7 +80,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Add Item" id="XxS-Rp-GRy">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="zmL-YO-lKu"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Mm4-dv-OwI"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="Mm4-dv-OwI"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JQI-ba-NpT" userLabel="First Responder" sceneMemberID="firstResponder"/>
