@@ -43,7 +43,7 @@
                     <navigationItem key="navigationItem" title="Checklists" id="IGV-Fm-Lac">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ia9-wm-XTT">
                             <connections>
-                                <action selector="addItem" destination="a7u-4I-cKg" id="MF1-BQ-ahj"/>
+                                <segue destination="T2Y-bU-aId" kind="show" id="FJa-wf-QSp"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -63,7 +63,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="PIa-Pu-soG">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PIa-Pu-soG" id="khj-PE-UXJ">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
