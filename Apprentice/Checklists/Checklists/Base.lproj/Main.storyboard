@@ -43,7 +43,7 @@
                     <navigationItem key="navigationItem" title="Checklists" id="IGV-Fm-Lac">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ia9-wm-XTT">
                             <connections>
-                                <segue destination="T2Y-bU-aId" kind="presentation" id="FJa-wf-QSp"/>
+                                <segue destination="28j-uh-5y0" kind="presentation" id="FJa-wf-QSp"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -52,7 +52,7 @@
             </objects>
             <point key="canvasLocation" x="1235" y="360"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Add Item-->
         <scene sceneID="GjM-sv-Pvd">
             <objects>
                 <tableViewController id="T2Y-bU-aId" sceneMemberID="viewController">
@@ -63,7 +63,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="PIa-Pu-soG">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PIa-Pu-soG" id="khj-PE-UXJ">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -78,10 +78,14 @@
                             <outlet property="delegate" destination="T2Y-bU-aId" id="mPb-pP-vw7"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Add Item" id="XxS-Rp-GRy">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="zmL-YO-lKu"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Mm4-dv-OwI"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JQI-ba-NpT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2014" y="355"/>
+            <point key="canvasLocation" x="2826" y="355"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="R0D-e3-Ngj">
@@ -101,6 +105,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Rn-DC-V5m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="423" y="360"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cqD-Uj-q0A">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="28j-uh-5y0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zuy-Kq-3LC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="T2Y-bU-aId" kind="relationship" relationship="rootViewController" id="u2i-jy-gKI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="prc-oI-pCg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2014" y="355"/>
         </scene>
     </scenes>
 </document>
