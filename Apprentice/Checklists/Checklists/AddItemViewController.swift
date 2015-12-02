@@ -11,6 +11,15 @@ import UIKit
 
 class AddItemViewController: UITableViewController {
   
+  
+  
+  // MARK: Table specific
+  override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+    return nil
+  }
+  
+  
+  // MARK: Action handlers
   @IBAction func cancel() {
    dismissViewControllerAnimated(true, completion: nil)
     
