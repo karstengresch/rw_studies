@@ -39,4 +39,23 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
     dismissViewControllerAnimated(true, completion: nil)
   }
   
+  // MARK: Text field specific
+  func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+    
+    if let oldText: NSString = textField.text {
+      let newText: NSString = oldText.stringByReplacingCharactersInRange(range, withString: string)
+      
+      if newText.length > 0 {
+        doneBarButton?.enabled = true
+      } else {
+        doneBarButton?.enabled = false
+      }
+    }
+    
+    return true
+
+    
+  }
+  
+  
 }
