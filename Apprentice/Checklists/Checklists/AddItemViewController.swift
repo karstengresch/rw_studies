@@ -18,7 +18,7 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
   // MARK: View related
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
-    addItemTextField.becomeFirstResponder()
+    addItemTextField?.becomeFirstResponder()
   }
   
   
@@ -36,7 +36,6 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
   
   @IBAction func done() {
     print("Contents of the text field: \(addItemTextField?.text) ")
-    
     dismissViewControllerAnimated(true, completion: nil)
   }
   
