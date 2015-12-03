@@ -12,6 +12,7 @@ import UIKit
 class AddItemViewController: UITableViewController {
   
   
+  @IBOutlet weak var addItemTextField: UITextField!
   
   // MARK: Table specific
   override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
@@ -26,6 +27,8 @@ class AddItemViewController: UITableViewController {
   }
   
   @IBAction func done() {
+    print("Contents of the text field: \(addItemTextField?.text) ")
+    
     dismissViewControllerAnimated(true, completion: nil)
   }
   
