@@ -9,11 +9,11 @@
 import Foundation
 import UIKit
 
-class AddItemViewController: UITableViewController {
+class AddItemViewController: UITableViewController, UITextFieldDelegate {
   
   
-  @IBOutlet weak var addItemTextField: UITextField!
-  
+  @IBOutlet weak var addItemTextField: UITextField?
+  @IBOutlet weak var doneBarButton: UIBarButtonItem?
   
   // MARK: View related
   override func viewWillAppear(animated: Bool) {

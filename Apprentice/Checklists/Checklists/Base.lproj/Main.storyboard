@@ -75,9 +75,10 @@
                                                     <rect key="frame" x="8" y="7" width="584" height="30"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     <connections>
                                                         <action selector="done" destination="T2Y-bU-aId" eventType="editingDidEndOnExit" id="arM-rd-xWR"/>
+                                                        <outlet property="delegate" destination="T2Y-bU-aId" id="dWq-Yx-qTI"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -107,6 +108,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addItemTextField" destination="zwJ-L6-efi" id="0Sz-4a-lLy"/>
+                        <outlet property="doneBarButton" destination="Mm4-dv-OwI" id="6OB-z6-IqL"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JQI-ba-NpT" userLabel="First Responder" sceneMemberID="firstResponder"/>
