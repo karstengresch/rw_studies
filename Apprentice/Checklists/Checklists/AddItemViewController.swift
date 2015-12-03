@@ -14,6 +14,14 @@ class AddItemViewController: UITableViewController {
   
   @IBOutlet weak var addItemTextField: UITextField!
   
+  
+  // MARK: View related
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    addItemTextField.becomeFirstResponder()
+  }
+  
+  
   // MARK: Table specific
   override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
     return nil
