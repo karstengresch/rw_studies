@@ -76,6 +76,9 @@
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                                    <connections>
+                                                        <action selector="done" destination="T2Y-bU-aId" eventType="editingDidEndOnExit" id="arM-rd-xWR"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <animations/>
