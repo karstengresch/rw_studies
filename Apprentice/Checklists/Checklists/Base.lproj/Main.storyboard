@@ -100,7 +100,7 @@
                                 <action selector="cancel" destination="T2Y-bU-aId" id="yM1-Wp-Biv"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="Mm4-dv-OwI">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" style="done" systemItem="done" id="Mm4-dv-OwI">
                             <connections>
                                 <action selector="done" destination="T2Y-bU-aId" id="kXp-66-f3v"/>
                             </connections>
