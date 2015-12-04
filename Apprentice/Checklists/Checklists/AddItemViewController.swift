@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+
 class AddItemViewController: UITableViewController, UITextFieldDelegate {
   
   
@@ -45,11 +46,8 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
     if let oldText: NSString = textField.text {
       let newText: NSString = oldText.stringByReplacingCharactersInRange(range, withString: string)
       
-      if newText.length > 0 {
-        doneBarButton?.enabled = true
-      } else {
-        doneBarButton?.enabled = false
-      }
+    doneBarButton?.enabled = (newText.length > 0)
+      
     }
     
     return true
