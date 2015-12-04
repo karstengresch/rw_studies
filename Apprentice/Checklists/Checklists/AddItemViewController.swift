@@ -10,6 +10,9 @@ import Foundation
 import UIKit
 
 protocol AddItemViewControllerDelegate: class {
+  func addItemViewControllerDidCancel(controller: AddItemViewController)
+  
+  func addItemViewController(controller: AddItemViewController, didFinishAddingItem checklistItem: ChecklistItem)
   
 }
 
