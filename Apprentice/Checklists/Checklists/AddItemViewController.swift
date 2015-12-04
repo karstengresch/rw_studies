@@ -9,6 +9,9 @@
 import Foundation
 import UIKit
 
+protocol AddItemViewControllerDelegate: class {
+  
+}
 
 class AddItemViewController: UITableViewController, UITextFieldDelegate {
   
