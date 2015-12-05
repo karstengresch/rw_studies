@@ -22,6 +22,8 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
   @IBOutlet weak var addItemTextField: UITextField?
   @IBOutlet weak var doneBarButton: UIBarButtonItem?
   
+  weak var delegate: AddItemViewControllerDelegate?
+  
   // MARK: View related
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
