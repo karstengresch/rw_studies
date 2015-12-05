@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChecklistViewController: UITableViewController {
+class ChecklistViewController: UITableViewController, AddItemViewControllerDelegate {
   
   var checkListItems = [ChecklistItem]()
   
@@ -42,7 +42,18 @@ class ChecklistViewController: UITableViewController {
     
   }
   
+  // MARK: Delegate protocol implementations
   
+  func addItemViewControllerDidCancel(controller: AddItemViewController) {
+    dismissViewControllerAnimated(true, completion: nil)
+  }
+  
+  func addItemViewController(controller: AddItemViewController, didFinishAddingItem checklistItem: ChecklistItem) {
+    dismissViewControllerAnimated(true, completion: nil)
+  }
+  
+  
+  // MARK: General view related methods
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -52,6 +63,11 @@ class ChecklistViewController: UITableViewController {
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
+  }
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    
+    
   }
   
   // MARK: Content related methods

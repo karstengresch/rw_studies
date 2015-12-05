@@ -43,7 +43,7 @@
                     <navigationItem key="navigationItem" title="Checklists" id="IGV-Fm-Lac">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ia9-wm-XTT">
                             <connections>
-                                <segue destination="28j-uh-5y0" kind="presentation" id="FJa-wf-QSp"/>
+                                <segue destination="28j-uh-5y0" kind="presentation" identifier="AddCheckListItem" id="FJa-wf-QSp"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
