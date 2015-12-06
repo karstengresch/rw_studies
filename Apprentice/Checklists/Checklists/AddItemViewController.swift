@@ -36,6 +36,7 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
     if let itemToEdit = checklistItemToEdit {
       title = "Edit item"
       addItemTextField?.text = itemToEdit.text
+      doneBarButton?.enabled = true
     }
   }
   
