@@ -40,6 +40,9 @@
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <segue destination="28j-uh-5y0" kind="presentation" trigger="accessoryAction" id="lgm-cB-tnS"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -161,4 +164,7 @@
             <point key="canvasLocation" x="2014" y="355"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="lgm-cB-tnS"/>
+    </inferredMetricsTieBreakers>
 </document>
