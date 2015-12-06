@@ -135,21 +135,7 @@ class ChecklistViewController: UITableViewController, AddItemViewControllerDeleg
   }
   
   // MARK: Action handlers
-  @IBAction func addItem() {
-    let newRowIndex = checkListItems.count
-    
-    let checklistItem = ChecklistItem()
-    checklistItem.text = "New to do"
-    checklistItem.checked = true
-    
-    checkListItems.append(checklistItem)
-    
-    let indexPath = NSIndexPath(forRow: newRowIndex, inSection: 0)
-    let indexPaths = [indexPath, indexPath, indexPath]
-    
-    tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
-    
-  }
+
 
 }
 
