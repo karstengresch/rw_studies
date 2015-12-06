@@ -49,6 +49,15 @@ class ChecklistViewController: UITableViewController, AddItemViewControllerDeleg
   }
   
   func addItemViewController(controller: AddItemViewController, didFinishAddingItem checklistItem: ChecklistItem) {
+    let newRowIndex = checkListItems.count
+    
+    checkListItems.append(checklistItem)
+    
+    let indexPath = NSIndexPath(forRow: newRowIndex, inSection: 0)
+    let indexPaths = [indexPath]
+    
+    tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
+    
     dismissViewControllerAnimated(true, completion: nil)
   }
   
