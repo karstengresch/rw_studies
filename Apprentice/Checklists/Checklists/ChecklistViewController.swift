@@ -87,7 +87,10 @@ class ChecklistViewController: UITableViewController, AddItemViewControllerDeleg
       let controller = navigationController?.topViewController as? AddItemViewController
       
       controller?.delegate = self
-            
+      
+      if let indexPath = tableView.indexPathForCell((sender as? UITableViewCell)!) {
+        controller?.checklistItemToEdit = checkListItems[indexPath.row]
+      }
     }
     
   }
