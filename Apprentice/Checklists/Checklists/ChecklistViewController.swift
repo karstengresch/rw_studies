@@ -82,6 +82,14 @@ class ChecklistViewController: UITableViewController, AddItemViewControllerDeleg
       controller?.delegate = self
     }
     
+    if segue.identifier == "EditCheckListItem" {
+      let navigationController = segue.destinationViewController as? UINavigationController
+      let controller = navigationController?.topViewController as? AddItemViewController
+      
+      controller?.delegate = self
+            
+    }
+    
   }
   
   // MARK: Content related methods

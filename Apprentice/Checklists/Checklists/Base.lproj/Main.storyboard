@@ -41,7 +41,7 @@
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
-                                    <segue destination="28j-uh-5y0" kind="presentation" trigger="accessoryAction" id="lgm-cB-tnS"/>
+                                    <segue destination="28j-uh-5y0" kind="presentation" identifier="EditCheckListItem" trigger="accessoryAction" id="lgm-cB-tnS"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
