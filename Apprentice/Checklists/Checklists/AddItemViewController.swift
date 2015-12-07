@@ -58,7 +58,7 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
 
     if let checklistItem = checklistItemToEdit {
       checklistItem.text = (addItemTextField?.text)!
-      delegate?.addItemViewController(self, didFinishAddingItem: checklistItem)
+      delegate?.addItemViewController(self, didFinishEditingItem: checklistItem)
     } else {
       
       let checklistItem = ChecklistItem()
