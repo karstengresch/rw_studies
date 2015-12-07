@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChecklistViewController: UITableViewController, AddItemViewControllerDelegate {
+class ChecklistViewController: UITableViewController, ItemDetailViewControllerDelegate {
   
   var checkListItems = [ChecklistItem]()
   
@@ -44,11 +44,11 @@ class ChecklistViewController: UITableViewController, AddItemViewControllerDeleg
   
   // MARK: Delegate protocol implementations
   
-  func addItemViewControllerDidCancel(controller: AddItemViewController) {
+  func itemDetailViewControllerDidCancel(controller: ItemDetailViewController) {
     dismissViewControllerAnimated(true, completion: nil)
   }
   
-  func addItemViewController(controller: AddItemViewController, didFinishAddingItem checklistItem: ChecklistItem) {
+  func itemDetailViewController(controller: ItemDetailViewController, didFinishAddingItem checklistItem: ChecklistItem) {
     let newRowIndex = checkListItems.count
     
     checkListItems.append(checklistItem)
@@ -61,7 +61,7 @@ class ChecklistViewController: UITableViewController, AddItemViewControllerDeleg
     dismissViewControllerAnimated(true, completion: nil)
   }
   
-  func addItemViewController(controller: AddItemViewController, didFinishEditingItem checklistItem: ChecklistItem) {
+  func itemDetailViewController(controller: ItemDetailViewController, didFinishEditingItem checklistItem: ChecklistItem) {
     
     if let index = checkListItems.indexOf(checklistItem) {
       let indexPath = NSIndexPath(forRow: index, inSection: 0)
@@ -69,7 +69,7 @@ class ChecklistViewController: UITableViewController, AddItemViewControllerDeleg
       if let cell = tableView.cellForRowAtIndexPath(indexPath) {
         configureTextForCell(cell, withChecklistItem: checklistItem)
       }
-    }    
+    }
     dismissViewControllerAnimated(true, completion: nil)
   }
   
@@ -90,14 +90,14 @@ class ChecklistViewController: UITableViewController, AddItemViewControllerDeleg
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "AddCheckListItem" {
       let navigationController = segue.destinationViewController as? UINavigationController
-      let controller = navigationController?.topViewController as? AddItemViewController
+      let controller = navigationController?.topViewController as? ItemDetailViewController
       
       controller?.delegate = self
     }
     
     if segue.identifier == "EditCheckListItem" {
       let navigationController = segue.destinationViewController as? UINavigationController
-      let controller = navigationController?.topViewController as? AddItemViewController
+      let controller = navigationController?.topViewController as? ItemDetailViewController
       
       controller?.delegate = self
       
