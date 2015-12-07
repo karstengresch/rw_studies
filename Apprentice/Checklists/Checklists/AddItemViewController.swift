@@ -55,13 +55,18 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
   }
   
   @IBAction func done() {
-//    print("Contents of the text field: \(addItemTextField?.text) ")
-//    dismissViewControllerAnimated(true, completion: nil)
-    let checklistItem = ChecklistItem()
-    checklistItem.text = (addItemTextField?.text)!
-    checklistItem.checked = false
-    
-    delegate?.addItemViewController(self, didFinishAddingItem: checklistItem)
+
+    if let checklistItem = checklistItemToEdit {
+      checklistItem.text = (addItemTextField?.text)!
+      delegate?.addItemViewController(self, didFinishAddingItem: checklistItem)
+    } else {
+      
+      let checklistItem = ChecklistItem()
+      checklistItem.text = (addItemTextField?.text)!
+      checklistItem.checked = false
+      
+      delegate?.addItemViewController(self, didFinishAddingItem: checklistItem)
+    }
     
   }
   
