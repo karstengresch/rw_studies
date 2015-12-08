@@ -40,6 +40,10 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
     
     super.init(coder: aDecoder)
     
+    print("Documents folder is: \(documentsDirectory())")
+    print("Data file path is: \(dataFilePath())")
+    
+    
   }
   
   // MARK: Delegate protocol implementations
