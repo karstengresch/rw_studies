@@ -160,7 +160,15 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
     tableView.deleteRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
   }
   
-  // MARK: Action handlers
+  // MARK: File related
+  func documentsDirectory() -> String {
+    let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+    return paths[0]
+  }
+  
+  func dataFilePath() -> String {
+    return (documentsDirectory() as NSString).stringByAppendingPathComponent("Checklist.plist")
+  }
 
 
 }
