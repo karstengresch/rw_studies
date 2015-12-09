@@ -173,6 +173,14 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
   func dataFilePath() -> String {
     return (documentsDirectory() as NSString).stringByAppendingPathComponent("Checklist.plist")
   }
+  
+  func saveChecklistItem() {
+    let data = NSMutableData()
+    let archiver = NSKeyedArchiver(forWritingWithMutableData: data)
+    archiver.encodeObject(checkListItems, forKey: "ChecklistItems")
+    archiver.finishEncoding()
+    data.writeToFile(dataFilePath(), atomically: true)
+  }
 
 
 }
