@@ -35,5 +35,5 @@ class ChecklistItem: NSObject, NSCoding {
     super.init()
   }
   
-  
+    
 }

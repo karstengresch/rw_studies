@@ -13,36 +13,21 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
   var checkListItems = [ChecklistItem]()
   
   required init?(coder aDecoder: NSCoder) {
-    let row0item = ChecklistItem()
-    row0item.text = "Walk the fish."
-    row0item.checked = false
-    checkListItems.append(row0item)
-
-    let row1item = ChecklistItem()
-    row1item.text = "Massage my neck."
-    row1item.checked = false
-    checkListItems.append(row1item)
-    
-    let row2item = ChecklistItem()
-    row2item.text = "Learn singing."
-    row2item.checked = false
-    checkListItems.append(row2item)
-    
-    let row3item = ChecklistItem()
-    row3item.text = "ASMR practice."
-    row3item.checked = false
-    checkListItems.append(row3item)
-    
-    let row4item = ChecklistItem()
-    row4item.text = "Eat File Wellington."
-    row4item.checked = false
-    checkListItems.append(row4item)
-    
+    checkListItems = [ChecklistItem]()
     super.init(coder: aDecoder)
+    loadChecklistItems()
     
-    print("Documents folder is: \(documentsDirectory())")
-    print("Data file path is: \(dataFilePath())")
-    
+  }
+  
+  func loadChecklistItems() {
+    let path = dataFilePath()
+    if NSFileManager.defaultManager().fileExistsAtPath(path) {
+      if let data = NSData(contentsOfFile: path) {
+        let unarchiver = NSKeyedUnarchiver(forReadingWithData: data)
+        checkListItems = unarchiver.decodeObjectForKey("ChecklistItems") as! [ChecklistItem]
+        unarchiver.finishDecoding()
+      }
+    }
     
   }
   
