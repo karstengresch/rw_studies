@@ -15,8 +15,8 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
   required init?(coder aDecoder: NSCoder) {
     checkListItems = [ChecklistItem]()
     super.init(coder: aDecoder)
+    print("Data file path is \(dataFilePath())")
     loadChecklistItems()
-    
   }
   
   func loadChecklistItems() {
@@ -48,7 +48,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
     tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
     
     dismissViewControllerAnimated(true, completion: nil)
-    saveChecklistItem()
+    saveChecklistItems()
   }
   
   func itemDetailViewController(controller: ItemDetailViewController, didFinishEditingItem checklistItem: ChecklistItem) {
@@ -61,7 +61,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
       }
     }
     dismissViewControllerAnimated(true, completion: nil)
-    saveChecklistItem()
+    saveChecklistItems()
   }
   
   
@@ -142,7 +142,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
       
     }
     tableView.deselectRowAtIndexPath(indexPath, animated: true)
-    saveChecklistItem()
+    saveChecklistItems()
   }
   
   override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -150,7 +150,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
     
     let indexPaths = [indexPath]
     tableView.deleteRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
-    saveChecklistItem()
+    saveChecklistItems()
   }
   
   // MARK: File related
@@ -163,7 +163,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
     return (documentsDirectory() as NSString).stringByAppendingPathComponent("Checklist.plist")
   }
   
-  func saveChecklistItem() {
+  func saveChecklistItems() {
     let data = NSMutableData()
     let archiver = NSKeyedArchiver(forWritingWithMutableData: data)
     archiver.encodeObject(checkListItems, forKey: "ChecklistItems")
