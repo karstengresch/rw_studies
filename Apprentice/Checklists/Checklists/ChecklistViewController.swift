@@ -63,6 +63,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
     tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
     
     dismissViewControllerAnimated(true, completion: nil)
+    saveChecklistItem()
   }
   
   func itemDetailViewController(controller: ItemDetailViewController, didFinishEditingItem checklistItem: ChecklistItem) {
@@ -75,6 +76,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
       }
     }
     dismissViewControllerAnimated(true, completion: nil)
+    saveChecklistItem()
   }
   
   
@@ -155,6 +157,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
       
     }
     tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    saveChecklistItem()
   }
   
   override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -162,6 +165,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
     
     let indexPaths = [indexPath]
     tableView.deleteRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
+    saveChecklistItem()
   }
   
   // MARK: File related
