@@ -134,16 +134,16 @@
             </objects>
             <point key="canvasLocation" x="423" y="360"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Checklists-->
         <scene sceneID="F8O-vO-jyR">
             <objects>
-                <tableViewController id="5Ft-tr-KHO" sceneMemberID="viewController">
+                <tableViewController id="5Ft-tr-KHO" customClass="AllListsTableViewController" customModule="Checklists" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fvm-rW-cdK">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="iWX-Xb-30w">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllListsCell" id="iWX-Xb-30w">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iWX-Xb-30w" id="weM-9B-gBh">
@@ -157,7 +157,7 @@
                             <outlet property="delegate" destination="5Ft-tr-KHO" id="uhi-76-bsj"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="L2A-dF-mpd"/>
+                    <navigationItem key="navigationItem" title="Checklists" id="L2A-dF-mpd"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3fl-jH-sT4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
