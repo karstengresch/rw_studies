@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--Checklists-->
+        <!--Name of the Checklist-->
         <scene sceneID="nZa-bY-ua4">
             <objects>
                 <tableViewController id="a7u-4I-cKg" customClass="ChecklistViewController" customModule="Checklists" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,7 +15,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="ChecklistItem" id="Ttz-TJ-Lln">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ttz-TJ-Lln" id="gMV-6y-nSJ">
                                     <rect key="frame" x="0.0" y="0.0" width="533" height="43.5"/>
@@ -45,7 +45,7 @@
                             <outlet property="delegate" destination="a7u-4I-cKg" id="8dp-HJ-evH"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Checklists" id="IGV-Fm-Lac">
+                    <navigationItem key="navigationItem" title="Name of the Checklist" id="IGV-Fm-Lac">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ia9-wm-XTT">
                             <connections>
                                 <segue destination="28j-uh-5y0" kind="presentation" identifier="AddCheckListItem" id="FJa-wf-QSp"/>
@@ -132,7 +132,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Rn-DC-V5m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="423" y="360"/>
+            <point key="canvasLocation" x="-393" y="360"/>
         </scene>
         <!--Checklists-->
         <scene sceneID="F8O-vO-jyR">
@@ -142,26 +142,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllListsCell" id="iWX-Xb-30w">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iWX-Xb-30w" id="weM-9B-gBh">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="5Ft-tr-KHO" id="Ewg-cw-NDz"/>
                             <outlet property="delegate" destination="5Ft-tr-KHO" id="uhi-76-bsj"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Checklists" id="L2A-dF-mpd"/>
+                    <connections>
+                        <segue destination="a7u-4I-cKg" kind="show" id="DVt-my-toe"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3fl-jH-sT4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1235" y="-422"/>
+            <point key="canvasLocation" x="427" y="355"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cqD-Uj-q0A">
