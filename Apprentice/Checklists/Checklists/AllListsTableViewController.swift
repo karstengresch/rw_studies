@@ -36,6 +36,13 @@ class AllListsTableViewController: UITableViewController {
         return cell
     }
   
+  
+  override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+    performSegueWithIdentifier("ShowChecklist", sender: nil)
+  }
+  
+  
+  
     func cellForTableView(tableView: UITableView) -> UITableViewCell {
       let cellIdentifier = "AllListsCell"
       var returnCell: UITableViewCell?
