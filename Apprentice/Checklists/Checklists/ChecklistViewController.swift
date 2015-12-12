@@ -15,7 +15,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
   required init?(coder aDecoder: NSCoder) {
     checkListItems = [ChecklistItem]()
     super.init(coder: aDecoder)
-    print("Data file path is \(dataFilePath())")
+    // print("Data file path is \(dataFilePath())")
     loadChecklistItems()
   }
   

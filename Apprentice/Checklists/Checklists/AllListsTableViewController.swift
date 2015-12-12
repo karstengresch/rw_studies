@@ -49,9 +49,7 @@ class AllListsTableViewController: UITableViewController {
       } else {
         returnCell = UITableViewCell(style: .Default, reuseIdentifier: cellIdentifier)
       }
-      
-      print("Returning cell: \(returnCell?.textLabel)")
-      
+            
       return returnCell!
     }
 
