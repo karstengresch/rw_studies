@@ -9,6 +9,7 @@
 import UIKit
 
 class AllListsTableViewController: UITableViewController {
+  var checklists: [Checklist]
   
   override func viewDidLoad() {
     super.viewDidLoad()
