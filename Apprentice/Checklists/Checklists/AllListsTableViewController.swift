@@ -20,9 +20,6 @@ class AllListsTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 0
-    }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
@@ -31,7 +28,7 @@ class AllListsTableViewController: UITableViewController {
   
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = cellForTableView(tableView)
-        cell.textLabel?.text = "List \(indexPath.row)"
+        cell.textLabel!.text = "List \(indexPath.row)"
 
         return cell
     }
@@ -52,6 +49,8 @@ class AllListsTableViewController: UITableViewController {
       } else {
         returnCell = UITableViewCell(style: .Default, reuseIdentifier: cellIdentifier)
       }
+      
+      print("Returning cell: \(returnCell?.textLabel)")
       
       return returnCell!
     }
