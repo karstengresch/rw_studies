@@ -52,6 +52,7 @@ class AllListsTableViewController: UITableViewController {
   
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    print("indexPath.row: \(indexPath.row)" )
     let cell = cellForTableView(tableView)
     
     let checklist = checklists[indexPath.row]
@@ -64,7 +65,7 @@ class AllListsTableViewController: UITableViewController {
   
   
   func cellForTableView(tableView: UITableView) -> UITableViewCell {
-    let cellIdentifier = "AllListsCell"
+    let cellIdentifier = "Cell"
     var returnCell: UITableViewCell?
     
     if let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) {
