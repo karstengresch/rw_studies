@@ -52,7 +52,7 @@ class AllListsTableViewController: UITableViewController {
   
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    print("indexPath.row: \(indexPath.row)" )
+//    print("indexPath.row: \(indexPath.row)" )
     let cell = cellForTableView(tableView)
     
     let checklist = checklists[indexPath.row]
@@ -77,7 +77,8 @@ class AllListsTableViewController: UITableViewController {
     return returnCell!
   }
   
-  override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    print("indexPath.row: \(indexPath.row)" )
     performSegueWithIdentifier("ShowChecklist", sender: nil)
   }
   
