@@ -19,7 +19,7 @@ import UIKit
   class ListDetailViewController: UITableViewController, UITextFieldDelegate {
     var checklistToEdit: Checklist?
     
-    @IBOutlet weak var addItemTextField: UITextField?
+    @IBOutlet weak var checklistTextField: UITextField?
     @IBOutlet weak var doneBarButton: UIBarButtonItem?
     
     weak var delegate: ListDetailViewControllerDelegate?
@@ -27,15 +27,15 @@ import UIKit
     // MARK: View related
     override func viewWillAppear(animated: Bool) {
       super.viewWillAppear(animated)
-      addItemTextField?.becomeFirstResponder()
+      checklistTextField?.becomeFirstResponder()
     }
     
     override func viewDidLoad() {
       super.viewDidLoad()
       
       if let itemToEdit = checklistToEdit {
-        title = "Edit item"
-        addItemTextField?.text = itemToEdit.name
+        title = "Edit checklist"
+        checklistTextField?.text = itemToEdit.name
         doneBarButton?.enabled = true
       }
     }
@@ -55,10 +55,10 @@ import UIKit
     @IBAction func done() {
       
       if let checklist = checklistToEdit {
-        checklist.name = (addItemTextField?.text)!
+        checklist.name = (checklistTextField?.text)!
         delegate?.listDetailViewController(self, didFinishEditingItem: checklist)
       } else {
-        let checklist = Checklist(name: (addItemTextField?.text)!)
+        let checklist = Checklist(name: (checklistTextField?.text)!)
         delegate?.listDetailViewController(self, didFinishAddingItem: checklist)
       }
       
