@@ -11,10 +11,8 @@ import UIKit
 
 protocol ItemDetailViewControllerDelegate: class {
   func itemDetailViewControllerDidCancel(controller: ItemDetailViewController)
-  
   func itemDetailViewController(controller: ItemDetailViewController, didFinishAddingItem checklistItem: ChecklistItem)
   func itemDetailViewController(controller: ItemDetailViewController, didFinishEditingItem checklistItem: ChecklistItem)
-  
 }
 
 class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
