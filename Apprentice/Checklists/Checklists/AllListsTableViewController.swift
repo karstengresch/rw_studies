@@ -16,7 +16,9 @@ class AllListsTableViewController: UITableViewController {
     
     super.init(coder: aDecoder)
     
+    
     var checklist = Checklist(name: "Birthdays")
+    
     checklists.append(checklist)
     
     checklist = Checklist(name: "True hackers")
@@ -79,7 +81,8 @@ class AllListsTableViewController: UITableViewController {
   
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     print("indexPath.row: \(indexPath.row)" )
-    performSegueWithIdentifier("ShowChecklist", sender: nil)
+    let checklist = checklists[indexPath.row]
+    performSegueWithIdentifier("ShowChecklist", sender: checklist)
   }
   
 }
