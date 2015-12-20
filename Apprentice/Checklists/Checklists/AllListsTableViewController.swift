@@ -16,9 +16,7 @@ class AllListsTableViewController: UITableViewController {
     
     super.init(coder: aDecoder)
     
-    
     var checklist = Checklist(name: "Birthdays")
-    
     checklists.append(checklist)
     
     checklist = Checklist(name: "True hackers")
@@ -32,6 +30,8 @@ class AllListsTableViewController: UITableViewController {
     
     checklist = Checklist(name: "Restaurants")
     checklists.append(checklist)
+    
+    
     
   }
   
@@ -49,6 +49,7 @@ class AllListsTableViewController: UITableViewController {
   
   
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    print("Numbers of rows: \(checklists.count)")
     return checklists.count
   }
   
@@ -58,7 +59,6 @@ class AllListsTableViewController: UITableViewController {
     let cell = cellForTableView(tableView)
     
     let checklist = checklists[indexPath.row]
-    
     cell.textLabel?.text = checklist.name
     cell.accessoryType = .DetailDisclosureButton
     
@@ -83,6 +83,13 @@ class AllListsTableViewController: UITableViewController {
     print("indexPath.row: \(indexPath.row)" )
     let checklist = checklists[indexPath.row]
     performSegueWithIdentifier("ShowChecklist", sender: checklist)
+  }
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "ShowChecklist" {
+      let controller = segue.destinationViewController as! ChecklistViewController
+      controller.checklist = sender as! Checklist
+    }
   }
   
 }
