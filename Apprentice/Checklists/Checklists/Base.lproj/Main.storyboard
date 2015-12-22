@@ -147,7 +147,13 @@
                             <outlet property="delegate" destination="5Ft-tr-KHO" id="uhi-76-bsj"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Checklists" id="L2A-dF-mpd"/>
+                    <navigationItem key="navigationItem" title="Checklists" id="L2A-dF-mpd">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="xoS-hH-bPg">
+                            <connections>
+                                <segue destination="2Hm-V2-QBH" kind="presentation" identifier="AddChecklist" id="hgm-ZL-ieK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="a7u-4I-cKg" kind="show" identifier="ShowChecklist" id="fmh-bA-BqF"/>
                     </connections>
@@ -227,7 +233,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8TM-o5-BdR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2423" y="-918"/>
+            <point key="canvasLocation" x="1603" y="-719"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CbJ-Rn-28b">
@@ -243,7 +249,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OZj-JI-XdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1603" y="-919"/>
+            <point key="canvasLocation" x="795" y="-719"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
