@@ -96,7 +96,22 @@ class AllListsTableViewController: UITableViewController, ListDetailViewControll
       controller.checklistToEdit = nil
       
     }
-    
   }
+  
+    // MARK: ListDetailViewController delegate methods
+    func listDetailViewControllerDidCancel(controller: ListDetailViewController) {
+      
+    }
+    
+    
+    func listDetailViewController(controller: ListDetailViewController, didFinishAddingItem checklist: Checklist) {
+      
+    }
+    
+    
+    func listDetailViewController(controller: ListDetailViewController, didFinishEditingItem checklist: Checklist) {
+      
+    }
+  
   
 }
