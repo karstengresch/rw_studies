@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AllListsTableViewController: UITableViewController {
+class AllListsTableViewController: UITableViewController, ListDetailViewControllerDelegate {
   var checklists: [Checklist]
   
   required init?(coder aDecoder: NSCoder) {
@@ -89,7 +89,14 @@ class AllListsTableViewController: UITableViewController {
     if segue.identifier == "ShowChecklist" {
       let controller = segue.destinationViewController as! ChecklistViewController
       controller.checklist = sender as! Checklist
+    } else if segue.identifier == "AddChecklist" {
+      let navigationController = segue.destinationViewController as! UINavigationController
+      let controller = navigationController.topViewController as! ListDetailViewController
+      controller.delegate = self
+      controller.checklistToEdit = nil
+      
     }
+    
   }
   
 }
