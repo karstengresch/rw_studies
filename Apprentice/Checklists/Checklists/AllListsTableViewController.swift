@@ -67,7 +67,7 @@ class AllListsTableViewController: UITableViewController, ListDetailViewControll
   
   
   func cellForTableView(tableView: UITableView) -> UITableViewCell {
-    let cellIdentifier = "Cell"
+    let cellIdentifier = "AddChecklistCell"
     var returnCell: UITableViewCell?
     
     if let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) {
@@ -113,6 +113,7 @@ class AllListsTableViewController: UITableViewController, ListDetailViewControll
     
     
     func listDetailViewController(controller: ListDetailViewController, didFinishAddingItem checklist: Checklist) {
+      print("didFinishAddingItem - checklist name: \(checklist.name)")
       let newRowIndex = checklists.count
       checklists.append(checklist)
       
@@ -124,6 +125,7 @@ class AllListsTableViewController: UITableViewController, ListDetailViewControll
     
     
     func listDetailViewController(controller: ListDetailViewController, didFinishEditingItem checklist: Checklist) {
+      print("didFinishEditingItem - checklist name: \(checklist.name)")
       if let index = checklists.indexOf(checklist) {
         let indexPath = NSIndexPath(forRow: index, inSection: 0)
         if let cell = tableView.cellForRowAtIndexPath(indexPath)
