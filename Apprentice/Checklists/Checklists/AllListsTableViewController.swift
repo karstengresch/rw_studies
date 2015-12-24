@@ -106,6 +106,17 @@ class AllListsTableViewController: UITableViewController, ListDetailViewControll
     tableView.deleteRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
   }
   
+  override func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
+    let navigationController = storyboard!.instantiateViewControllerWithIdentifier("ListDetailViewController") as! UINavigationController
+    let controller = navigationController.topViewController as! ListDetailViewController
+    controller.delegate = self
+    
+    let checklist = checklists[indexPath.row]
+    controller.checklistToEdit = checklist
+    presentViewController(navigationController, animated: true, completion: nil)
+    
+  }
+  
     // MARK: ListDetailViewController delegate methods
     func listDetailViewControllerDidCancel(controller: ListDetailViewController) {
      dismissViewControllerAnimated(true, completion: nil)
