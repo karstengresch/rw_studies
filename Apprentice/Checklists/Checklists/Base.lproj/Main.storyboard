@@ -230,6 +230,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="checklistTextField" destination="etP-mc-6Af" id="QW8-Pb-QUJ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8TM-o5-BdR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
