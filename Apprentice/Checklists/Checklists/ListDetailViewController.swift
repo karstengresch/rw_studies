@@ -58,8 +58,10 @@ import UIKit
         checklist.name = (checklistTextField?.text)!
         delegate?.listDetailViewController(self, didFinishEditingItem: checklist)
       } else {
-        let checklist = Checklist(name: (checklistTextField?.text)!)
+        if let name = checklistTextField?.text {
+        let checklist = Checklist(name: name)
         delegate?.listDetailViewController(self, didFinishAddingItem: checklist)
+        }
       }
       
     }

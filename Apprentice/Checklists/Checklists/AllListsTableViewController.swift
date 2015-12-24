@@ -98,18 +98,40 @@ class AllListsTableViewController: UITableViewController, ListDetailViewControll
     }
   }
   
+  
+  
+  override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    checklists.removeAtIndex(indexPath.row)
+    let indexPaths = [indexPath]
+    tableView.deleteRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
+  }
+  
     // MARK: ListDetailViewController delegate methods
     func listDetailViewControllerDidCancel(controller: ListDetailViewController) {
-      
+     dismissViewControllerAnimated(true, completion: nil)
     }
     
     
     func listDetailViewController(controller: ListDetailViewController, didFinishAddingItem checklist: Checklist) {
+      let newRowIndex = checklists.count
+      checklists.append(checklist)
       
+      let indexPath = NSIndexPath(forRow: newRowIndex, inSection: 0)
+      let indexPaths = [indexPath]
+      tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
+      dismissViewControllerAnimated(true, completion: nil)
     }
     
     
     func listDetailViewController(controller: ListDetailViewController, didFinishEditingItem checklist: Checklist) {
+      if let index = checklists.indexOf(checklist) {
+        let indexPath = NSIndexPath(forRow: index, inSection: 0)
+        if let cell = tableView.cellForRowAtIndexPath(indexPath)
+        {
+            cell.textLabel?.text = checklist.name
+        }
+      }
+      dismissViewControllerAnimated(true, completion: nil)
       
     }
   
