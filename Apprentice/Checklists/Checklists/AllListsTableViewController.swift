@@ -31,6 +31,11 @@ class AllListsTableViewController: UITableViewController, ListDetailViewControll
     checklist = Checklist(name: "Restaurants")
     checklists.append(checklist)
     
+    for currentChecklist in checklists {
+      let checklistItem = ChecklistItem()
+      checklistItem.text = "This is an item of checklist: \(currentChecklist.name)"
+      currentChecklist.checklistItems.append(checklistItem)
+    }
     
     
   }
