@@ -12,8 +12,9 @@ class AllListsTableViewController: UITableViewController, ListDetailViewControll
   var checklists: [Checklist]
   
   required init?(coder aDecoder: NSCoder) {
-      checklists = [Checklist]()
+    checklists = [Checklist]()
     super.init(coder: aDecoder)
+    print("Data file path is \(dataFilePath())")
     loadChecklists()
   }
   
@@ -158,7 +159,5 @@ class AllListsTableViewController: UITableViewController, ListDetailViewControll
   }
   
   }
-  
-  
   
 }
