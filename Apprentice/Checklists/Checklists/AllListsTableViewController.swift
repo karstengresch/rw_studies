@@ -12,35 +12,10 @@ class AllListsTableViewController: UITableViewController, ListDetailViewControll
   var checklists: [Checklist]
   
   required init?(coder aDecoder: NSCoder) {
-    checklists = [Checklist]()
-    
+      checklists = [Checklist]()
     super.init(coder: aDecoder)
-    
-    var checklist = Checklist(name: "Birthdays")
-    checklists.append(checklist)
-    
-    checklist = Checklist(name: "True hackers")
-    checklists.append(checklist)
-    
-    checklist = Checklist(name: "More Birthdays")
-    checklists.append(checklist)
-    
-    checklist = Checklist(name: "Other Birthdays")
-    checklists.append(checklist)
-    
-    checklist = Checklist(name: "Restaurants")
-    checklists.append(checklist)
-    
-    for currentChecklist in checklists {
-      let checklistItem = ChecklistItem()
-      checklistItem.text = "This is an item of checklist: \(currentChecklist.name)"
-      currentChecklist.checklistItems.append(checklistItem)
-    }
-    
-    
+    loadChecklists()
   }
-  
-  
   
   override func viewDidLoad() {
     super.viewDidLoad()
