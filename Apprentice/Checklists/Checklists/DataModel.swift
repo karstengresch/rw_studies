@@ -11,6 +11,10 @@ import Foundation
 class DataModel {
   var checklists = [Checklist]()
   
+  init() {
+    loadChecklists()
+  }
+  
   // MARK: File related
   func documentsDirectory() -> String {
     let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
