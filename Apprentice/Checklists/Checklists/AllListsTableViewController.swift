@@ -9,7 +9,7 @@
 import UIKit
 
 class AllListsTableViewController: UITableViewController, ListDetailViewControllerDelegate {
-  var dataModel = DataModel!()
+  var dataModel: DataModel!
   
   override func viewDidLoad() {
     super.viewDidLoad()
