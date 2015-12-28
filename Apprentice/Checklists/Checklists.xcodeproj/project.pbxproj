@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D2694791C319B8500A01402 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2694781C319B8500A01402 /* DataModel.swift */; };
 		3D2B68301C1CDECB005ABEA4 /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2B682F1C1CDECB005ABEA4 /* Checklist.swift */; };
 		3D496FF31C1B7D9A00D089B5 /* AllListsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D496FF21C1B7D9A00D089B5 /* AllListsTableViewController.swift */; };
 		3D73C1E41C0CFAD3006B02A2 /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D73C1E31C0CFAD3006B02A2 /* ChecklistItem.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D2694781C319B8500A01402 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		3D2B682F1C1CDECB005ABEA4 /* Checklist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
 		3D496FF21C1B7D9A00D089B5 /* AllListsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllListsTableViewController.swift; sourceTree = "<group>"; };
 		3D73C1E31C0CFAD3006B02A2 /* ChecklistItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 			children = (
 				3D2B682F1C1CDECB005ABEA4 /* Checklist.swift */,
 				3D73C1E31C0CFAD3006B02A2 /* ChecklistItem.swift */,
+				3D2694781C319B8500A01402 /* DataModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				3DD22AF51C0F801000C790A1 /* ItemDetailViewController.swift in Sources */,
 				3D2B68301C1CDECB005ABEA4 /* Checklist.swift in Sources */,
 				3D73C1E41C0CFAD3006B02A2 /* ChecklistItem.swift in Sources */,
+				3D2694791C319B8500A01402 /* DataModel.swift in Sources */,
 				3D496FF31C1B7D9A00D089B5 /* AllListsTableViewController.swift in Sources */,
 				3D81515C1C065AE80041D012 /* AppDelegate.swift in Sources */,
 			);
