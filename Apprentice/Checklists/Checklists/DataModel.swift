@@ -12,6 +12,7 @@ class DataModel {
   var checklists = [Checklist]()
   
   init() {
+    print("Data file path is \(dataFilePath())")
     loadChecklists()
   }
   

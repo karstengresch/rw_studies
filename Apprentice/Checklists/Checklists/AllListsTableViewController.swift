@@ -9,14 +9,7 @@
 import UIKit
 
 class AllListsTableViewController: UITableViewController, ListDetailViewControllerDelegate {
-  var checklists: [Checklist]
-  
-  required init?(coder aDecoder: NSCoder) {
-    checklists = [Checklist]()
-    super.init(coder: aDecoder)
-    print("Data file path is \(dataFilePath())")
-    loadChecklists()
-  }
+  var dataModel = DataModel!()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -30,8 +23,8 @@ class AllListsTableViewController: UITableViewController, ListDetailViewControll
   
   
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    print("Numbers of rows: \(checklists.count)")
-    return checklists.count
+    print("Numbers of rows: \(dataModel.checklists.count)")
+    return dataModel.checklists.count
   }
   
   
@@ -39,7 +32,7 @@ class AllListsTableViewController: UITableViewController, ListDetailViewControll
 //    print("indexPath.row: \(indexPath.row)" )
     let cell = cellForTableView(tableView)
     
-    let checklist = checklists[indexPath.row]
+    let checklist = dataModel.checklists[indexPath.row]
     cell.textLabel?.text = checklist.name
     cell.accessoryType = .DetailDisclosureButton
     
@@ -62,7 +55,7 @@ class AllListsTableViewController: UITableViewController, ListDetailViewControll
   
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     print("indexPath.row: \(indexPath.row)" )
-    let checklist = checklists[indexPath.row]
+    let checklist = dataModel.checklists[indexPath.row]
     performSegueWithIdentifier("ShowChecklist", sender: checklist)
   }
   
@@ -82,7 +75,7 @@ class AllListsTableViewController: UITableViewController, ListDetailViewControll
   
   
   override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-    checklists.removeAtIndex(indexPath.row)
+    dataModel.checklists.removeAtIndex(indexPath.row)
     let indexPaths = [indexPath]
     tableView.deleteRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
   }
@@ -92,7 +85,7 @@ class AllListsTableViewController: UITableViewController, ListDetailViewControll
     let controller = navigationController.topViewController as! ListDetailViewController
     controller.delegate = self
     
-    let checklist = checklists[indexPath.row]
+    let checklist = dataModel.checklists[indexPath.row]
     controller.checklistToEdit = checklist
     presentViewController(navigationController, animated: true, completion: nil)
     
@@ -106,8 +99,8 @@ class AllListsTableViewController: UITableViewController, ListDetailViewControll
     
     func listDetailViewController(controller: ListDetailViewController, didFinishAddingItem checklist: Checklist) {
       print("didFinishAddingItem - checklist name: \(checklist.name)")
-      let newRowIndex = checklists.count
-      checklists.append(checklist)
+      let newRowIndex = dataModel.checklists.count
+      dataModel.checklists.append(checklist)
       
       let indexPath = NSIndexPath(forRow: newRowIndex, inSection: 0)
       let indexPaths = [indexPath]
@@ -118,7 +111,7 @@ class AllListsTableViewController: UITableViewController, ListDetailViewControll
     
     func listDetailViewController(controller: ListDetailViewController, didFinishEditingItem checklist: Checklist) {
       print("didFinishEditingItem - checklist name: \(checklist.name)")
-      if let index = checklists.indexOf(checklist) {
+      if let index = dataModel.checklists.indexOf(checklist) {
         let indexPath = NSIndexPath(forRow: index, inSection: 0)
         if let cell = tableView.cellForRowAtIndexPath(indexPath)
         {
