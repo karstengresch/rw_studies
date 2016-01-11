@@ -45,4 +45,11 @@ class DataModel {
     }
   }
   
+  func registerDefaults() {
+    let dictionary = [ "ChecklistIndex": -1 ]
+    
+    NSUserDefaults.standardUserDefaults().registerDefaults(dictionary)
+    
+  }
+  
 }
