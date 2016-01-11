@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AllListsTableViewController: UITableViewController, ListDetailViewControllerDelegate {
+class AllListsTableViewController: UITableViewController, ListDetailViewControllerDelegate, UINavigationControllerDelegate {
   var dataModel: DataModel!
   
   override func viewDidLoad() {
@@ -55,6 +55,7 @@ class AllListsTableViewController: UITableViewController, ListDetailViewControll
   
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     print("indexPath.row: \(indexPath.row)" )
+    NSUserDefaults.standardUserDefaults().setInteger(indexPath.row, forKey: "ChecklistIndex")
     let checklist = dataModel.checklists[indexPath.row]
     performSegueWithIdentifier("ShowChecklist", sender: checklist)
   }
@@ -121,5 +122,12 @@ class AllListsTableViewController: UITableViewController, ListDetailViewControll
       dismissViewControllerAnimated(true, completion: nil)
       
     }
+  
+  // MARK: Navigation Controller Delegate
+  func navigationController(navigationController: UINavigationController, willShowViewController viewController: UIViewController, animated: Bool) {
+    if viewController == self {
+      NSUserDefaults.standardUserDefaults().setInteger(-1, forKey: "ChecklistIndex")
+    }
+  }
   
 }
