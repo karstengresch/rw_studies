@@ -125,8 +125,21 @@ class AllListsTableViewController: UITableViewController, ListDetailViewControll
   
   // MARK: Navigation Controller Delegate
   func navigationController(navigationController: UINavigationController, willShowViewController viewController: UIViewController, animated: Bool) {
-    if viewController == self {
+    if viewController === self {
       NSUserDefaults.standardUserDefaults().setInteger(-1, forKey: "ChecklistIndex")
+    }
+  }
+  
+  override func viewDidAppear(animated: Bool) {
+    super.viewDidAppear(animated)
+    navigationController?.delegate = self
+    let index = NSUserDefaults.standardUserDefaults().integerForKey("ChecklistIndex")
+    
+    if index != -1 {
+      let checklist = dataModel.checklists[index]
+      performSegueWithIdentifier("ShowChecklist", sender: checklist)
+      
+      
     }
   }
   
