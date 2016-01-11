@@ -14,6 +14,7 @@ class DataModel {
   init() {
     print("Data file path is \(dataFilePath())")
     loadChecklists()
+    registerDefaults()
   }
   
   // MARK: File related
