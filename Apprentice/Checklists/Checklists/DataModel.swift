@@ -28,6 +28,7 @@ class DataModel {
     print("Data file path is \(dataFilePath())")
     loadChecklists()
     registerDefaults()
+    handleFirstTimeAppStart()
   }
   
   // MARK: File related
