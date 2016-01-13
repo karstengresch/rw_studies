@@ -63,7 +63,19 @@ class DataModel {
     let dictionary = [ "ChecklistIndex": -1, "AppRunsFirstTime": true ]
     
     NSUserDefaults.standardUserDefaults().registerDefaults(dictionary)
-    
   }
+  
+  func handleFirstTimeAppStart() {
+    let userDefaults = NSUserDefaults.standardUserDefaults()
+    let firstTime = userDefaults.boolForKey("AppRunsFirstTime")
+    if firstTime {
+     let firstTimeChecklist = Checklist(name: "First Checklist")
+      checklists.append(firstTimeChecklist)
+      indexOfSelectedChecklist = 0
+      userDefaults.setBool(false, forKey: "AppRunsFirstTime")
+      userDefaults.synchronize()
+    }
+  }
+  
   
 }
