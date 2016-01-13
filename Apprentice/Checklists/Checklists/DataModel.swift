@@ -60,7 +60,7 @@ class DataModel {
   }
   
   func registerDefaults() {
-    let dictionary = [ "ChecklistIndex": -1 ]
+    let dictionary = [ "ChecklistIndex": -1, "AppRunsFirstTime": true ]
     
     NSUserDefaults.standardUserDefaults().registerDefaults(dictionary)
     
