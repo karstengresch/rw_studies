@@ -55,9 +55,16 @@ class DataModel {
       if let data = NSData(contentsOfFile: path) {
         let unarchiver = NSKeyedUnarchiver(forReadingWithData: data)
         checklists = unarchiver.decodeObjectForKey("Checklists") as! [Checklist]
+        if (checklists.count > 0) {
+          analyzeChecklist(checklists)
+        }
         unarchiver.finishDecoding()
       }
     }
+  }
+  
+  func analyzeChecklist(checklists: [Checklist]) {
+    checklists.forEach { print("Checklist name: \($0.name) - Items: \($0.checklistItems.count)" )}
   }
   
   func registerDefaults() {
@@ -70,6 +77,7 @@ class DataModel {
     let userDefaults = NSUserDefaults.standardUserDefaults()
     let firstTime = userDefaults.boolForKey("AppRunsFirstTime")
     if firstTime {
+     print("Running first time!")
      let firstTimeChecklist = Checklist(name: "First Checklist")
       checklists.append(firstTimeChecklist)
       indexOfSelectedChecklist = 0
