@@ -55,9 +55,6 @@ class DataModel {
       if let data = NSData(contentsOfFile: path) {
         let unarchiver = NSKeyedUnarchiver(forReadingWithData: data)
         checklists = unarchiver.decodeObjectForKey("Checklists") as! [Checklist]
-        if (checklists.count > 0) {
-          analyzeChecklist(checklists)
-        }
         unarchiver.finishDecoding()
       }
     }
