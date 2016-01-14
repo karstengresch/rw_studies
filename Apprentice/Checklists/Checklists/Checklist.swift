@@ -29,9 +29,7 @@ class Checklist: NSObject, NSCoding {
   }
   
   func countUncheckedItems() -> Int {
-    let countUnchecked = checklistItems.filter { $0.checked == false }
-    print("Unchecked: \(countUnchecked.count)")
-    return countUnchecked.count
+    return (checklistItems.filter { $0.checked == false }).count
   }
   
 
