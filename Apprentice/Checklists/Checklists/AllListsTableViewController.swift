@@ -42,7 +42,11 @@ class AllListsTableViewController: UITableViewController, ListDetailViewControll
     cell.accessoryType = .DetailDisclosureButton
     
     let count = checklist.countUncheckedItems()
-    if count == 0 {
+    
+    if checklist.checklistItems.count == 0 {
+      cell.detailTextLabel?.text = "Start entering new items!"
+    }
+    else if count == 0 {
       cell.detailTextLabel?.text = "All done!"
     } else {
      cell.detailTextLabel?.text = "\(count) Remaining"
