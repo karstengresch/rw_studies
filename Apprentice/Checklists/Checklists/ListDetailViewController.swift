@@ -11,8 +11,8 @@ import UIKit
 
   protocol ListDetailViewControllerDelegate: class {
     func listDetailViewControllerDidCancel(controller: ListDetailViewController)
-    func listDetailViewController(controller: ListDetailViewController, didFinishAddingItem checklist: Checklist)
-    func listDetailViewController(controller: ListDetailViewController, didFinishEditingItem checklist: Checklist)
+    func listDetailViewController(controller: ListDetailViewController, didFinishAddingChecklist checklist: Checklist)
+    func listDetailViewController(controller: ListDetailViewController, didFinishEditingChecklist checklist: Checklist)
     
   }
   
@@ -57,14 +57,14 @@ import UIKit
       
       if let checklist = checklistToEdit {
         checklist.name = (checklistTextField?.text)!
-        delegate?.listDetailViewController(self, didFinishEditingItem: checklist)
+        delegate?.listDetailViewController(self, didFinishEditingChecklist: checklist)
       } else {
           if let name = checklistTextField?.text {
             let checklist = Checklist(name: name)
-            delegate?.listDetailViewController(self, didFinishAddingItem: checklist)
+            delegate?.listDetailViewController(self, didFinishAddingChecklist: checklist)
         } else {
           let checklist = Checklist(name: "New checklist")
-          delegate?.listDetailViewController(self, didFinishAddingItem: checklist)
+          delegate?.listDetailViewController(self, didFinishAddingChecklist: checklist)
         }
       }
       

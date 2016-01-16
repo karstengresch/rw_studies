@@ -114,7 +114,7 @@ class AllListsTableViewController: UITableViewController, ListDetailViewControll
     }
     
     
-    func listDetailViewController(controller: ListDetailViewController, didFinishAddingItem checklist: Checklist) {
+    func listDetailViewController(controller: ListDetailViewController, didFinishAddingChecklist checklist: Checklist) {
       print("didFinishAddingItem - checklist name: \(checklist.name)")
       let newRowIndex = dataModel.checklists.count
       dataModel.checklists.append(checklist)
@@ -126,7 +126,7 @@ class AllListsTableViewController: UITableViewController, ListDetailViewControll
     }
     
     
-    func listDetailViewController(controller: ListDetailViewController, didFinishEditingItem checklist: Checklist) {
+    func listDetailViewController(controller: ListDetailViewController, didFinishEditingChecklist checklist: Checklist) {
       print("didFinishEditingItem - checklist name: \(checklist.name)")
       if let index = dataModel.checklists.indexOf(checklist) {
         let indexPath = NSIndexPath(forRow: index, inSection: 0)
