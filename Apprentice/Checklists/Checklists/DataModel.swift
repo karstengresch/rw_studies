@@ -60,6 +60,10 @@ class DataModel {
     }
   }
   
+  func sortChecklist() {
+    checklists.sortInPlace( { checklist1, checklist2 in return checklist1.name.localizedStandardCompare(checklist2.name) == .OrderedAscending })
+  }
+  
   func analyzeChecklist(checklists: [Checklist]) {
     checklists.forEach { print("Checklist name: \($0.name) - Items: \($0.checklistItems.count)" )}
   }
