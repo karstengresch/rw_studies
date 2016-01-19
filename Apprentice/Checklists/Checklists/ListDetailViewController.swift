@@ -13,7 +13,6 @@ import UIKit
     func listDetailViewControllerDidCancel(controller: ListDetailViewController)
     func listDetailViewController(controller: ListDetailViewController, didFinishAddingChecklist checklist: Checklist)
     func listDetailViewController(controller: ListDetailViewController, didFinishEditingChecklist checklist: Checklist)
-    
   }
   
   class ListDetailViewController: UITableViewController, UITextFieldDelegate {
