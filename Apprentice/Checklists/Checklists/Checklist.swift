@@ -28,7 +28,7 @@ class Checklist: NSObject, NSCoding {
   
   init(name: String) {
     self.name = name
-    iconName = "Appointments"
+    iconName = "No Icon"
     super.init()
   }
   
