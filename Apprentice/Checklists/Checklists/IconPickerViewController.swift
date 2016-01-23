@@ -27,6 +27,17 @@ class IconPickerViewController: UITableViewController {
                 "Photos",
                 "Trips" ]
   
+  override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return icons.count
+  }
   
+  override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCellWithIdentifier("IconCell", forIndexPath: indexPath)
+    let iconName = icons[indexPath.row]
+    cell.textLabel?.text = iconName
+    cell.imageView?.image = UIImage(named: iconName)
+    
+    return cell
+  }
   
 }
