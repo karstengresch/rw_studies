@@ -63,20 +63,15 @@ import UIKit
     }
     
     @IBAction func done() {
-      
       if let checklist = checklistToEdit {
         checklist.name = (checklistTextField?.text)!
+        checklist.iconName = iconName
         delegate?.listDetailViewController(self, didFinishEditingChecklist: checklist)
       } else {
-          if let name = checklistTextField?.text {
-            let checklist = Checklist(name: name)
-            delegate?.listDetailViewController(self, didFinishAddingChecklist: checklist)
-        } else {
-          let checklist = Checklist(name: "New checklist")
+          let checklist = Checklist(name: (checklistTextField?.text)!)
+          checklist.iconName = iconName
           delegate?.listDetailViewController(self, didFinishAddingChecklist: checklist)
-        }
       }
-      
     }
     
     // MARK: Text field specific
