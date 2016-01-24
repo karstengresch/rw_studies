@@ -15,8 +15,10 @@ import UIKit
     func listDetailViewController(controller: ListDetailViewController, didFinishEditingChecklist checklist: Checklist)
   }
   
-  class ListDetailViewController: UITableViewController, UITextFieldDelegate {
+  class ListDetailViewController: UITableViewController, UITextFieldDelegate, IconPickerViewControllerDelegate {
     var checklistToEdit: Checklist?
+    var iconName = "Folder"
+    
     
     @IBOutlet weak var checklistTextField: UITextField?
     @IBOutlet weak var doneBarButton: UIBarButtonItem?
@@ -37,7 +39,10 @@ import UIKit
         title = "Edit checklist"
         checklistTextField?.text = itemToEdit.name
         doneBarButton?.enabled = true
+        iconName = itemToEdit.iconName
       }
+      
+      iconImageView.image = UIImage(named: iconName)
     }
     
     // MARK: Table specific
@@ -85,8 +90,17 @@ import UIKit
       }
       
       return true
-      
-      
     }
+    
+    // MARK: Segue related
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+      if segue.identifier == "PickIcon" {
+        let controller = segue.destinationViewController as! IconPickerViewController
+        controller.delegate = self
+      }
+    }
+    
+    // MARK: IconPicker related
+    
 
 }
