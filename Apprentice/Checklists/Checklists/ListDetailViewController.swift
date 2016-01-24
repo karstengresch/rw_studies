@@ -42,7 +42,11 @@ import UIKit
     
     // MARK: Table specific
     override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
-      return nil
+      if indexPath.section == 1 {
+        return indexPath
+      } else {
+        return nil
+      }
     }
     
     
