@@ -214,7 +214,7 @@
                             </tableViewSection>
                             <tableViewSection id="Rtw-XB-uP2">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="AddChecklistCell" id="PTC-eR-o7O">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="IconCell" id="PTC-eR-o7O">
                                         <rect key="frame" x="0.0" y="179" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PTC-eR-o7O" id="cMe-2l-xQb">
@@ -233,7 +233,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Mtz-Dn-k9P" kind="show" identifier="PickIcon" id="AgA-QU-W0C"/>
+                                            <segue destination="Mtz-Dn-k9P" kind="show" identifier="PickIcon" id="CsA-1k-w1B"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -265,7 +265,7 @@
             </objects>
             <point key="canvasLocation" x="1603" y="-719"/>
         </scene>
-        <!--Icon Picker View Controller-->
+        <!--Choose Icon-->
         <scene sceneID="Lbm-Q4-bDu">
             <objects>
                 <tableViewController id="Mtz-Dn-k9P" customClass="IconPickerViewController" customModule="Checklists" customModuleProvider="target" sceneMemberID="viewController">
@@ -297,6 +297,7 @@
                             <outlet property="delegate" destination="Mtz-Dn-k9P" id="ngp-B6-Web"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Choose Icon" id="j4t-40-zTU"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7sG-g2-11x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
