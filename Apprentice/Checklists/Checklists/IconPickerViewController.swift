@@ -27,6 +27,8 @@ class IconPickerViewController: UITableViewController {
                 "Photos",
                 "Trips" ]
   
+  // MARK: table delegate methods
+  
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return icons.count
   }
@@ -39,5 +41,12 @@ class IconPickerViewController: UITableViewController {
     
     return cell
   }
+  
+  override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+      if let delegate = delegate {
+        let iconName = icons[indexPath.row]
+        delegate.iconPicker(self, didPickIcon: iconName)
+      }
+    }
   
 }
