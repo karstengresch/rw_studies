@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Name of the Checklist-->
@@ -227,10 +228,18 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1e9-ZF-mQQ">
-                                                    <rect key="frame" x="512" y="4" width="36" height="36"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1e9-ZF-mQQ">
+                                                    <rect key="frame" x="523" y="4" width="36" height="36"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="36" id="E1x-Lw-zZs"/>
+                                                        <constraint firstAttribute="height" constant="36" id="eaf-2f-sns"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="1e9-ZF-mQQ" secondAttribute="trailing" id="WmQ-Bx-EeF"/>
+                                                <constraint firstItem="1e9-ZF-mQQ" firstAttribute="centerY" secondItem="cMe-2l-xQb" secondAttribute="centerY" id="tD7-HK-Mwj"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="Mtz-Dn-k9P" kind="show" identifier="PickIcon" id="CsA-1k-w1B"/>

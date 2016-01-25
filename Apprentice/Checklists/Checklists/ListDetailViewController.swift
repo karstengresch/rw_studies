@@ -40,6 +40,7 @@ import UIKit
         checklistTextField?.text = itemToEdit.name
         doneBarButton?.enabled = true
         iconName = itemToEdit.iconName
+        print("iconName: \(iconName)")
       }
       
       iconImageView.image = UIImage(named: iconName)
@@ -66,10 +67,12 @@ import UIKit
       if let checklist = checklistToEdit {
         checklist.name = (checklistTextField?.text)!
         checklist.iconName = iconName
+        print("iconName: \(iconName)")
         delegate?.listDetailViewController(self, didFinishEditingChecklist: checklist)
       } else {
           let checklist = Checklist(name: (checklistTextField?.text)!)
           checklist.iconName = iconName
+          print("iconName: \(iconName)")
           delegate?.listDetailViewController(self, didFinishAddingChecklist: checklist)
       }
     }
