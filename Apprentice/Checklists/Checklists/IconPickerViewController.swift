@@ -42,9 +42,10 @@ class IconPickerViewController: UITableViewController {
     return cell
   }
   
-  override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
       if let delegate = delegate {
         let iconName = icons[indexPath.row]
+        print("IPCV iconName: \(iconName)")
         delegate.iconPicker(self, didPickIcon: iconName)
       }
     }
