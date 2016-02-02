@@ -75,6 +75,7 @@ import UIKit
           print("iconName: \(iconName)")
           delegate?.listDetailViewController(self, didFinishAddingChecklist: checklist)
       }
+      
     }
     
     // MARK: Text field specific

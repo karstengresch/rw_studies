@@ -20,6 +20,12 @@ class Checklist: NSObject, NSCoding {
     super.init()
   }
   
+  init(name: String, iconName: String) {
+    self.name = name
+    self.iconName = iconName
+    super.init()
+  }
+  
   func encodeWithCoder(aCoder: NSCoder) {
     aCoder.encodeObject(name, forKey: "Name")
         aCoder.encodeObject(iconName, forKey: "IconName")
