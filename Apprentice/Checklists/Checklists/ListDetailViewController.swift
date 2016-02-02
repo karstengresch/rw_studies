@@ -70,9 +70,8 @@ import UIKit
         print("iconName: \(iconName)")
         delegate?.listDetailViewController(self, didFinishEditingChecklist: checklist)
       } else {
-          let checklist = Checklist(name: (checklistTextField?.text)!)
-          checklist.iconName = iconName
-          print("iconName: \(iconName)")
+        let checklist = Checklist(name: (checklistTextField?.text)!, iconName: iconName)
+        print("iconName: \(iconName)")
           delegate?.listDetailViewController(self, didFinishAddingChecklist: checklist)
       }
       
