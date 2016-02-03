@@ -21,10 +21,8 @@ class Checklist: NSObject, NSCoding {
   }
 
   
-  init(name: String) {
-    self.name = name
-    iconName = "No Icon"
-    super.init()
+  convenience init(name: String) {
+    self.init(name: name, iconName: "No Icon")
   }
   
   init(name: String, iconName: String) {
