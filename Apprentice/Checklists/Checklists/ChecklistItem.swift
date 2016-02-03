@@ -16,6 +16,24 @@ class ChecklistItem: NSObject, NSCoding {
     super.init()
   }
   
+  required init?(coder aDecoder: NSCoder) {
+    
+    text = aDecoder.decodeObjectForKey("Text") as! String
+    checked = aDecoder.decodeBoolForKey("Checked")
+    
+    super.init()
+  }
+  
+  convenience init(text: String) {
+    self.init(text: text, checked: false)
+  }
+  
+  init(text: String, checked: Bool) {
+    self.text = text
+    self.checked = checked
+    super.init()
+  }
+  
   // MARK: Class methods
   func toggleChecked() {
     checked = !checked
@@ -26,14 +44,5 @@ class ChecklistItem: NSObject, NSCoding {
     aCoder.encodeObject(text, forKey: "Text")
     aCoder.encodeBool(checked, forKey: "Checked")
   }
-  
-  required init?(coder aDecoder: NSCoder) {
-    
-    text = aDecoder.decodeObjectForKey("Text") as! String
-    checked = aDecoder.decodeBoolForKey("Checked")
-    
-    super.init()
-  }
-  
   
 }
