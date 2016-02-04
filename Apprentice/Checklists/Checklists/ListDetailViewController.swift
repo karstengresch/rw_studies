@@ -17,7 +17,7 @@ import UIKit
   
   class ListDetailViewController: UITableViewController, UITextFieldDelegate, IconPickerViewControllerDelegate {
     var checklistToEdit: Checklist?
-    var iconName = "Folder"
+    var iconName = "No Icon"
     
     
     @IBOutlet weak var checklistTextField: UITextField?

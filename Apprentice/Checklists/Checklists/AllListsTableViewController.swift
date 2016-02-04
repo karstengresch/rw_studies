@@ -90,8 +90,6 @@ class AllListsTableViewController: UITableViewController, ListDetailViewControll
     }
   }
   
-  
-  
   override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
     dataModel.checklists.removeAtIndex(indexPath.row)
     let indexPaths = [indexPath]
@@ -147,8 +145,6 @@ class AllListsTableViewController: UITableViewController, ListDetailViewControll
     if index > 0 && index < dataModel.checklists.count {
       let checklist = dataModel.checklists[index]
       performSegueWithIdentifier("ShowChecklist", sender: checklist)
-      
-      
     }
   }
   
