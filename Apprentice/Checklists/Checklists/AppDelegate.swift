@@ -18,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let navigationController = window!.rootViewController as! UINavigationController
     let controller = navigationController.viewControllers[0] as! AllListsTableViewController
     controller.dataModel = self.dataModel
+    let notificationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Sound], categories: nil)
+    UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
     return true
   }
 
