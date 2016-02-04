@@ -18,17 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let navigationController = window!.rootViewController as! UINavigationController
     let controller = navigationController.viewControllers[0] as! AllListsTableViewController
     controller.dataModel = self.dataModel
-    let notificationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Sound], categories: nil)
-    UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
-    
-    let date = NSDate(timeIntervalSinceNow: 10)
-    
-    let localNotification = UILocalNotification()
-    localNotification.fireDate = date
-    localNotification.timeZone = NSTimeZone.defaultTimeZone()
-    localNotification.alertBody = "Dummy notification"
-    localNotification.soundName = UILocalNotificationDefaultSoundName
-    UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
     
     return true
   }
