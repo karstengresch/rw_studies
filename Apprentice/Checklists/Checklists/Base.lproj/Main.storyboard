@@ -29,7 +29,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Agd-li-p2K">
-                                            <rect key="frame" x="491" y="11.5" width="42" height="20.5"/>
+                                            <rect key="frame" x="38" y="11.5" width="495" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -38,6 +38,7 @@
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="Agd-li-p2K" secondAttribute="trailing" id="Bo8-hR-9SX"/>
                                         <constraint firstItem="Agd-li-p2K" firstAttribute="centerY" secondItem="gMV-6y-nSJ" secondAttribute="centerY" id="CnU-iE-wJ2"/>
+                                        <constraint firstItem="Agd-li-p2K" firstAttribute="leading" secondItem="gMV-6y-nSJ" secondAttribute="leadingMargin" constant="30" id="p14-sG-tgD"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
