@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RGD-bX-NVs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RGD-bX-NVs">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -98,6 +98,37 @@
                                                 <constraint firstAttribute="trailing" secondItem="zwJ-L6-efi" secondAttribute="trailing" constant="8" id="4E1-ai-i0W"/>
                                                 <constraint firstItem="zwJ-L6-efi" firstAttribute="top" secondItem="khj-PE-UXJ" secondAttribute="top" constant="7" id="4hc-0k-4ay"/>
                                                 <constraint firstItem="zwJ-L6-efi" firstAttribute="leading" secondItem="khj-PE-UXJ" secondAttribute="leading" constant="8" id="ZuA-e5-OoI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="yqH-gF-eNz">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="AddItemCell" id="9Oo-tf-sx2">
+                                        <rect key="frame" x="0.0" y="179" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Oo-tf-sx2" id="0Ov-Oj-7ud">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Item's name" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Ot-8y-z6e">
+                                                    <rect key="frame" x="8" y="7" width="584" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="X0F-AO-kbM"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                    <connections>
+                                                        <action selector="done" destination="T2Y-bU-aId" eventType="editingDidEndOnExit" id="f9J-iQ-KF6"/>
+                                                        <outlet property="delegate" destination="T2Y-bU-aId" id="0LU-62-A50"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="5Ot-8y-z6e" secondAttribute="trailing" constant="8" id="D4q-xf-Btq"/>
+                                                <constraint firstItem="5Ot-8y-z6e" firstAttribute="leading" secondItem="0Ov-Oj-7ud" secondAttribute="leading" constant="8" id="EWS-Ld-F1E"/>
+                                                <constraint firstItem="5Ot-8y-z6e" firstAttribute="top" secondItem="0Ov-Oj-7ud" secondAttribute="top" constant="7" id="oJ9-uf-Kb5"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
