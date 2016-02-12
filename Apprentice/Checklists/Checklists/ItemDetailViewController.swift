@@ -18,6 +18,7 @@ protocol ItemDetailViewControllerDelegate: class {
 class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
   var checklistItemToEdit: ChecklistItem?
   var dueDate = NSDate()
+  var datePickerVisible = false
   
   
   @IBOutlet weak var addItemTextField: UITextField?
@@ -85,7 +86,7 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
       checklistItem.text = (addItemTextField?.text)!
       checklistItem.checked = false
       checklistItem.shouldRemind = (shouldRemindSwitch?.on)!
-      checklistItem.dueDate = dueDate      
+      checklistItem.dueDate = dueDate
       delegate?.itemDetailViewController(self, didFinishAddingItem: checklistItem)
     }
     
@@ -103,6 +104,15 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     
     return true
 
+  }
+  
+  func showDatePicker() {
+    datePickerVisible = true
+    
+    let indexPathDatePicker = NSIndexPath(forRow: 2, inSection: 1))
+    
+    // Placeholder for tableViewCell - rather dislike the style to reference on non existing controls
+    
     
   }
   
