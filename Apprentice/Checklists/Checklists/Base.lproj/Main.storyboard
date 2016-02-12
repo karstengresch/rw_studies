@@ -113,7 +113,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remind Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDf-yw-2I4">
-                                                    <rect key="frame" x="20" y="12" width="260.5" height="19.5"/>
+                                                    <rect key="frame" x="15" y="12" width="260.5" height="19.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="260.5" id="9nL-cu-NkM"/>
                                                     </constraints>
@@ -127,7 +127,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="uc0-NW-vex" secondAttribute="trailing" constant="20" symbolic="YES" id="7I2-8d-8nF"/>
-                                                <constraint firstItem="NDf-yw-2I4" firstAttribute="leading" secondItem="0Ov-Oj-7ud" secondAttribute="leading" constant="20" symbolic="YES" id="AXd-L1-gVK"/>
+                                                <constraint firstItem="NDf-yw-2I4" firstAttribute="leading" secondItem="0Ov-Oj-7ud" secondAttribute="leading" constant="15" id="AXd-L1-gVK"/>
                                                 <constraint firstItem="uc0-NW-vex" firstAttribute="centerY" secondItem="0Ov-Oj-7ud" secondAttribute="centerY" id="LqD-fq-mkQ"/>
                                                 <constraint firstItem="NDf-yw-2I4" firstAttribute="centerY" secondItem="0Ov-Oj-7ud" secondAttribute="centerY" id="qI7-Ia-5e9"/>
                                             </constraints>
