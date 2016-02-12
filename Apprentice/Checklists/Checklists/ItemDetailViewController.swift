@@ -109,7 +109,8 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
   func showDatePicker() {
     datePickerVisible = true
     
-    let indexPathDatePicker = NSIndexPath(forRow: 2, inSection: 1))
+    let indexPathDatePicker = NSIndexPath(forRow: 2, inSection: 1)
+    
     
     // Placeholder for tableViewCell - rather dislike the style to reference on non existing controls
     

@@ -186,11 +186,23 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JQI-ba-NpT" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Sah-eE-tpO">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <rect key="frame" x="0.0" y="0.0" width="216" height="217"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Sah-eE-tpO" id="fkA-Um-FCy">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="216" height="216.5"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="dOK-hi-Zfg">
+                                <rect key="frame" x="-52" y="0.0" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="476991399.90389699">
+                                    <!--2016-02-12 17:36:39 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="dOK-hi-Zfg" firstAttribute="centerX" secondItem="fkA-Um-FCy" secondAttribute="centerX" id="H7c-od-1rC"/>
+                            <constraint firstItem="dOK-hi-Zfg" firstAttribute="centerY" secondItem="fkA-Um-FCy" secondAttribute="centerY" id="cE0-TK-EsZ"/>
+                        </constraints>
                     </tableViewCellContentView>
                 </tableViewCell>
             </objects>
