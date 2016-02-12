@@ -46,6 +46,8 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
       dueDate = itemToEdit.dueDate
     }
     
+    updateDueDateLabel()
+    
   }
 
   func updateDueDateLabel() {
