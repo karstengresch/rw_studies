@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -193,17 +194,26 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="dOK-hi-Zfg">
-                                <rect key="frame" x="-52" y="0.0" width="320" height="216"/>
+                                <rect key="frame" x="0.0" y="0.0" width="216" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dOK-hi-Zfg" secondAttribute="height" multiplier="40:27" id="Pdx-ul-f7d"/>
+                                </constraints>
                                 <date key="date" timeIntervalSinceReferenceDate="476991399.90389699">
                                     <!--2016-02-12 17:36:39 +0000-->
                                 </date>
                             </datePicker>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="dOK-hi-Zfg" firstAttribute="centerX" secondItem="fkA-Um-FCy" secondAttribute="centerX" id="H7c-od-1rC"/>
-                            <constraint firstItem="dOK-hi-Zfg" firstAttribute="centerY" secondItem="fkA-Um-FCy" secondAttribute="centerY" id="cE0-TK-EsZ"/>
+                            <constraint firstAttribute="trailing" secondItem="dOK-hi-Zfg" secondAttribute="trailing" id="Pz5-9a-gBl"/>
+                            <constraint firstItem="dOK-hi-Zfg" firstAttribute="top" secondItem="fkA-Um-FCy" secondAttribute="top" id="WgZ-w0-2J8"/>
+                            <constraint firstAttribute="bottom" secondItem="dOK-hi-Zfg" secondAttribute="bottom" id="bcv-To-aYc"/>
+                            <constraint firstItem="dOK-hi-Zfg" firstAttribute="leading" secondItem="fkA-Um-FCy" secondAttribute="leading" id="yd4-0l-dUT"/>
                         </constraints>
                     </tableViewCellContentView>
+                    <constraints>
+                        <constraint firstItem="dOK-hi-Zfg" firstAttribute="height" secondItem="Sah-eE-tpO" secondAttribute="height" id="pjm-ou-zPk"/>
+                        <constraint firstItem="dOK-hi-Zfg" firstAttribute="width" secondItem="Sah-eE-tpO" secondAttribute="width" id="tLh-pz-u4C"/>
+                    </constraints>
                 </tableViewCell>
             </objects>
             <point key="canvasLocation" x="3194" y="-1613"/>
