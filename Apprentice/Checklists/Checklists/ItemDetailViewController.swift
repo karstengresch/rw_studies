@@ -129,6 +129,14 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     }
   }
   
+  override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    if section == 1 && datePickerVisible {
+      return 3
+    } else {
+      return super.tableView(tableView, numberOfRowsInSection: section)
+    }
+  }
+  
   
   
   
