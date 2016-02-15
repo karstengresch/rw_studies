@@ -120,5 +120,16 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     
   }
   
+  override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    if indexPath.section == 1 && indexPath.row == 2 {
+      // dangerous
+      return datePickerCell!
+    } else {
+      return super.tableView(tableView, cellForRowAtIndexPath: indexPath)
+    }
+  }
+  
+  
+  
   
 }
