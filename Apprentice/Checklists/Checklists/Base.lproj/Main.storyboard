@@ -180,6 +180,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addItemTextField" destination="zwJ-L6-efi" id="0Sz-4a-lLy"/>
+                        <outlet property="datePicker" destination="dOK-hi-Zfg" id="iFR-2a-C2z"/>
+                        <outlet property="datePickerCell" destination="Sah-eE-tpO" id="aEj-0P-NRd"/>
                         <outlet property="doneBarButton" destination="Mm4-dv-OwI" id="6OB-z6-IqL"/>
                         <outlet property="dueDateLabel" destination="eKS-xT-qQs" id="Obs-Wy-XFh"/>
                         <outlet property="shouldRemindSwitch" destination="uc0-NW-vex" id="MRl-Ve-4GE"/>
