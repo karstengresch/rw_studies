@@ -137,6 +137,14 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     }
   }
   
+  override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    if indexPath.section == 1 && indexPath.row == 2 {
+      return 217
+    } else {
+      return super.tableView(tableView, heightForRowAtIndexPath: indexPath)
+    }
+  }
+  
   
   
   

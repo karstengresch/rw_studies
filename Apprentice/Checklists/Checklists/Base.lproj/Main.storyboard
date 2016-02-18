@@ -195,7 +195,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="216" height="216.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="dOK-hi-Zfg">
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="dOK-hi-Zfg">
                                 <rect key="frame" x="0.0" y="0.0" width="216" height="216"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dOK-hi-Zfg" secondAttribute="height" multiplier="40:27" id="Pdx-ul-f7d"/>
