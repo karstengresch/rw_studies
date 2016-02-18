@@ -114,9 +114,7 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     
     let indexPathDatePicker = NSIndexPath(forRow: 2, inSection: 1)
     
-    
-    // Placeholder for tableViewCell - rather dislike the style to reference on non existing controls
-    
+    tableView.insertRowsAtIndexPaths([indexPathDatePicker], withRowAnimation: .Fade)
     
   }
   
