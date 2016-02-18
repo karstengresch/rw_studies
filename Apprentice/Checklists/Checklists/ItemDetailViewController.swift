@@ -145,6 +145,15 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     }
   }
   
+  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    addItemTextField?.resignFirstResponder()
+    if indexPath.section == 1 && indexPath.row == 1 {
+      showDatePicker()
+    }
+  }
+  
+  }
   
   
   
