@@ -79,9 +79,9 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
 
     if let checklistItem = checklistItemToEdit {
       checklistItem.text = (addItemTextField?.text)!
-      delegate?.itemDetailViewController(self, didFinishEditingItem: checklistItem)
       checklistItem.shouldRemind = (shouldRemindSwitch?.on)!
       checklistItem.dueDate = dueDate
+      delegate?.itemDetailViewController(self, didFinishEditingItem: checklistItem)      
       
     } else {
       
@@ -153,6 +153,3 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
   
   }
   
-  
-  
-}
