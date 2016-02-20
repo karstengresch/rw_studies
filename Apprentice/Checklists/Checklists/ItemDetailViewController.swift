@@ -81,7 +81,7 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
       checklistItem.text = (addItemTextField?.text)!
       checklistItem.shouldRemind = (shouldRemindSwitch?.on)!
       checklistItem.dueDate = dueDate
-      delegate?.itemDetailViewController(self, didFinishEditingItem: checklistItem)      
+      delegate?.itemDetailViewController(self, didFinishEditingItem: checklistItem)
       
     } else {
       
@@ -144,9 +144,12 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
   }
   
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    print("didSelectRowAtIndexPath: \(indexPath.row)")
     tableView.deselectRowAtIndexPath(indexPath, animated: true)
     addItemTextField?.resignFirstResponder()
+    
     if indexPath.section == 1 && indexPath.row == 1 {
+      print("Trying to show date picker")
       showDatePicker()
     }
   }

@@ -195,8 +195,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="216" height="216.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="dOK-hi-Zfg">
-                                <rect key="frame" x="0.0" y="0.0" width="216" height="216"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="dOK-hi-Zfg">
+                                <rect key="frame" x="0.0" y="0.0" width="216" height="146"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dOK-hi-Zfg" secondAttribute="height" multiplier="40:27" id="Pdx-ul-f7d"/>
                                 </constraints>
@@ -383,7 +383,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8TM-o5-BdR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1603" y="-719"/>
+            <point key="canvasLocation" x="1603" y="-343"/>
         </scene>
         <!--Choose Icon-->
         <scene sceneID="Lbm-Q4-bDu">
@@ -421,7 +421,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7sG-g2-11x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2321" y="-710"/>
+            <point key="canvasLocation" x="2321" y="-334"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CbJ-Rn-28b">
@@ -437,7 +437,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OZj-JI-XdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="795" y="-719"/>
+            <point key="canvasLocation" x="795" y="-343"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
