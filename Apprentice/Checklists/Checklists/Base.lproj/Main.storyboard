@@ -179,6 +179,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addItemTextField" destination="zwJ-L6-efi" id="0Sz-4a-lLy"/>
+                        <outlet property="datePicker" destination="jLh-T0-ZVq" id="xUF-DB-wJq"/>
+                        <outlet property="datePickerCell" destination="pYf-dN-v8l" id="NeE-sB-Slo"/>
                         <outlet property="doneBarButton" destination="Mm4-dv-OwI" id="6OB-z6-IqL"/>
                         <outlet property="dueDateLabel" destination="eKS-xT-qQs" id="Obs-Wy-XFh"/>
                         <outlet property="shouldRemindSwitch" destination="uc0-NW-vex" id="MRl-Ve-4GE"/>
@@ -192,13 +194,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="216" height="216.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="jLh-T0-ZVq">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="jLh-T0-ZVq">
                                 <rect key="frame" x="0.0" y="0.0" width="216" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="477697581.24118203">
                                     <!--2016-02-20 21:46:21 +0000-->
                                 </date>
                             </datePicker>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="jLh-T0-ZVq" secondAttribute="trailing" id="JCL-qg-p1r"/>
+                            <constraint firstItem="jLh-T0-ZVq" firstAttribute="top" secondItem="IcP-57-kzL" secondAttribute="top" id="OoD-aQ-DOH"/>
+                            <constraint firstItem="jLh-T0-ZVq" firstAttribute="leading" secondItem="IcP-57-kzL" secondAttribute="leading" id="ety-yb-CCm"/>
+                            <constraint firstAttribute="bottom" secondItem="jLh-T0-ZVq" secondAttribute="bottom" id="jeN-kA-mnU"/>
+                        </constraints>
                     </tableViewCellContentView>
                 </tableViewCell>
             </objects>
