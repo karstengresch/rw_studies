@@ -66,29 +66,6 @@
         <!--Add Item-->
         <scene sceneID="GjM-sv-Pvd">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JQI-ba-NpT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="pYf-dN-v8l">
-                    <rect key="frame" x="0.0" y="0.0" width="216" height="217"/>
-                    <autoresizingMask key="autoresizingMask"/>
-                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pYf-dN-v8l" id="IcP-57-kzL">
-                        <rect key="frame" x="0.0" y="0.0" width="216" height="216.5"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="jLh-T0-ZVq">
-                                <rect key="frame" x="0.0" y="0.0" width="216" height="216"/>
-                                <date key="date" timeIntervalSinceReferenceDate="477697581.24118203">
-                                    <!--2016-02-20 21:46:21 +0000-->
-                                </date>
-                            </datePicker>
-                        </subviews>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="jLh-T0-ZVq" secondAttribute="trailing" id="JCL-qg-p1r"/>
-                            <constraint firstItem="jLh-T0-ZVq" firstAttribute="top" secondItem="IcP-57-kzL" secondAttribute="top" id="OoD-aQ-DOH"/>
-                            <constraint firstItem="jLh-T0-ZVq" firstAttribute="leading" secondItem="IcP-57-kzL" secondAttribute="leading" id="ety-yb-CCm"/>
-                            <constraint firstAttribute="bottom" secondItem="jLh-T0-ZVq" secondAttribute="bottom" id="jeN-kA-mnU"/>
-                        </constraints>
-                    </tableViewCellContentView>
-                </tableViewCell>
                 <tableViewController id="T2Y-bU-aId" customClass="ItemDetailViewController" customModule="Checklists" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="k9U-hD-YaP">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -209,6 +186,29 @@
                         <outlet property="shouldRemindSwitch" destination="uc0-NW-vex" id="MRl-Ve-4GE"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JQI-ba-NpT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="pYf-dN-v8l">
+                    <rect key="frame" x="0.0" y="0.0" width="216" height="217"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pYf-dN-v8l" id="IcP-57-kzL">
+                        <rect key="frame" x="0.0" y="0.0" width="216" height="216.5"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="jLh-T0-ZVq">
+                                <rect key="frame" x="0.0" y="0.0" width="216" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="477697581.24118203">
+                                    <!--2016-02-20 21:46:21 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="jLh-T0-ZVq" secondAttribute="trailing" id="JCL-qg-p1r"/>
+                            <constraint firstItem="jLh-T0-ZVq" firstAttribute="top" secondItem="IcP-57-kzL" secondAttribute="top" id="OoD-aQ-DOH"/>
+                            <constraint firstItem="jLh-T0-ZVq" firstAttribute="leading" secondItem="IcP-57-kzL" secondAttribute="leading" id="ety-yb-CCm"/>
+                            <constraint firstAttribute="bottom" secondItem="jLh-T0-ZVq" secondAttribute="bottom" id="jeN-kA-mnU"/>
+                        </constraints>
+                    </tableViewCellContentView>
+                </tableViewCell>
             </objects>
             <point key="canvasLocation" x="3194" y="-1613"/>
         </scene>
