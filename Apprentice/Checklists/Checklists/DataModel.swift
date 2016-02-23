@@ -50,6 +50,7 @@ class DataModel {
   }
   
   func loadChecklists() {
+    print("loading Checklist")
     let path = dataFilePath()
     if NSFileManager.defaultManager().fileExistsAtPath(path) {
       if let data = NSData(contentsOfFile: path) {
@@ -62,6 +63,7 @@ class DataModel {
   }
   
   func sortChecklists() {
+        print("sorting Checklist")
     checklists.sortInPlace(
       {
         checklist1, checklist2 in
@@ -82,6 +84,7 @@ class DataModel {
   }
   
   func handleFirstTimeAppStart() {
+    print("starting handleFirstTimeAppStart")
     let userDefaults = NSUserDefaults.standardUserDefaults()
     let firstTime = userDefaults.boolForKey("AppRunsFirstTime")
     if firstTime {
