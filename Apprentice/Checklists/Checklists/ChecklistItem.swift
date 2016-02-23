@@ -22,7 +22,7 @@ class ChecklistItem: NSObject, NSCoding {
   }
   
   required init?(coder aDecoder: NSCoder) {
-    
+    print("init")
     text = aDecoder.decodeObjectForKey("Text") as! String
     checked = aDecoder.decodeBoolForKey("Checked")
     dueDate = aDecoder.decodeObjectForKey("DueDate") as! NSDate
@@ -51,6 +51,7 @@ class ChecklistItem: NSObject, NSCoding {
   
   // MARK: NSCoding implementations
   func encodeWithCoder(aCoder: NSCoder) {
+    print("encodeWithCoder")
     aCoder.encodeObject(text, forKey: "Text")
     aCoder.encodeBool(checked, forKey: "Checked")
     aCoder.encodeObject(dueDate, forKey: "DueDate")
