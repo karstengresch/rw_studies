@@ -123,7 +123,7 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
   }
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    print("cellForRowAtIndexPath()")
+    print("cellForRowAtIndexPath() indexPath.section: \(indexPath.section) - indexPath.row: \(indexPath.row)")
     if indexPath.section == 1 && indexPath.row == 2 {
       // dangerous
       return datePickerCell!
@@ -150,6 +150,7 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     }
   }
   
+
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     print("didSelectRowAtIndexPath: \(indexPath.row) - didSelectRowAtIndexPath: \(indexPath.section)")
     tableView.deselectRowAtIndexPath(indexPath, animated: true)

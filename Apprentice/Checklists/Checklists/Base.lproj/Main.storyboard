@@ -179,8 +179,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addItemTextField" destination="zwJ-L6-efi" id="0Sz-4a-lLy"/>
-                        <outlet property="datePicker" destination="jLh-T0-ZVq" id="xUF-DB-wJq"/>
-                        <outlet property="datePickerCell" destination="pYf-dN-v8l" id="NeE-sB-Slo"/>
+                        <outlet property="datePicker" destination="jLh-T0-ZVq" id="5qe-xA-LKJ"/>
+                        <outlet property="datePickerCell" destination="pYf-dN-v8l" id="vBP-RX-yrP"/>
                         <outlet property="doneBarButton" destination="Mm4-dv-OwI" id="6OB-z6-IqL"/>
                         <outlet property="dueDateLabel" destination="eKS-xT-qQs" id="Obs-Wy-XFh"/>
                         <outlet property="shouldRemindSwitch" destination="uc0-NW-vex" id="MRl-Ve-4GE"/>
