@@ -133,6 +133,7 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
   }
   
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("numberOfRowsInSection()")
     if section == 1 && datePickerVisible {
       return 3
     } else {
@@ -141,6 +142,7 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
   }
   
   override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+            print("heightForRowAtIndexPath()")
     if indexPath.section == 1 && indexPath.row == 2 {
       return 217
     } else {
