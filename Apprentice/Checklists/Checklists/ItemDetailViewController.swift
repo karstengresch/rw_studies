@@ -64,10 +64,6 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
   
   
   // MARK: Table specific
-  override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
-    return nil
-  }
-  
   
   // MARK: Action handlers
   @IBAction func cancel() {
@@ -159,6 +155,14 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     if indexPath.section == 1 && indexPath.row == 1 {
       print("Trying to show date picker")
       showDatePicker()
+    }
+  }
+  
+  override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+    if indexPath.section == 1 && indexPath.row == 1 {
+      return indexPath
+    } else {
+      return nil
     }
   }
   
