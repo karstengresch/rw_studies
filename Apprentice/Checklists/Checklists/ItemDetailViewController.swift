@@ -87,7 +87,7 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
       delegate?.itemDetailViewController(self, didFinishEditingItem: checklistItem)
       
     } else {
-          print("done() - checklistItem does not exist")      
+          print("done() - checklistItem does not exist")
       let checklistItem = ChecklistItem()
       checklistItem.text = (addItemTextField?.text)!
       checklistItem.checked = false
@@ -113,6 +113,7 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
   }
   
   func showDatePicker() {
+    print("showDatePicker()")
     datePickerVisible = true
     
     let indexPathDatePicker = NSIndexPath(forRow: 2, inSection: 1)
