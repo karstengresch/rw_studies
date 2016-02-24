@@ -123,6 +123,7 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
   }
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    print("cellForRowAtIndexPath()")
     if indexPath.section == 1 && indexPath.row == 2 {
       // dangerous
       return datePickerCell!
