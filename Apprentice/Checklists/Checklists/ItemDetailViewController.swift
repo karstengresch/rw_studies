@@ -55,6 +55,7 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
   }
 
   func updateDueDateLabel() {
+    print("updateDueDateLabel")
     let formatter = NSDateFormatter()
     formatter.dateStyle = .MediumStyle
     formatter.timeStyle = .ShortStyle
@@ -76,15 +77,17 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
   }
   
   @IBAction func done() {
+    print("done()")
 
     if let checklistItem = checklistItemToEdit {
+          print("done() - checklistItem exists")
       checklistItem.text = (addItemTextField?.text)!
       checklistItem.shouldRemind = (shouldRemindSwitch?.on)!
       checklistItem.dueDate = dueDate
       delegate?.itemDetailViewController(self, didFinishEditingItem: checklistItem)
       
     } else {
-      
+          print("done() - checklistItem does not exist")      
       let checklistItem = ChecklistItem()
       checklistItem.text = (addItemTextField?.text)!
       checklistItem.checked = false
@@ -144,7 +147,7 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
   }
   
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    print("didSelectRowAtIndexPath: \(indexPath.row)")
+    print("didSelectRowAtIndexPath: \(indexPath.row) - didSelectRowAtIndexPath: \(indexPath.section)")
     tableView.deselectRowAtIndexPath(indexPath, animated: true)
     addItemTextField?.resignFirstResponder()
     
