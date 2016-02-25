@@ -166,5 +166,13 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     }
   }
   
+  override func tableView(tableView: UITableView, var indentationLevelForRowAtIndexPath indexPath: NSIndexPath) -> Int {
+
+    if indexPath.section == 1 && indexPath.row == 2 {
+      indexPath = NSIndexPath(forRow: 0, inSection: indexPath.section)
+    }
+    
+    return super.tableView(tableView, indentationLevelForRowAtIndexPath: indexPath)
+  
   }
   
