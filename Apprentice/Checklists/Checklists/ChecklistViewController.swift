@@ -59,6 +59,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "AddCheckListItem" {
+      print("AddCheckListItem segue called")
       let navigationController = segue.destinationViewController as? UINavigationController
       let controller = navigationController?.topViewController as? ItemDetailViewController
       
