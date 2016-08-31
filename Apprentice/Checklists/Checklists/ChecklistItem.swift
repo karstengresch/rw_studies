@@ -22,7 +22,7 @@ class ChecklistItem: NSObject, NSCoding {
   }
   
   required init?(coder aDecoder: NSCoder) {
-    print("init")
+    print("init?")
     text = aDecoder.decodeObjectForKey("Text") as! String
     checked = aDecoder.decodeBoolForKey("Checked")
     dueDate = aDecoder.decodeObjectForKey("DueDate") as! NSDate
@@ -39,7 +39,6 @@ class ChecklistItem: NSObject, NSCoding {
   init(text: String, checked: Bool) {
     self.text = text
     self.checked = checked
-    // TODO check next
     itemId = DataModel.nextChecklistItemId()
     super.init()
   }
