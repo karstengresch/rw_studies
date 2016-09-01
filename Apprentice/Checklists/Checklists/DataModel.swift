@@ -63,7 +63,7 @@ class DataModel {
   }
   
   func sortChecklists() {
-        print("sorting Checklist")
+    print("sorting Checklist")
     checklists.sortInPlace(
       {
         checklist1, checklist2 in
