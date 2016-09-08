@@ -77,18 +77,6 @@ class AllListsTableViewController: UITableViewController, ListDetailViewControll
     performSegueWithIdentifier("ShowChecklist", sender: checklist)
   }
   
-  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    if segue.identifier == "ShowChecklist" {
-      let controller = segue.destinationViewController as! ChecklistViewController
-      controller.checklist = sender as! Checklist
-    } else if segue.identifier == "AddChecklist" {
-      let navigationController = segue.destinationViewController as! UINavigationController
-      let controller = navigationController.topViewController as! ListDetailViewController
-      controller.delegate = self
-      controller.checklistToEdit = nil
-      
-    }
-  }
   
   override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
     dataModel.checklists.removeAtIndex(indexPath.row)
@@ -130,10 +118,23 @@ class AllListsTableViewController: UITableViewController, ListDetailViewControll
       
     }
   
-  // MARK: Navigation Controller Delegate
+  // MARK: Navigation
   func navigationController(navigationController: UINavigationController, willShowViewController viewController: UIViewController, animated: Bool) {
     if viewController === self {
       dataModel.indexOfSelectedChecklist = -1
+    }
+  }
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "ShowChecklist" {
+      let controller = segue.destinationViewController as! ChecklistViewController
+      controller.checklist = sender as! Checklist
+    } else if segue.identifier == "AddChecklist" {
+      let navigationController = segue.destinationViewController as! UINavigationController
+      let controller = navigationController.topViewController as! ListDetailViewController
+      controller.delegate = self
+      controller.checklistToEdit = nil
+      
     }
   }
   
