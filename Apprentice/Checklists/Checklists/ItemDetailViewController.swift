@@ -10,14 +10,14 @@ import Foundation
 import UIKit
 
 protocol ItemDetailViewControllerDelegate: class {
-  func itemDetailViewControllerDidCancel(controller: ItemDetailViewController)
-  func itemDetailViewController(controller: ItemDetailViewController, didFinishAddingItem checklistItem: ChecklistItem)
-  func itemDetailViewController(controller: ItemDetailViewController, didFinishEditingItem checklistItem: ChecklistItem)
+  func itemDetailViewControllerDidCancel(_ controller: ItemDetailViewController)
+  func itemDetailViewController(_ controller: ItemDetailViewController, didFinishAddingItem checklistItem: ChecklistItem)
+  func itemDetailViewController(_ controller: ItemDetailViewController, didFinishEditingItem checklistItem: ChecklistItem)
 }
 
 class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
   var checklistItemToEdit: ChecklistItem?
-  var dueDate = NSDate()
+  var dueDate = Date()
   var datePickerVisible = false
   
   
@@ -34,7 +34,7 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
   weak var delegate: ItemDetailViewControllerDelegate?
   
   // MARK: View related
-  override func viewWillAppear(animated: Bool) {
+  override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     addItemTextField?.becomeFirstResponder()
   }
@@ -45,9 +45,9 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     if let itemToEdit = checklistItemToEdit {
       title = "Edit item"
       addItemTextField?.text = itemToEdit.text
-      doneBarButton?.enabled = true
-      shouldRemindSwitch?.on = itemToEdit.shouldRemind
-      dueDate = itemToEdit.dueDate
+      doneBarButton?.isEnabled = true
+      shouldRemindSwitch?.isOn = itemToEdit.shouldRemind
+      dueDate = itemToEdit.dueDate as Date
     }
     
     updateDueDateLabel()
@@ -56,10 +56,10 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
 
   func updateDueDateLabel() {
     print("updateDueDateLabel")
-    let formatter = NSDateFormatter()
-    formatter.dateStyle = .MediumStyle
-    formatter.timeStyle = .ShortStyle
-    dueDateLabel?.text = formatter.stringFromDate(dueDate)
+    let formatter = DateFormatter()
+    formatter.dateStyle = .medium
+    formatter.timeStyle = .short
+    dueDateLabel?.text = formatter.string(from: dueDate)
   }
   
   
@@ -78,7 +78,7 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     if let checklistItem = checklistItemToEdit {
           print("done() - checklistItem exists")
       checklistItem.text = (addItemTextField?.text)!
-      checklistItem.shouldRemind = (shouldRemindSwitch?.on)!
+      checklistItem.shouldRemind = (shouldRemindSwitch?.isOn)!
       checklistItem.dueDate = dueDate
       delegate?.itemDetailViewController(self, didFinishEditingItem: checklistItem)
       
@@ -87,7 +87,7 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
       let checklistItem = ChecklistItem()
       checklistItem.text = (addItemTextField?.text)!
       checklistItem.checked = false
-      checklistItem.shouldRemind = (shouldRemindSwitch?.on)!
+      checklistItem.shouldRemind = (shouldRemindSwitch?.isOn)!
       checklistItem.dueDate = dueDate
       delegate?.itemDetailViewController(self, didFinishAddingItem: checklistItem)
     }
@@ -95,12 +95,12 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
   }
   
   // MARK: Text field specific
-  func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+  func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
     
-    if let oldText: NSString = textField.text {
-      let newText: NSString = oldText.stringByReplacingCharactersInRange(range, withString: string)
+    if let oldText: NSString = textField.text as NSString? {
+      let newText: NSString = oldText.replacingCharacters(in: range, with: string) as NSString
       
-    doneBarButton?.enabled = (newText.length > 0)
+    doneBarButton?.isEnabled = (newText.length > 0)
       
     }
     
@@ -112,23 +112,23 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     print("showDatePicker()")
     datePickerVisible = true
     
-    let indexPathDatePicker = NSIndexPath(forRow: 2, inSection: 1)
+    let indexPathDatePicker = IndexPath(row: 2, section: 1)
     
-    tableView.insertRowsAtIndexPaths([indexPathDatePicker], withRowAnimation: .Fade)
+    tableView.insertRows(at: [indexPathDatePicker], with: .fade)
     
   }
   
-  override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    print("cellForRowAtIndexPath() indexPath.section: \(indexPath.section) - indexPath.row: \(indexPath.row)")
-    if indexPath.section == 1 && indexPath.row == 2 {
+  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    print("cellForRowAtIndexPath() indexPath.section: \((indexPath as NSIndexPath).section) - indexPath.row: \((indexPath as NSIndexPath).row)")
+    if (indexPath as NSIndexPath).section == 1 && (indexPath as NSIndexPath).row == 2 {
       // dangerous
       return datePickerCell!
     } else {
-      return super.tableView(tableView, cellForRowAtIndexPath: indexPath)
+      return super.tableView(tableView, cellForRowAt: indexPath)
     }
   }
   
-  override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     if section == 1 && datePickerVisible {
       print("numberOfRowsInSection(): section 1 AND datePickerVisible")
       return 3
@@ -138,41 +138,42 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     }
   }
   
-  override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-    if indexPath.section == 1 && indexPath.row == 2 {
+  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    if (indexPath as NSIndexPath).section == 1 && (indexPath as NSIndexPath).row == 2 {
       return 217
     } else {
-      return super.tableView(tableView, heightForRowAtIndexPath: indexPath)
+      return super.tableView(tableView, heightForRowAt: indexPath)
     }
   }
   
 
-  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    print("didSelectRowAtIndexPath: \(indexPath.row) - didSelectRowAtIndexPath: \(indexPath.section)")
-    tableView.deselectRowAtIndexPath(indexPath, animated: true)
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    print("didSelectRowAtIndexPath: \((indexPath as NSIndexPath).row) - didSelectRowAtIndexPath: \((indexPath as NSIndexPath).section)")
+    tableView.deselectRow(at: indexPath, animated: true)
     addItemTextField?.resignFirstResponder()
     
-    if indexPath.section == 1 && indexPath.row == 1 {
+    if (indexPath as NSIndexPath).section == 1 && (indexPath as NSIndexPath).row == 1 {
       print("Trying to show date picker")
       showDatePicker()
     }
   }
   
-  override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
-    if indexPath.section == 1 && indexPath.row == 1 {
+  override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+    if (indexPath as NSIndexPath).section == 1 && (indexPath as NSIndexPath).row == 1 {
       return indexPath
     } else {
       return nil
     }
   }
   
-  override func tableView(tableView: UITableView, var indentationLevelForRowAtIndexPath indexPath: NSIndexPath) -> Int {
+  override func tableView(_ tableView: UITableView, indentationLevelForRowAt indexPath: IndexPath) -> Int {
+    var indexPath = indexPath
 
-    if indexPath.section == 1 && indexPath.row == 2 {
-      indexPath = NSIndexPath(forRow: 0, inSection: indexPath.section)
+    if (indexPath as NSIndexPath).section == 1 && (indexPath as NSIndexPath).row == 2 {
+      indexPath = IndexPath(row: 0, section: (indexPath as NSIndexPath).section)
     }
     
-    return super.tableView(tableView, indentationLevelForRowAtIndexPath: indexPath)
+    return super.tableView(tableView, indentationLevelForRowAt: indexPath)
   
   }
   

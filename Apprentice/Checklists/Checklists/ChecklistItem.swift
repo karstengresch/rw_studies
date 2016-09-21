@@ -11,7 +11,7 @@ import Foundation
 class ChecklistItem: NSObject, NSCoding {
   var text = ""
   var checked = false
-  var dueDate = NSDate()
+  var dueDate = Date()
   var shouldRemind = false
   var itemId: Int
   
@@ -23,11 +23,11 @@ class ChecklistItem: NSObject, NSCoding {
   
   required init?(coder aDecoder: NSCoder) {
     print("init?")
-    text = aDecoder.decodeObjectForKey("Text") as! String
-    checked = aDecoder.decodeBoolForKey("Checked")
-    dueDate = aDecoder.decodeObjectForKey("DueDate") as! NSDate
-    shouldRemind = aDecoder.decodeBoolForKey("ShouldRemind")
-    itemId = aDecoder.decodeIntegerForKey("ItemId")
+    text = aDecoder.decodeObject(forKey: "Text") as! String
+    checked = aDecoder.decodeBool(forKey: "Checked")
+    dueDate = aDecoder.decodeObject(forKey: "DueDate") as! Date
+    shouldRemind = aDecoder.decodeBool(forKey: "ShouldRemind")
+    itemId = aDecoder.decodeInteger(forKey: "ItemId")
     
     super.init()
   }
@@ -49,13 +49,13 @@ class ChecklistItem: NSObject, NSCoding {
   }
   
   // MARK: NSCoding implementations
-  func encodeWithCoder(aCoder: NSCoder) {
+  func encode(with aCoder: NSCoder) {
     print("encodeWithCoder")
-    aCoder.encodeObject(text, forKey: "Text")
-    aCoder.encodeBool(checked, forKey: "Checked")
-    aCoder.encodeObject(dueDate, forKey: "DueDate")
-    aCoder.encodeBool(shouldRemind, forKey: "ShouldRemind")
-    aCoder.encodeInteger(itemId, forKey: "ItemID")
+    aCoder.encode(text, forKey: "Text")
+    aCoder.encode(checked, forKey: "Checked")
+    aCoder.encode(dueDate, forKey: "DueDate")
+    aCoder.encode(shouldRemind, forKey: "ShouldRemind")
+    aCoder.encode(itemId, forKey: "ItemID")
     
   }
   

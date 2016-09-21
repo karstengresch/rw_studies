@@ -14,9 +14,9 @@ class Checklist: NSObject, NSCoding {
   var checklistItems = [ChecklistItem]()
   
   required init?(coder aDecoder: NSCoder) {
-    name = aDecoder.decodeObjectForKey("Name") as! String
-    iconName = aDecoder.decodeObjectForKey("IconName") as! String
-    checklistItems = aDecoder.decodeObjectForKey("ChecklistItems") as! [ChecklistItem]
+    name = aDecoder.decodeObject(forKey: "Name") as! String
+    iconName = aDecoder.decodeObject(forKey: "IconName") as! String
+    checklistItems = aDecoder.decodeObject(forKey: "ChecklistItems") as! [ChecklistItem]
     super.init()
   }
 
@@ -31,10 +31,10 @@ class Checklist: NSObject, NSCoding {
     super.init()
   }
   
-  func encodeWithCoder(aCoder: NSCoder) {
-    aCoder.encodeObject(name, forKey: "Name")
-        aCoder.encodeObject(iconName, forKey: "IconName")
-    aCoder.encodeObject(checklistItems, forKey: "ChecklistItems")
+  func encode(with aCoder: NSCoder) {
+    aCoder.encode(name, forKey: "Name")
+        aCoder.encode(iconName, forKey: "IconName")
+    aCoder.encode(checklistItems, forKey: "ChecklistItems")
   }
 
   

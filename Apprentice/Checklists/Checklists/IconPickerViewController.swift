@@ -9,7 +9,7 @@
 import UIKit
 
 protocol IconPickerViewControllerDelegate: class {
-  func iconPicker(picker: IconPickerViewController, didPickIcon iconName: String)
+  func iconPicker(_ picker: IconPickerViewController, didPickIcon iconName: String)
 }
 
 
@@ -29,22 +29,22 @@ class IconPickerViewController: UITableViewController {
   
   // MARK: table delegate methods
   
-  override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return icons.count
   }
   
-  override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier("IconCell", forIndexPath: indexPath)
-    let iconName = icons[indexPath.row]
+  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "IconCell", for: indexPath)
+    let iconName = icons[(indexPath as NSIndexPath).row]
     cell.textLabel?.text = iconName
     cell.imageView?.image = UIImage(named: iconName)
     
     return cell
   }
   
-  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
       if let delegate = delegate {
-        let iconName = icons[indexPath.row]
+        let iconName = icons[(indexPath as NSIndexPath).row]
         print("IPCV iconName: \(iconName)")
         delegate.iconPicker(self, didPickIcon: iconName)
       }
