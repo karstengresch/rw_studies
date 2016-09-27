@@ -42,6 +42,7 @@ class DataModel {
   }
   
   func saveChecklists() {
+    print("saving Checklist")
     let data = NSMutableData()
     let archiver = NSKeyedArchiver(forWritingWith: data)
     archiver.encode(checklists, forKey: "Checklists")
