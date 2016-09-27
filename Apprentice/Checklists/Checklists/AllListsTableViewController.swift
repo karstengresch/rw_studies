@@ -85,7 +85,7 @@ class AllListsTableViewController: UITableViewController, ListDetailViewControll
   }
   
   override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
-    let navigationController = storyboard!.instantiateViewController(withIdentifier: "ListDetailViewC≤ontroller") as! UINavigationController
+    let navigationController = storyboard!.instantiateViewController(withIdentifier: "ListDetailViewController") as! UINavigationController
     let controller = navigationController.topViewController as! ListDetailViewController
     controller.delegate = self
     
