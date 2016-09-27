@@ -102,7 +102,7 @@ import UIKit
     func iconPicker(_ picker: IconPickerViewController, didPickIcon iconName: String) {
       self.iconName = iconName
       iconImageView.image = UIImage(named: iconName)
-      navigationController?.popViewController(animated: true)
+      _ = navigationController?.popViewController(animated: true)
     }
 
 }
