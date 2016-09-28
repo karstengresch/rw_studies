@@ -56,7 +56,7 @@ class AllListsTableViewController: UITableViewController, ListDetailViewControll
     return cell
   }
   
-  
+
   func cellForTableView(_ tableView: UITableView) -> UITableViewCell {
     let cellIdentifier = "AddChecklistCell"
     var returnCell: UITableViewCell?

@@ -60,6 +60,9 @@ class DataModel {
         unarchiver.finishDecoding()
         sortChecklists()
       }
+    } else {
+      print("Big problem. No file at \(path)")
+      // handle problem
     }
   }
   
@@ -96,7 +99,10 @@ class DataModel {
       userDefaults.set(false, forKey: "AppRunsFirstTime")
       userDefaults.synchronize()
     } else {
-     print("NOT running first time!") 
+     print("NOT running first time! Checklist Size: \(checklists.count)")
+      if checklists.count <= 0 {
+        // handle this problem
+      }
     }
   }
   
