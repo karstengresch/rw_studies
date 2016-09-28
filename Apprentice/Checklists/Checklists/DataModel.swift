@@ -95,6 +95,8 @@ class DataModel {
       indexOfSelectedChecklist = 0
       userDefaults.set(false, forKey: "AppRunsFirstTime")
       userDefaults.synchronize()
+    } else {
+     print("NOT running first time!") 
     }
   }
   
