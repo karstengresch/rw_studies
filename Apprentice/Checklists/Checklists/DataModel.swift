@@ -64,6 +64,7 @@ class DataModel {
       print("Big problem. No file at \(path)")
       // handle problem
       // cheapo - just trying
+      analyzeChecklist(checklists)
       saveChecklists()
       
     }
@@ -91,6 +92,7 @@ class DataModel {
   }
   
   func handleFirstTimeAppStart() {
+    analyzeChecklist(checklists)
     print("starting handleFirstTimeAppStart")
     let userDefaults = UserDefaults.standard
     let firstTime = userDefaults.bool(forKey: "AppRunsFirstTime")
@@ -105,6 +107,10 @@ class DataModel {
      print("NOT running first time! Checklist Size: \(checklists.count)")
       if checklists.count <= 0 {
         // handle this problem
+        // only testing
+        userDefaults.set(true, forKey: "AppRunsFirstTime")
+        userDefaults.set(-1, forKey: "ChecklistItemId")
+        handleFirstTimeAppStart()
       }
     }
   }
