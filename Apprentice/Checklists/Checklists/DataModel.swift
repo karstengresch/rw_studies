@@ -53,7 +53,7 @@ class DataModel {
   func loadChecklists() {
     print("loading Checklist")
     let path = dataFilePath()
-    
+    print("loadChecklist - path: \(path)")
     if FileManager.default.fileExists(atPath: path) {
       if let data = try? Data(contentsOf: URL(fileURLWithPath: path)) {
         let unarchiver = NSKeyedUnarchiver(forReadingWith: data)
@@ -109,8 +109,9 @@ class DataModel {
       if checklists.count <= 0 {
         // handle this problem
         // only testing
-        registerDefaults()
-        handleFirstTimeAppStart()
+      userDefaults.set(true, forKey: "AppRunsFirstTime")
+      userDefaults.set(0, forKey: "ChecklistItemId")
+      handleFirstTimeAppStart()
       }
     }
   }
