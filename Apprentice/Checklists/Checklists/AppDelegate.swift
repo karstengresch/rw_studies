@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   let dataModel = DataModel()
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    print("didFinishLaunchingWithOptions")
     let navigationController = window!.rootViewController as! UINavigationController
     let controller = navigationController.viewControllers[0] as! AllListsTableViewController
     controller.dataModel = self.dataModel
