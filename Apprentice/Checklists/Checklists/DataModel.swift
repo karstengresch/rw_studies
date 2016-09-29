@@ -63,6 +63,9 @@ class DataModel {
     } else {
       print("Big problem. No file at \(path)")
       // handle problem
+      // cheapo - just trying
+      saveChecklists()
+      
     }
   }
   
