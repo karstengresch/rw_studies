@@ -54,6 +54,7 @@ class DataModel {
     print("loading Checklist")
     let path = dataFilePath()
     print("loadChecklist - path: \(path)")
+    analyzeChecklist(checklists)
     if FileManager.default.fileExists(atPath: path) {
       if let data = try? Data(contentsOf: URL(fileURLWithPath: path)) {
         let unarchiver = NSKeyedUnarchiver(forReadingWith: data)
