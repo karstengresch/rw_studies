@@ -63,12 +63,15 @@ class DataModel {
         sortChecklists()
       }
     } else {
-      print("Big problem. No file at \(path)")
-      // handle problem
-      // cheapo - just trying
-      analyzeChecklist(checklists)
-      saveChecklists()
       
+      if checklists.count > 0
+      {
+          print("Big problem. No file at \(path)")
+          // handle problem
+          // cheapo - just trying
+          analyzeChecklist(checklists)
+          saveChecklists()
+      }
     }
   }
   
