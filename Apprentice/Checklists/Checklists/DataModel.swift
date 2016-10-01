@@ -113,7 +113,8 @@ class DataModel {
       if checklists.count <= 0 {
         // handle this problem
         // only testing
-      userDefaults.set(true, forKey: "AppRunsFirstTime")
+      print("Resetting checklists as size is zero")
+        userDefaults.set(true, forKey: "AppRunsFirstTime")
       userDefaults.set(0, forKey: "ChecklistItemId")
       handleFirstTimeAppStart()
       }

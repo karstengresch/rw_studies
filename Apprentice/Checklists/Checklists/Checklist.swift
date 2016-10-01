@@ -33,7 +33,7 @@ class Checklist: NSObject, NSCoding {
   
   func encode(with aCoder: NSCoder) {
     aCoder.encode(name, forKey: "Name")
-        aCoder.encode(iconName, forKey: "IconName")
+    aCoder.encode(iconName, forKey: "IconName")
     aCoder.encode(checklistItems, forKey: "ChecklistItems")
   }
 
