@@ -55,7 +55,7 @@ class ChecklistItem: NSObject, NSCoding {
     aCoder.encode(checked, forKey: "Checked")
     aCoder.encode(dueDate, forKey: "DueDate")
     aCoder.encode(shouldRemind, forKey: "ShouldRemind")
-    aCoder.encode(itemId, forKey: "ItemID")
+    aCoder.encode(itemId, forKey: "ItemId")
     
   }
   
