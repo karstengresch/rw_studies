@@ -131,5 +131,10 @@ class DataModel {
   }
   
   // TODO create class func nextChecklistItemId(forChecklist: Int) -> Int
+  class func nextChecklistItemId(forChecklist: Int) -> Int {
+    return 0
+  }
+  
+  
   
 }
