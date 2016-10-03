@@ -123,15 +123,17 @@ class DataModel {
   
   class func nextChecklistItemId() -> Int {
     let userDefaults = UserDefaults.standard
+    let checklistIndex = UserDefaults.standard.integer(forKey: "ChecklistIndex")
     let checklistItemId = userDefaults.integer(forKey: "ChecklistItemId")
-    userDefaults.set(checklistItemId + 1, forKey: "ChecklistItemId")
+    userDefaults.set("\(checklistIndex)-\(checklistItemId + 1)", forKey: "ChecklistItemId")
     userDefaults.synchronize()
     print("Returning new checklistItemId: \(checklistItemId)")
     return checklistItemId
   }
   
-  // TODO create class func nextChecklistItemId(forChecklist: Int) -> Int
+  // TODO create func nextChecklistItemId(forChecklist: Int) -> Int
   class func nextChecklistItemId(forChecklist: Int) -> Int {
+    
     return 0
   }
   
