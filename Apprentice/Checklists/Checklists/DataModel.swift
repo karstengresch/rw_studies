@@ -125,9 +125,10 @@ class DataModel {
     let userDefaults = UserDefaults.standard
     let checklistIndex = UserDefaults.standard.integer(forKey: "ChecklistIndex")
     let checklistItemId = userDefaults.integer(forKey: "ChecklistItemId")
-    userDefaults.set("\(checklistIndex)-\(checklistItemId + 1)", forKey: "ChecklistItemId")
+    let finalChecklistItemId = "\(checklistIndex)-\(checklistItemId + 1)"
+    userDefaults.set(finalChecklistItemId, forKey: "ChecklistItemId")
     userDefaults.synchronize()
-    print("Returning new checklistItemId: \(checklistItemId)")
+    print("Returning new checklistItemId: \(finalChecklistItemId)")
     return checklistItemId
   }
   
