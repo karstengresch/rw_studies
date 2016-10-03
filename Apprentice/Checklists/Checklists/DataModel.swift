@@ -129,7 +129,7 @@ class DataModel {
     userDefaults.set(finalChecklistItemId, forKey: "ChecklistItemId")
     userDefaults.synchronize()
     print("Returning new checklistItemId: \(finalChecklistItemId)")
-    return checklistItemId
+    return finalChecklistItemId
   }
   
   // TODO create func nextChecklistItemId(forChecklist: Int) -> Int
