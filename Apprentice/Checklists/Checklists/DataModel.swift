@@ -121,7 +121,7 @@ class DataModel {
     }
   }
   
-  class func nextChecklistItemId() -> Int {
+  class func nextChecklistItemId() -> String {
     let userDefaults = UserDefaults.standard
     let checklistIndex = UserDefaults.standard.integer(forKey: "ChecklistIndex")
     let checklistItemId = userDefaults.integer(forKey: "ChecklistItemId")

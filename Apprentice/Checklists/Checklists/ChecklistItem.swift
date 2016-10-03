@@ -13,7 +13,7 @@ class ChecklistItem: NSObject, NSCoding {
   var checked = false
   var dueDate = Date()
   var shouldRemind = false
-  var itemId: Int
+  var itemId: String
   
   override init() {
     itemId = DataModel.nextChecklistItemId()
