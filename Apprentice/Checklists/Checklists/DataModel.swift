@@ -124,8 +124,9 @@ class DataModel {
   class func nextChecklistItemId() -> String {
     let userDefaults = UserDefaults.standard
     let checklistIndex = UserDefaults.standard.integer(forKey: "ChecklistIndex")
-    let checklistItemId = userDefaults.integer(forKey: "ChecklistItemId")
-    let finalChecklistItemId = "\(checklistIndex)-\(checklistItemId + 1)"
+    let checklistItemId = userDefaults.string(forKey: "ChecklistItemId")
+    // let finalChecklistItemId = "\(checklistIndex)-\(checklistItemId?.substring(from: checklistItemId.) + 1)"
+    let finalChecklistItemId = "\(checklistIndex)-\(((checklistItemId!.range(of: "-")!.lowerBound) as! Int) + 1)"
     userDefaults.set(finalChecklistItemId, forKey: "ChecklistItemId")
     userDefaults.synchronize()
     print("Returning new checklistItemId: \(finalChecklistItemId)")
