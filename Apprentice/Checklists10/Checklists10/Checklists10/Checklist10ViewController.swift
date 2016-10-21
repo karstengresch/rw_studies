@@ -35,15 +35,15 @@ class Checklist10ViewController: UITableViewController {
     let cell = tableView.dequeueReusableCell(withIdentifier: "ChecklistItem", for: indexPath)
     
     if let label = cell.viewWithTag(1000) as! UILabel? {
-      if indexPath.row % 5 == 0 {
+      if indexPath.row == 0 {
         label.text = row0text
-      } else if indexPath.row % 5 == 1 {
+      } else if indexPath.row == 1 {
         label.text = row1text
-      } else if indexPath.row % 5 == 2 {
+      } else if indexPath.row == 2 {
         label.text = row2text
-      } else if indexPath.row % 5 == 3 {
+      } else if indexPath.row == 3 {
         label.text = row3text
-      } else if indexPath.row % 5 == 4 {
+      } else if indexPath.row == 4 {
         label.text = row4text
       }
     }
