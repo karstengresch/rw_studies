@@ -51,9 +51,9 @@ class Checklist10ViewController: UITableViewController {
     
     if let cell = tableView.cellForRow(at: indexPath) {
       if cell.accessoryType == .none {
-        cell.accessoryType == .checkmark
+        cell.accessoryType = .checkmark
       } else {
-        cell.accessoryType == .none
+        cell.accessoryType = .none
       }
     }
     
