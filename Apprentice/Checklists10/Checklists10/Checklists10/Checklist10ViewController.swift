@@ -47,6 +47,9 @@ class Checklist10ViewController: UITableViewController {
   
   // MARK: TV delegate related
   
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    tableView.deselectRow(at: indexPath, animated: true)
+  }
 
 }
 
