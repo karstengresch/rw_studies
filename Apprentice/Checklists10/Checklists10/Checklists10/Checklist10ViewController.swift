@@ -20,7 +20,7 @@ class Checklist10ViewController: UITableViewController {
     // Dispose of any resources that can be recreated.
   }
   
-  
+  // MARK: TV Data Source related
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return 5
   }
@@ -44,6 +44,9 @@ class Checklist10ViewController: UITableViewController {
     
     return cell
   }
+  
+  // MARK: TV delegate related
+  
 
 }
 
