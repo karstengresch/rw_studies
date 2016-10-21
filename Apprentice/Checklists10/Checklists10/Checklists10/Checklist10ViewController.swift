@@ -15,6 +15,12 @@ class Checklist10ViewController: UITableViewController {
   var row2text = "Learn iOS development"
   var row3text = "Soccer practice"
   var row4text = "Eat ice cream"
+  
+  var row0checked = false
+  var row1checked = false
+  var row2checked = false
+  var row3checked = false
+  var row4checked = false
 
   override func viewDidLoad() {
     super.viewDidLoad()
