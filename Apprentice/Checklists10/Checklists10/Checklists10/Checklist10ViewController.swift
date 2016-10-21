@@ -36,15 +36,15 @@ class Checklist10ViewController: UITableViewController {
     
     if let label = cell.viewWithTag(1000) as! UILabel? {
       if indexPath.row % 5 == 0 {
-        label.text = "Walk the dog"
+        label.text = row0text
       } else if indexPath.row % 5 == 1 {
-        label.text = "Brush my teeth"
+        label.text = row1text
       } else if indexPath.row % 5 == 2 {
-        label.text = "Learn iOS development"
+        label.text = row2text
       } else if indexPath.row % 5 == 3 {
-        label.text = "Soccer practice"
+        label.text = row3text
       } else if indexPath.row % 5 == 4 {
-        label.text = "Eat ice cream"
+        label.text = row4text
       }
     }
     
