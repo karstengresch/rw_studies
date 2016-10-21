@@ -30,7 +30,7 @@ class Checklist10ViewController: UITableViewController {
     
     if let label = cell.viewWithTag(1000) as! UILabel? {
       if indexPath.row % 5 == 0 {
-        label.text % 5 = "Walk the dog"
+        label.text = "Walk the dog"
       } else if indexPath.row % 5 == 1 {
         label.text = "Brush my teeth"
       } else if indexPath.row % 5 == 2 {
