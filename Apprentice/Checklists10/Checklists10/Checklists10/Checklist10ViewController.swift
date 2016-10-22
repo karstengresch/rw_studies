@@ -10,7 +10,7 @@ import UIKit
 
 class Checklist10ViewController: UITableViewController {
   
-  var row0text = "Walk the dog"
+  var row0text = "Walk the doggies"
   var row1text = "Brush teeth"
   var row2text = "Learn iOS development"
   var row3text = "Soccer practice"
