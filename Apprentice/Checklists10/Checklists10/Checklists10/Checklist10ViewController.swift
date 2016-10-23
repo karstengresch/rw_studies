@@ -88,6 +88,9 @@ class Checklist10ViewController: UITableViewController {
     
     tableView.deselectRow(at: indexPath, animated: true)
   }
+  
+  // MARK Individual methods
+  
 
 }
 
