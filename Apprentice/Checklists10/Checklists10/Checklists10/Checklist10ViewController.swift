@@ -54,6 +54,8 @@ class Checklist10ViewController: UITableViewController {
       }
     }
     
+    configureCheckmark(for: cell, at: indexPath)
+    
     return cell
   }
   
