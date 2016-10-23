@@ -54,7 +54,7 @@ class Checklist10ViewController: UITableViewController {
       }
     }
     
-    configureCheckmark(for: cell, at: indexPath)
+     configureCheckmark(for: cell, at: indexPath)
     
     return cell
   }
@@ -62,6 +62,8 @@ class Checklist10ViewController: UITableViewController {
   // MARK: TV delegate related
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+    print("didSelectRowAt indexPath: \(indexPath )")
     
     if let cell = tableView.cellForRow(at: indexPath) {
       var isChecked = false
@@ -93,8 +95,7 @@ class Checklist10ViewController: UITableViewController {
   
   // MARK Individual methods
   
-  func configureCheckmark(for cell: UITableViewCell,
-    at indexPath: IndexPath) {
+  func configureCheckmark(for cell: UITableViewCell, at indexPath: IndexPath) {
 
     var isChecked = false
    
