@@ -38,6 +38,9 @@ class Checklist10ViewController: UITableViewController {
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    print("cellForRowAt indexPath: \(indexPath )")
+    
     let cell = tableView.dequeueReusableCell(withIdentifier: "ChecklistItem", for: indexPath)
     
     if let label = cell.viewWithTag(1000) as! UILabel? {
@@ -96,6 +99,8 @@ class Checklist10ViewController: UITableViewController {
   // MARK Individual methods
   
   func configureCheckmark(for cell: UITableViewCell, at indexPath: IndexPath) {
+    
+    print("configureCheckmark cell: \(cell) indexPath: \(indexPath )")
 
     var isChecked = false
    
