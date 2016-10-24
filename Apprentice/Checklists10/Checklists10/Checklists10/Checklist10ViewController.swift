@@ -86,11 +86,8 @@ class Checklist10ViewController: UITableViewController {
         row4checked = !row4checked
         isChecked = row4checked
       }
-      if isChecked {
-        cell.accessoryType = .checkmark
-      } else {
-        cell.accessoryType = .none
-      }
+     configureCheckmark(for: cell, at: indexPath)
+      
     }
     
     tableView.deselectRow(at: indexPath, animated: true)
