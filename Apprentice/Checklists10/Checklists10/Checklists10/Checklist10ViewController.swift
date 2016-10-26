@@ -77,7 +77,6 @@ class Checklist10ViewController: UITableViewController {
     print("didSelectRowAt indexPath: \(indexPath )")
     
     if let cell = tableView.cellForRow(at: indexPath) {
-      var isChecked = false
       if indexPath.row == 0 {
         row0item.checked = !row0item.checked
       } else if indexPath.row == 1 {
