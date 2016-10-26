@@ -11,11 +11,31 @@ import UIKit
 class Checklist10ViewController: UITableViewController {
   
   
+  
   var row0item: Checklist10Item
   var row1item: Checklist10Item
   var row2item: Checklist10Item
   var row3item: Checklist10Item
   var row4item: Checklist10Item
+  
+  required init?(coder aDecoder: NSCoder) {
+    row0item = Checklist10Item()
+    row0item.text = "Walk the dog"
+    row0item.checked = false
+    row1item = Checklist10Item()
+    row1item.text = "Brush my teeth"
+    row1item.checked = true
+    row2item = Checklist10Item()
+    row2item.text = "Learn iOS development"
+    row2item.checked = true
+    row3item = Checklist10Item()
+    row3item.text = "Soccer practice"
+    row3item.checked = false
+    row4item = Checklist10Item()
+    row4item.text = "Eat ice cream"
+    row4item.checked = true
+    super.init(coder: aDecoder)
+  }
   
   
   var row0text = "Walk the doggies"
