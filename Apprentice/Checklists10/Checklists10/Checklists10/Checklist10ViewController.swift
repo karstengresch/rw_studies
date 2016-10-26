@@ -79,20 +79,15 @@ class Checklist10ViewController: UITableViewController {
     if let cell = tableView.cellForRow(at: indexPath) {
       var isChecked = false
       if indexPath.row == 0 {
-        row0checked = !row0checked
-        isChecked = row0checked
+        row0item.checked = !row0item.checked
       } else if indexPath.row == 1 {
-        row1checked = !row1checked
-        isChecked = row1checked
+        row1item.checked = !row1item.checked
       } else if indexPath.row == 2 {
-        row2checked = !row2checked
-        isChecked = row2checked
+        row2item.checked = !row2item.checked
       } else if indexPath.row == 3 {
-        row3checked = !row3checked
-        isChecked = row3checked
+        row3item.checked = !row3item.checked
       } else if indexPath.row == 4 {
-        row4checked = !row4checked
-        isChecked = row4checked
+        row4item.checked = !row4item.checked
       }
      configureCheckmark(for: cell, at: indexPath)
       
@@ -110,15 +105,15 @@ class Checklist10ViewController: UITableViewController {
     var isChecked = false
    
     if indexPath.row == 0 {
-      isChecked = row0checked
+      isChecked = row0item.checked
     } else if indexPath.row == 1 {
-      isChecked = row1checked
+      isChecked = row1item.checked
     } else if indexPath.row == 2 {
-      isChecked = row2checked
+      isChecked = row2item.checked
     } else if indexPath.row == 3 {
-      isChecked = row3checked
+      isChecked = row3item.checked
     } else if indexPath.row == 4 {
-      isChecked = row4checked
+      isChecked = row4item.checked
     }
     if isChecked {
       cell.accessoryType = .checkmark
