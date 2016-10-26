@@ -10,6 +10,12 @@ import UIKit
 
 class Checklist10ViewController: UITableViewController {
   
+  var row0item: Checklist10Item
+  var row1item: Checklist10Item
+  var row2item: Checklist10Item
+  var row3item: Checklist10Item
+  var row4item: Checklist10Item
+  
   var row0text = "Walk the doggies"
   var row1text = "Brush teeth"
   var row2text = "Learn iOS development"
