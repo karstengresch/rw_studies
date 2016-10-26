@@ -10,11 +10,13 @@ import UIKit
 
 class Checklist10ViewController: UITableViewController {
   
+  
   var row0item: Checklist10Item
   var row1item: Checklist10Item
   var row2item: Checklist10Item
   var row3item: Checklist10Item
   var row4item: Checklist10Item
+  
   
   var row0text = "Walk the doggies"
   var row1text = "Brush teeth"
@@ -51,15 +53,15 @@ class Checklist10ViewController: UITableViewController {
     
     if let label = cell.viewWithTag(1000) as! UILabel? {
       if indexPath.row == 0 {
-        label.text = row0text
+        label.text = row0item.text
       } else if indexPath.row == 1 {
-        label.text = row1text
+        label.text = row1item.text
       } else if indexPath.row == 2 {
-        label.text = row2text
+        label.text = row2item.text
       } else if indexPath.row == 3 {
-        label.text = row3text
+        label.text = row3item.text
       } else if indexPath.row == 4 {
-        label.text = row4text
+        label.text = row4item.text
       }
     }
     
