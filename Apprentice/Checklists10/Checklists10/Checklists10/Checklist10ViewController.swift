@@ -10,30 +10,33 @@ import UIKit
 
 class Checklist10ViewController: UITableViewController {
   
+  var items: [Checklist10Item]
   
-  
-  var row0item: Checklist10Item
-  var row1item: Checklist10Item
-  var row2item: Checklist10Item
-  var row3item: Checklist10Item
-  var row4item: Checklist10Item
   
   required init?(coder aDecoder: NSCoder) {
-    row0item = Checklist10Item()
+    items = [Checklist10Item]()
+    
+    let row0item = Checklist10Item()
     row0item.text = "Walk the dog"
     row0item.checked = false
-    row1item = Checklist10Item()
+    items.append(row0item)
+    let row1item = Checklist10Item()
     row1item.text = "Brush my teeth"
     row1item.checked = true
-    row2item = Checklist10Item()
+    items.append(row1item)
+    let row2item = Checklist10Item()
     row2item.text = "Learn iOS development"
     row2item.checked = true
-    row3item = Checklist10Item()
+    items.append(row2item)
+    let row3item = Checklist10Item()
     row3item.text = "Soccer practice"
     row3item.checked = false
-    row4item = Checklist10Item()
+    items.append(row3item)
+    let row4item = Checklist10Item()
     row4item.text = "Eat ice cream"
     row4item.checked = true
+    items.append(row4item)
+    
     super.init(coder: aDecoder)
   }
 
@@ -60,15 +63,15 @@ class Checklist10ViewController: UITableViewController {
     
     if let label = cell.viewWithTag(1000) as! UILabel? {
       if indexPath.row == 0 {
-        label.text = row0item.text
+        label.text = items[0].text
       } else if indexPath.row == 1 {
-        label.text = row1item.text
+        label.text = items[1].text
       } else if indexPath.row == 2 {
-        label.text = row2item.text
+        label.text = items[2].text
       } else if indexPath.row == 3 {
-        label.text = row3item.text
+        label.text = items[3].text
       } else if indexPath.row == 4 {
-        label.text = row4item.text
+        label.text = items[4].text
       }
     }
     
@@ -85,15 +88,15 @@ class Checklist10ViewController: UITableViewController {
     
     if let cell = tableView.cellForRow(at: indexPath) {
       if indexPath.row == 0 {
-        row0item.checked = !row0item.checked
+        items[0].checked = !items[0].checked
       } else if indexPath.row == 1 {
-        row1item.checked = !row1item.checked
+        items[1].checked = !items[1].checked
       } else if indexPath.row == 2 {
-        row2item.checked = !row2item.checked
+        items[2].checked = !items[2].checked
       } else if indexPath.row == 3 {
-        row3item.checked = !row3item.checked
+        items[3].checked = !items[3].checked
       } else if indexPath.row == 4 {
-        row4item.checked = !row4item.checked
+        items[4].checked = !items[4].checked
       }
      configureCheckmark(for: cell, at: indexPath)
       
@@ -111,15 +114,15 @@ class Checklist10ViewController: UITableViewController {
     var isChecked = false
    
     if indexPath.row == 0 {
-      isChecked = row0item.checked
+      isChecked = items[0].checked
     } else if indexPath.row == 1 {
-      isChecked = row1item.checked
+      isChecked = items[1].checked
     } else if indexPath.row == 2 {
-      isChecked = row2item.checked
+      isChecked = items[2].checked
     } else if indexPath.row == 3 {
-      isChecked = row3item.checked
+      isChecked = items[3].checked
     } else if indexPath.row == 4 {
-      isChecked = row4item.checked
+      isChecked = items[4].checked
     }
     if isChecked {
       cell.accessoryType = .checkmark
