@@ -52,7 +52,7 @@ class Checklist10ViewController: UITableViewController {
   
   // MARK: TV Data Source related
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 5
+    return checklist10Items.count
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -79,7 +79,7 @@ class Checklist10ViewController: UITableViewController {
     if let cell = tableView.cellForRow(at: indexPath) {
       let checklist10Item = checklist10Items[indexPath.row]
       checklist10Item.checked = !checklist10Item.checked
-      configureCheckmark(for: cell, at: indexPath)
+      configureCheckmark(for: cell, )
     }
     
     tableView.deselectRow(at: indexPath, animated: true)
@@ -87,11 +87,9 @@ class Checklist10ViewController: UITableViewController {
   
   // MARK Individual methods
   
-  func configureCheckmark(for cell: UITableViewCell, at indexPath: IndexPath) {
+  func configureCheckmark(for cell: UITableViewCell, with checklist10Item: Checklist10Item) {
     
-    print("configureCheckmark cell: \(cell) indexPath: \(indexPath )")
-
-    let checklist10Item = checklist10Items[indexPath.row]
+    print("configureCheckmark cell: \(cell) checklist10Item: \(checklist10Item)")
 
     if checklist10Item.checked {
       cell.accessoryType = .checkmark
