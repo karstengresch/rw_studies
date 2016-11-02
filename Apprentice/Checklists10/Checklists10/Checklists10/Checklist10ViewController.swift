@@ -60,22 +60,12 @@ class Checklist10ViewController: UITableViewController {
     print("cellForRowAt indexPath: \(indexPath )")
     
     let cell = tableView.dequeueReusableCell(withIdentifier: "ChecklistItem", for: indexPath)
+
+    let checklist10Item = checklist10Items[indexPath.row]
+    let label = cell.viewWithTag(1000) as! UILabel
+    label.text = checklist10Item.text
     
-    if let label = cell.viewWithTag(1000) as! UILabel? {
-      if indexPath.row == 0 {
-        label.text = checklist10Items[0].text
-      } else if indexPath.row == 1 {
-        label.text = checklist10Items[1].text
-      } else if indexPath.row == 2 {
-        label.text = checklist10Items[2].text
-      } else if indexPath.row == 3 {
-        label.text = checklist10Items[3].text
-      } else if indexPath.row == 4 {
-        label.text = checklist10Items[4].text
-      }
-    }
-    
-     configureCheckmark(for: cell, at: indexPath)
+    configureCheckmark(for: cell, at: indexPath)
     
     return cell
   }
