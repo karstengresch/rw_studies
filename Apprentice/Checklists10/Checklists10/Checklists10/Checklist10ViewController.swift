@@ -79,7 +79,7 @@ class Checklist10ViewController: UITableViewController {
     if let cell = tableView.cellForRow(at: indexPath) {
       let checklist10Item = checklist10Items[indexPath.row]
       checklist10Item.checked = !checklist10Item.checked
-      configureCheckmark(for: cell, )
+      configureCheckmark(for: cell, with: checklist10Item)
     }
     
     tableView.deselectRow(at: indexPath, animated: true)
