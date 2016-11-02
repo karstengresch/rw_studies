@@ -65,7 +65,7 @@ class Checklist10ViewController: UITableViewController {
     let label = cell.viewWithTag(1000) as! UILabel
     label.text = checklist10Item.text
     
-    configureCheckmark(for: cell, at: indexPath)
+    configureCheckmark(for: cell, with: checklist10Item)
     
     return cell
   }
