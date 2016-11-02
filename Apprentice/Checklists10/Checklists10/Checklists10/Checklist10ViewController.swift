@@ -79,7 +79,7 @@ class Checklist10ViewController: UITableViewController {
     if let cell = tableView.cellForRow(at: indexPath) {
       let checklist10Item = checklist10Items[indexPath.row]
       checklist10Item.checked = !checklist10Item.checked
-      configureCheckmark(for: cell, at: indexPath)      
+      configureCheckmark(for: cell, at: indexPath)
     }
     
     tableView.deselectRow(at: indexPath, animated: true)
@@ -91,20 +91,9 @@ class Checklist10ViewController: UITableViewController {
     
     print("configureCheckmark cell: \(cell) indexPath: \(indexPath )")
 
-    var isChecked = false
-   
-    if indexPath.row == 0 {
-      isChecked = checklist10Items[0].checked
-    } else if indexPath.row == 1 {
-      isChecked = checklist10Items[1].checked
-    } else if indexPath.row == 2 {
-      isChecked = checklist10Items[2].checked
-    } else if indexPath.row == 3 {
-      isChecked = checklist10Items[3].checked
-    } else if indexPath.row == 4 {
-      isChecked = checklist10Items[4].checked
-    }
-    if isChecked {
+    let checklist10Item = checklist10Items[indexPath.row]
+
+    if checklist10Item.checked {
       cell.accessoryType = .checkmark
     } else {
       cell.accessoryType = .none
