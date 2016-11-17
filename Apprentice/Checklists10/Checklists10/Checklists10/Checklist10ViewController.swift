@@ -53,7 +53,16 @@ class Checklist10ViewController: UITableViewController {
   // MARK: IBAction and Outlet methods
   
   @IBAction func addItem() {
-  
+    let newRowIndex = checklist10Items.count
+    
+    let checklist10Item = Checklist10Item()
+    checklist10Item.text = "New checklist10Item row."
+    checklist10Item.checked = false
+    checklist10Items.append(checklist10Item)
+    
+    let indexPath = IndexPath(row: newRowIndex, section: 0)
+    let indexPaths = [indexPath]
+    tableView.insertRows(at: indexPaths, with: .automatic)
   }
   
   // MARK: TV Data Source related
