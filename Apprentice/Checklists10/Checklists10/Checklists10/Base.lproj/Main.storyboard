@@ -42,7 +42,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Checklist10s" id="SoU-Qr-EKf">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="gEE-KA-3ow"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="gEE-KA-3ow"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vX3-lq-UpB" userLabel="First Responder" sceneMemberID="firstResponder"/>
