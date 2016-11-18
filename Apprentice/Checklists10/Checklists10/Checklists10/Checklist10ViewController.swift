@@ -100,6 +100,13 @@ class Checklist10ViewController: UITableViewController {
     tableView.deselectRow(at: indexPath, animated: true)
   }
   
+  override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    checklist10Items.remove(at: indexPath.row)
+    
+    let indexPaths = [indexPath]
+    tableView.deleteRows(at: indexPaths, with: .automatic)
+  }
+  
   // MARK Individual methods
   
   func configureCheckmark(for cell: UITableViewCell, with checklist10Item: Checklist10Item) {
