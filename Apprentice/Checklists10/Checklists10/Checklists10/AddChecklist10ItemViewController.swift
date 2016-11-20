@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+import UIKit
+
+class AddChecklist10ItemViewController {
+  
+}
