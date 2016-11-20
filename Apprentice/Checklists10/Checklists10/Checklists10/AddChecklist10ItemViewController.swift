@@ -10,6 +10,6 @@ import Foundation
 
 import UIKit
 
-class AddChecklist10ItemViewController {
+class AddChecklist10ItemViewController: UITableViewController {
   
 }
