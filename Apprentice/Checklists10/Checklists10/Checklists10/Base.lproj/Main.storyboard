@@ -77,8 +77,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Add Checklist10Item" id="In2-Oe-Gme">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="JqR-9t-IbU"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="LnG-Ey-nfW"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="JqR-9t-IbU"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="LnG-Ey-nfW"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MkI-oN-rXE" userLabel="First Responder" sceneMemberID="firstResponder"/>
