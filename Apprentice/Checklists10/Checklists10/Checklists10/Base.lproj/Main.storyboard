@@ -53,7 +53,7 @@
             </objects>
             <point key="canvasLocation" x="895.20000000000005" y="-424.13793103448279"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Add Checklist10Item-->
         <scene sceneID="AVY-hX-97t">
             <objects>
                 <tableViewController id="c20-Uf-fby" sceneMemberID="viewController">
@@ -76,7 +76,10 @@
                             <outlet property="delegate" destination="c20-Uf-fby" id="8vA-KO-SKa"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="In2-Oe-Gme"/>
+                    <navigationItem key="navigationItem" title="Add Checklist10Item" id="In2-Oe-Gme">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="JqR-9t-IbU"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="LnG-Ey-nfW"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MkI-oN-rXE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
