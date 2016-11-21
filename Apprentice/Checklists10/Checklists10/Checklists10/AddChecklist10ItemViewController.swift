@@ -12,4 +12,16 @@ import UIKit
 
 class AddChecklist10ItemViewController: UITableViewController {
   
+  
+  // MARK: IBOutlet/IBAction
+  
+  @IBAction func cancel() {
+    dismiss(animated: true, completion: nil)
+  }
+  
+  @IBAction func done() {
+    dismiss(animated: true, completion: nil)
+  }
+  
+  
 }
