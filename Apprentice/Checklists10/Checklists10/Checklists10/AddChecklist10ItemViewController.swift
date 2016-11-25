@@ -20,10 +20,11 @@ class AddChecklist10ItemViewController: UITableViewController {
   }
   
   @IBAction func done() {
+    print("Contents of addChecklist10ItemTextField: \(addChecklist10ItemTextField.text)")
     dismiss(animated: true, completion: nil)
   }
   
-  @IBOutlet weak var addCheclist10ItemTextField: UITextField!
+  @IBOutlet weak var addChecklist10ItemTextField: UITextField!
   
   // MARK: TVC methods
   
