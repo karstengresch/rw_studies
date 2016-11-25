@@ -101,6 +101,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addCheclist10ItemTextField" destination="Lft-Iw-Pmm" id="kUL-Uz-cO8"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MkI-oN-rXE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

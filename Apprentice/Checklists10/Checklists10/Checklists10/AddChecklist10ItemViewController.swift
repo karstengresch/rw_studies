@@ -23,6 +23,7 @@ class AddChecklist10ItemViewController: UITableViewController {
     dismiss(animated: true, completion: nil)
   }
   
+  @IBOutlet weak var addCheclist10ItemTextField: UITextField!
   
   // MARK: TVC methods
   
