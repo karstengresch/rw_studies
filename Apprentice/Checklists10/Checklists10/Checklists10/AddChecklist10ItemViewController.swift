@@ -34,7 +34,8 @@ class AddChecklist10ItemViewController: UITableViewController {
   }
   
   override func viewWillAppear(_ animated: Bool) {
-    
+    super.viewWillAppear(animated)
+    addChecklist10ItemTextField.becomeFirstResponder()
   }
   
 }
