@@ -24,4 +24,11 @@ class AddChecklist10ItemViewController: UITableViewController {
   }
   
   
+  // MARK: TVC methods
+  
+  // disallow row from selection
+  override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+    return nil
+  }
+  
 }
