@@ -33,4 +33,8 @@ class AddChecklist10ItemViewController: UITableViewController {
     return nil
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    
+  }
+  
 }
