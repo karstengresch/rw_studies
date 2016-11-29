@@ -43,4 +43,10 @@ class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelega
     addChecklist10ItemTextField.becomeFirstResponder()
   }
   
+  
+  func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString: string: String) -> Bool {
+    
+    
+  }
+  
 }
