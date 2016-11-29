@@ -44,8 +44,17 @@ class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelega
   }
   
   
-  func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString: string: String) -> Bool {
+  func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    let oldText = textField.text! as NSString
+    let newText = oldText.replacingCharacters(in: range, with: string)
     
+    if newText.characters.count > 0 {
+      doneBarButton.isEnabled = true
+    } else {
+      doneBarButton.isEnabled = false
+    }
+    
+    return true
     
   }
   
