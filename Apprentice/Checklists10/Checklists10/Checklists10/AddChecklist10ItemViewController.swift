@@ -10,7 +10,7 @@ import Foundation
 
 import UIKit
 
-class AddChecklist10ItemViewController: UITableViewController {
+class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelegate {
   
   
   // MARK: IBOutlet/IBAction
