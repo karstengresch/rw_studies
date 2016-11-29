@@ -17,6 +17,9 @@ class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelega
   
   @IBOutlet weak var addChecklist10ItemTextField: UITextField!
   
+  @IBOutlet weak var doneBarButton: UIBarButtonItem!
+  
+  
   @IBAction func cancel() {
     dismiss(animated: true, completion: nil)
   }

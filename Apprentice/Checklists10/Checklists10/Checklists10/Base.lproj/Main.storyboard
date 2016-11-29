@@ -79,6 +79,7 @@
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     <connections>
                                                         <action selector="done" destination="c20-Uf-fby" eventType="editingDidEndOnExit" id="EZi-22-QiH"/>
+                                                        <outlet property="delegate" destination="c20-Uf-fby" id="l4v-MM-Gqf"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -106,6 +107,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addChecklist10ItemTextField" destination="Lft-Iw-Pmm" id="8Ab-U5-xgs"/>
+                        <outlet property="doneBarButton" destination="LnG-Ey-nfW" id="itY-X8-m3U"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MkI-oN-rXE" userLabel="First Responder" sceneMemberID="firstResponder"/>
