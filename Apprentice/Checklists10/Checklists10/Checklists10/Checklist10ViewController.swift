@@ -50,6 +50,16 @@ class Checklist10ViewController: UITableViewController, AddChecklist10ItemViewCo
     // Dispose of any resources that can be recreated.
   }
   
+  // MARK: Delegate Implementations
+  
+  func addChecklist10ItemViewControllerDidCancel(_ controller: AddChecklist10ItemViewController) {
+    
+  }
+  
+  func addChecklist10ItemViewController(_ controller: AddChecklist10ItemViewController, didFinishingAdding checklist10Item: Checklist10Item) {
+    
+  }
+  
   // MARK: IBAction and Outlet methods
   
   @IBAction func addItem() {
