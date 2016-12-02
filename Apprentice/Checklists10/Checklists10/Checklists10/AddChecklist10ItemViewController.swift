@@ -42,8 +42,12 @@ class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelega
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier == "" {
+    if segue.identifier == "AddChecklist10Item" {
+      let navigationController = segue.destination as! UINavigationController
       
+      let controller = navigationController.topViewController as! AddChecklist10ItemViewController
+      
+      controller.delegate = self
     }
   }
   
