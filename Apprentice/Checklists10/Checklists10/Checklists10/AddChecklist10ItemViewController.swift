@@ -41,6 +41,9 @@ class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelega
     delegate?.addChecklist10ItemViewController(self, didFinishingAdding: checklist10Item)
   }
   
+  func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+  }
   
   
   // MARK: TVC methods
