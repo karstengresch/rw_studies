@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Checklist10ViewController: UITableViewController {
+class Checklist10ViewController: UITableViewController, AddChecklist10ItemViewControllerDelegate {
   
   var checklist10Items: [Checklist10Item]
   
