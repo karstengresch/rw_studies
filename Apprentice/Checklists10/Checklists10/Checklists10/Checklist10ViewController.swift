@@ -53,11 +53,11 @@ class Checklist10ViewController: UITableViewController, AddChecklist10ItemViewCo
   // MARK: Delegate Implementations
   
   func addChecklist10ItemViewControllerDidCancel(_ controller: AddChecklist10ItemViewController) {
-    
+    dismiss(animated: true, completion: nil)
   }
   
   func addChecklist10ItemViewController(_ controller: AddChecklist10ItemViewController, didFinishingAdding checklist10Item: Checklist10Item) {
-    
+    dismiss(animated: true, completion: nil)
   }
   
   // MARK: IBAction and Outlet methods
