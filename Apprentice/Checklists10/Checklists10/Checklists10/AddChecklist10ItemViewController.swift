@@ -10,6 +10,10 @@ import Foundation
 
 import UIKit
 
+protocol AddChecklist10ItemViewControllerDelegate: class {
+  
+}
+
 class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelegate {
   
   
