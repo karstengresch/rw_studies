@@ -33,7 +33,12 @@ class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelega
   
   @IBAction func done() {
     print("Contents of addChecklist10ItemTextField: \(addChecklist10ItemTextField.text)")
-    dismiss(animated: true, completion: nil)
+    // dismiss(animated: true, completion: nil)
+    
+    let checklist10Item = Checklist10Item()
+    checklist10Item.text = addChecklist10ItemTextField.text!
+    checklist10Item.checked = false
+    delegate?.addChecklist10ItemViewController(self, didFinishingAdding: checklist10Item)
   }
   
   
