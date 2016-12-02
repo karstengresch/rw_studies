@@ -17,6 +17,7 @@ protocol AddChecklist10ItemViewControllerDelegate: class {
 
 class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelegate {
   
+  weak var delegate: AddChecklist10ItemViewControllerDelegate?
   
   // MARK: IBOutlet/IBAction
   
