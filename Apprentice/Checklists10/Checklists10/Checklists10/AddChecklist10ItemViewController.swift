@@ -27,7 +27,8 @@ class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelega
   
   
   @IBAction func cancel() {
-    dismiss(animated: true, completion: nil)
+    // dismiss(animated: true, completion: nil)
+    delegate?.addChecklist10ItemViewControllerDidCancel(self)
   }
   
   @IBAction func done() {
