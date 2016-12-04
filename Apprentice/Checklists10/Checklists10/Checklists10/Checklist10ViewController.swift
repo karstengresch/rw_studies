@@ -60,6 +60,16 @@ class Checklist10ViewController: UITableViewController, AddChecklist10ItemViewCo
     dismiss(animated: true, completion: nil)
   }
   
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "AddChecklist10Item" {
+      let navigationController = segue.destination as! UINavigationController
+      
+      let controller = navigationController.topViewController as! AddChecklist10ItemViewController
+      // TODO - broken: "Cannot assign value of type 'AddChecklist10ItemViewController' to type 'AddChecklist10ItemViewControllerDelegate?'"
+      controller.delegate = self
+    }
+  }
+  
   // MARK: IBAction and Outlet methods
   
   @IBAction func addItem() {
