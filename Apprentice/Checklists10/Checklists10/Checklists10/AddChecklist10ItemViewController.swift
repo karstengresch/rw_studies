@@ -17,14 +17,15 @@ protocol AddChecklist10ItemViewControllerDelegate: class {
 
 class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelegate {
   
-  weak var delegate: AddChecklist10ItemViewControllerDelegate?
+
   
   // MARK: IBOutlet/IBAction
   
   @IBOutlet weak var addChecklist10ItemTextField: UITextField!
   
   @IBOutlet weak var doneBarButton: UIBarButtonItem!
-  
+
+  weak var delegate: AddChecklist10ItemViewControllerDelegate?
   
   @IBAction func cancel() {
     // dismiss(animated: true, completion: nil)
@@ -40,17 +41,6 @@ class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelega
     checklist10Item.checked = false
     delegate?.addChecklist10ItemViewController(self, didFinishingAdding: checklist10Item)
   }
-  
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier == "AddChecklist10Item" {
-      let navigationController = segue.destination as! UINavigationController
-      
-      let controller = navigationController.topViewController as! AddChecklist10ItemViewController
-      // TODO - broken: "Cannot assign value of type 'AddChecklist10ItemViewController' to toype 'AddChecklist10ItemViewControllerDelegate?'"
-      controller.delegate = self
-    }
-  }
-  
   
   // MARK: TVC methods
   
