@@ -46,7 +46,11 @@ class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelega
   
   // disallow row from selection
   override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-    return nil
+    if indexPath.section == 1 {
+      return indexPath
+    } else {
+      return nil
+    }
   }
   
   override func viewWillAppear(_ animated: Bool) {
