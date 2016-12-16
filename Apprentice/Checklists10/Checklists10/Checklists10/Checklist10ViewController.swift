@@ -59,9 +59,11 @@ class Checklist10ViewController: UITableViewController, AddChecklist10ItemViewCo
   func addChecklist10ItemViewController(_ controller: AddChecklist10ItemViewController, didFinishingAdding checklist10Item: Checklist10Item) {
     let newRowIndex = checklist10Items.count
     checklist10Items.append(checklist10Item)
+    
     let indexPath = IndexPath(row: newRowIndex, section: 0)
     let indexPaths = [indexPath]
     tableView.insertRows(at: indexPaths, with: .automatic)
+    
     dismiss(animated: true, completion: nil)
   }
   
