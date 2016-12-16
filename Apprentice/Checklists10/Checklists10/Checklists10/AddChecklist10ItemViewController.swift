@@ -54,6 +54,7 @@ class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelega
   }
   
   override func viewWillAppear(_ animated: Bool) {
+    print("AddChecklist10ItemViewController.viewWillAppear")
     super.viewWillAppear(animated)
     addChecklist10ItemTextField.becomeFirstResponder()
   }
