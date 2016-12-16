@@ -59,13 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				3D3227A91DB55CDE008DA8CF /* AppDelegate.swift */,
+				3DA455331DE24BFB00A756A8 /* AddChecklist10ItemViewController.swift */,
 				3D3227AB1DB55CDE008DA8CF /* Checklist10ViewController.swift */,
 				3D3227AD1DB55CDE008DA8CF /* Main.storyboard */,
 				3D3227B01DB55CDE008DA8CF /* Assets.xcassets */,
 				3D3227B21DB55CDE008DA8CF /* LaunchScreen.storyboard */,
 				3D3227B51DB55CDE008DA8CF /* Info.plist */,
 				3D9D17F71DC14420009F6F25 /* Checklist10Item.swift */,
-				3DA455331DE24BFB00A756A8 /* AddChecklist10ItemViewController.swift */,
 			);
 			path = Checklists10;
 			sourceTree = "<group>";
