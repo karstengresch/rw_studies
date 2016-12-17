@@ -54,6 +54,78 @@ class Checklist10ViewController: UITableViewController, AddChecklist10ItemViewCo
   
   // MARK: Delegate Implementations
   
+  
+
+  
+
+  
+  // MARK: IBAction and Outlet methods
+  
+  
+  // MARK: TV Data Source related
+  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return checklist10Items.count
+  }
+  
+  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    print("cellForRowAt indexPath: \(indexPath )")
+    
+    let cell = tableView.dequeueReusableCell(withIdentifier: "Checklist10Item", for: indexPath)
+
+    let checklist10Item = checklist10Items[indexPath.row]
+    let label = cell.viewWithTag(1000) as! UILabel
+    label.text = checklist10Item.text
+    
+    configureCheckmark(for: cell, with: checklist10Item)
+    
+    return cell
+  }
+  
+  // MARK: TV delegate related
+  
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+    print("didSelectRowAt indexPath: \(indexPath )")
+    
+    if let cell = tableView.cellForRow(at: indexPath) {
+      let checklist10Item = checklist10Items[indexPath.row]
+      checklist10Item.toggleChecked()
+      configureCheckmark(for: cell, with: checklist10Item)
+    }
+    
+    tableView.deselectRow(at: indexPath, animated: true)
+  }
+  
+
+  
+  // MARK Individual methods
+  
+  func configureCheckmark(for cell: UITableViewCell, with checklist10Item: Checklist10Item) {
+    
+    print("configureCheckmark cell: \(cell) checklist10Item: \(checklist10Item)")
+
+    if checklist10Item.checked {
+      cell.accessoryType = .checkmark
+    } else {
+      cell.accessoryType = .none
+    }
+  }
+  
+  override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    checklist10Items.remove(at: indexPath.row)
+    
+    let indexPaths = [indexPath]
+    tableView.deleteRows(at: indexPaths, with: .automatic)
+  }
+  
+  func configureText(for cell: UITableViewCell,
+                     with checklist10Item: Checklist10Item) {
+    let label = cell.viewWithTag(1000) as! UILabel
+    label.text = checklist10Item.text
+  }
+  
+  
   func addChecklist10ItemViewControllerDidCancel(_ controller: AddChecklist10ItemViewController) {
     dismiss(animated: true, completion: nil)
   }
@@ -77,70 +149,6 @@ class Checklist10ViewController: UITableViewController, AddChecklist10ItemViewCo
       // TODO - broken: "Cannot assign value of type 'AddChecklist10ItemViewController' to type 'AddChecklist10ItemViewControllerDelegate?'"
       controller.delegate = self
     }
-  }
-  
-  // MARK: IBAction and Outlet methods
-  
-  
-  // MARK: TV Data Source related
-  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return checklist10Items.count
-  }
-  
-  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    
-    print("cellForRowAt indexPath: \(indexPath )")
-    
-    let cell = tableView.dequeueReusableCell(withIdentifier: "ChecklistItem", for: indexPath)
-
-    let checklist10Item = checklist10Items[indexPath.row]
-    let label = cell.viewWithTag(1000) as! UILabel
-    label.text = checklist10Item.text
-    
-    configureCheckmark(for: cell, with: checklist10Item)
-    
-    return cell
-  }
-  
-  // MARK: TV delegate related
-  
-  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    
-    print("didSelectRowAt indexPath: \(indexPath )")
-    
-    if let cell = tableView.cellForRow(at: indexPath) {
-      let checklist10Item = checklist10Items[indexPath.row]
-      checklist10Item.checked = !checklist10Item.checked
-      configureCheckmark(for: cell, with: checklist10Item)
-    }
-    
-    tableView.deselectRow(at: indexPath, animated: true)
-  }
-  
-  override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-    checklist10Items.remove(at: indexPath.row)
-    
-    let indexPaths = [indexPath]
-    tableView.deleteRows(at: indexPaths, with: .automatic)
-  }
-  
-  // MARK Individual methods
-  
-  func configureCheckmark(for cell: UITableViewCell, with checklist10Item: Checklist10Item) {
-    
-    print("configureCheckmark cell: \(cell) checklist10Item: \(checklist10Item)")
-
-    if checklist10Item.checked {
-      cell.accessoryType = .checkmark
-    } else {
-      cell.accessoryType = .none
-    }
-  }
-  
-  func configureText(for cell: UITableViewCell,
-                     with checklist10Item: Checklist10Item) {
-    let label = cell.viewWithTag(1000) as! UILabel
-    label.text = checklist10Item.text
   }
 
 }
