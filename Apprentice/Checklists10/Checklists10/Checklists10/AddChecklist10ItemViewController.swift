@@ -22,7 +22,6 @@ class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelega
   // MARK: IBOutlet/IBAction
   
   @IBOutlet weak var addChecklist10ItemTextField: UITextField!
-  
   @IBOutlet weak var doneBarButton: UIBarButtonItem!
 
   weak var delegate: AddChecklist10ItemViewControllerDelegate?
