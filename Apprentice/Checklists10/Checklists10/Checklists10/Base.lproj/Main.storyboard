@@ -106,7 +106,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="addChecklist10ItemTextField" destination="Lft-Iw-Pmm" id="8Ab-U5-xgs"/>
+                        <outlet property="addChecklist10ItemTextField" destination="Lft-Iw-Pmm" id="zhx-T1-7J5"/>
                         <outlet property="doneBarButton" destination="LnG-Ey-nfW" id="itY-X8-m3U"/>
                     </connections>
                 </tableViewController>
