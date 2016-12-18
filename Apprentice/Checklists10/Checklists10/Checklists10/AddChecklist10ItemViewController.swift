@@ -7,7 +7,6 @@
 //
 
 import Foundation
-
 import UIKit
 
 protocol AddChecklist10ItemViewControllerDelegate: class {
@@ -25,6 +24,12 @@ class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelega
   @IBOutlet weak var doneBarButton: UIBarButtonItem!
 
   weak var delegate: AddChecklist10ItemViewControllerDelegate?
+  
+  override func viewWillAppear(_ animated: Bool) {
+    print("AddChecklist10ItemViewController.viewWillAppear")
+    super.viewWillAppear(animated)
+    addChecklist10ItemTextField.becomeFirstResponder()
+  }
   
   @IBAction func cancel() {
     // dismiss(animated: true, completion: nil)
@@ -45,32 +50,52 @@ class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelega
   
   // disallow row from selection
   override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-    if indexPath.section == 1 {
+    /* if indexPath.section == 1 {
       return indexPath
     } else {
       return nil
-    }
-  }
-  
-  override func viewWillAppear(_ animated: Bool) {
-    print("AddChecklist10ItemViewController.viewWillAppear")
-    super.viewWillAppear(animated)
-    addChecklist10ItemTextField.becomeFirstResponder()
+    }*/
+    
+    return nil
   }
   
   
   func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
     let oldText = textField.text! as NSString
-    let newText = oldText.replacingCharacters(in: range, with: string)
+    let newText = oldText.replacingCharacters(in: range, with: string) as NSString
     
+    /*
     if newText.characters.count > 0 {
       doneBarButton.isEnabled = true
     } else {
       doneBarButton.isEnabled = false
     }
+    */
     
+    doneBarButton.isEnabled = (newText.length > 0)
     return true
     
   }
   
 }
+
+/*
+ 
+ 
+ 
+ 
+ func textField(_ textField: UITextField,
+ shouldChangeCharactersIn range: NSRange,
+ replacementString string: String) -> Bool {
+ 
+ let oldText = textField.text! as NSString
+ let newText = oldText.replacingCharacters(in: range, with: string) as NSString
+ 
+ doneBarButton.isEnabled = (newText.length > 0)
+ return true
+ }
+ 
+ }
+
+ 
+ */
