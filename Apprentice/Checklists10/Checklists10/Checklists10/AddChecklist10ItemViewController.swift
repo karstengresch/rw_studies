@@ -27,7 +27,7 @@ class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelega
     print("AddChecklist10ItemViewController.viewWillAppear")
     super.viewWillAppear(animated)
     
-    let when = DispatchTime.now() + 0.4
+    let when = DispatchTime.now() + 3
     DispatchQueue.main.asyncAfter(deadline: when) {
       self.addChecklist10ItemTextField.becomeFirstResponder()
     }
