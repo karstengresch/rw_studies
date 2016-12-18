@@ -16,8 +16,6 @@ protocol AddChecklist10ItemViewControllerDelegate: class {
 
 class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelegate {
   
-
-  
   // MARK: IBOutlet/IBAction
   
   @IBOutlet weak var addChecklist10ItemTextField: UITextField!
@@ -28,16 +26,25 @@ class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelega
   override func viewWillAppear(_ animated: Bool) {
     print("AddChecklist10ItemViewController.viewWillAppear")
     super.viewWillAppear(animated)
-    addChecklist10ItemTextField.becomeFirstResponder()
+    
+    let when = DispatchTime.now() + 0.4
+    DispatchQueue.main.asyncAfter(deadline: when) {
+      self.addChecklist10ItemTextField.becomeFirstResponder()
+    }
+    
+
+
+    
   }
   
   @IBAction func cancel() {
     // dismiss(animated: true, completion: nil)
+    print("CANCEL Contents of addChecklist10ItemTextField: \(addChecklist10ItemTextField.text)")
     delegate?.addChecklist10ItemViewControllerDidCancel(self)
   }
   
   @IBAction func done() {
-    print("Contents of addChecklist10ItemTextField: \(addChecklist10ItemTextField.text)")
+    print("DONE Contents of addChecklist10ItemTextField: \(addChecklist10ItemTextField.text)")
     // dismiss(animated: true, completion: nil)
     
     let checklist10Item = Checklist10Item()
@@ -78,24 +85,3 @@ class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelega
   }
   
 }
-
-/*
- 
- 
- 
- 
- func textField(_ textField: UITextField,
- shouldChangeCharactersIn range: NSRange,
- replacementString string: String) -> Bool {
- 
- let oldText = textField.text! as NSString
- let newText = oldText.replacingCharacters(in: range, with: string) as NSString
- 
- doneBarButton.isEnabled = (newText.length > 0)
- return true
- }
- 
- }
-
- 
- */
