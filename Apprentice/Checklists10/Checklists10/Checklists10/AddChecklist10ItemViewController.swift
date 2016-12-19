@@ -24,15 +24,16 @@ class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelega
   weak var delegate: AddChecklist10ItemViewControllerDelegate?
   
   override func viewWillAppear(_ animated: Bool) {
-    print("AddChecklist10ItemViewController.viewWillAppear")
     super.viewWillAppear(animated)
-    
+    /*
     let when = DispatchTime.now() + 3
     DispatchQueue.main.asyncAfter(deadline: when) {
       self.addChecklist10ItemTextField.becomeFirstResponder()
     }
+     */
     
     addChecklist10ItemTextField.becomeFirstResponder()
+    print("ddChecklist10ItemTextField.becomeFirstResponder() passed")
 
   }
   
