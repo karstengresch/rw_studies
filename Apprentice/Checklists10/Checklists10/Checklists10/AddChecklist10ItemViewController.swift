@@ -32,9 +32,8 @@ class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelega
       self.addChecklist10ItemTextField.becomeFirstResponder()
     }
     
+    addChecklist10ItemTextField.becomeFirstResponder()
 
-
-    
   }
   
   @IBAction func cancel() {
