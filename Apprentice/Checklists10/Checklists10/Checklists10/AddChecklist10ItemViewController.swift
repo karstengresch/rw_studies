@@ -32,6 +32,7 @@ class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelega
     }
      */
     
+    addChecklist10ItemTextField.text = "Gimme text"
     addChecklist10ItemTextField.becomeFirstResponder()
     print("ddChecklist10ItemTextField.becomeFirstResponder() passed")
 
