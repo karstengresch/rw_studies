@@ -34,8 +34,14 @@ class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelega
     
     addChecklist10ItemTextField.text = "Gimme text"
     addChecklist10ItemTextField.becomeFirstResponder()
-    print("ddChecklist10ItemTextField.becomeFirstResponder() passed")
+    print("addChecklist10ItemTextField.becomeFirstResponder() passed")
 
+  }
+  
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    addChecklist10ItemTextField.becomeFirstResponder()
   }
   
   @IBAction func cancel() {
