@@ -64,23 +64,19 @@
                         <sections>
                             <tableViewSection id="a0q-o1-4bU">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="dsQ-OP-lPC">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="lvx-hy-AZg">
                                         <rect key="frame" x="0.0" y="35" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dsQ-OP-lPC" id="Z11-rf-p9p">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lvx-hy-AZg" id="xLj-5M-MNm">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of the Checklist10 item." adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lft-Iw-Pmm">
-                                                    <rect key="frame" x="8" y="6" width="359" height="30"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insert Checklist10 here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nZX-8t-hea">
+                                                    <rect key="frame" x="8" y="5" width="359" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                                                    <connections>
-                                                        <action selector="done" destination="c20-Uf-fby" eventType="editingDidEndOnExit" id="EZi-22-QiH"/>
-                                                        <outlet property="delegate" destination="c20-Uf-fby" id="l4v-MM-Gqf"/>
-                                                    </connections>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -106,7 +102,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="addChecklist10ItemTextField" destination="Lft-Iw-Pmm" id="zhx-T1-7J5"/>
+                        <outlet property="addChecklist10ItemTextField" destination="nZX-8t-hea" id="68z-Cp-2m0"/>
                         <outlet property="doneBarButton" destination="LnG-Ey-nfW" id="itY-X8-m3U"/>
                     </connections>
                 </tableViewController>

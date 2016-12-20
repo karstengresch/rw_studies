@@ -32,8 +32,11 @@ class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelega
     }
      */
     
+    checkFirstResponder(view: self.view)
+    
     addChecklist10ItemTextField.text = "Gimme text"
     addChecklist10ItemTextField.becomeFirstResponder()
+    // self.target(forAction: "becomeFirstResponder:", withSender: _)
     print("addChecklist10ItemTextField.becomeFirstResponder() passed")
 
   }
@@ -42,6 +45,7 @@ class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelega
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     addChecklist10ItemTextField.becomeFirstResponder()
+    
   }
   
   @IBAction func cancel() {
@@ -89,6 +93,22 @@ class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelega
     doneBarButton.isEnabled = (newText.length > 0)
     return true
     
+  }
+  
+  func checkFirstResponder(view: UIView) {
+    for subview in view.subviews {
+      print("Checking view: \(subview.classForCoder)")
+      if (subview.subviews.count > 0)
+      {
+        checkFirstResponder(view: subview)
+      }
+      else {
+      print("No more subviews found for: \(view.classForCoder)")
+      if (subview.isFirstResponder) {
+        print("And the first responder is: \(view.classForCoder)")
+      }
+      }
+    }
   }
   
 }
