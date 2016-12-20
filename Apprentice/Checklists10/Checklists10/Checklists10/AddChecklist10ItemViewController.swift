@@ -32,9 +32,8 @@ class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelega
     }
      */
     
-    checkFirstResponder(view: self.view)
+//     checkFirstResponder(view: self.view)
     
-    addChecklist10ItemTextField.text = "Gimme text"
     addChecklist10ItemTextField.becomeFirstResponder()
     // self.target(forAction: "becomeFirstResponder:", withSender: _)
     print("addChecklist10ItemTextField.becomeFirstResponder() passed")
