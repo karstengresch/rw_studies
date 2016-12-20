@@ -25,19 +25,7 @@ class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelega
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    /*
-    let when = DispatchTime.now() + 3
-    DispatchQueue.main.asyncAfter(deadline: when) {
-      self.addChecklist10ItemTextField.becomeFirstResponder()
-    }
-     */
-    
-//     checkFirstResponder(view: self.view)
-    
     addChecklist10ItemTextField.becomeFirstResponder()
-    // self.target(forAction: "becomeFirstResponder:", withSender: _)
-    // print("addChecklist10ItemTextField.becomeFirstResponder() passed")
-
   }
   
   
@@ -92,22 +80,6 @@ class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelega
     doneBarButton.isEnabled = (newText.length > 0)
     return true
     
-  }
-  
-  func checkFirstResponder(view: UIView) {
-    for subview in view.subviews {
-      print("Checking view: \(subview.classForCoder)")
-      if (subview.subviews.count > 0)
-      {
-        checkFirstResponder(view: subview)
-      }
-      else {
-      print("No more subviews found for: \(view.classForCoder)")
-      if (subview.isFirstResponder) {
-        print("And the first responder is: \(view.classForCoder)")
-      }
-      }
-    }
   }
   
 }
