@@ -23,6 +23,18 @@ class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelega
 
   weak var delegate: AddChecklist10ItemViewControllerDelegate?
   
+  var checklist10ItemToEdit: Checklist10Item?
+  
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    if let checklist10Item = checklist10ItemToEdit {
+      title = "Edit item"
+      addChecklist10ItemTextField.text = checklist10Item.text
+    }
+  }
+  
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     addChecklist10ItemTextField.becomeFirstResponder()

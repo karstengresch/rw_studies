@@ -42,7 +42,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="JO0-8d-zMo" kind="presentation" trigger="accessoryAction" id="qGa-AN-ovg"/>
+                                    <segue destination="JO0-8d-zMo" kind="presentation" identifier="EditChecklist10Item" trigger="accessoryAction" id="qGa-AN-ovg"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
