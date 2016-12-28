@@ -30,7 +30,7 @@ class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelega
     super.viewDidLoad()
     
     if let checklist10Item = checklist10ItemToEdit {
-      title = "Edit item"
+      title = "Edit checklist 10 item"
       addChecklist10ItemTextField.text = checklist10Item.text
     }
   }
