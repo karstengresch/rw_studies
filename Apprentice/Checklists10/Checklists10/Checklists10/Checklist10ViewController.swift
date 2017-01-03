@@ -152,6 +152,13 @@ class Checklist10ViewController: UITableViewController, AddChecklist10ItemViewCo
       controller.delegate = self
     } else if segue.identifier == "EditChecklist10Item" {
       
+        let navigationController = segue.destination as! UINavigationController
+        let controller = navigationController.topViewController as! AddChecklist10ItemViewController
+      
+      controller.delegate = self
+      
+      
+      
     }
   }
 
