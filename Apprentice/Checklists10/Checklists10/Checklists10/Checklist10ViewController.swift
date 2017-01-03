@@ -157,7 +157,9 @@ class Checklist10ViewController: UITableViewController, AddChecklist10ItemViewCo
       
       controller.delegate = self
       
-      
+      if let indexPath = tableView.indexPath(for: sender as! UITableViewCell) {
+        controller.checklist10ItemToEdit = checklist10Items[indexPath.row]
+      }
       
     }
   }
