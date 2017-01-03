@@ -150,6 +150,8 @@ class Checklist10ViewController: UITableViewController, AddChecklist10ItemViewCo
       let controller = navigationController.topViewController as! AddChecklist10ItemViewController
       // TODO - broken: "Cannot assign value of type 'AddChecklist10ItemViewController' to type 'AddChecklist10ItemViewControllerDelegate?'"
       controller.delegate = self
+    } else if segue.identifier == "EditChecklist10Item" {
+      
     }
   }
 
