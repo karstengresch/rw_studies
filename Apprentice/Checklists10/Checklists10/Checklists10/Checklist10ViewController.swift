@@ -132,7 +132,7 @@ class Checklist10ViewController: UITableViewController, AddChecklist10ItemViewCo
     dismiss(animated: true, completion: nil)
   }
   
-  func addChecklist10ItemViewController(_ controller: AddChecklist10ItemViewController, didFinishingAdding checklist10Item: Checklist10Item) {
+  func addChecklist10ItemViewController(_ controller: AddChecklist10ItemViewController, didFinishAdding checklist10Item: Checklist10Item) {
     let newRowIndex = checklist10Items.count
     checklist10Items.append(checklist10Item)
     
