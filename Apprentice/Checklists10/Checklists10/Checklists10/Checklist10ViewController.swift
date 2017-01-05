@@ -143,6 +143,10 @@ class Checklist10ViewController: UITableViewController, AddChecklist10ItemViewCo
     dismiss(animated: true, completion: nil)
   }
   
+  func addChecklist10ItemViewController(_ controller: AddChecklist10ItemViewController, didFinishEditing checklist10Item: Checklist10Item) {
+    // TBD later - just 4 comp purp
+  }
+  
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "AddChecklist10Item" {
       let navigationController = segue.destination as! UINavigationController
