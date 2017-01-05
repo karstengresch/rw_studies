@@ -144,7 +144,14 @@ class Checklist10ViewController: UITableViewController, AddChecklist10ItemViewCo
   }
   
   func addChecklist10ItemViewController(_ controller: AddChecklist10ItemViewController, didFinishEditing checklist10Item: Checklist10Item) {
-    // TBD later - just 4 comp purp
+    if let index = checklist10Items.index(of: checklist10Item) {
+      let indexPath = IndexPath(row: index, section: 0)
+      if let cell = tableView.cellForRow(at: indexPath)
+      {
+        configureText(for: cell, with: checklist10Item)
+      }
+    }
+    dismiss(animated: true, completion: nil)
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
