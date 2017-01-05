@@ -32,6 +32,7 @@ class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelega
     if let checklist10Item = checklist10ItemToEdit {
       title = "Edit checklist 10 item"
       addChecklist10ItemTextField.text = checklist10Item.text
+      doneBarButton.isEnabled = true
     }
   }
   
