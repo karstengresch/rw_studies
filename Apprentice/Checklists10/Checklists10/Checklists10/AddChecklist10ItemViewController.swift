@@ -59,10 +59,16 @@ class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelega
     print("DONE Contents of addChecklist10ItemTextField: \(addChecklist10ItemTextField.text)")
     // dismiss(animated: true, completion: nil)
     
-    let checklist10Item = Checklist10Item()
-    checklist10Item.text = addChecklist10ItemTextField.text!
-    checklist10Item.checked = false
-    delegate?.addChecklist10ItemViewController(self, didFinishAdding: checklist10Item)
+    if let checklist10Item = checklist10ItemToEdit {
+      checklist10Item.text = addChecklist10ItemTextField.text!
+      delegate?.addChecklist10ItemViewController(self, didFinishEditing: checklist10Item)
+    }
+    else {
+      let checklist10Item = Checklist10Item()
+      checklist10Item.text = addChecklist10ItemTextField.text!
+      checklist10Item.checked = false
+      delegate?.addChecklist10ItemViewController(self, didFinishAdding: checklist10Item)
+    }
   }
   
   // MARK: TVC methods
