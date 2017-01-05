@@ -12,6 +12,7 @@ import UIKit
 protocol AddChecklist10ItemViewControllerDelegate: class {
   func addChecklist10ItemViewControllerDidCancel(_ controller: AddChecklist10ItemViewController)
   func addChecklist10ItemViewController(_ controller: AddChecklist10ItemViewController, didFinishingAdding checklist10Item: Checklist10Item)
+  func addItemViewController(_ controller: AddChecklist10ItemViewController, didFinishEditing checklist10Item: Checklist10Item)
 }
 
 class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelegate {
