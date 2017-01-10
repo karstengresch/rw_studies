@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Checklist10ViewController: UITableViewController, AddChecklist10ItemViewControllerDelegate {
+class Checklist10ViewController: UITableViewController, Checklist10ItemDetailViewControllerDelegate {
   
   var checklist10Items: [Checklist10Item]
   
@@ -128,11 +128,11 @@ class Checklist10ViewController: UITableViewController, AddChecklist10ItemViewCo
   }
   
   
-  func addChecklist10ItemViewControllerDidCancel(_ controller: AddChecklist10ItemViewController) {
+  func addChecklist10ItemViewControllerDidCancel(_ controller: Checklist10ItemDetailViewController) {
     dismiss(animated: true, completion: nil)
   }
   
-  func addChecklist10ItemViewController(_ controller: AddChecklist10ItemViewController, didFinishAdding checklist10Item: Checklist10Item) {
+  func addChecklist10ItemViewController(_ controller: Checklist10ItemDetailViewController, didFinishAdding checklist10Item: Checklist10Item) {
     let newRowIndex = checklist10Items.count
     checklist10Items.append(checklist10Item)
     
@@ -143,7 +143,7 @@ class Checklist10ViewController: UITableViewController, AddChecklist10ItemViewCo
     dismiss(animated: true, completion: nil)
   }
   
-  func addChecklist10ItemViewController(_ controller: AddChecklist10ItemViewController, didFinishEditing checklist10Item: Checklist10Item) {
+  func addChecklist10ItemViewController(_ controller: Checklist10ItemDetailViewController, didFinishEditing checklist10Item: Checklist10Item) {
     if let index = checklist10Items.index(of: checklist10Item) {
       let indexPath = IndexPath(row: index, section: 0)
       if let cell = tableView.cellForRow(at: indexPath)
@@ -158,13 +158,13 @@ class Checklist10ViewController: UITableViewController, AddChecklist10ItemViewCo
     if segue.identifier == "AddChecklist10Item" {
       let navigationController = segue.destination as! UINavigationController
       
-      let controller = navigationController.topViewController as! AddChecklist10ItemViewController
-      // TODO - broken: "Cannot assign value of type 'AddChecklist10ItemViewController' to type 'AddChecklist10ItemViewControllerDelegate?'"
+      let controller = navigationController.topViewController as! Checklist10ItemDetailViewController
+      // TODO - broken: "Cannot assign value of type 'Checklist10ItemDetailViewController' to type 'Checklist10ItemDetailViewControllerDelegate?'"
       controller.delegate = self
     } else if segue.identifier == "EditChecklist10Item" {
       
         let navigationController = segue.destination as! UINavigationController
-        let controller = navigationController.topViewController as! AddChecklist10ItemViewController
+        let controller = navigationController.topViewController as! Checklist10ItemDetailViewController
       
       controller.delegate = self
       

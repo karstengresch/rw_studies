@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol AddChecklist10ItemViewControllerDelegate: class {
+protocol Checklist10ItemDetailViewControllerDelegate: class {
   func addChecklist10ItemViewControllerDidCancel(_ controller: AddChecklist10ItemViewController)
   func addChecklist10ItemViewController(_ controller: AddChecklist10ItemViewController, didFinishAdding checklist10Item: Checklist10Item)
   func addChecklist10ItemViewController(_ controller: AddChecklist10ItemViewController, didFinishEditing checklist10Item: Checklist10Item)
@@ -22,7 +22,7 @@ class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelega
   @IBOutlet weak var addChecklist10ItemTextField: UITextField!
   @IBOutlet weak var doneBarButton: UIBarButtonItem!
 
-  weak var delegate: AddChecklist10ItemViewControllerDelegate?
+  weak var delegate: Checklist10ItemDetailViewControllerDelegate?
   
   var checklist10ItemToEdit: Checklist10Item?
   
