@@ -174,6 +174,14 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
       
     }
   }
+  
+  // MARK: Persistence related
+  func documentsDirectory() -> URL {
+    let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+    
+    return paths[0]
+    
+  }
 
 }
 
