@@ -10,9 +10,9 @@ import Foundation
 import UIKit
 
 protocol Checklist10ItemDetailViewControllerDelegate: class {
-  func Checklist10ItemDetailViewControllerDidCancel(_ controller: Checklist10ItemDetailViewController)
-  func Checklist10ItemDetailViewController(_ controller: Checklist10ItemDetailViewController, didFinishAdding checklist10Item: Checklist10Item)
-  func Checklist10ItemDetailViewController(_ controller: Checklist10ItemDetailViewController, didFinishEditing checklist10Item: Checklist10Item)
+  func checklist10ItemDetailViewControllerDidCancel(_ controller: Checklist10ItemDetailViewController)
+  func checklist10ItemDetailViewController(_ controller: Checklist10ItemDetailViewController, didFinishAdding checklist10Item: Checklist10Item)
+  func checklist10ItemDetailViewController(_ controller: Checklist10ItemDetailViewController, didFinishEditing checklist10Item: Checklist10Item)
 }
 
 class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDelegate {
@@ -52,7 +52,7 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
   @IBAction func cancel() {
     // dismiss(animated: true, completion: nil)
     print("CANCEL Contents of addChecklist10ItemTextField: \(addChecklist10ItemTextField.text)")
-    delegate?.Checklist10ItemDetailViewControllerDidCancel(self)
+    delegate?.checklist10ItemDetailViewControllerDidCancel(self)
   }
   
   @IBAction func done() {
@@ -61,13 +61,13 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
     
     if let checklist10Item = checklist10ItemToEdit {
       checklist10Item.text = addChecklist10ItemTextField.text!
-      delegate?.Checklist10ItemDetailViewController(self, didFinishEditing: checklist10Item)
+      delegate?.checklist10ItemDetailViewController(self, didFinishEditing: checklist10Item)
     }
     else {
       let checklist10Item = Checklist10Item()
       checklist10Item.text = addChecklist10ItemTextField.text!
       checklist10Item.checked = false
-      delegate?.Checklist10ItemDetailViewController(self, didFinishAdding: checklist10Item)
+      delegate?.checklist10ItemDetailViewController(self, didFinishAdding: checklist10Item)
     }
   }
   
