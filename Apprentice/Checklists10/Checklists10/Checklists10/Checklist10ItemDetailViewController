@@ -1,5 +1,5 @@
 //
-//  AddChecklist10ItemViewController.swift
+//  Checklist10ItemDetailViewController.swift
 //  Checklists10
 //
 //  Created by Karsten Gresch on 20.11.16.
@@ -10,12 +10,12 @@ import Foundation
 import UIKit
 
 protocol Checklist10ItemDetailViewControllerDelegate: class {
-  func addChecklist10ItemViewControllerDidCancel(_ controller: AddChecklist10ItemViewController)
-  func addChecklist10ItemViewController(_ controller: AddChecklist10ItemViewController, didFinishAdding checklist10Item: Checklist10Item)
-  func addChecklist10ItemViewController(_ controller: AddChecklist10ItemViewController, didFinishEditing checklist10Item: Checklist10Item)
+  func Checklist10ItemDetailViewControllerDidCancel(_ controller: Checklist10ItemDetailViewController)
+  func Checklist10ItemDetailViewController(_ controller: Checklist10ItemDetailViewController, didFinishAdding checklist10Item: Checklist10Item)
+  func Checklist10ItemDetailViewController(_ controller: Checklist10ItemDetailViewController, didFinishEditing checklist10Item: Checklist10Item)
 }
 
-class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelegate {
+class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDelegate {
   
   // MARK: IBOutlet/IBAction
   
@@ -52,7 +52,7 @@ class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelega
   @IBAction func cancel() {
     // dismiss(animated: true, completion: nil)
     print("CANCEL Contents of addChecklist10ItemTextField: \(addChecklist10ItemTextField.text)")
-    delegate?.addChecklist10ItemViewControllerDidCancel(self)
+    delegate?.Checklist10ItemDetailViewControllerDidCancel(self)
   }
   
   @IBAction func done() {
@@ -61,13 +61,13 @@ class AddChecklist10ItemViewController: UITableViewController, UITextFieldDelega
     
     if let checklist10Item = checklist10ItemToEdit {
       checklist10Item.text = addChecklist10ItemTextField.text!
-      delegate?.addChecklist10ItemViewController(self, didFinishEditing: checklist10Item)
+      delegate?.Checklist10ItemDetailViewController(self, didFinishEditing: checklist10Item)
     }
     else {
       let checklist10Item = Checklist10Item()
       checklist10Item.text = addChecklist10ItemTextField.text!
       checklist10Item.checked = false
-      delegate?.addChecklist10ItemViewController(self, didFinishAdding: checklist10Item)
+      delegate?.Checklist10ItemDetailViewController(self, didFinishAdding: checklist10Item)
     }
   }
   
