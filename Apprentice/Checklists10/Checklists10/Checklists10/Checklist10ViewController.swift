@@ -128,13 +128,13 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
     let label = cell.viewWithTag(1000) as! UILabel
     label.text = checklist10Item.text
   }
+
   
-  
-  func checklist10ItemDetailViewControllerDidCancel(_ controller: Checklist10ItemDetailViewController) {
+  func checklist10ItemDetailViewControllerDidCancel(_ controller: Checklist10ItemDetailViewController) -> () {
     dismiss(animated: true, completion: nil)
   }
   
-  func checklist10ItemDetailViewController(_ controller: Checklist10ItemDetailViewController, didFinishAdding checklist10Item: Checklist10Item) {
+  func checklist10ItemDetailViewController(_ controller: Checklist10ItemDetailViewController, didFinishAdding checklist10Item: Checklist10Item) -> () {
     let newRowIndex = checklist10Items.count
     checklist10Items.append(checklist10Item)
     
@@ -145,7 +145,7 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
     dismiss(animated: true, completion: nil)
   }
   
-  func checklist10ItemDetailViewController(_ controller: Checklist10ItemDetailViewController, didFinishEditing checklist10Item: Checklist10Item) {
+  func checklist10ItemDetailViewController(_ controller: Checklist10ItemDetailViewController, didFinishEditing checklist10Item: Checklist10Item) -> () {
     if let index = checklist10Items.index(of: checklist10Item) {
       let indexPath = IndexPath(row: index, section: 0)
       if let cell = tableView.cellForRow(at: indexPath)
