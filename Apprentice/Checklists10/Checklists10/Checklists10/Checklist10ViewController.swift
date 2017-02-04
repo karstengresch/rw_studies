@@ -182,6 +182,10 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
     return paths[0]
     
   }
+  
+  func dataFilePath() -> URL {
+    return documentsDirectory().appendingPathComponent("Checklist10.plist")
+  }
 
 }
 
