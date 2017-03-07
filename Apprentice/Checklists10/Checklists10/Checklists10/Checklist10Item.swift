@@ -16,6 +16,9 @@ class Checklist10Item: NSObject, NSCoding {
     super.init()
   }
   
+  override init() {
+    super.init()
+  }
   
   func toggleChecked() {
     checked = !checked
