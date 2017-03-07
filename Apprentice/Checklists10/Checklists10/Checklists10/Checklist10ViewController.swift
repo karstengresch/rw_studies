@@ -192,7 +192,11 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
   
   // Persistence stuff
   func saveChecklist10Items() {
-    
+    let data = NSMutableData()
+    let archiver = NSKeyedArchiver(forWritingWith: data)
+    archiver.encode(checklist10Items, forKey: "Checklist10Items")
+    archiver.finishEncoding()
+    data.write(to: dataFilePath(), atomically: true)
   }
   
   
