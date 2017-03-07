@@ -12,9 +12,20 @@ class Checklist10Item: NSObject, NSCoding {
   var text = ""
   var checked = false
   
+  required init(coder aDecoder: NSCoder) {
+    super.init()
+  }
+  
+  
   func toggleChecked() {
     checked = !checked
   }
+  
+  func encode(with aCoder: NSCoder) {
+    
+  }
+  
+  
   
 }
 
