@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Checklist10Item: NSObject {
+class Checklist10Item: NSObject, NSCoding {
   var text = ""
   var checked = false
   
