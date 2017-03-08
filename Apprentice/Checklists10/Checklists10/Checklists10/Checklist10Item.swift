@@ -13,7 +13,11 @@ class Checklist10Item: NSObject, NSCoding {
   var checked = false
   
   required init(coder aDecoder: NSCoder) {
+    text = aDecoder.decodeObject(value(forKey: "Text") as! String)
+    checked = aDecoder.decodeBool(forKey: "Checked")
+    
     super.init()
+    
   }
   
   override init() {
