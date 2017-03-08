@@ -15,31 +15,10 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
   
   required init?(coder aDecoder: NSCoder) {
     checklist10Items = [Checklist10Item]()
-    
-    let row0item = Checklist10Item()
-    row0item.text = "Walk the dog"
-    row0item.checked = false
-    checklist10Items.append(row0item)
-    let row1item = Checklist10Item()
-    row1item.text = "Brush my teeth"
-    row1item.checked = true
-    checklist10Items.append(row1item)
-    let row2item = Checklist10Item()
-    row2item.text = "Learn iOS development"
-    row2item.checked = true
-    checklist10Items.append(row2item)
-    let row3item = Checklist10Item()
-    row3item.text = "Soccer practice"
-    row3item.checked = false
-    checklist10Items.append(row3item)
-    let row4item = Checklist10Item()
-    row4item.text = "Eat ice cream"
-    row4item.checked = true
-    checklist10Items.append(row4item)
-    
     super.init(coder: aDecoder)
     print("Documents folder is \(documentsDirectory())")
     print("Data file path is \(dataFilePath())")
+    loadChecklist10Items()
   }
 
   override func viewDidLoad() {
@@ -53,6 +32,11 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
+  
+  func loadChecklist10Items() {
+    
+  }
+  
   
   // MARK: Delegate Implementations
   
