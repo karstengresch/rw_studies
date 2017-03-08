@@ -9,8 +9,8 @@
 import Foundation
 
 class Checklist10Item: NSObject, NSCoding {
-  var text = ""
-  var checked = false
+  var text: String
+  var checked: Bool
   
   required init(coder aDecoder: NSCoder) {
     text = aDecoder.decodeObject(forKey: "Text") as! String
@@ -20,6 +20,8 @@ class Checklist10Item: NSObject, NSCoding {
   }
   
   override init() {
+    text = ""
+    checked = false
     super.init()  
   }
   
