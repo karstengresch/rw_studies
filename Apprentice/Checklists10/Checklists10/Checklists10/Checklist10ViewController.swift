@@ -34,7 +34,12 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
   }
   
   func loadChecklist10Items() {
-    
+    let path = dataFilePath()
+    if let data = try? Data(contentsOf: path) {
+      let unarchiver = NSKeyedUnarchiver(forReadingWith: data)
+      checklist10Items = unarchiver.decodeObject(forKey: "Checklist10Items") as! [Checklist10Item]
+      unarchiver.finishDecoding()
+    }
   }
   
   
