@@ -43,12 +43,7 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
   }
   
   
-  // MARK: Delegate Implementations
-  
-  
-
-  
-
+  // MARK: Delegate Implementation
   
   // MARK: IBAction and Outlet methods
   
