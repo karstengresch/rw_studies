@@ -39,13 +39,20 @@ class AllLists10ViewController: UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = makeCell(for: tableView)
         cell.textLabel!.text = "List10 \(indexPath.row)"
         return cell
     }
   
   func makeCell(for tableView: UITableView) -> UITableViewCell {
     
+    let cellIdentifier = "Cell10"
+    if let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) {
+      return cell
+    } else
+    {
+      return UITableViewCell(style: .default, reuseIdentifier: cellIdentifier)
+    }
   }
 
     /*
