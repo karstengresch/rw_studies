@@ -43,6 +43,10 @@ class AllLists10ViewController: UITableViewController {
         cell.textLabel!.text = "List10 \(indexPath.row)"
         return cell
     }
+  
+  func makeCell(for tableView: UITableView) -> UITableViewCell {
+    
+  }
 
     /*
     // Override to support conditional editing of the table view.
