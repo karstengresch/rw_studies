@@ -60,6 +60,7 @@
 		3D3227A81DB55CDE008DA8CF /* Checklists10 */ = {
 			isa = PBXGroup;
 			children = (
+				3DAE2B2C1E735AC9000B22D1 /* AllLists10ViewController.swift */,
 				3D3227A91DB55CDE008DA8CF /* AppDelegate.swift */,
 				3DA455331DE24BFB00A756A8 /* Checklist10ItemDetailViewController.swift */,
 				3D3227AB1DB55CDE008DA8CF /* Checklist10ViewController.swift */,
@@ -68,7 +69,6 @@
 				3D3227B21DB55CDE008DA8CF /* LaunchScreen.storyboard */,
 				3D3227B51DB55CDE008DA8CF /* Info.plist */,
 				3D9D17F71DC14420009F6F25 /* Checklist10Item.swift */,
-				3DAE2B2C1E735AC9000B22D1 /* AllLists10ViewController.swift */,
 			);
 			path = Checklists10;
 			sourceTree = "<group>";
