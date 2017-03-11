@@ -63,10 +63,10 @@
             </objects>
             <point key="canvasLocation" x="895.20000000000005" y="-424.13793103448279"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Checklists10-->
         <scene sceneID="BMg-2A-iI5">
             <objects>
-                <tableViewController id="Jls-uo-NHe" sceneMemberID="viewController">
+                <tableViewController id="Jls-uo-NHe" customClass="AllLists10ViewController" customModule="Checklists10" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="u9a-EW-29s">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,11 +86,11 @@
                             <outlet property="delegate" destination="Jls-uo-NHe" id="Ghp-YX-eOc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="kY8-cE-e6x"/>
+                    <navigationItem key="navigationItem" title="Checklists10" id="kY8-cE-e6x"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="64T-Sx-Ihk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="895" y="374"/>
+            <point key="canvasLocation" x="-44" y="412"/>
         </scene>
         <!--Add Checklist10Item-->
         <scene sceneID="AVY-hX-97t">
