@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Checklist10s-->
+        <!--Name of the Checklist10-->
         <scene sceneID="hDr-Vh-3wx">
             <objects>
                 <tableViewController id="y5a-pM-cbH" customClass="Checklist10ViewController" customModule="Checklists10" customModuleProvider="target" sceneMemberID="viewController">
@@ -51,7 +51,7 @@
                             <outlet property="delegate" destination="y5a-pM-cbH" id="it5-KB-T55"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Checklist10s" id="SoU-Qr-EKf">
+                    <navigationItem key="navigationItem" title="Name of the Checklist10" id="SoU-Qr-EKf">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gEE-KA-3ow">
                             <connections>
                                 <segue destination="JO0-8d-zMo" kind="presentation" identifier="AddChecklist10Item" id="0tv-JF-dwT"/>
@@ -63,7 +63,7 @@
             </objects>
             <point key="canvasLocation" x="2193" y="-424"/>
         </scene>
-        <!--Checklists10-->
+        <!--Checklist10s-->
         <scene sceneID="BMg-2A-iI5">
             <objects>
                 <tableViewController id="Jls-uo-NHe" customClass="AllLists10ViewController" customModule="Checklists10" customModuleProvider="target" sceneMemberID="viewController">
@@ -76,9 +76,9 @@
                             <outlet property="delegate" destination="Jls-uo-NHe" id="Ghp-YX-eOc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Checklists10" id="kY8-cE-e6x"/>
+                    <navigationItem key="navigationItem" title="Checklist10s" id="kY8-cE-e6x"/>
                     <connections>
-                        <segue destination="y5a-pM-cbH" kind="show" id="rOp-rW-ZG9"/>
+                        <segue destination="y5a-pM-cbH" kind="show" identifier="ShowCheclist10" id="rOp-rW-ZG9"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="64T-Sx-Ihk" userLabel="First Responder" sceneMemberID="firstResponder"/>
