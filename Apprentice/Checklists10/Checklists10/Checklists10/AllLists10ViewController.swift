@@ -45,5 +45,9 @@ class AllLists10ViewController: UITableViewController {
       return UITableViewCell(style: .default, reuseIdentifier: cellIdentifier)
     }
   }
+  
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    performSegue(withIdentifier: "Show Checklist10", sender: nil)
+  }
 
 }
