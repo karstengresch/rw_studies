@@ -77,6 +77,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Checklists10" id="kY8-cE-e6x"/>
+                    <connections>
+                        <segue destination="y5a-pM-cbH" kind="show" id="rOp-rW-ZG9"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="64T-Sx-Ihk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
