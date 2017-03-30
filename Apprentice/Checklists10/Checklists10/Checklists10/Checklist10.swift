@@ -10,4 +10,11 @@ import UIKit
 
 class Checklist10: NSObject {
   
+  var name = ""
+  
+  init(name: String) {
+    self.name = name
+    super.init()    
+  }
+  
 }

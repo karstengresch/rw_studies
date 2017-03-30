@@ -9,6 +9,26 @@
 import UIKit
 
 class AllLists10ViewController: UITableViewController {
+  
+  var checklist10s: [Checklist10]
+  
+  required init?(coder aDecoder: NSCoder) {
+    checklist10s = [Checklist10]()
+    super.init(coder: aDecoder)
+    
+    var checklist10 = Checklist10(name: "Dionysos")
+    checklist10s.append(checklist10)
+    
+    checklist10 = Checklist10(name: "Nymphs")
+    checklist10s.append(checklist10)
+    
+    checklist10 = Checklist10(name: "Satyrs")
+    checklist10s.append(checklist10)
+    
+    checklist10 = Checklist10(name: "Bacchanal")
+    checklist10s.append(checklist10)
+    
+  }
 
     override func viewDidLoad() {
         super.viewDidLoad()
