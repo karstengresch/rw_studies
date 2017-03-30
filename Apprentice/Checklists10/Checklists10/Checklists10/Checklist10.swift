@@ -7,3 +7,7 @@
 //
 
 import UIKit
+
+class Checklist10: NSObject {
+  
+}
