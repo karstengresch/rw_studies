@@ -57,6 +57,7 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
     
     print("cellForRowAt indexPath: \(indexPath )")
     
+    // from prototype cell
     let cell = tableView.dequeueReusableCell(withIdentifier: "Checklist10Item", for: indexPath)
 
     let checklist10Item = checklist10Items[indexPath.row]
