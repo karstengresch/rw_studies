@@ -11,6 +11,7 @@ import UIKit
 class Checklist10ViewController: UITableViewController, Checklist10ItemDetailViewControllerDelegate {
   
   var checklist10Items: [Checklist10Item]
+  var checklist10: Checklist10!
   
   
   required init?(coder aDecoder: NSCoder) {
@@ -23,7 +24,7 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+    title = checklist10.name
   }
   
   
