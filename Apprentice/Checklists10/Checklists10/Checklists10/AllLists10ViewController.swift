@@ -45,13 +45,17 @@ class AllLists10ViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return checklist10s.count
     }
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = makeCell(for: tableView)
-        cell.textLabel!.text = "List10 \(indexPath.row)"
+        let checklist = checklist10s[indexPath.row]
+        if let textLabel = cell.textLabel {
+          textLabel.text = checklist.name
+        }
+        cell.accessoryType = .detailDisclosureButton
         return cell
     }
   
