@@ -71,7 +71,12 @@ class AllLists10ViewController: UITableViewController {
   }
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    performSegue(withIdentifier: "ShowChecklist10", sender: nil)
+    let checklist10 = checklist10s[indexPath.row]
+    performSegue(withIdentifier: "ShowChecklist10", sender: checklist10)
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
   }
 
 }
