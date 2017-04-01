@@ -76,7 +76,10 @@ class AllLists10ViewController: UITableViewController {
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    
+    if segue.identifier == "ShowChecklist10" {
+      let checklist10ViewController = segue.destination as! Checklist10ViewController
+      checklist10ViewController.checklist10 = sender as! Checklist10
+    }
   }
 
 }
