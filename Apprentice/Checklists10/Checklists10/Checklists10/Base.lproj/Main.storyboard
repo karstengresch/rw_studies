@@ -209,7 +209,6 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     <connections>
-                                                        <action selector="done" destination="BtY-zT-o2D" eventType="editingDidEnd" id="x2Q-yY-Mfa"/>
                                                         <outlet property="delegate" destination="BtY-zT-o2D" id="eEH-Di-OF8"/>
                                                     </connections>
                                                 </textField>

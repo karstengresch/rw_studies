@@ -50,6 +50,7 @@ class ListDetailViewController: UITableViewController, UITextFieldDelegate {
   }
   
   @IBAction func done() {
+    print("ListDetailViewController: done")
     if let checklist10 = checklist10ToEdit {
       checklist10.name = textField.text!
       delegate?.listDetailViewController(self, didFinishEditing: checklist10)
