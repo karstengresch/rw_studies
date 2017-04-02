@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AllLists10ViewController: UITableViewController {
+class AllLists10ViewController: UITableViewController, ListDetailViewControllerDelegate {
   
   var checklist10s: [Checklist10]
   
@@ -79,6 +79,11 @@ class AllLists10ViewController: UITableViewController {
     if segue.identifier == "ShowChecklist10" {
       let checklist10ViewController = segue.destination as! Checklist10ViewController
       checklist10ViewController.checklist10 = (sender as! Checklist10)
+    } else if segue.identifier == "AddChecklist10" {
+      let navigationController = segue.destination as! UINavigationController
+      let controller = navigationController.topViewController as! ListDetailViewController
+      controller.delegate = self
+      controller.checklist10ToEdit = nil
     }
   }
 
