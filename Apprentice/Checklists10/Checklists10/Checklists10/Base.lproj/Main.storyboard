@@ -94,7 +94,7 @@
         <!--Add Checklist10Item-->
         <scene sceneID="AVY-hX-97t">
             <objects>
-                <tableViewController id="c20-Uf-fby" customClass="AddChecklist10ItemViewController" customModule="Checklists10" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="c20-Uf-fby" customClass="Checklist10ItemDetailViewController" customModule="Checklists10" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="c2S-qg-Fkt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -259,7 +259,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D81-BN-C4f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3181.5999999999999" y="253.2233883058471"/>
+            <point key="canvasLocation" x="1889" y="354"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JKx-Lh-UeN">
@@ -275,7 +275,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kjb-hp-xbN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2231" y="254"/>
+            <point key="canvasLocation" x="950" y="354"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
