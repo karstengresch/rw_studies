@@ -51,12 +51,12 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
   
   @IBAction func cancel() {
     // dismiss(animated: true, completion: nil)
-    print("CANCEL Contents of addChecklist10ItemTextField: \(addChecklist10ItemTextField.text)")
+    print("CANCEL Contents of addChecklist10ItemTextField: \(addChecklist10ItemTextField.text ?? "N/V")")
     delegate?.checklist10ItemDetailViewControllerDidCancel(self)
   }
   
   @IBAction func done() {
-    print("DONE Contents of addChecklist10ItemTextField: \(addChecklist10ItemTextField.text)")
+    print("DONE Contents of addChecklist10ItemTextField: \(addChecklist10ItemTextField.text ?? "N/V")")
     // dismiss(animated: true, completion: nil)
     
     if let checklist10Item = checklist10ItemToEdit {
