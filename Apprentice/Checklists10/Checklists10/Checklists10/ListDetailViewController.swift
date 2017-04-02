@@ -22,4 +22,13 @@ class ListDetailViewController: UITableViewController, UITextFieldDelegate {
   
   var checklist10ToEdit: Checklist10?
   
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    if let checklist10 = checklist10ToEdit {
+      title = "Edit Checklist10"
+      textField.text = checklist10.name
+    }
+  }
+  
 }
