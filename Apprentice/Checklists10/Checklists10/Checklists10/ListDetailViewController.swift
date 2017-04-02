@@ -28,6 +28,7 @@ class ListDetailViewController: UITableViewController, UITextFieldDelegate {
     if let checklist10 = checklist10ToEdit {
       title = "Edit Checklist10"
       textField.text = checklist10.name
+      doneBarButton.isEnabled = true
     }
   }
   
