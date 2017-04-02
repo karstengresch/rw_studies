@@ -37,4 +37,8 @@ class ListDetailViewController: UITableViewController, UITextFieldDelegate {
     textField.becomeFirstResponder()
   }
   
+  @IBAction func cancel() {
+    delegate?.listDetailViewControllerDidCancel(self)
+  }
+  
 }
