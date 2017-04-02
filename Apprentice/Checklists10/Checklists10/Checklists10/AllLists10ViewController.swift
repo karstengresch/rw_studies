@@ -89,19 +89,28 @@ class AllLists10ViewController: UITableViewController, ListDetailViewControllerD
   
   // MARK: ListDetailViewControllerDelegate methods
   func listDetailViewControllerDidCancel(_ controller: ListDetailViewController) {
-    
+    dismiss(animated: true, completion: nil)
   }
   
   func listDetailViewController(_ controller: ListDetailViewController, didFinishAdding checklist10: Checklist10) {
+    let newRowIndex = checklist10s.count
+    checklist10s.append(checklist10)
     
+    let indexPath = IndexPath(row: newRowIndex, section: 0)
+    let indexPaths = [indexPath]
+    tableView.insertRows(at: indexPaths, with: .automatic)
+    
+    dismiss(animated: true, completion: nil)
   }
   
   func listDetailViewController(_ controller: ListDetailViewController, didFinishEditing checklist10: Checklist10) {
-    
+    if let index = checklist10s.index(of: checklist10) {
+      let indexPath = IndexPath(row: index, section: 0)
+      if let cell = tableView.cellForRow(at: indexPath) {
+        cell.textLabel!.text = checklist10.name
+      }
+    }
+   dismiss(animated: true, completion: nil)
   }
   
-  
-  
-  
-
 }
