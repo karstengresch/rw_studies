@@ -6,4 +6,13 @@
 //  Copyright © 2017 Closure One. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+protocol ListDetailViewControllerDelegate: class {
+  
+}
+
+class ListDetailViewController: UITableViewController, UITextFieldDelegate {
+  
+  
+}
