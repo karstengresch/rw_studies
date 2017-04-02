@@ -32,4 +32,9 @@ class ListDetailViewController: UITableViewController, UITextFieldDelegate {
     }
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    textField.becomeFirstResponder()
+  }
+  
 }
