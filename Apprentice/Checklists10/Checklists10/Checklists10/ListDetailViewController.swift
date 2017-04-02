@@ -37,6 +37,14 @@ class ListDetailViewController: UITableViewController, UITextFieldDelegate {
     textField.becomeFirstResponder()
   }
   
+  // MARK: Table View Related
+  override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+    return nil
+  }
+  
+  
+  // MARK: UI Related
+  
   @IBAction func cancel() {
     delegate?.listDetailViewControllerDidCancel(self)
   }
