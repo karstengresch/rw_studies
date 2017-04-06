@@ -81,6 +81,13 @@ class AllLists10ViewController: UITableViewController, ListDetailViewControllerD
     performSegue(withIdentifier: "ShowChecklist10", sender: checklist10)
   }
   
+  override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+    
+  }
+  
+  
+  // MARK: Segue related
+  
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "ShowChecklist10" {
       let checklist10ViewController = segue.destination as! Checklist10ViewController
