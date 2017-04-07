@@ -39,7 +39,7 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
     let path = dataFilePath()
     if let data = try? Data(contentsOf: path) {
       let unarchiver = NSKeyedUnarchiver(forReadingWith: data)
-      checklist10Items = unarchiver.decodeObject(forKey: "Checklist10Items") as! [Checklist10Item]
+      checklist10?.checklist10Items = unarchiver.decodeObject(forKey: "Checklist10Items") as! [Checklist10Item]
       unarchiver.finishDecoding()
     }
   }
@@ -52,7 +52,7 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
   
   // MARK: TV Data Source related
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return checklist10Items.count
+    return checklist10?.checklist10Items.count
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -62,7 +62,7 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
     // from prototype cell
     let cell = tableView.dequeueReusableCell(withIdentifier: "Checklist10Item", for: indexPath)
 
-    let checklist10Item = checklist10Items[indexPath.row]
+    let checklist10Item = checklist10?.checklist10Items[indexPath.row]
     let label = cell.viewWithTag(1000) as! UILabel
     label.text = checklist10Item.text
     
@@ -78,7 +78,7 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
     print("didSelectRowAt indexPath: \(indexPath )")
     
     if let cell = tableView.cellForRow(at: indexPath) {
-      let checklist10Item = checklist10Items[indexPath.row]
+      let checklist10Item = checklist10?.checklist10Items[indexPath.row]
       checklist10Item.toggleChecked()
       configureCheckmark(for: cell, with: checklist10Item)
     }
@@ -105,7 +105,7 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
   }
   
   override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-    checklist10Items.remove(at: indexPath.row)
+    checklist10?.checklist10Items.remove(at: indexPath.row)
     
     let indexPaths = [indexPath]
     tableView.deleteRows(at: indexPaths, with: .automatic)
@@ -124,8 +124,8 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
   }
   
   func checklist10ItemDetailViewController(_ controller: Checklist10ItemDetailViewController, didFinishAdding checklist10Item: Checklist10Item) -> () {
-    let newRowIndex = checklist10Items.count
-    checklist10Items.append(checklist10Item)
+    let newRowIndex = checklist10?.checklist10Items.count
+    checklist10?.checklist10Items.append(checklist10Item)
     
     let indexPath = IndexPath(row: newRowIndex, section: 0)
     let indexPaths = [indexPath]
@@ -136,7 +136,7 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
   }
   
   func checklist10ItemDetailViewController(_ controller: Checklist10ItemDetailViewController, didFinishEditing checklist10Item: Checklist10Item) -> () {
-    if let index = checklist10Items.index(of: checklist10Item) {
+    if let index = checklist10?.checklist10Items.index(of: checklist10Item) {
       let indexPath = IndexPath(row: index, section: 0)
       if let cell = tableView.cellForRow(at: indexPath)
       {
@@ -162,7 +162,7 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
       controller.delegate = self
       
       if let indexPath = tableView.indexPath(for: sender as! UITableViewCell) {
-        controller.checklist10ItemToEdit = checklist10Items[indexPath.row]
+        controller.checklist10ItemToEdit = checklist10?.checklist10Items[indexPath.row]
       }
       
     }
@@ -185,7 +185,7 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
   func saveChecklist10Items() {
     let data = NSMutableData()
     let archiver = NSKeyedArchiver(forWritingWith: data)
-    archiver.encode(checklist10Items, forKey: "Checklist10Items")
+    archiver.encode(checklist10?.checklist10Items, forKey: "Checklist10Items")
     archiver.finishEncoding()
     data.write(to: dataFilePath(), atomically: true)
   }
