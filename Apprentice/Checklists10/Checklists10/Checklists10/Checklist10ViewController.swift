@@ -14,7 +14,7 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
 
   
   required init?(coder aDecoder: NSCoder) {
-    checklist10Items = [Checklist10Item]()
+    checklist10?.checklist10Items = [Checklist10Item]()
     super.init(coder: aDecoder)
     print("Documents folder is \(documentsDirectory())")
     print("Data file path is \(dataFilePath())")
@@ -52,7 +52,7 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
   
   // MARK: TV Data Source related
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return checklist10?.checklist10Items.count
+    return (checklist10?.checklist10Items.count)!
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -64,9 +64,9 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
 
     let checklist10Item = checklist10?.checklist10Items[indexPath.row]
     let label = cell.viewWithTag(1000) as! UILabel
-    label.text = checklist10Item.text
+    label.text = checklist10Item?.text
     
-    configureCheckmark(for: cell, with: checklist10Item)
+    configureCheckmark(for: cell, with: checklist10Item!)
     
     return cell
   }
@@ -79,8 +79,8 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
     
     if let cell = tableView.cellForRow(at: indexPath) {
       let checklist10Item = checklist10?.checklist10Items[indexPath.row]
-      checklist10Item.toggleChecked()
-      configureCheckmark(for: cell, with: checklist10Item)
+      checklist10Item?.toggleChecked()
+      configureCheckmark(for: cell, with: checklist10Item!)
     }
     
     tableView.deselectRow(at: indexPath, animated: true)
@@ -127,7 +127,7 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
     let newRowIndex = checklist10?.checklist10Items.count
     checklist10?.checklist10Items.append(checklist10Item)
     
-    let indexPath = IndexPath(row: newRowIndex, section: 0)
+    let indexPath = IndexPath(row: newRowIndex!, section: 0)
     let indexPaths = [indexPath]
     tableView.insertRows(at: indexPaths, with: .automatic)
     
