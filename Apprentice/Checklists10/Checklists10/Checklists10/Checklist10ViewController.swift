@@ -10,9 +10,8 @@ import UIKit
 
 class Checklist10ViewController: UITableViewController, Checklist10ItemDetailViewControllerDelegate {
   
-  var checklist10Items: [Checklist10Item]
   var checklist10: Checklist10?
-  
+
   
   required init?(coder aDecoder: NSCoder) {
     checklist10Items = [Checklist10Item]()
