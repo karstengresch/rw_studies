@@ -159,6 +159,8 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
     }
   }
   
+  
+  /*
   // MARK: Persistence related
   
   // Utility methods
@@ -189,7 +191,7 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
       unarchiver.finishDecoding()
     }
   }
-  
+  */
   
   
   
