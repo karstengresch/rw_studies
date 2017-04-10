@@ -153,7 +153,11 @@ class AllLists10ViewController: UITableViewController, ListDetailViewControllerD
   
   
   func saveChecklist10s() {
-    
+    let data = NSMutableData()
+    let archiver = NSKeyedArchiver(forWritingWith: data)
+    archiver.encode(checklist10?.checklist10Items, forKey: "Checklist10s")
+    archiver.finishEncoding()
+    data.write(to: dataFilePath(), atomically: true)
   }
   
   /*
