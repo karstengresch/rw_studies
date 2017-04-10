@@ -35,15 +35,6 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
     // Dispose of any resources that can be recreated.
   }
   
-  func loadChecklist10Items() {
-    let path = dataFilePath()
-    if let data = try? Data(contentsOf: path) {
-      let unarchiver = NSKeyedUnarchiver(forReadingWith: data)
-      checklist10?.checklist10Items = unarchiver.decodeObject(forKey: "Checklist10Items") as! [Checklist10Item]
-      unarchiver.finishDecoding()
-    }
-  }
-  
   
   // MARK: Delegate Implementation
   
@@ -188,6 +179,15 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
     archiver.encode(checklist10?.checklist10Items, forKey: "Checklist10Items")
     archiver.finishEncoding()
     data.write(to: dataFilePath(), atomically: true)
+  }
+  
+  func loadChecklist10Items() {
+    let path = dataFilePath()
+    if let data = try? Data(contentsOf: path) {
+      let unarchiver = NSKeyedUnarchiver(forReadingWith: data)
+      checklist10?.checklist10Items = unarchiver.decodeObject(forKey: "Checklist10Items") as! [Checklist10Item]
+      unarchiver.finishDecoding()
+    }
   }
   
   
