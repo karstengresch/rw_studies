@@ -28,6 +28,12 @@ class AllLists10ViewController: UITableViewController, ListDetailViewControllerD
     checklist10 = Checklist10(name: "Bacchanal")
     checklist10s.append(checklist10)
     
+    for checklist10 in checklist10s {
+      let checklist10Item = Checklist10Item()
+      checklist10Item.text = "Item for \(checklist10.name)"
+      checklist10.checklist10Items.append(checklist10Item)
+    }
+    
   }
 
     override func viewDidLoad() {

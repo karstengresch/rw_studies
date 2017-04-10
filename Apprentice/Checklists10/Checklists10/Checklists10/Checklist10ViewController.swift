@@ -159,43 +159,6 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
       
     }
   }
-  
-  
-  /*
-  // MARK: Persistence related
-  
-  // Utility methods
-  func documentsDirectory() -> URL {
-    let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-    
-    return paths[0]
-  }
-  
-  func dataFilePath() -> URL {
-    return documentsDirectory().appendingPathComponent("Checklist10.plist")
-  }
-  
-  // Persistence stuff
-  func saveChecklist10Items() {
-    let data = NSMutableData()
-    let archiver = NSKeyedArchiver(forWritingWith: data)
-    archiver.encode(checklist10?.checklist10Items, forKey: "Checklist10Items")
-    archiver.finishEncoding()
-    data.write(to: dataFilePath(), atomically: true)
-  }
-  
-  func loadChecklist10Items() {
-    let path = dataFilePath()
-    if let data = try? Data(contentsOf: path) {
-      let unarchiver = NSKeyedUnarchiver(forReadingWith: data)
-      checklist10?.checklist10Items = unarchiver.decodeObject(forKey: "Checklist10Items") as! [Checklist10Item]
-      unarchiver.finishDecoding()
-    }
-  }
-  */
-  
-  
-  
 
 }
 
