@@ -12,14 +12,15 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
   
   var checklist10: Checklist10?
 
-  
+  /*
   required init?(coder aDecoder: NSCoder) {
     checklist10?.checklist10Items = [Checklist10Item]()
     super.init(coder: aDecoder)
-    print("Documents folder is \(documentsDirectory())")
-    print("Data file path is \(dataFilePath())")
-    loadChecklist10Items()
+    // print("Documents folder is \(documentsDirectory())")
+    // print("Data file path is \(dataFilePath())")
+    // loadChecklist10Items()
   }
+  */
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -75,7 +76,7 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
     }
     
     tableView.deselectRow(at: indexPath, animated: true)
-    saveChecklist10Items()
+    // saveChecklist10Items()
   }
   
 
@@ -100,7 +101,7 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
     
     let indexPaths = [indexPath]
     tableView.deleteRows(at: indexPaths, with: .automatic)
-    saveChecklist10Items()
+    // saveChecklist10Items()
   }
   
   func configureText(for cell: UITableViewCell,
@@ -123,7 +124,7 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
     tableView.insertRows(at: indexPaths, with: .automatic)
     
     dismiss(animated: true, completion: nil)
-    saveChecklist10Items()
+    // saveChecklist10Items()
   }
   
   func checklist10ItemDetailViewController(_ controller: Checklist10ItemDetailViewController, didFinishEditing checklist10Item: Checklist10Item) -> () {
@@ -135,7 +136,7 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
       }
     }
     dismiss(animated: true, completion: nil)
-    saveChecklist10Items()
+    // saveChecklist10Items()
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
