@@ -13,57 +13,39 @@ class AllLists10ViewController: UITableViewController, ListDetailViewControllerD
   var checklist10s: [Checklist10]
   
   required init?(coder aDecoder: NSCoder) {
-    checklist10s = [Checklist10]()
-    super.init(coder: aDecoder)
-    
-    var checklist10 = Checklist10(name: "Dionysos")
-    checklist10s.append(checklist10)
-    
-    checklist10 = Checklist10(name: "Nymphs")
-    checklist10s.append(checklist10)
-    
-    checklist10 = Checklist10(name: "Satyrs")
-    checklist10s.append(checklist10)
-    
-    checklist10 = Checklist10(name: "Bacchanal")
-    checklist10s.append(checklist10)
-    
-    for checklist10 in checklist10s {
-      let checklist10Item = Checklist10Item()
-      checklist10Item.text = "Item for \(checklist10.name)"
-      checklist10.checklist10Items.append(checklist10Item)
-    }
-    
+      checklist10s = [Checklist10]()
+      super.init(coder: aDecoder)
+      loadChecklist10s()
   }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+  }
+  
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+  }
+  
+  // MARK: - Table view data source
+  
+  override func numberOfSections(in tableView: UITableView) -> Int {
+    return 1
+  }
+  
+  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return checklist10s.count
+  }
+  
+  
+  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = makeCell(for: tableView)
+    let checklist10 = checklist10s[indexPath.row]
+    if let textLabel = cell.textLabel {
+      textLabel.text = checklist10.name
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return checklist10s.count
-    }
-
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = makeCell(for: tableView)
-        let checklist10 = checklist10s[indexPath.row]
-        if let textLabel = cell.textLabel {
-          textLabel.text = checklist10.name
-        }
-        cell.accessoryType = .detailDisclosureButton
-        return cell
-    }
+    cell.accessoryType = .detailDisclosureButton
+    return cell
+  }
   
   override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
     checklist10s.remove(at: indexPath.row)
@@ -134,22 +116,22 @@ class AllLists10ViewController: UITableViewController, ListDetailViewControllerD
         cell.textLabel!.text = checklist10.name
       }
     }
-   dismiss(animated: true, completion: nil)
+    dismiss(animated: true, completion: nil)
   }
   
- 
-   // MARK: Persistence related
-   
-   // Utility methods
-   func documentsDirectory() -> URL {
+  
+  // MARK: Persistence related
+  
+  // Utility methods
+  func documentsDirectory() -> URL {
     let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
     return paths[0]
-   }
+  }
   
   
-   func dataFilePath() -> URL {
+  func dataFilePath() -> URL {
     return documentsDirectory().appendingPathComponent("Checklist10.plist")
-   }
+  }
   
   
   func saveChecklist10s() {
@@ -160,25 +142,14 @@ class AllLists10ViewController: UITableViewController, ListDetailViewControllerD
     data.write(to: dataFilePath(), atomically: true)
   }
   
-  /*
+  func loadChecklist10s() {
+    let path = dataFilePath()
+    if let data = try? Data(contentsOf: path) {
+      let unarchiver = NSKeyedUnarchiver(forReadingWith: data)
+      checklist10s = unarchiver.decodeObject(forKey: "Checklist10s") as! [Checklist10]
+      unarchiver.finishDecoding()
+    }
+  }
   
-   // Persistence stuff
-   func saveChecklist10Items() {
-   let data = NSMutableData()
-   let archiver = NSKeyedArchiver(forWritingWith: data)
-   archiver.encode(checklist10?.checklist10Items, forKey: "Checklist10Items")
-   archiver.finishEncoding()
-   data.write(to: dataFilePath(), atomically: true)
-   }
-   
-   func loadChecklist10Items() {
-   let path = dataFilePath()
-   if let data = try? Data(contentsOf: path) {
-   let unarchiver = NSKeyedUnarchiver(forReadingWith: data)
-   checklist10?.checklist10Items = unarchiver.decodeObject(forKey: "Checklist10Items") as! [Checklist10Item]
-   unarchiver.finishDecoding()
-   }
-   }
-   */
   
 }
