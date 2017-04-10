@@ -137,20 +137,22 @@ class AllLists10ViewController: UITableViewController, ListDetailViewControllerD
    dismiss(animated: true, completion: nil)
   }
   
-  /*
+ 
    // MARK: Persistence related
    
    // Utility methods
    func documentsDirectory() -> URL {
-   let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-   
-   return paths[0]
+    let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+    return paths[0]
    }
-   
+  
+  
    func dataFilePath() -> URL {
    return documentsDirectory().appendingPathComponent("Checklist10.plist")
    }
-   
+  
+  /*
+  
    // Persistence stuff
    func saveChecklist10Items() {
    let data = NSMutableData()
