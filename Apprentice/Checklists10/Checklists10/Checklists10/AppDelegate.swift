@@ -11,6 +11,7 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+  let dataModel10 = DataModel10()
   var window: UIWindow?
 
 
@@ -40,11 +41,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     saveData()
   }
   
-  
   func saveData() {
-    let navigationController = window!.rootViewController as! UINavigationController
-    let controller = navigationController.viewControllers[0] as! AllLists10ViewController
-    controller.saveChecklist10s()
+    dataModel10.saveChecklist10s()
   }
 
 
