@@ -12,12 +12,6 @@ class AllLists10ViewController: UITableViewController, ListDetailViewControllerD
   
   var dataModel10: DataModel10!
   
-  required init?(coder aDecoder: NSCoder) {
-      checklist10s = [Checklist10]()
-      super.init(coder: aDecoder)
-      loadChecklist10s()
-  }
-  
   override func viewDidLoad() {
     super.viewDidLoad()
   }
@@ -33,13 +27,13 @@ class AllLists10ViewController: UITableViewController, ListDetailViewControllerD
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return checklist10s.count
+    return dataModel10.checklist10s.count
   }
   
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = makeCell(for: tableView)
-    let checklist10 = checklist10s[indexPath.row]
+    let checklist10 = dataModel10.checklist10s[indexPath.row]
     if let textLabel = cell.textLabel {
       textLabel.text = checklist10.name
     }
@@ -48,7 +42,7 @@ class AllLists10ViewController: UITableViewController, ListDetailViewControllerD
   }
   
   override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-    checklist10s.remove(at: indexPath.row)
+    dataModel10.checklist10s.remove(at: indexPath.row)
     let indexPaths = [indexPath]
     tableView.deleteRows(at: indexPaths, with: .automatic)
   }
@@ -65,7 +59,7 @@ class AllLists10ViewController: UITableViewController, ListDetailViewControllerD
   }
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let checklist10 = checklist10s[indexPath.row]
+    let checklist10 = dataModel10.checklist10s[indexPath.row]
     performSegue(withIdentifier: "ShowChecklist10", sender: checklist10)
   }
   
@@ -73,7 +67,7 @@ class AllLists10ViewController: UITableViewController, ListDetailViewControllerD
     let navigationController = storyboard!.instantiateViewController(withIdentifier: "ListDetailViewController") as! UINavigationController
     let controller = navigationController.topViewController as! ListDetailViewController
     controller.delegate = self
-    let checklist10 = checklist10s[indexPath.row]
+    let checklist10 = dataModel10.checklist10s[indexPath.row]
     controller.checklist10ToEdit = checklist10
     present(navigationController, animated: true, completion: nil)
   }
@@ -99,8 +93,8 @@ class AllLists10ViewController: UITableViewController, ListDetailViewControllerD
   }
   
   func listDetailViewController(_ controller: ListDetailViewController, didFinishAdding checklist10: Checklist10) {
-    let newRowIndex = checklist10s.count
-    checklist10s.append(checklist10)
+    let newRowIndex = dataModel10.checklist10s.count
+    dataModel10.checklist10s.append(checklist10)
     
     let indexPath = IndexPath(row: newRowIndex, section: 0)
     let indexPaths = [indexPath]
@@ -110,7 +104,7 @@ class AllLists10ViewController: UITableViewController, ListDetailViewControllerD
   }
   
   func listDetailViewController(_ controller: ListDetailViewController, didFinishEditing checklist10: Checklist10) {
-    if let index = checklist10s.index(of: checklist10) {
+    if let index = dataModel10.checklist10s.index(of: checklist10) {
       let indexPath = IndexPath(row: index, section: 0)
       if let cell = tableView.cellForRow(at: indexPath) {
         cell.textLabel!.text = checklist10.name
