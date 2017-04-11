@@ -10,9 +10,7 @@ import UIKit
 
 class AllLists10ViewController: UITableViewController, ListDetailViewControllerDelegate {
   
-  var checklist10s: [Checklist10]
-  
-  var dataModel10 = DataModel10!
+  var dataModel10: DataModel10!
   
   required init?(coder aDecoder: NSCoder) {
       checklist10s = [Checklist10]()
