@@ -11,7 +11,9 @@ import Foundation
 class DataModel10 {
   var checklist10s = [Checklist10]()
   
-  
+  init() {
+    loadChecklist10s()
+  }
   
   
   // Utility methods

@@ -12,6 +12,8 @@ class AllLists10ViewController: UITableViewController, ListDetailViewControllerD
   
   var checklist10s: [Checklist10]
   
+  var dataModel10 = DataModel10!
+  
   required init?(coder aDecoder: NSCoder) {
       checklist10s = [Checklist10]()
       super.init(coder: aDecoder)
