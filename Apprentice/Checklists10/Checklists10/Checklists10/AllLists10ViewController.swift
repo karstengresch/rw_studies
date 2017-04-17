@@ -59,6 +59,7 @@ class AllLists10ViewController: UITableViewController, ListDetailViewControllerD
   }
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    UserDefaults.standard.set(indexPath.row, forKey: "Checklist10Index")
     let checklist10 = dataModel10.checklist10s[indexPath.row]
     performSegue(withIdentifier: "ShowChecklist10", sender: checklist10)
   }
