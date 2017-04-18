@@ -115,7 +115,7 @@ class AllLists10ViewController: UITableViewController, ListDetailViewControllerD
   }
 
   func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
-    if viewController == self {
+    if viewController === self {
       UserDefaults.standard.set(-1, forKey: "Checklist10Index")
     }
   }
