@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AllLists10ViewController: UITableViewController, ListDetailViewControllerDelegate {
+class AllLists10ViewController: UITableViewController, ListDetailViewControllerDelegate, UINavigationControllerDelegate {
   
   var dataModel10: DataModel10!
   
@@ -114,4 +114,11 @@ class AllLists10ViewController: UITableViewController, ListDetailViewControllerD
     dismiss(animated: true, completion: nil)
   }
 
+  func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+    if viewController == self {
+      UserDefaults.standard.set(-1, forKey: "Checklist10Index")
+    }
+  }
+  
+  
 }
