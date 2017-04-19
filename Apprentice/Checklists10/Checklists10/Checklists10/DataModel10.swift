@@ -11,6 +11,15 @@ import Foundation
 class DataModel10 {
   var checklist10s = [Checklist10]()
   
+  var indexOfSelectedChecklist10: Int {
+    get {
+      return UserDefaults.standard.integer(forKey: "Checklist10Index")
+    }
+    set {
+      UserDefaults.standard.set(newValue, forKey: "Checklist10Index")
+    }
+  }
+  
   init() {
     loadChecklist10s()
     registerDefaults()
