@@ -22,11 +22,9 @@ class DataModel10 {
     return paths[0]
   }
   
-  
   func dataFilePath() -> URL {
     return documentsDirectory().appendingPathComponent("Checklist10.plist")
   }
-  
   
   func saveChecklist10s() {
     let data = NSMutableData()
@@ -43,6 +41,11 @@ class DataModel10 {
       checklist10s = unarchiver.decodeObject(forKey: "Checklist10s") as! [Checklist10]
       unarchiver.finishDecoding()
     }
+  }
+  
+  func registerDefaults() {
+    let dictionary: [String: Any] = ["Checklist10Index", -1]
+    UserDefaults.standard.register(defaults: dictionary)
   }
   
 }
