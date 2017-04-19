@@ -16,6 +16,20 @@ class AllLists10ViewController: UITableViewController, ListDetailViewControllerD
     super.viewDidLoad()
   }
   
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(true)
+    
+    navigationController?.delegate = self
+    
+    let index = UserDefaults.standard.integer(forKey: "Checklist10Index")
+    
+    if index != -1 {
+      let checklist10 = dataModel10.checklist10s[index]
+      performSegue(withIdentifier: "ShowChecklist10", sender: checklist10)
+    }
+    
+  }
+  
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
   }
