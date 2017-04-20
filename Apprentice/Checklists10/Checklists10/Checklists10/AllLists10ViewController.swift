@@ -64,8 +64,10 @@ class AllLists10ViewController: UITableViewController, ListDetailViewControllerD
     var detailTextLabelText = ""
     
     let count = checklist10.countUncheckedChecklist10Items()
-    
-    if count == 0 {
+    if checklist10.checklist10Items.count == 0 {
+      detailTextLabelText = "(List empty)"
+    }
+    else if count == 0 {
       detailTextLabelText = "All done!"
     } else {
       detailTextLabelText = "\(checklist10.countUncheckedChecklist10Items()) remaining"
@@ -146,7 +148,7 @@ class AllLists10ViewController: UITableViewController, ListDetailViewControllerD
     }
     dismiss(animated: true, completion: nil)
   }
-
+  
   func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
     if viewController === self {
       dataModel10.indexOfSelectedChecklist10 = -1
