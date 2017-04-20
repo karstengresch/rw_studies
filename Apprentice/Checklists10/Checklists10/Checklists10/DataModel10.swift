@@ -59,4 +59,19 @@ class DataModel10 {
     UserDefaults.standard.register(defaults: dictionary)
   }
   
+  func handleFirstTime() {
+   let userDefaults = UserDefaults.standard
+   let isFirstTime = userDefaults.bool(forKey: "FirstTime")
+    
+    if isFirstTime {
+     let firstChecklist10 = Checklist10(name: "List")
+      checklist10s.append(firstChecklist10)
+      
+      indexOfSelectedChecklist10 = 0
+      userDefaults.set(false, forKey: "FirstTime")
+      userDefaults.synchronize()
+    }
+    
+  }
+  
 }
