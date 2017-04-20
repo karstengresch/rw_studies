@@ -29,4 +29,10 @@ class Checklist10: NSObject, NSCoding {
     aCoder.encode(checklist10Items, forKey: "Checklist10Items")
   }
   
+  func countUncheckedChecklist10Items() -> Int {
+    var count = 0
+    
+    return count
+  }
+  
 }
