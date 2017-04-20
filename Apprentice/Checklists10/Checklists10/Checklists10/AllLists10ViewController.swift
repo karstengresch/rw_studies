@@ -60,22 +60,6 @@ class AllLists10ViewController: UITableViewController, ListDetailViewControllerD
     return cell
   }
   
-  func getDetailTextLabelByUncheckedItems(_ checklist10: Checklist10) -> String {
-    var detailTextLabelText = ""
-    
-    let count = checklist10.countUncheckedChecklist10Items()
-    if checklist10.checklist10Items.count == 0 {
-      detailTextLabelText = "(List empty)"
-    }
-    else if count == 0 {
-      detailTextLabelText = "All done!"
-    } else {
-      detailTextLabelText = "\(checklist10.countUncheckedChecklist10Items()) remaining"
-    }
-    
-    return detailTextLabelText
-  }
-  
   override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
     dataModel10.checklist10s.remove(at: indexPath.row)
     let indexPaths = [indexPath]
@@ -155,5 +139,20 @@ class AllLists10ViewController: UITableViewController, ListDetailViewControllerD
     }
   }
   
+  func getDetailTextLabelByUncheckedItems(_ checklist10: Checklist10) -> String {
+    var detailTextLabelText = ""
+    
+    let count = checklist10.countUncheckedChecklist10Items()
+    if checklist10.checklist10Items.count == 0 {
+      detailTextLabelText = "(List empty)"
+    }
+    else if count == 0 {
+      detailTextLabelText = "All done!"
+    } else {
+      detailTextLabelText = "\(checklist10.countUncheckedChecklist10Items()) remaining"
+    }
+    
+    return detailTextLabelText
+  }
   
 }
