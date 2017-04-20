@@ -56,8 +56,22 @@ class AllLists10ViewController: UITableViewController, ListDetailViewControllerD
       textLabel.text = checklist10.name
     }
     cell.accessoryType = .detailDisclosureButton
-    cell.detailTextLabel!.text = "\(checklist10.countUncheckedChecklist10Items()) remaining"
+    cell.detailTextLabel!.text = getDetailTextLabelByUncheckedItems(checklist10)
     return cell
+  }
+  
+  func getDetailTextLabelByUncheckedItems(_ checklist10: Checklist10) -> String {
+    var detailTextLabelText = ""
+    
+    let count = checklist10.countUncheckedChecklist10Items()
+    
+    if count == 0 {
+      detailTextLabelText = "All done!"
+    } else {
+      detailTextLabelText = "\(checklist10.countUncheckedChecklist10Items()) remaining"
+    }
+    
+    return detailTextLabelText
   }
   
   override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
