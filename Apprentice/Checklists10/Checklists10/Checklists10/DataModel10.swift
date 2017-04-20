@@ -23,6 +23,7 @@ class DataModel10 {
   init() {
     loadChecklist10s()
     registerDefaults()
+    handleFirstTime()
   }
   
   
