@@ -21,7 +21,7 @@ class AllLists10ViewController: UITableViewController, ListDetailViewControllerD
     
     navigationController?.delegate = self
     
-    let index = UserDefaults.standard.integer(forKey: "Checklist10Index")
+    let index = dataModel10.indexOfSelectedChecklist10
     
     if index != -1 {
       let checklist10 = dataModel10.checklist10s[index]
