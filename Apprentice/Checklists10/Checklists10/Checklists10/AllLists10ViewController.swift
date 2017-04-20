@@ -35,6 +35,11 @@ class AllLists10ViewController: UITableViewController, ListDetailViewControllerD
   
   // MARK: - Table view data source
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    tableView.reloadData()
+  }
+  
   override func numberOfSections(in tableView: UITableView) -> Int {
     return 1
   }
@@ -51,6 +56,7 @@ class AllLists10ViewController: UITableViewController, ListDetailViewControllerD
       textLabel.text = checklist10.name
     }
     cell.accessoryType = .detailDisclosureButton
+    cell.detailTextLabel!.text = "\(checklist10.countUncheckedChecklist10Items()) remaining"
     return cell
   }
   
