@@ -23,11 +23,10 @@ class AllLists10ViewController: UITableViewController, ListDetailViewControllerD
     
     let index = dataModel10.indexOfSelectedChecklist10
     
-    if index != -1 {
+    if index >= 0 && index < dataModel10.checklist10s.count {
       let checklist10 = dataModel10.checklist10s[index]
       performSegue(withIdentifier: "ShowChecklist10", sender: checklist10)
     }
-    
   }
   
   override func didReceiveMemoryWarning() {
