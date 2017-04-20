@@ -67,7 +67,7 @@ class AllLists10ViewController: UITableViewController, ListDetailViewControllerD
       return cell
     } else
     {
-      return UITableViewCell(style: .default, reuseIdentifier: cellIdentifier)
+      return UITableViewCell(style: .subtitle, reuseIdentifier: cellIdentifier)
     }
   }
   
