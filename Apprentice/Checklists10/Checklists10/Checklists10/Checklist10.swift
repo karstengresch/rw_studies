@@ -30,13 +30,7 @@ class Checklist10: NSObject, NSCoding {
   }
   
   func countUncheckedChecklist10Items() -> Int {
-    var count = 0
-    
-    for checklist10Item in checklist10Items where !checklist10Item.checked {
-      count += 1
-    }
-    
-    return count
+    return checklist10Items.reduce(0) { count, checklist10Item in count + (checklist10Item.checked ? 0 : 1) }
   }
   
 }
