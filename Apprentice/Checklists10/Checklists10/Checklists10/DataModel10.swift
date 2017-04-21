@@ -26,7 +26,6 @@ class DataModel10 {
     handleFirstTime()
   }
   
-  
   // Utility methods
   func documentsDirectory() -> URL {
     let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
@@ -38,6 +37,7 @@ class DataModel10 {
   }
   
   func saveChecklist10s() {
+    print("saveChecklist10s called")
     let data = NSMutableData()
     let archiver = NSKeyedArchiver(forWritingWith: data)
     archiver.encode(checklist10s, forKey: "Checklist10s")
@@ -47,6 +47,7 @@ class DataModel10 {
   
   func loadChecklist10s() {
     let path = dataFilePath()
+    print("loadChecklist10s called for \(path)")
     if let data = try? Data(contentsOf: path) {
       let unarchiver = NSKeyedUnarchiver(forReadingWith: data)
       checklist10s = unarchiver.decodeObject(forKey: "Checklist10s") as! [Checklist10]

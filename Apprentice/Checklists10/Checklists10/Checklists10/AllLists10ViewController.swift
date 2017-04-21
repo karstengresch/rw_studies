@@ -33,12 +33,16 @@ class AllLists10ViewController: UITableViewController, ListDetailViewControllerD
     super.didReceiveMemoryWarning()
   }
   
-  // MARK: - Table view data source
+  
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     tableView.reloadData()
+    dataModel10.saveChecklist10s()
   }
+  
+  
+  // MARK: - Table view data source
   
   override func numberOfSections(in tableView: UITableView) -> Int {
     return 1
@@ -48,7 +52,6 @@ class AllLists10ViewController: UITableViewController, ListDetailViewControllerD
     return dataModel10.checklist10s.count
   }
   
-  
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = makeCell(for: tableView)
     let checklist10 = dataModel10.checklist10s[indexPath.row]
@@ -56,6 +59,7 @@ class AllLists10ViewController: UITableViewController, ListDetailViewControllerD
       textLabel.text = checklist10.name
     }
     cell.accessoryType = .detailDisclosureButton
+    // cell.showsReorderControl = true
     cell.detailTextLabel!.text = getDetailTextLabelByUncheckedItems(checklist10)
     return cell
   }

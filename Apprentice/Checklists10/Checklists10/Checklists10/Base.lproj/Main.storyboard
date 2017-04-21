@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Mdh-Ay-5yF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Mdh-Ay-5yF">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -61,7 +61,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vX3-lq-UpB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1889" y="-424"/>
+            <point key="canvasLocation" x="950" y="451"/>
         </scene>
         <!--Checklist10s-->
         <scene sceneID="BMg-2A-iI5">
@@ -146,7 +146,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MkI-oN-rXE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3806" y="-421"/>
+            <point key="canvasLocation" x="2858" y="453"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ase-60-Ia8">
@@ -182,7 +182,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWi-gG-hMM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2862" y="-421"/>
+            <point key="canvasLocation" x="1902" y="451"/>
         </scene>
         <!--Add Checklist10-->
         <scene sceneID="BCV-FI-rpI">
@@ -242,7 +242,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D81-BN-C4f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1889" y="354"/>
+            <point key="canvasLocation" x="2842" y="-424"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JKx-Lh-UeN">
@@ -258,10 +258,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kjb-hp-xbN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="950" y="354"/>
+            <point key="canvasLocation" x="1903" y="-424"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qGa-AN-ovg"/>
+        <segue reference="0tv-JF-dwT"/>
     </inferredMetricsTieBreakers>
 </document>

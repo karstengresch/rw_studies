@@ -29,6 +29,13 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
     }
   }
   
+  /*
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    tableView.reloadData()
+    dataModel10.saveChecklist10s()
+  }
+  */
   
 
   override func didReceiveMemoryWarning() {
