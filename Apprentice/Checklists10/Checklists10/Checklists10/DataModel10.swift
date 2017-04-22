@@ -76,4 +76,9 @@ class DataModel10 {
     
   }
   
+  func sortChecklist10s() {
+    checklist10s.sort(by: {})
+    
+  }
+  
 }

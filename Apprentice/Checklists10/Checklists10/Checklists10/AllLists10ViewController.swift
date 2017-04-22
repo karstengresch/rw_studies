@@ -120,6 +120,7 @@ class AllLists10ViewController: UITableViewController, ListDetailViewControllerD
     let newRowIndex = dataModel10.checklist10s.count
     dataModel10.checklist10s.append(checklist10)
     
+    
     let indexPath = IndexPath(row: newRowIndex, section: 0)
     let indexPaths = [indexPath]
     tableView.insertRows(at: indexPaths, with: .automatic)
