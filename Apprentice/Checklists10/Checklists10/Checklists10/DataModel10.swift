@@ -52,6 +52,7 @@ class DataModel10 {
       let unarchiver = NSKeyedUnarchiver(forReadingWith: data)
       checklist10s = unarchiver.decodeObject(forKey: "Checklist10s") as! [Checklist10]
       unarchiver.finishDecoding()
+      sortChecklist10s()
     }
   }
   
