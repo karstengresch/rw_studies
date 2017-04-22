@@ -117,24 +117,28 @@ class AllLists10ViewController: UITableViewController, ListDetailViewControllerD
   }
   
   func listDetailViewController(_ controller: ListDetailViewController, didFinishAdding checklist10: Checklist10) {
-    let newRowIndex = dataModel10.checklist10s.count
+    // let newRowIndex = dataModel10.checklist10s.count
     dataModel10.checklist10s.append(checklist10)
+    dataModel10.sortChecklist10s()
+    tableView.reloadData()
     
-    
-    let indexPath = IndexPath(row: newRowIndex, section: 0)
-    let indexPaths = [indexPath]
-    tableView.insertRows(at: indexPaths, with: .automatic)
+    // let indexPath = IndexPath(row: newRowIndex, section: 0)
+    // let indexPaths = [indexPath]
+    // tableView.insertRows(at: indexPaths, with: .automatic)
     
     dismiss(animated: true, completion: nil)
   }
   
   func listDetailViewController(_ controller: ListDetailViewController, didFinishEditing checklist10: Checklist10) {
-    if let index = dataModel10.checklist10s.index(of: checklist10) {
-      let indexPath = IndexPath(row: index, section: 0)
-      if let cell = tableView.cellForRow(at: indexPath) {
-        cell.textLabel!.text = checklist10.name
-      }
-    }
+    dataModel10.sortChecklist10s()
+    tableView.reloadData()
+    
+    // if let index = dataModel10.checklist10s.index(of: checklist10) {
+     // let indexPath = IndexPath(row: index, section: 0)
+     // if let cell = tableView.cellForRow(at: indexPath) {
+     //   cell.textLabel!.text = checklist10.name
+     // }
+    // }
     dismiss(animated: true, completion: nil)
   }
   
