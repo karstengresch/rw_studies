@@ -10,21 +10,25 @@ import UIKit
 
 class Checklist10: NSObject, NSCoding {
   
+  var iconName: String
   var name = ""
   var checklist10Items = [Checklist10Item]()
   // var checklist10Items: [Checklist10Item]  = []
   
   init(name: String) {
     self.name = name
+    iconName = "Appointments"
     super.init()    
   }
   
   required init?(coder aDecoder: NSCoder) {
+    iconName = aDecoder.decodeObject(forKey: "IconName") as! String
     name = aDecoder.decodeObject(forKey: "Name") as! String
     checklist10Items = aDecoder.decodeObject(forKey: "Checklist10Items") as! [Checklist10Item]
   }
   
   func encode(with aCoder: NSCoder) {
+    aCoder.encode(iconName, forKey: "IconName")
     aCoder.encode(name, forKey: "Name")
     aCoder.encode(checklist10Items, forKey: "Checklist10Items")
   }
