@@ -26,4 +26,11 @@ class IconPicker10ViewController: UITableViewController {
     "Inbox",
     "Photos",
     "Trips" ]
+  
+  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return icons.count
+  }
+  
+  
+  
 }
