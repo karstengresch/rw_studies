@@ -61,6 +61,7 @@ class AllLists10ViewController: UITableViewController, ListDetailViewControllerD
     cell.accessoryType = .detailDisclosureButton
     // cell.showsReorderControl = true
     cell.detailTextLabel!.text = getDetailTextLabelByUncheckedItems(checklist10)
+    cell.imageView!.image = UIImage(named: checklist10.iconName)
     return cell
   }
   
