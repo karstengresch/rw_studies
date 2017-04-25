@@ -6,4 +6,12 @@
 //  Copyright © 2017 Closure One. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+protocol IconPicker10ViewControllerDelegate {
+  func iconPicker10()
+}
+
+class IconPicker10ViewController {
+  
+}
