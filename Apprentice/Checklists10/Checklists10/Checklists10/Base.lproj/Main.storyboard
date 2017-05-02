@@ -148,6 +148,34 @@
             </objects>
             <point key="canvasLocation" x="2858" y="453"/>
         </scene>
+        <!--Icon Picker10 View Controller-->
+        <scene sceneID="laK-is-aRb">
+            <objects>
+                <tableViewController id="tnA-Rl-bq9" customClass="IconPicker10ViewController" customModule="Checklists10" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="NWY-x8-6hN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="sxj-Gh-Saj">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sxj-Gh-Saj" id="bnE-IE-9yr">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="tnA-Rl-bq9" id="2hU-Qw-Xx5"/>
+                            <outlet property="delegate" destination="tnA-Rl-bq9" id="3f8-C6-0w9"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EaI-JE-tyC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3700" y="-424"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="ase-60-Ia8">
             <objects>
