@@ -276,6 +276,9 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="tnA-Rl-bq9" kind="show" identifier="PickListIcon" id="fDB-dB-GYI"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
