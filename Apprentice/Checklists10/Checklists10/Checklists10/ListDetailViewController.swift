@@ -39,6 +39,7 @@ class ListDetailViewController: UITableViewController, UITextFieldDelegate, Icon
     iconImageView.image = UIImage(named: iconName)
   }
   
+  
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     textField.becomeFirstResponder()
@@ -63,7 +64,7 @@ class ListDetailViewController: UITableViewController, UITextFieldDelegate, Icon
   @IBAction func done() {
     print("ListDetailViewController: done")
     if let checklist10 = checklist10ToEdit {
-      let checklist10 = Checklist10(name: textField!.text, iconName: iconName)
+      let checklist10 = Checklist10(name: textField.text!, iconName: iconName)
       delegate?.listDetailViewController(self, didFinishEditing: checklist10)
     } else {
       let checklist10 = Checklist10(name: textField.text!)

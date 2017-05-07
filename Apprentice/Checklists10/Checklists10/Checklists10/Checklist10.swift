@@ -15,10 +15,14 @@ class Checklist10: NSObject, NSCoding {
   var checklist10Items = [Checklist10Item]()
   // var checklist10Items: [Checklist10Item]  = []
   
-  init(name: String) {
+  convenience init(name: String) {
+    self.init(name: name, iconName: "No Icon")
+  }
+  
+  init(name: String, iconName: String) {
     self.name = name
-    iconName = "No Icon"
-    super.init()    
+    self.iconName = iconName
+    super.init()
   }
   
   required init?(coder aDecoder: NSCoder) {
