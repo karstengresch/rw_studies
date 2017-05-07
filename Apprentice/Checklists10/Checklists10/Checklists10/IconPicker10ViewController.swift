@@ -40,4 +40,11 @@ class IconPicker10ViewController: UITableViewController {
     return cell
   }
   
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    if let delegate = delegate {
+      let iconName = icons[indexPath.row]
+      delegate.iconPicker10(self, didPick: iconName)
+    }
+  }
+  
 }
