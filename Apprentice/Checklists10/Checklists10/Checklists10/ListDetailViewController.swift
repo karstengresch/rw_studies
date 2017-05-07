@@ -14,7 +14,7 @@ protocol ListDetailViewControllerDelegate: class {
   func listDetailViewController(_ controller: ListDetailViewController, didFinishEditing checklist10: Checklist10)
 }
 
-class ListDetailViewController: UITableViewController, UITextFieldDelegate {
+class ListDetailViewController: UITableViewController, UITextFieldDelegate, IconPicker10ViewControllerDelegate {
   @IBOutlet weak var textField: UITextField!
   @IBOutlet weak var doneBarButton: UIBarButtonItem!
   @IBOutlet weak var iconImageView: UIImageView!
@@ -24,6 +24,7 @@ class ListDetailViewController: UITableViewController, UITextFieldDelegate {
   weak var delegate: ListDetailViewControllerDelegate?
   
   var checklist10ToEdit: Checklist10?
+  var iconName = "Folder"
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -32,7 +33,10 @@ class ListDetailViewController: UITableViewController, UITextFieldDelegate {
       title = "Edit Checklist10"
       textField.text = checklist10.name
       doneBarButton.isEnabled = true
+      iconName = checklist10.iconName
     }
+    
+    iconImageView.image = UIImage(named: iconName)
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -42,7 +46,11 @@ class ListDetailViewController: UITableViewController, UITextFieldDelegate {
   
   // MARK: Table View Related
   override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-    return nil
+    if indexPath.section == 1 {
+      return indexPath
+    } else {
+      return nil
+    }
   }
   
   
@@ -68,6 +76,19 @@ class ListDetailViewController: UITableViewController, UITextFieldDelegate {
     let newText = oldText.replacingCharacters(in: range, with: string) as NSString
     doneBarButton.isEnabled = (newText.length > 0)
     return true
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "PickListIcon" {
+      let controller = segue.destination as! IconPicker10ViewController
+      controller.delegate = self
+    }
+  }
+  
+  func iconPicker10(_ picker: IconPicker10ViewController, didPick iconName: String) {
+    self.iconName = iconName
+    iconImageView.image = UIImage(named: iconName)
+    let _ = navigationController?.popViewController(animated: true)
   }
   
 }

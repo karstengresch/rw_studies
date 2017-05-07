@@ -148,7 +148,7 @@
             </objects>
             <point key="canvasLocation" x="2858" y="453"/>
         </scene>
-        <!--Icon Picker10 View Controller-->
+        <!--Choose Icon-->
         <scene sceneID="laK-is-aRb">
             <objects>
                 <tableViewController id="tnA-Rl-bq9" customClass="IconPicker10ViewController" customModule="Checklists10" customModuleProvider="target" sceneMemberID="viewController">
@@ -180,6 +180,7 @@
                             <outlet property="delegate" destination="tnA-Rl-bq9" id="3f8-C6-0w9"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Choose Icon" id="pWm-d8-THP"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EaI-JE-tyC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
