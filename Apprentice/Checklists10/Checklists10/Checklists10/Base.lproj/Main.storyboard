@@ -331,5 +331,5 @@
     <inferredMetricsTieBreakers>
         <segue reference="0tv-JF-dwT"/>
     </inferredMetricsTieBreakers>
-    <color key="tintColor" red="0.2470588235" green="0.42352941179999998" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
+    <color key="tintColor" red="0.015686274509803921" green="0.66274509803921566" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
 </document>
