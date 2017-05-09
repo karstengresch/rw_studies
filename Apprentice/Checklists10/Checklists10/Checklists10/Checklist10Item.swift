@@ -18,14 +18,18 @@ class Checklist10Item: NSObject, NSCoding {
     super.init()
   }
   
-  init(text: String) {
-    
+  convenience init(text: String) {
+    self.init(text: text, checked: false)
   }
   
-  override init() {
-    text = ""
-    checked = false
-    super.init()  
+  init(text: String, checked: Bool) {
+    self.text = text
+    self.checked = checked
+    super.init()
+  }
+  
+  override convenience init() {
+    self.init(text: "", checked: false)
   }
   
   func toggleChecked() {
