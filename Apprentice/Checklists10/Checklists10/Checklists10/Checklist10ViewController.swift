@@ -95,7 +95,8 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
     print("configureCheckmark cell: \(cell) checklist10Item: \(checklist10Item)")
     
     let label = cell.viewWithTag(1001) as! UILabel
-
+    label.textColor = view.tintColor
+    
     if checklist10Item.checked {
       label.text = "√"
     } else {
