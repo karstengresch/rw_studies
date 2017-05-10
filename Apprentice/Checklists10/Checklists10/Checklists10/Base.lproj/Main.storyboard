@@ -271,11 +271,18 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mpl-qZ-tlI">
-                                                    <rect key="frame" x="298" y="3" width="36" height="36"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mpl-qZ-tlI">
+                                                    <rect key="frame" x="302" y="4" width="36" height="36"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="36" id="4MN-rK-div"/>
+                                                        <constraint firstAttribute="height" constant="36" id="cF7-di-ace"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="mpl-qZ-tlI" firstAttribute="top" secondItem="Ht3-oh-EHt" secondAttribute="top" constant="4" id="IpH-Oy-bUv"/>
+                                                <constraint firstAttribute="trailing" secondItem="mpl-qZ-tlI" secondAttribute="trailing" constant="4" id="UUL-jZ-vzp"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="tnA-Rl-bq9" kind="show" identifier="PickListIcon" id="fDB-dB-GYI"/>
