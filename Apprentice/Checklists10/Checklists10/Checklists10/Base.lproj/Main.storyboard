@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -240,9 +241,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of the List" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BjA-4h-xMd">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of the List" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BjA-4h-xMd">
                                                     <rect key="frame" x="8" y="7" width="359" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -251,6 +251,12 @@
                                                     </connections>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="BjA-4h-xMd" secondAttribute="bottom" constant="6" id="6oX-6i-05A"/>
+                                                <constraint firstAttribute="trailing" secondItem="BjA-4h-xMd" secondAttribute="trailing" constant="8" id="SPv-eQ-EYR"/>
+                                                <constraint firstItem="BjA-4h-xMd" firstAttribute="leading" secondItem="wWC-3d-Qsz" secondAttribute="leading" constant="8" id="lrg-qu-bui"/>
+                                                <constraint firstItem="BjA-4h-xMd" firstAttribute="top" secondItem="wWC-3d-Qsz" secondAttribute="top" constant="7" id="pUn-HI-EOb"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -264,9 +270,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Icon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VhG-VP-IaU">
-                                                    <rect key="frame" x="22" y="11" width="51" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Icon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VhG-VP-IaU">
+                                                    <rect key="frame" x="16" y="15" width="278" height="14.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -280,8 +285,12 @@
                                                 </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="VhG-VP-IaU" firstAttribute="top" secondItem="Ht3-oh-EHt" secondAttribute="topMargin" constant="7" id="7SW-FS-IeU"/>
                                                 <constraint firstItem="mpl-qZ-tlI" firstAttribute="top" secondItem="Ht3-oh-EHt" secondAttribute="top" constant="4" id="IpH-Oy-bUv"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="VhG-VP-IaU" secondAttribute="bottom" constant="6" id="Psd-Qb-ECq"/>
                                                 <constraint firstAttribute="trailing" secondItem="mpl-qZ-tlI" secondAttribute="trailing" constant="4" id="UUL-jZ-vzp"/>
+                                                <constraint firstItem="mpl-qZ-tlI" firstAttribute="leading" secondItem="VhG-VP-IaU" secondAttribute="trailing" constant="8" id="dcq-zT-AMp"/>
+                                                <constraint firstItem="VhG-VP-IaU" firstAttribute="leading" secondItem="Ht3-oh-EHt" secondAttribute="leadingMargin" constant="8" id="vOI-Ul-u7q"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
