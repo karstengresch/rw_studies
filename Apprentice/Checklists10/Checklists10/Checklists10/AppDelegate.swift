@@ -39,7 +39,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     let notificationRequest = UNNotificationRequest(identifier: "HiNotification", content: notificationContent, trigger: notificationTrigger)
     userNotificationCenter.add(notificationRequest)
     
-    
     return true
   }
   
