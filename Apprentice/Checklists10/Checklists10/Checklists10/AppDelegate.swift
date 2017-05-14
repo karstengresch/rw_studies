@@ -22,7 +22,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     controller.dataModel10 = dataModel10
     let userNotificationCenter = UNUserNotificationCenter.current()
     userNotificationCenter.requestAuthorization(options: [.alert, .sound]) {
-      
+      granted, error in
+      if granted {
+        print("Permission granted.")
+      } else {
+        print("Permission denied.")
+      }
     }
     
     
