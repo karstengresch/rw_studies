@@ -10,7 +10,7 @@ import UIKit
 import UserNotifications
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
   let dataModel10 = DataModel10()
   var window: UIWindow?
@@ -41,6 +41,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     return true
+  }
+  
+  
+  func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+    print("Received local notification: \(notification)")
   }
 
   func applicationWillResignActive(_ application: UIApplication) {
