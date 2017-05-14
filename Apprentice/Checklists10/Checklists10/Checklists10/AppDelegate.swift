@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let navigationController = window!.rootViewController as! UINavigationController
     let controller = navigationController.viewControllers[0] as! AllLists10ViewController
     controller.dataModel10 = dataModel10
+    let userNotificationCenter = UNUserNotificationCenter.current()
+    userNotificationCenter.requestAuthorization(options: [.alert, .sound]) {
+      
+    }
+    
+    
     return true
   }
 
