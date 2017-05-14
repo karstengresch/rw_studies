@@ -30,6 +30,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       }
     }
     
+    let notificationContent = UNMutableNotificationContent()
+    notificationContent.title = "Hi Folks!"
+    notificationContent.body = "Da local notification"
+    notificationContent.sound = UNNotificationSound.default()
+    
+    let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+    let notificationRequest = UNNotificationRequest(identifier: "HiNotification", content: notificationContent, trigger: notificationTrigger)
+    userNotificationCenter.add(notificationRequest)
+    
     
     return true
   }
