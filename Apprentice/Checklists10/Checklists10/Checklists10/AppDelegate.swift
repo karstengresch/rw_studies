@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
       } else {
         print("Permission denied.")
       }
+      userNotificationCenter.delegate = self
     }
     
     let notificationContent = UNMutableNotificationContent()
