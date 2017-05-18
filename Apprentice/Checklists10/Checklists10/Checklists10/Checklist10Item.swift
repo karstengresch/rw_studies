@@ -18,8 +18,11 @@ class Checklist10Item: NSObject, NSCoding {
   var shouldRemind = false
   
   required init(coder aDecoder: NSCoder) {
+    itemId = aDecoder.decodeInteger(forKey: "ItemId")
     text = aDecoder.decodeObject(forKey: "Text") as! String
     checked = aDecoder.decodeBool(forKey: "Checked")
+    dueDate = aDecoder.decodeObject(forKey: "DueDate") as! Date
+    shouldRemind = aDecoder.decodeBool(forKey: "ShouldRemind")
     super.init()
   }
   
@@ -42,8 +45,12 @@ class Checklist10Item: NSObject, NSCoding {
   }
   
   func encode(with aCoder: NSCoder) {
+    aCoder.encode(itemId, forKey: "ItemId")
     aCoder.encode(text, forKey: "Text")
     aCoder.encode(checked, forKey: "Checked")
+    aCoder.encode(dueDate, forKey: "DueDate")
+    aCoder.encode(shouldRemind, forKey: "ShouldRemind")
+    
   }
   
   
