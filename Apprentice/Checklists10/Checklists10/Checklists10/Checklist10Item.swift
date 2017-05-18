@@ -9,8 +9,13 @@
 import Foundation
 
 class Checklist10Item: NSObject, NSCoding {
+  var itemId: Int
+  
   var text: String
   var checked: Bool
+  
+  var dueDate = Date()
+  var shouldRemind = false
   
   required init(coder aDecoder: NSCoder) {
     text = aDecoder.decodeObject(forKey: "Text") as! String

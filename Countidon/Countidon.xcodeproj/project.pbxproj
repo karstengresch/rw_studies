@@ -14,11 +14,11 @@
 		3D1DEE0B1BAC9CA800E448DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D1DEE091BAC9CA800E448DE /* LaunchScreen.storyboard */; };
 		3D1DEE161BAC9CA800E448DE /* CountidonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1DEE151BAC9CA800E448DE /* CountidonTests.swift */; };
 		3D1DEE211BAC9CA800E448DE /* CountidonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1DEE201BAC9CA800E448DE /* CountidonUITests.swift */; };
-		3D1DEE2F1BAC9D1200E448DE /* PushButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1DEE2E1BAC9D1200E448DE /* PushButtonView.swift */; settings = {ASSET_TAGS = (); }; };
-		3D494C811BB26B6800381DCF /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D494C801BB26B6800381DCF /* GraphView.swift */; settings = {ASSET_TAGS = (); }; };
-		3D57234F1BBB168500497A22 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D57234E1BBB168500497A22 /* BackgroundView.swift */; settings = {ASSET_TAGS = (); }; };
-		3D9EF0911BADF8C00037B042 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9EF0901BADF8C00037B042 /* CounterView.swift */; settings = {ASSET_TAGS = (); }; };
-		3DCAC1A31BBD0F2A00E5DFBE /* MedalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCAC1A21BBD0F2A00E5DFBE /* MedalView.swift */; settings = {ASSET_TAGS = (); }; };
+		3D1DEE2F1BAC9D1200E448DE /* PushButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1DEE2E1BAC9D1200E448DE /* PushButtonView.swift */; };
+		3D494C811BB26B6800381DCF /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D494C801BB26B6800381DCF /* GraphView.swift */; };
+		3D57234F1BBB168500497A22 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D57234E1BBB168500497A22 /* BackgroundView.swift */; };
+		3D9EF0911BADF8C00037B042 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9EF0901BADF8C00037B042 /* CounterView.swift */; };
+		3DCAC1A31BBD0F2A00E5DFBE /* MedalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCAC1A21BBD0F2A00E5DFBE /* MedalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -208,13 +208,16 @@
 					3D1DEDFC1BAC9CA800E448DE = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = BD2TPDQG5D;
+						LastSwiftMigration = 0830;
 					};
 					3D1DEE101BAC9CA800E448DE = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0830;
 						TestTargetID = 3D1DEDFC1BAC9CA800E448DE;
 					};
 					3D1DEE1B1BAC9CA800E448DE = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0830;
 						TestTargetID = 3D1DEDFC1BAC9CA800E448DE;
 					};
 				};
@@ -424,6 +427,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = CLO.Countidon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -438,6 +442,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = CLO.Countidon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -449,6 +454,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CLO.CountidonTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Countidon.app/Countidon";
 			};
 			name = Debug;
@@ -461,6 +467,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CLO.CountidonTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Countidon.app/Countidon";
 			};
 			name = Release;
@@ -472,6 +479,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CLO.CountidonUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Countidon;
 				USES_XCTRUNNER = YES;
 			};
@@ -484,6 +492,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CLO.CountidonUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Countidon;
 				USES_XCTRUNNER = YES;
 			};

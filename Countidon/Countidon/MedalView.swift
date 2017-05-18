@@ -14,7 +14,7 @@ class MedalView: UIImageView {
 
   lazy var medalImage: UIImage = self.createMedalImage()
   
-  func showMedal(show: Bool) {
+  func showMedal(_ show: Bool) {
     if show {
       image = medalImage
     } else {
@@ -39,53 +39,53 @@ class MedalView: UIImageView {
     let lightColdColor = UIColor(red: 1.0, green: 0.98, blue: 0.9, alpha: 1.0)
     
     // Add shadow
-    let shadow: UIColor = UIColor.blackColor().colorWithAlphaComponent(0.3)
-    let shadowOffset = CGSizeMake(2.0, 2.0)
+    let shadow: UIColor = UIColor.black.withAlphaComponent(0.3)
+    let shadowOffset = CGSize(width: 2.0, height: 2.0)
     let shadowBlurRadius: CGFloat = 4
     
-    CGContextSetShadowWithColor(context, shadowOffset, shadowBlurRadius, shadow.CGColor)
+    context?.setShadow(offset: shadowOffset, blur: shadowBlurRadius, color: shadow.cgColor)
     
-    CGContextBeginTransparencyLayer(context, nil)
+    context?.beginTransparencyLayer(auxiliaryInfo: nil)
     
     // lower ribbon
     let lowerRibbonPath = UIBezierPath()
-    lowerRibbonPath.moveToPoint(CGPointMake(0, 0))
-    lowerRibbonPath.addLineToPoint(CGPointMake(40, 0))
-    lowerRibbonPath.addLineToPoint(CGPointMake(78, 70))
-    lowerRibbonPath.addLineToPoint(CGPointMake(38, 70))
-    lowerRibbonPath.closePath()
+    lowerRibbonPath.move(to: CGPoint(x: 0, y: 0))
+    lowerRibbonPath.addLine(to: CGPoint(x: 40, y: 0))
+    lowerRibbonPath.addLine(to: CGPoint(x: 78, y: 70))
+    lowerRibbonPath.addLine(to: CGPoint(x: 38, y: 70))
+    lowerRibbonPath.close()
     UIColor(red: 0.99, green: 0.4, blue: 0.4, alpha: 0.8).setFill()
     lowerRibbonPath.fill()
     
     // clasp
     // o what punny this is!
-    let claspPath = UIBezierPath(roundedRect: CGRectMake(36, 62, 43, 20), cornerRadius: 5)
+    let claspPath = UIBezierPath(roundedRect: CGRect(x: 36, y: 62, width: 43, height: 20), cornerRadius: 5)
     claspPath.lineWidth = 5
     darkGoldColor.setStroke()
     claspPath.stroke()
     
     // medallion
-    let medallionPath = UIBezierPath(ovalInRect: CGRect(origin: CGPointMake(8, 72), size: CGSizeMake(100, 100)))
-    CGContextSaveGState(context)
+    let medallionPath = UIBezierPath(ovalIn: CGRect(origin: CGPoint(x: 8, y: 72), size: CGSize(width: 100, height: 100)))
+    context?.saveGState()
     medallionPath.addClip()
-    let gradient = CGGradientCreateWithColors(CGColorSpaceCreateDeviceRGB(), [darkGoldColor.CGColor, midGoldColor.CGColor, lightColdColor.CGColor], [0, 0.51, 1])
-    CGContextDrawLinearGradient(context, gradient, CGPointMake(40, 40), CGPointMake(100, 160),  CGGradientDrawingOptions())
-    CGContextRestoreGState(context)
+    let gradient = CGGradient(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: [darkGoldColor.cgColor, midGoldColor.cgColor, lightColdColor.cgColor], locations: [0, 0.51, 1])
+    context.drawLinearGradient(gradient, start: CGPoint(x: 40, y: 40), end: CGPoint(x: 100, y: 160),  options: CGGradientDrawingOptions())
+    context?.restoreGState()
     
     // medallion's inner edge
-    var transform = CGAffineTransformMakeScale(0.8, 0.8)
-    transform = CGAffineTransformTranslate(transform, 15, 30)
+    var transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+    transform = transform.translatedBy(x: 15, y: 30)
     medallionPath.lineWidth = 2.0
-    medallionPath.applyTransform(transform)
+    medallionPath.apply(transform)
     medallionPath.stroke()
     
     // upper ribbon
     let upperRibbonPath = UIBezierPath()
-    upperRibbonPath.moveToPoint(CGPointMake(68, 0))
-    upperRibbonPath.addLineToPoint(CGPointMake(108, 0))
-    upperRibbonPath.addLineToPoint(CGPointMake(78, 70))
-    upperRibbonPath.addLineToPoint(CGPointMake(38, 70))
-    upperRibbonPath.closePath()
+    upperRibbonPath.move(to: CGPoint(x: 68, y: 0))
+    upperRibbonPath.addLine(to: CGPoint(x: 108, y: 0))
+    upperRibbonPath.addLine(to: CGPoint(x: 78, y: 70))
+    upperRibbonPath.addLine(to: CGPoint(x: 38, y: 70))
+    upperRibbonPath.close()
     
     UIColor(red: 0.5, green: 0.7, blue: 0.88, alpha: 0.8).setFill()
     // UIColor.blueColor().setFill()
@@ -93,21 +93,21 @@ class MedalView: UIImageView {
     
     // number 1a´
     let number = "1"
-    let numberOneRect = CGRectMake(47, 100, 50, 50)
+    let numberOneRect = CGRect(x: 47, y: 100, width: 50, height: 50)
     let font = UIFont(name: "Academy Engraved LET", size: 60)
     // let textStyle = NSMutableParagraphStyle.defaultParagraphStyle()
     if let numberOneFont = font {
       let numberOneAttributes = [NSFontAttributeName: numberOneFont, NSForegroundColorAttributeName: darkGoldColor]
-      number.drawInRect(numberOneRect, withAttributes: numberOneAttributes)
+      number.draw(in: numberOneRect, withAttributes: numberOneAttributes)
     }
     
-    CGContextEndTransparencyLayer(context)
+    context?.endTransparencyLayer()
     
     // keep @ end!
     let image = UIGraphicsGetImageFromCurrentImageContext()
     UIGraphicsEndImageContext()
     
-    return image
+    return image!
     
   }
 

@@ -11,7 +11,7 @@ import UIKit
 @IBDesignable
 class PushButtonView: UIButton {
   
-  @IBInspectable var fillColor: UIColor = UIColor.redColor()
+  @IBInspectable var fillColor: UIColor = UIColor.red
   @IBInspectable var isAddButton: Bool = true
   
 
@@ -23,8 +23,8 @@ class PushButtonView: UIButton {
     }
     */
   
-  override func drawRect(rect: CGRect) {
-    let path = UIBezierPath(ovalInRect: rect)
+  override func draw(_ rect: CGRect) {
+    let path = UIBezierPath(ovalIn: rect)
     fillColor.setFill()
     path.fill()
     // line thickness
@@ -34,26 +34,26 @@ class PushButtonView: UIButton {
     
     let plusPath = UIBezierPath()
     plusPath.lineWidth = plusHeight
-    plusPath.moveToPoint(CGPoint(x: bounds.width/2 - plusWidth/2 + 0.5, y: bounds.height/2 + 0.5))
+    plusPath.move(to: CGPoint(x: bounds.width/2 - plusWidth/2 + 0.5, y: bounds.height/2 + 0.5))
     
-    plusPath.addLineToPoint(CGPoint(x: bounds.width/2 + plusWidth/2 + 0.5, y: bounds.height/2 + 0.5))
+    plusPath.addLine(to: CGPoint(x: bounds.width/2 + plusWidth/2 + 0.5, y: bounds.height/2 + 0.5))
 
 
     
     if isAddButton {
       //move to the start of the vertical stroke
-      plusPath.moveToPoint(CGPoint(
+      plusPath.move(to: CGPoint(
         x:bounds.width/2 + 0.5,
         y:bounds.height/2 - plusWidth/2 + 0.5))
       
       //add the end point to the vertical stroke
-      plusPath.addLineToPoint(CGPoint(
+      plusPath.addLine(to: CGPoint(
         x:bounds.width/2 + 0.5,
         y:bounds.height/2 + plusWidth/2 + 0.5))
       
     }
     
-    UIColor.whiteColor().setStroke()
+    UIColor.white.setStroke()
     plusPath.stroke()
     
   }

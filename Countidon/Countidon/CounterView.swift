@@ -22,14 +22,14 @@ class CounterView: UIView {
     }
     
   }
-  @IBInspectable var outlineColor: UIColor = UIColor.blueColor()
-  @IBInspectable var counterColor: UIColor = UIColor.orangeColor()
+  @IBInspectable var outlineColor: UIColor = UIColor.blue
+  @IBInspectable var counterColor: UIColor = UIColor.orange
   
   /*
   // Only override drawRect: if you perform custom drawing.
   // An empty implementation adversely affects performance during animation.
   */
-  override func drawRect(rect: CGRect) {
+  override func draw(_ rect: CGRect) {
     // center
     let center = CGPoint(x: bounds.width/2, y: bounds.height/2)
     let radius: CGFloat = max(bounds.width/2, bounds.height/2)
@@ -49,9 +49,9 @@ class CounterView: UIView {
     let outlineEndAngle = arcLengthPerGlass * CGFloat(counter) + startAngle
     
     let outlinePath = UIBezierPath(arcCenter: center, radius: bounds.width/2.79, startAngle: startAngle, endAngle: outlineEndAngle, clockwise: true)
-    outlinePath.addArcWithCenter(center, radius: bounds.width/2 - arcWidth*1.69 + 2.5, startAngle: outlineEndAngle, endAngle: startAngle, clockwise: false)
+    outlinePath.addArc(withCenter: center, radius: bounds.width/2 - arcWidth*1.69 + 2.5, startAngle: outlineEndAngle, endAngle: startAngle, clockwise: false)
     
-    outlinePath.closePath()
+    outlinePath.close()
     outlineColor.setStroke()
     outlinePath.lineWidth = 2.0
     outlinePath.stroke()
@@ -59,7 +59,7 @@ class CounterView: UIView {
     // glasses drunken markers
     let context = UIGraphicsGetCurrentContext()
     // 1 save state
-    CGContextSaveGState(context)
+    context?.saveGState()
     outlineColor.setFill()
     
     let markerWidth: CGFloat = 5.0
@@ -67,18 +67,18 @@ class CounterView: UIView {
     
     // marker top left
     let markerPath = UIBezierPath(rect: CGRect(x: -markerWidth/2, y: -10.5*π, width: markerWidth, height: markerSize))
-    CGContextTranslateCTM(context, rect.width/2, rect.height/2)
+    context?.translateBy(x: rect.width/2, y: rect.height/2)
     
     for i in 1...NumberOfGlasses {
-      CGContextSaveGState(context)
+      context?.saveGState()
       let angle = arcLengthPerGlass * CGFloat(i) + startAngle - π/2
-      CGContextRotateCTM(context, angle)
-      CGContextTranslateCTM(context, 0, rect.height/2 - markerSize)
+      context?.rotate(by: angle)
+      context?.translateBy(x: 0, y: rect.height/2 - markerSize)
       markerPath.fill()
-      CGContextRestoreGState(context)
+      context?.restoreGState()
     }
     
-      CGContextRestoreGState(context)
+      context?.restoreGState()
     
     
   }
