@@ -36,6 +36,10 @@ class Checklist10Item: NSObject, NSCoding {
     super.init()
   }
   
+  override init() {
+    itemId = DataModel10.nextItemId()
+  }
+  
   override convenience init() {
     self.init(text: "", checked: false)
   }
