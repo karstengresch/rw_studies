@@ -17,7 +17,7 @@ class Checklist10Item: NSObject, NSCoding {
   var dueDate = Date()
   var shouldRemind = false
   
-  required init(coder aDecoder: NSCoder) {
+  required init?(coder aDecoder: NSCoder) {
     itemId = aDecoder.decodeInteger(forKey: "ItemId")
     text = aDecoder.decodeObject(forKey: "Text") as! String
     checked = aDecoder.decodeBool(forKey: "Checked")
@@ -37,10 +37,12 @@ class Checklist10Item: NSObject, NSCoding {
   }
   
   override init() {
-    itemId = DataModel10.nextItemId()
+    itemId = DataModel10.nextChecklist10ItemId()
+    
+    super.init()
   }
   
-  override convenience init() {
+  convenience override init() {
     self.init(text: "", checked: false)
   }
   

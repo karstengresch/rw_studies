@@ -81,7 +81,7 @@ class DataModel10 {
     checklist10s.sort(by: { checklist101, checklist102 in return checklist101.name.localizedStandardCompare(checklist102.name) == .orderedAscending })
   }
   
-  func nextItemId() -> Int {
+  class func nextChecklist10ItemId() -> Int {
     return 0
   }
   
