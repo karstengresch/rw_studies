@@ -109,9 +109,8 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
     
     let indexPaths = [indexPath]
     tableView.deleteRows(at: indexPaths, with: .automatic)
-    // saveChecklist10Items()
   }
-  
+    
   func configureText(for cell: UITableViewCell,
                      with checklist10Item: Checklist10Item) {
     let label = cell.viewWithTag(1000) as! UILabel
@@ -133,7 +132,6 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
     tableView.insertRows(at: indexPaths, with: .automatic)
     
     dismiss(animated: true, completion: nil)
-    // saveChecklist10Items()
   }
   
   func checklist10ItemDetailViewController(_ controller: Checklist10ItemDetailViewController, didFinishEditing checklist10Item: Checklist10Item) -> () {
@@ -145,7 +143,6 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
       }
     }
     dismiss(animated: true, completion: nil)
-    // saveChecklist10Items()
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
