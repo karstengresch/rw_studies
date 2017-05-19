@@ -82,7 +82,14 @@ class DataModel10 {
   }
   
   class func nextChecklist10ItemId() -> Int {
-    return 0
+    let userDefaults = UserDefaults.standard
+    let checklist10ItemId = userDefaults.integer(forKey: "Checklist10ItemId")
+    userDefaults.set(checklist10ItemId + 1, forKey: "Checklist10ItemId")
+    userDefaults.synchronize()
+    return checklist10ItemId
+    
   }
+  
+  
   
 }

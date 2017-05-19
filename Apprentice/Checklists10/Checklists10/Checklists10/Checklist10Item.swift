@@ -18,7 +18,7 @@ class Checklist10Item: NSObject, NSCoding {
   var shouldRemind = false
   
   required init?(coder aDecoder: NSCoder) {
-    itemId = aDecoder.decodeInteger(forKey: "ItemId")
+    itemId = aDecoder.decodeInteger(forKey: "Checklist10ItemId")
     text = aDecoder.decodeObject(forKey: "Text") as! String
     checked = aDecoder.decodeBool(forKey: "Checked")
     dueDate = aDecoder.decodeObject(forKey: "DueDate") as! Date
@@ -51,7 +51,7 @@ class Checklist10Item: NSObject, NSCoding {
   }
   
   func encode(with aCoder: NSCoder) {
-    aCoder.encode(itemId, forKey: "ItemId")
+    aCoder.encode(itemId, forKey: "Checklist10ItemId")
     aCoder.encode(text, forKey: "Text")
     aCoder.encode(checked, forKey: "Checked")
     aCoder.encode(dueDate, forKey: "DueDate")
