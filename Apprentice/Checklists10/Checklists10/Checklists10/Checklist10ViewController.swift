@@ -115,7 +115,8 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
   func configureText(for cell: UITableViewCell,
                      with checklist10Item: Checklist10Item) {
     let label = cell.viewWithTag(1000) as! UILabel
-    label.text = checklist10Item.text
+    // label.text = checklist10Item.text
+    label.text = "\(checklist10Item.checklist10ItemId): \(checklist10Item.text)"
   }
 
   
