@@ -106,6 +106,9 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
     
     doneBarButton.isEnabled = (newText.length > 0)
     return true
+  }
+  
+  func updateDueDateLabel() {
     
   }
   
