@@ -139,6 +139,7 @@ class Checklist10ViewController: UITableViewController, Checklist10ItemDetailVie
       let indexPath = IndexPath(row: index, section: 0)
       if let cell = tableView.cellForRow(at: indexPath)
       {
+        print("Calling: configureText")
         configureText(for: cell, with: checklist10Item)
       }
     }
