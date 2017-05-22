@@ -196,6 +196,8 @@
                     <connections>
                         <outlet property="addChecklist10ItemTextField" destination="nZX-8t-hea" id="68z-Cp-2m0"/>
                         <outlet property="doneBarButton" destination="LnG-Ey-nfW" id="itY-X8-m3U"/>
+                        <outlet property="dueDateLabel" destination="E3E-2V-tE3" id="gv0-gt-KK7"/>
+                        <outlet property="shouldRemindSwitch" destination="OF6-Od-81C" id="EkF-vy-UcX"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MkI-oN-rXE" userLabel="First Responder" sceneMemberID="firstResponder"/>
