@@ -21,6 +21,9 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
   
   @IBOutlet weak var addChecklist10ItemTextField: UITextField!
   @IBOutlet weak var doneBarButton: UIBarButtonItem!
+  
+  @IBOutlet weak var shouldRemindSwitch: UISwitch!
+  @IBOutlet weak var dueDateLabel: UILabel!
 
   weak var delegate: Checklist10ItemDetailViewControllerDelegate?
   
