@@ -77,6 +77,10 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
       let checklist10Item = Checklist10Item()
       checklist10Item.text = addChecklist10ItemTextField.text!
       checklist10Item.checked = false
+
+      checklist10Item.shouldRemind = shouldRemindSwitch.isOn
+      checklist10Item.dueDate = dueDate
+
       delegate?.checklist10ItemDetailViewController(self, didFinishAdding: checklist10Item)
     }
   }
