@@ -36,9 +36,11 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
     super.viewDidLoad()
     
     if let checklist10Item = checklist10ItemToEdit {
-      title = "Edit checklist 10 item"
+      title = "Edit Checklist10 Item"
       addChecklist10ItemTextField.text = checklist10Item.text
       doneBarButton.isEnabled = true
+      shouldRemindSwitch.isOn = checklist10Item.shouldRemind
+      dueDate = checklist10Item.dueDate
     }
   }
   
