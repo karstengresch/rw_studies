@@ -109,7 +109,10 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
   }
   
   func updateDueDateLabel() {
-    
+    let formatter = DateFormatter()
+    formatter.dateStyle = .medium
+    formatter.timeStyle = .short
+    dueDateLabel.text = formatter.string(from: dueDate)
   }
   
 }
