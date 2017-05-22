@@ -28,6 +28,8 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
   weak var delegate: Checklist10ItemDetailViewControllerDelegate?
   
   var checklist10ItemToEdit: Checklist10Item?
+  var dueDate = Date()
+  
   
   
   override func viewDidLoad() {
