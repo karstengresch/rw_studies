@@ -68,6 +68,9 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
     
     if let checklist10Item = checklist10ItemToEdit {
       checklist10Item.text = addChecklist10ItemTextField.text!
+      checklist10Item.shouldRemind = shouldRemindSwitch.isOn
+      checklist10Item.dueDate = dueDate
+      
       delegate?.checklist10ItemDetailViewController(self, didFinishEditing: checklist10Item)
     }
     else {
