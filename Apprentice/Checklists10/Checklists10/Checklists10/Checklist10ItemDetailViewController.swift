@@ -29,6 +29,8 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
   
   var checklist10ItemToEdit: Checklist10Item?
   var dueDate = Date()
+  var isDatePickerVisible = false
+  
   
   
   
