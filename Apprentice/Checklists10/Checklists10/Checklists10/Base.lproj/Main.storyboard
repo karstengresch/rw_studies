@@ -208,14 +208,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="216.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="9JD-MU-1DA">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="9JD-MU-1DA">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="517329064.29338902">
                                     <!--2017-05-24 14:31:04 +0000-->
                                 </date>
                             </datePicker>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9JD-MU-1DA" secondAttribute="trailing" id="8Uc-qC-aQA"/>
+                            <constraint firstAttribute="bottom" secondItem="9JD-MU-1DA" secondAttribute="bottom" id="Sbx-sI-fHA"/>
+                            <constraint firstItem="9JD-MU-1DA" firstAttribute="top" secondItem="D75-Bd-dB3" secondAttribute="top" id="iOq-o2-zKf"/>
+                            <constraint firstItem="9JD-MU-1DA" firstAttribute="leading" secondItem="D75-Bd-dB3" secondAttribute="leading" id="rQ0-gV-Z8U"/>
+                        </constraints>
                     </tableViewCellContentView>
                 </tableViewCell>
             </objects>
