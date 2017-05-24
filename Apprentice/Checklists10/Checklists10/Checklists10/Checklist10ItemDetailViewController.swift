@@ -128,7 +128,6 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
     isDatePickerVisible = true
     let indexPathDatePicker = IndexPath(row: 2, section: 1)
     tableView.insertRows(at: [indexPathDatePicker], with: .fade)
-    
   }
   
 }
