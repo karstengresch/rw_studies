@@ -195,6 +195,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addChecklist10ItemTextField" destination="nZX-8t-hea" id="68z-Cp-2m0"/>
+                        <outlet property="datePicker" destination="9JD-MU-1DA" id="D5l-k4-plc"/>
+                        <outlet property="datePickerCell" destination="PNH-Av-9a3" id="hSx-ZW-AR4"/>
                         <outlet property="doneBarButton" destination="LnG-Ey-nfW" id="itY-X8-m3U"/>
                         <outlet property="dueDateLabel" destination="E3E-2V-tE3" id="gv0-gt-KK7"/>
                         <outlet property="shouldRemindSwitch" destination="OF6-Od-81C" id="EkF-vy-UcX"/>
