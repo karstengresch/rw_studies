@@ -103,6 +103,10 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
     return nil
   }
   
+  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+  }
+  
   
   func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
     let oldText = textField.text! as NSString
