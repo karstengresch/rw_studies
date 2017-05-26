@@ -104,7 +104,11 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    
+    if section == 1 {
+      
+    } else {
+      
+    }
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
