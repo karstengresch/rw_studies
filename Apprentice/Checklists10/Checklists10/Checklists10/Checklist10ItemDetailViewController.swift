@@ -103,6 +103,10 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
     return nil
   }
   
+  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+  }
+  
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     if indexPath.section == 1 && indexPath.row == 2 {
       return datePickerCell
