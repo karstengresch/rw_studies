@@ -120,7 +120,12 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
   }
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    tableView.deselectRow(at: indexPath, animated: true)
+    addChecklist10ItemTextField.resignFirstResponder()
     
+    if indexPath.section == 1 && indexPath.row == 1 {
+      showDatePicker()
+    }
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
