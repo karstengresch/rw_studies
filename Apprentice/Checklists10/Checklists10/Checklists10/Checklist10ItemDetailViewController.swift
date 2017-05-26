@@ -94,13 +94,11 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
   
   // disallow row from selection
   override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-    /* if indexPath.section == 1 {
+    if indexPath.section == 1 && indexPath.row == 1 {
       return indexPath
     } else {
       return nil
-    }*/
-    
-    return nil
+    }
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
