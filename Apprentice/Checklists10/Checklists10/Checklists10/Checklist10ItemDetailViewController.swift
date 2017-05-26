@@ -113,7 +113,9 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
   
   override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     if indexPath.section == 1 && indexPath.row == 2 {
-      
+      return 217
+    } else {
+      return super.tableView(tableView, heightForRowAt: indexPath)
     }
   }
   
