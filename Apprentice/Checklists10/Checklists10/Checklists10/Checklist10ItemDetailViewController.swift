@@ -181,10 +181,14 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
     let indexPathDatePicker = IndexPath(row: 2, section: 1)
     
     if let dateCell = tableView.cellForRow(at: indexPathDateRow) {
-      
+      dateCell.detailTextLabel!.textColor = dateCell.detailTextLabel!.tintColor
     }
     
+    tableView.beginUpdates()
     tableView.insertRows(at: [indexPathDatePicker], with: .fade)
+    tableView.reloadRows(at: [indexPathDateRow], with: .none)
+    tableView.endUpdates()
+    
     datePicker.setDate(dueDate, animated: true)
   }
   
