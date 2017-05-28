@@ -137,7 +137,11 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
     addChecklist10ItemTextField.resignFirstResponder()
     
     if indexPath.section == 1 && indexPath.row == 1 {
-      showDatePicker()
+      if !isDatePickerVisible {
+        showDatePicker()
+      } else {
+        hideDatePicker()
+      }
     }
   }
   
