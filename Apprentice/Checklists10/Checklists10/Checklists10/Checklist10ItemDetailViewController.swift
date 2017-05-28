@@ -118,7 +118,13 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
   }
   
   override func tableView(_ tableView: UITableView, indentationLevelForRowAt indexPath: IndexPath) -> Int {
+    var newIndexPath = indexPath
     
+    if indexPath.section == 1 && indexPath.row == 2 {
+      newIndexPath = IndexPath(row: 0, section: indexPath.section)
+    }
+    
+    return super.tableView(tableView, indentationLevelForRowAt: newIndexPath)
   }
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
