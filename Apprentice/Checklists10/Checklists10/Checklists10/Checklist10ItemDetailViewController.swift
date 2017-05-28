@@ -208,8 +208,8 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
       }
       
       tableView.beginUpdates()
-      tableView.insertRows(at: [indexPathDatePicker], with: .fade)
       tableView.reloadRows(at: [indexPathDateRow], with: .none)
+      tableView.deleteRows(at: [indexPathDatePicker], with: .fade)
       tableView.endUpdates()
       
     }
