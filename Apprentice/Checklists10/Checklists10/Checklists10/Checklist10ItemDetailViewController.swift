@@ -193,7 +193,22 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
   }
   
   func hideDatePicker() {
-    
+    if isDatePickerVisible {
+      isDatePickerVisible = false
+      
+      let indexPathDateRow = IndexPath(row: 1, section: 1)
+      let indexPathDatePicker = IndexPath(row: 2, section: 1)
+      
+      if let datePickerCell = tableView.cellForRow(at: indexPathDateRow) {
+        datePickerCell.detailTextLabel!.textColor = UIColor(white: 0, alpha: 0.5)
+      }
+      
+      tableView.beginUpdates()
+      tableView.insertRows(at: [indexPathDatePicker], with: .fade)
+      tableView.reloadRows(at: [indexPathDateRow], with: .none)
+      tableView.endUpdates()
+      
+    }
   }
   
 }
