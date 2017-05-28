@@ -29,7 +29,8 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
   @IBOutlet weak var datePicker: UIDatePicker!
 
   @IBAction func dateChanged(_ datePicker: UIDatePicker) {
-    
+    dueDate = datePicker.date
+    updateDueDateLabel()
   }
   
   weak var delegate: Checklist10ItemDetailViewControllerDelegate?
