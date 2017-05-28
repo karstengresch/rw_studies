@@ -117,6 +117,10 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
     }
   }
   
+  override func tableView(_ tableView: UITableView, indentationLevelForRowAt indexPath: IndexPath) -> Int {
+    
+  }
+  
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
     addChecklist10ItemTextField.resignFirstResponder()
@@ -159,6 +163,7 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
   }
   
   func showDatePicker() {
+    print("Calling: showDatePicker()")
     isDatePickerVisible = true
     let indexPathDatePicker = IndexPath(row: 2, section: 1)
     tableView.insertRows(at: [indexPathDatePicker], with: .fade)
