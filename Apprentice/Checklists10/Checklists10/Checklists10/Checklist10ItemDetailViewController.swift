@@ -192,4 +192,8 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
     datePicker.setDate(dueDate, animated: true)
   }
   
+  func hideDatePicker() {
+    
+  }
+  
 }
