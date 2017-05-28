@@ -176,8 +176,16 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
   func showDatePicker() {
     print("Calling: showDatePicker()")
     isDatePickerVisible = true
+    
+    let indexPathDateRow = IndexPath(row: 1, section: 1)
     let indexPathDatePicker = IndexPath(row: 2, section: 1)
+    
+    if let dateCell = tableView.cellForRow(at: indexPathDateRow) {
+      
+    }
+    
     tableView.insertRows(at: [indexPathDatePicker], with: .fade)
+    datePicker.setDate(dueDate, animated: true)
   }
   
 }
