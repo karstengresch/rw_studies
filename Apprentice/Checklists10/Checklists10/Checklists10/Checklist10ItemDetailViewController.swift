@@ -28,6 +28,10 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
   @IBOutlet weak var datePickerCell: UITableViewCell!
   @IBOutlet weak var datePicker: UIDatePicker!
 
+  @IBAction func dateChanged(_ datePicker: UIDatePicker) {
+    
+  }
+  
   weak var delegate: Checklist10ItemDetailViewControllerDelegate?
   
   var checklist10ItemToEdit: Checklist10Item?
