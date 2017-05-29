@@ -39,6 +39,10 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
     updateDueDateLabel()
   }
   
+  @IBAction shouldRemindToggled(_ switchControl: UISwitch) {
+  
+  }
+  
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -218,8 +222,9 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
       tableView.reloadRows(at: [indexPathDateRow], with: .none)
       tableView.deleteRows(at: [indexPathDatePicker], with: .fade)
       tableView.endUpdates()
-      
     }
   }
+  
+  
   
 }
