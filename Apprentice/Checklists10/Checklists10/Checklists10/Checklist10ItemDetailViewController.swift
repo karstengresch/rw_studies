@@ -78,6 +78,7 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
       checklist10Item.text = addChecklist10ItemTextField.text!
       checklist10Item.shouldRemind = shouldRemindSwitch.isOn
       checklist10Item.dueDate = dueDate
+      updateDueDateLabel()
       checklist10Item.scheduleNotification()
       
       delegate?.checklist10ItemDetailViewController(self, didFinishEditing: checklist10Item)
@@ -89,6 +90,7 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
 
       checklist10Item.shouldRemind = shouldRemindSwitch.isOn
       checklist10Item.dueDate = dueDate
+      updateDueDateLabel()
       
       checklist10Item.scheduleNotification()
 
