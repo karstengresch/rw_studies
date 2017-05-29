@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UserNotifications
 
 class Checklist10Item: NSObject, NSCoding {
   var checklist10ItemId: Int
@@ -46,8 +47,20 @@ class Checklist10Item: NSObject, NSCoding {
   
   func scheduleNotification() {
     if shouldRemind && dueDate > Date() {
-      print("TO DO: Schedule a notification")
-    }
+      let notificationContent = UNMutableNotificationContent()
+      notificationContent.title = "Reminder:"
+      notificationContent.body = text
+      notificationContent.sound = UNNotificationSound.default()
+      
+      let gregorianCalendar = Calendar(identifier: .gregorian)
+      let dateComponents = gregorianCalendar.dateComponents([.month, .day, .hour, .minute], from: dueDate)
+      let notificationTrigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+      let notificationRequest = UNNotificationRequest(identifier: "\(checklist10ItemId)", content: notificationContent, trigger: notificationTrigger)
+      let notificationCenter = UNUserNotificationCenter.current()
+      notificationCenter.add(notificationRequest)
+      
+      print("Scheduled notification \(notificationRequest) for checklist10ItemId \(checklist10ItemId)")
+      }
     else {
       print("Either no reminder set or date lies in the past.")
     }
