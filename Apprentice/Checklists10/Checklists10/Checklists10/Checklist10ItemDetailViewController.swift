@@ -17,6 +17,12 @@ protocol Checklist10ItemDetailViewControllerDelegate: class {
 
 class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDelegate {
   
+  weak var delegate: Checklist10ItemDetailViewControllerDelegate?
+  
+  var checklist10ItemToEdit: Checklist10Item?
+  var dueDate = Date()
+  var isDatePickerVisible = false
+  
   // MARK: IBOutlet/IBAction
   
   @IBOutlet weak var addChecklist10ItemTextField: UITextField!
@@ -27,19 +33,11 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
   
   @IBOutlet weak var datePickerCell: UITableViewCell!
   @IBOutlet weak var datePicker: UIDatePicker!
-
+  
   @IBAction func dateChanged(_ datePicker: UIDatePicker) {
     dueDate = datePicker.date
     updateDueDateLabel()
   }
-  
-  weak var delegate: Checklist10ItemDetailViewControllerDelegate?
-  
-  var checklist10ItemToEdit: Checklist10Item?
-  var dueDate = Date()
-  var isDatePickerVisible = false
-  
-  
   
   
   override func viewDidLoad() {
