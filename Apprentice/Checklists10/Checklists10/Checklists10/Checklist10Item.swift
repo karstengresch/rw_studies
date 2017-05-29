@@ -42,9 +42,13 @@ class Checklist10Item: NSObject, NSCoding {
     aCoder.encode(checked, forKey: "Checked")
     aCoder.encode(dueDate, forKey: "DueDate")
     aCoder.encode(shouldRemind, forKey: "ShouldRemind")
-    
   }
   
+  func scheduleNotification() {
+    if shouldRemind && dueDate > Date() {
+      print("TO DO: Schedule a notification")
+    }
+  }
   
   
 }
