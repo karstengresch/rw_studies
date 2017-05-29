@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import UserNotifications
 
 protocol Checklist10ItemDetailViewControllerDelegate: class {
   func checklist10ItemDetailViewControllerDidCancel(_ controller: Checklist10ItemDetailViewController)
@@ -39,7 +40,13 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
     updateDueDateLabel()
   }
   
-  @IBAction shouldRemindToggled(_ switchControl: UISwitch) {
+  @IBAction func shouldRemindToggled(_ switchControl: UISwitch) {
+     addChecklist10ItemTextField.resignFirstResponder()
+  
+    if switchControl.isOn {
+      
+    }
+  // let notificationCenter = UNUserNotificationCenter.current()
   
   }
   
