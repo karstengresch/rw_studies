@@ -48,6 +48,9 @@ class Checklist10Item: NSObject, NSCoding {
     if shouldRemind && dueDate > Date() {
       print("TO DO: Schedule a notification")
     }
+    else {
+      print("Either no reminder set or date lies in the past.")
+    }
   }
   
   
