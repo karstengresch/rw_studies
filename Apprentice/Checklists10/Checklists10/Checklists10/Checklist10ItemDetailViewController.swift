@@ -44,10 +44,11 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
      addChecklist10ItemTextField.resignFirstResponder()
   
     if switchControl.isOn {
-      
+     let notificationCenter = UNUserNotificationCenter.current()
+      notificationCenter.requestAuthorization(options: [.alert, .sound]) {
+        granted, error in
+      }
     }
-  // let notificationCenter = UNUserNotificationCenter.current()
-  
   }
   
   
