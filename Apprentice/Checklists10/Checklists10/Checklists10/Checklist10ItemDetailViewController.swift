@@ -170,6 +170,10 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
     return true
   }
   
+  func textFieldDidBeginEditing(_ textField: UITextField) {
+    hideDatePicker()
+  }
+  
   func updateDueDateLabel() {
     let formatter = DateFormatter()
     formatter.dateStyle = .medium
