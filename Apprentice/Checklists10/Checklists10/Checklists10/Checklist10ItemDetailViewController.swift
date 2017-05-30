@@ -48,9 +48,9 @@ class Checklist10ItemDetailViewController: UITableViewController, UITextFieldDel
       notificationCenter.requestAuthorization(options: [.alert, .sound]) {
         granted, error in
       }
-      datePickerCell.isEditing = true
+      // datePickerCell. = true
     } else {
-      datePickerCell.isEditing = false
+      // datePickerCell.isEditing = false
     }
   }
   
