@@ -67,7 +67,8 @@ class Checklist10Item: NSObject, NSCoding {
   }
   
   func removeNotification(){
-  
+    let notificationCenter = UNUserNotificationCenter.current()
+    notificationCenter.removeDeliveredNotifications(withIdentifiers: ["\(checklist10ItemId)"])
   }
   
   
