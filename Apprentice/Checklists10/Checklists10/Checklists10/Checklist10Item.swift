@@ -72,6 +72,10 @@ class Checklist10Item: NSObject, NSCoding {
     notificationCenter.removeDeliveredNotifications(withIdentifiers: ["\(checklist10ItemId)"])
   }
   
+  deinit {
+    removeNotification()
+  }
+  
   
 }
 
