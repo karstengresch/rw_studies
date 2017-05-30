@@ -66,6 +66,10 @@ class Checklist10Item: NSObject, NSCoding {
     }
   }
   
+  funce removeNotification(){
+  
+  }
+  
   
 }
 
