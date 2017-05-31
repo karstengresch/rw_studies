@@ -35,7 +35,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="yO4-LM-BPM" secondAttribute="trailing" constant="-16" id="ypG-nj-K6P"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="I5Y-S0-vhJ"/>
+                    <navigationItem key="navigationItem" id="I5Y-S0-vhJ">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="5me-Lb-0j0"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
