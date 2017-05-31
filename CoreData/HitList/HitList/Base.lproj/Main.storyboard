@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,13 +21,25 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yO4-LM-BPM">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yO4-LM-BPM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="0DC-4d-cWU"/>
+                            <constraint firstItem="yO4-LM-BPM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="hyR-bl-9yJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yO4-LM-BPM" secondAttribute="bottom" id="x0n-qE-ud6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yO4-LM-BPM" secondAttribute="trailing" constant="-16" id="ypG-nj-K6P"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="I5Y-S0-vhJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1050" y="-599"/>
+            <point key="canvasLocation" x="1048.8" y="-599.55022488755628"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0Ue-mZ-MsQ">
