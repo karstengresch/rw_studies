@@ -21,6 +21,22 @@ class ViewController: UIViewController {
   var names: [String] = []
   
   @IBAction func addName(_ sender: UIBarButtonItem) {
+    
+    let alert = UIAlertController(title: "New Name", message: "Please add a new name", preferredStyle: .alert)
+    
+    let saveAction = UIAlertAction(title: "Save", style: .default) { [unowned self] action in
+      
+      guard let textField = alert.textFields?.first , let nameToSave = textField.text else {
+        return
+      }
+      
+      self.names.append(nameToSave)
+      self.tableView.reloadData()
+    }
+    
+    
+    
+    
   }
 
   
@@ -35,7 +51,7 @@ extension ViewController: UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-    cell.textLabel?.text = name[indexPath.row]
+    cell.textLabel?.text = names[indexPath.row]
     return cell
   }
   
