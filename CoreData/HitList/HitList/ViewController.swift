@@ -34,7 +34,12 @@ class ViewController: UIViewController {
       self.tableView.reloadData()
     }
     
+   let cancelAction = UIAlertAction(title: "Cancel", style: .default)
+    alert.addTextField()
+    alert.addAction(saveAction)
+    alert.addAction(cancelAction)
     
+    present(alert, animated: true)
     
     
   }
@@ -54,8 +59,6 @@ extension ViewController: UITableViewDataSource {
     cell.textLabel?.text = names[indexPath.row]
     return cell
   }
-  
-  
   
 }
 
