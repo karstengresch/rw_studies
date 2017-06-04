@@ -47,6 +47,21 @@ class ViewController: UIViewController {
   }
   
   func save(name: String) {
+    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+      return
+    }
+    
+    let managedContext = appDelegate.persistentContainer.viewContext
+    let entity = NSEntityDescription.entity(forEntityName: "Person", in: managedContext)!
+    let person = NSManagedObject(entity: entity, insertInto: managedContext)
+    person.setValue(name, forKeyPath: "name")
+    
+    do {
+      
+    } catch let error as NSError {
+      print("Coud not save. \(error), \(error.userInfo)")
+    }
+    
     
   }
 
