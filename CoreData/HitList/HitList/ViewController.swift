@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
 
@@ -18,7 +19,8 @@ class ViewController: UIViewController {
 
   @IBOutlet weak var tableView: UITableView!
   
-  var names: [String] = []
+  // var names: [String] = []
+  var people: [NSManagedObject] = []
   
   @IBAction func addName(_ sender: UIBarButtonItem) {
     
@@ -51,7 +53,7 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return names.count
+    return people.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
