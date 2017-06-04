@@ -22,6 +22,10 @@ class ViewController: UIViewController {
   // var names: [String] = []
   var people: [NSManagedObject] = []
   
+  override func viewWillAppear(_ animated: Bool) {
+    
+  }
+  
   @IBAction func addName(_ sender: UIBarButtonItem) {
     
     let alert = UIAlertController(title: "New Name", message: "Please add a new name", preferredStyle: .alert)
