@@ -32,8 +32,7 @@ class ViewController: UIViewController {
         return
       }
       
-      self.names.append(nameToSave)
-      
+      self.save(name: nameToSave)
       self.tableView.reloadData()
     }
     
@@ -64,7 +63,7 @@ extension ViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let person = people[indexPath.row]
     let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-    cell.textLabel?.text = person.value(value(forKeyPath: "name") as? String)
+    cell.textLabel?.text = person.value(forKeyPath: "name") as? String
     return cell
   }
   
