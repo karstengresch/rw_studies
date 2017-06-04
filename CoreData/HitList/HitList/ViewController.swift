@@ -43,7 +43,6 @@ class ViewController: UIViewController {
     
     present(alert, animated: true)
     
-    
   }
   
   func save(name: String) {
@@ -57,16 +56,13 @@ class ViewController: UIViewController {
     person.setValue(name, forKeyPath: "name")
     
     do {
-      
+      try managedContext.save()
+      people.append(person)
     } catch let error as NSError {
       print("Coud not save. \(error), \(error.userInfo)")
     }
-    
-    
   }
-
   
-
 }
 
 extension ViewController: UITableViewDataSource {
