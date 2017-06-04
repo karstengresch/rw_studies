@@ -33,6 +33,7 @@ class ViewController: UIViewController {
       }
       
       self.names.append(nameToSave)
+      
       self.tableView.reloadData()
     }
     
@@ -43,6 +44,10 @@ class ViewController: UIViewController {
     
     present(alert, animated: true)
     
+    
+  }
+  
+  func save(name: String) {
     
   }
 
