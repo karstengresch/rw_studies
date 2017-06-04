@@ -23,7 +23,22 @@ class ViewController: UIViewController {
   var people: [NSManagedObject] = []
   
   override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(true)
     
+    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+      return
+    }
+    
+    let managedContext = appDelegate.persistentContainer.viewContext
+    
+    let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Person")
+    
+    do {
+      people =
+      try managedContext.fetch(fetchRequest)
+    } catch let error as NSError {
+      print("Coud not fetch. \(error), \(error.userInfo)")
+    }
   }
   
   @IBAction func addName(_ sender: UIBarButtonItem) {
