@@ -34,6 +34,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     bowtie.name = "My bow tie"
     bowtie.lastWorn = NSDate()
     
+    do {
+      let fetchRequest = NSFetchRequest<Bowtie>(entityName: "Bowtie")
+      let bowties = try
+        
+      self.persistentContainer.viewContext.fetch(fetchRequest)
+      
+      let sample = bowties.first
+      
+      print("Name: \(String(describing: sample?.name)), Worn: \(String(describing: sample?.lastWorn))")
+          
+      }  catch let error as NSError {
+        print("Fetching error \(error), \(error.userInfo)")
+      }
     
     
     return true
