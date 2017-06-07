@@ -21,8 +21,11 @@
  */
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
+  
+  var managedContext: NSManagedObjectContext!
 
   // MARK: - IBOutlets
   @IBOutlet weak var segmentedControl: UISegmentedControl!
