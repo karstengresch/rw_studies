@@ -57,9 +57,17 @@ class ViewController: UIViewController {
 
 private extension UIColor {
   
-  static func color(dict: [String : AnyObject]) -> UIColor? {
+  static func color(colorDictionary: [String : AnyObject]) -> UIColor? {
+    guard  let red = colorDictionary["red"] as? NSNumber,
+           let green = colorDictionary["green"] as? NSNumber,
+          let blue = colorDictionary["blue"] as? NSNumber
+      else {
+      return nil
+    }
     
+    return UIColor(red: CGFloat(red)/255.0,
+                   green: CGFloat(green)/255.0,
+                   blue: CGFloat(blue)/255.0,
+                   alpha: 1)
   }
-  
-  
 }
