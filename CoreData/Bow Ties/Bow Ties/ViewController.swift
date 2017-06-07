@@ -57,6 +57,9 @@ class ViewController: UIViewController {
 
 private extension UIColor {
   
+  static func color(dict: [String : AnyObject]) -> UIColor? {
+    
+  }
   
   
 }
