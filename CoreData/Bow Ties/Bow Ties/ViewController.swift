@@ -56,6 +56,9 @@ class ViewController: UIViewController {
   
   func insertSampleData() {
     let fetch = NSFetchRequest<Bowtie>(entityName: "Bowtie")
+    fetch.predicate = NSPredicate(format: "searchKey =! nil")
+    
+    
     
   }
 }
