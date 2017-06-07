@@ -62,7 +62,9 @@ class ViewController: UIViewController {
     
     let dataArray = NSArray(contentsOfFile: bundlePath!)!
     
-    
+    for dict in dataArray {
+      
+    }
     
   }
 }
