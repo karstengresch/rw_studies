@@ -36,12 +36,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     do {
       let fetchRequest = NSFetchRequest<Bowtie>(entityName: "Bowtie")
-      let bowties = try
+      let bowties =
         
-      self.persistentContainer.viewContext.fetch(fetchRequest)
+        try self.persistentContainer.viewContext.fetch(fetchRequest)
       
       let sample = bowties.first
-      
       print("Name: \(String(describing: sample?.name)), Worn: \(String(describing: sample?.lastWorn))")
           
       }  catch let error as NSError {
