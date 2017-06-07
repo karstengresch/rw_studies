@@ -60,6 +60,10 @@ class ViewController: UIViewController {
     
     let bundlePath = Bundle.main.path(forResource: "SampleData", ofType: "plist")
     
+    let dataArray = NSArray(contentsOfFile: bundlePath!)!
+    
+    
+    
   }
 }
 
