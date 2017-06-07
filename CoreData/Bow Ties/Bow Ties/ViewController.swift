@@ -58,7 +58,7 @@ class ViewController: UIViewController {
     let fetch = NSFetchRequest<Bowtie>(entityName: "Bowtie")
     fetch.predicate = NSPredicate(format: "searchKey =! nil")
     
-    
+    let bundlePath = Bundle.main.path(forResource: "SampleData", ofType: "plist")
     
   }
 }
