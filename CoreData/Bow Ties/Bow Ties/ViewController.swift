@@ -55,6 +55,7 @@ class ViewController: UIViewController {
   }
   
   func insertSampleData() {
+    let fetch = NSFetchRequest<Bowtie>(entityName: "Bowtie")
     
   }
 }
