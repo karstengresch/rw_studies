@@ -53,6 +53,10 @@ class ViewController: UIViewController {
   @IBAction func rate(_ sender: AnyObject) {
 
   }
+  
+  func insertSampleData() {
+    
+  }
 }
 
 private extension UIColor {
