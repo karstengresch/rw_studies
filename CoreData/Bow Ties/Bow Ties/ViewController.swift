@@ -41,7 +41,18 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     
     insertSampleData()
-    // let fetchRequest = NSFetchRequest<Bowtie>(entityName: "Bowtie")
+    let fetchRequest = NSFetchRequest<Bowtie>(entityName: "Bowtie")
+    let firstTitle = segmentedControl.titleForSegment(at: 0)!
+    
+    fetchRequest.predicate = NSPredicate(format: "searchKey == %@", firstTitle )
+    
+    do {
+      let results = try managedContext.fetch(fetchRequest)
+      populate(bowtie: results.first)
+      
+    } catch let error as NSError {
+      print("Could not fetch \(error), \(error.userInfo)")
+    }
     
   }
 
