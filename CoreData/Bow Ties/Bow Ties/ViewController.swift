@@ -108,11 +108,13 @@ class ViewController: UIViewController {
     
     try! managedContext.save()
     
-    
-
-    
+  }
+  
+  func populate(bowtie: Bowtie) {
     
   }
+  
+  
 }
 
 private extension UIColor {
