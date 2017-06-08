@@ -2,7 +2,7 @@
 //  Bowtie+CoreDataProperties.swift
 //  Bow Ties
 //
-//  Created by Karsten Gresch on 07.06.17.
+//  Created by Karsten Gresch on 08.06.17.
 //  Copyright © 2017 Razeware. All rights reserved.
 //
 
@@ -23,5 +23,6 @@ extension Bowtie {
     @NSManaged public var searchKey: String?
     @NSManaged public var timesWorn: Int32
     @NSManaged public var tintColor: NSObject?
+    @NSManaged public var rating: Double
 
 }

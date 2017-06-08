@@ -72,10 +72,49 @@ class ViewController: UIViewController {
     let dataArray = NSArray(contentsOfFile: sampleDataPath!)!
     
     for dict in dataArray {
+    
+      let entity = NSEntityDescription.entity(forEntityName: "Bowtie", in: managedContext)!
+      let bowtie = Bowtie(entity: entity, insertInto: managedContext)
+      let bowtieDictionary = dict as! [String: AnyObject]
+      
+      bowtie.name = bowtieDictionary["name"] as? String
+      bowtie.searchKey = bowtieDictionary["searchKey"] as? String
+      bowtie.rating = bowtieDictionary["rating"] as! Double
+      let colorDictionary = bowtieDictionary["tintColor"] as! [String: AnyObject]
+      bowtie.tintColor = UIColor.color(colorDictionary: colorDictionary)
+      
+      let imageName = bowtieDictionary["imageName"] as? String
+      let image = UIImage(named: imageName)
+      let photoData = UIImagePNGRepresentation(image!)!
+      bowtie.photoData = NSData(data: photoData)
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
     }
     
     try! managedContext.save()
+    
+    
 
     
     
