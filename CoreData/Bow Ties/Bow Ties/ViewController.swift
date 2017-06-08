@@ -71,7 +71,12 @@ class ViewController: UIViewController {
     let sampleDataPath = Bundle.main.path(forResource: "SampleData", ofType: "plist")
     let dataArray = NSArray(contentsOfFile: sampleDataPath!)!
     
+    for dict in dataArray {
+      
+    }
     
+    try! managedContext.save()
+
     
     
   }
