@@ -84,31 +84,14 @@ class ViewController: UIViewController {
       bowtie.tintColor = UIColor.color(colorDictionary: colorDictionary)
       
       let imageName = bowtieDictionary["imageName"] as? String
-      let image = UIImage(named: imageName)
+      let image = UIImage(named: imageName!)
       let photoData = UIImagePNGRepresentation(image!)!
       bowtie.photoData = NSData(data: photoData)
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+      bowtie.lastWorn = bowtieDictionary["lastWorn"] as? NSDate
+      let timesNumber = bowtieDictionary["timesWorn"] as! NSNumber
+      bowtie.timesWorn = timesNumber.int32Value
+      bowtie.isFavorite = bowtieDictionary["isFavorite"] as! Bool
       
     }
     
