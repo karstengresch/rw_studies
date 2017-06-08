@@ -48,7 +48,7 @@ class ViewController: UIViewController {
     
     do {
       let results = try managedContext.fetch(fetchRequest)
-      populate(bowtie: results.first)
+      populate(bowtie: results.first!)
       
     } catch let error as NSError {
       print("Could not fetch \(error), \(error.userInfo)")
@@ -111,7 +111,25 @@ class ViewController: UIViewController {
   }
   
   func populate(bowtie: Bowtie) {
+    guard let imageData = bowtie.photoData as Data?,
+          let lastWorn = bowtie.lastWorn as Date?,
+          let tintColor = bowtie.tintColor as? UIColor
+    else {
+      return
+    }
     
+    imageView.image = UIImage(data: imageData)
+    nameLabel.text = bowtie.name
+    ratingLabel.text = "Rating: \(bowtie.rating)/5"
+    timesWornLabel.text = "# times worn: \(bowtie.timesWorn)"
+    
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateStyle = .short
+    dateFormatter.timeStyle = .none
+    
+    lastWornLabel.text = "Last worn: \(dateFormatter.string(from: lastWorn))"
+    favoriteLabel.isHidden = !bowtie.isFavorite
+    view.tintColor = tintColor
   }
   
   
