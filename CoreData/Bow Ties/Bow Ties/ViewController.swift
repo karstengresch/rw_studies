@@ -39,6 +39,10 @@ class ViewController: UIViewController {
   // MARK: - View Life Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    insertSampleData()
+    // let fetchRequest = NSFetchRequest<Bowtie>(entityName: "Bowtie")
+    
   }
 
   // MARK: - IBActions
@@ -55,16 +59,20 @@ class ViewController: UIViewController {
   }
   
   func insertSampleData() {
-    let fetch = NSFetchRequest<Bowtie>(entityName: "Bowtie")
-    fetch.predicate = NSPredicate(format: "searchKey =! nil")
+    let fetchRequest = NSFetchRequest<Bowtie>(entityName: "Bowtie")
+    fetchRequest.predicate = NSPredicate(format: "searchKey =! nil")
     
-    let bundlePath = Bundle.main.path(forResource: "SampleData", ofType: "plist")
+    let count = try! managedContext.count(for: fetchRequest)
     
-    let dataArray = NSArray(contentsOfFile: bundlePath!)!
-    
-    for dict in dataArray {
-      
+    if count > 0 {
+      return
     }
+    
+    let sampleDataPath = Bundle.main.path(forResource: "SampleData", ofType: "plist")
+    let dataArray = NSArray(contentsOfFile: sampleDataPath!)!
+    
+    
+    
     
   }
 }
