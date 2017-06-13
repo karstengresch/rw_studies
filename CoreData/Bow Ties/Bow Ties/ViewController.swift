@@ -44,7 +44,7 @@ class ViewController: UIViewController {
     let fetchRequest = NSFetchRequest<Bowtie>(entityName: "Bowtie")
     let firstTitle = segmentedControl.titleForSegment(at: 0)!
     
-    fetchRequest.predicate = NSPredicate(format: "searchKey == %@", firstTitle )
+    fetchRequest.predicate = NSPredicate(format: "searchKey == %@", firstTitle)
     
     do {
       let results = try managedContext.fetch(fetchRequest)
@@ -71,7 +71,7 @@ class ViewController: UIViewController {
   
   func insertSampleData() {
     let fetchRequest = NSFetchRequest<Bowtie>(entityName: "Bowtie")
-    fetchRequest.predicate = NSPredicate(format: "searchKey =! nil")
+    fetchRequest.predicate = NSPredicate(format: "searchKey != nil")
     
     let count = try! managedContext.count(for: fetchRequest)
     
