@@ -26,6 +26,7 @@ import CoreData
 class ViewController: UIViewController {
   
   var managedContext: NSManagedObjectContext!
+  var currentBowtie: Bowtie!
 
   // MARK: - IBOutlets
   @IBOutlet weak var segmentedControl: UISegmentedControl!
