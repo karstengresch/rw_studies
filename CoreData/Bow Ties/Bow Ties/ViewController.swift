@@ -49,12 +49,12 @@ class ViewController: UIViewController {
     
     do {
       let results = try managedContext.fetch(fetchRequest)
+      currentBowtie = results.first
       populate(bowtie: results.first!)
       
     } catch let error as NSError {
       print("Could not fetch \(error), \(error.userInfo)")
     }
-    
   }
 
   // MARK: - IBActions
