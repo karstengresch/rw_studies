@@ -63,7 +63,7 @@ class ViewController: UIViewController {
   }
 
   @IBAction func wear(_ sender: AnyObject) {
-
+    
   }
   
   @IBAction func rate(_ sender: AnyObject) {
