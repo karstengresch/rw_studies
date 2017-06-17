@@ -94,6 +94,10 @@ class ViewController: UIViewController {
       
     }
     
+    rateAlert.addAction(cancelAction)
+    rateAlert.addAction(saveAction)
+    
+    present(rateAlert, animated: true)
     
   }
   
