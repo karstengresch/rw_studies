@@ -67,6 +67,7 @@ class ViewController: UIViewController {
     let selectedValue = segmentedControl.titleForSegment(at: segmentedControl.selectedSegmentIndex)
     
     let fetchRequest = NSFetchRequest<Bowtie>(entityName: "Bowtie")
+    fetchRequest.predicate = NSPredicate(format: "searchKey == %@", selectedValue!)
     
     
 
