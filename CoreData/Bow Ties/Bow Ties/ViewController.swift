@@ -64,6 +64,8 @@ class ViewController: UIViewController {
       return
     }
     
+    let selectedValue = segmentedControl.titleForSegment(at: segmentedControl.selectedSegmentIndex)
+    
     
 
   }
