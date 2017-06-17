@@ -70,7 +70,10 @@ class ViewController: UIViewController {
     fetchRequest.predicate = NSPredicate(format: "searchKey == %@", selectedValue!)
     
     do {
-      try <#throwing expression#>
+      let results =
+      try managedContext.fetch(fetchRequest)
+      currentBowtie = results.first
+      populate(bowtie: currentBowtie)
     } catch <#pattern#> {
       <#statements#>
     }
