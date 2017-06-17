@@ -59,6 +59,12 @@ class ViewController: UIViewController {
 
   // MARK: - IBActions
   @IBAction func segmentedControl(_ sender: AnyObject) {
+    
+    guard let segmentedControl = sender as? UISegmentedControl else {
+      return
+    }
+    
+    
 
   }
 
