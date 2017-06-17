@@ -116,7 +116,7 @@ class ViewController: UIViewController {
       
       if error.domain == NSCocoaErrorDomain && error.code == NSValidationNumberTooLargeError {
         update(rating: "5")
-      } else if error.domain == NSCocoaErrorDomain && error.code == NSValidationNumberTooSmall {
+      } else if error.domain == NSCocoaErrorDomain && error.code == NSValidationNumberTooSmallError {
         update(rating: "0")
       }
       
