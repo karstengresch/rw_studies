@@ -63,7 +63,16 @@ class ViewController: UIViewController {
   }
 
   @IBAction func wear(_ sender: AnyObject) {
+    let timesWorn = currentBowtie.timesWorn
+    currentBowtie.timesWorn = timesWorn + 1
     
+    currentBowtie.lastWorn = NSDate()
+    
+    do {
+      try managedContext.save()
+    } catch let error as NSError {
+      print("Could not fetch \(error), \(error.userInfo)")
+    }
   }
   
   @IBAction func rate(_ sender: AnyObject) {
