@@ -98,7 +98,6 @@ class ViewController: UIViewController {
     rateAlert.addAction(saveAction)
     
     present(rateAlert, animated: true)
-    
   }
   
   
@@ -108,9 +107,13 @@ class ViewController: UIViewController {
       return
     }
     
-    
-    
-    
+    do {
+      currentBowtie.rating = rating
+      try managedContext.save()
+      populate(bowtie: currentBowtie)
+    } catch let error as NSError {
+      print("Could not fetch \(error), \(error.userInfo)")
+    }
   }
   
   func insertSampleData() {
