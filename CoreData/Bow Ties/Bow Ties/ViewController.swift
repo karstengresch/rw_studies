@@ -74,8 +74,8 @@ class ViewController: UIViewController {
       try managedContext.fetch(fetchRequest)
       currentBowtie = results.first
       populate(bowtie: currentBowtie)
-    } catch <#pattern#> {
-      <#statements#>
+    } catch let error as NSError {
+      print("Could not fetch \(error), \(error.userInfo)")
     }
     
 
