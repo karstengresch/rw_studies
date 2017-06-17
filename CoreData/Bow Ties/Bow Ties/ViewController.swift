@@ -68,7 +68,7 @@ class ViewController: UIViewController {
     
     let fetchRequest = NSFetchRequest<Bowtie>(entityName: "Bowtie")
     fetchRequest.predicate = NSPredicate(format: "searchKey == %@", selectedValue!)
-    // 
+    
     do {
       let results =
       try managedContext.fetch(fetchRequest)
@@ -77,8 +77,6 @@ class ViewController: UIViewController {
     } catch let error as NSError {
       print("Could not fetch \(error), \(error.userInfo)")
     }
-    
-
   }
 
   @IBAction func wear(_ sender: AnyObject) {
