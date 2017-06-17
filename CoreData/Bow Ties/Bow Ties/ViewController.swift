@@ -70,6 +70,7 @@ class ViewController: UIViewController {
     
     do {
       try managedContext.save()
+      populate(bowtie: currentBowtie)
     } catch let error as NSError {
       print("Could not fetch \(error), \(error.userInfo)")
     }
