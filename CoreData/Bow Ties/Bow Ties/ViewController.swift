@@ -112,7 +112,18 @@ class ViewController: UIViewController {
       try managedContext.save()
       populate(bowtie: currentBowtie)
     } catch let error as NSError {
-      print("Could not fetch \(error), \(error.userInfo)")
+      
+      
+      if error.domain == NSCocoaErrorDomain && error.code == NSValidationNumberTooLargeError {
+        update(rating: "5")
+      } else if error.domain == NSCocoaErrorDomain && error.code == NSValidationNumberTooSmall {
+        update(rating: "0")
+      }
+      
+      else {
+        print("Could not fetch \(error), \(error.userInfo)")
+      }
+      
     }
   }
   
