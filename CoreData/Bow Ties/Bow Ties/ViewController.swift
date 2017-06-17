@@ -83,6 +83,16 @@ class ViewController: UIViewController {
     
     let cancelAction = UIAlertAction(title: "Cancel", style: .default)
     
+    let saveAction = UIAlertAction(title: "Save", style: .default) {
+      [unowned self] action in
+      
+      guard let textField = rateAlert.textFields?.first else {
+        return
+      }
+      
+      self.update(rating: textField.text)
+      
+    }
     
     
   }
