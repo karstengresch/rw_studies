@@ -101,6 +101,18 @@ class ViewController: UIViewController {
     
   }
   
+  
+  func update(rating: String?) {
+    
+    guard let ratingString = rating, let rating = Double(ratingString) else {
+      return
+    }
+    
+    
+    
+    
+  }
+  
   func insertSampleData() {
     let fetchRequest = NSFetchRequest<Bowtie>(entityName: "Bowtie")
     fetchRequest.predicate = NSPredicate(format: "searchKey != nil")
