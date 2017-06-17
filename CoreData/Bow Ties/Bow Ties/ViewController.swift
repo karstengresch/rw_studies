@@ -69,6 +69,11 @@ class ViewController: UIViewController {
     let fetchRequest = NSFetchRequest<Bowtie>(entityName: "Bowtie")
     fetchRequest.predicate = NSPredicate(format: "searchKey == %@", selectedValue!)
     
+    do {
+      try <#throwing expression#>
+    } catch <#pattern#> {
+      <#statements#>
+    }
     
 
   }
