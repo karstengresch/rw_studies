@@ -77,7 +77,10 @@ class ViewController: UIViewController {
   }
   
   @IBAction func rate(_ sender: AnyObject) {
-
+    let rateAlert = UIAlertController(title: "New Rating", message: "Rate this bow tie", preferredStyle: .alert)
+    
+    
+    
   }
   
   func insertSampleData() {
