@@ -82,7 +82,6 @@ class ViewController: UIViewController {
   @IBAction func wear(_ sender: AnyObject) {
     let timesWorn = currentBowtie.timesWorn
     currentBowtie.timesWorn = timesWorn + 1
-    
     currentBowtie.lastWorn = NSDate()
     
     do {
@@ -99,7 +98,6 @@ class ViewController: UIViewController {
     rateAlert.addTextField { (textField) in textField.keyboardType = .decimalPad }
     
     let cancelAction = UIAlertAction(title: "Cancel", style: .default)
-    
     let saveAction = UIAlertAction(title: "Save", style: .default) {
       [unowned self] action in
       
