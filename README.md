@@ -1,9 +1,9 @@
 # rw_studies
-Study projects from raywenderlich.com - All credits + copyrights at their side. Go and check their free tutorials, paid books and video courses - it's excellent, permanently updated good stuff, easy to follows!
+Study projects from raywenderlich.com - All credits + copyrights at their side. Go and check their free tutorials, paid books and video courses - it's excellent, permanently updated good stuff, easy to follow!
 
-You won't find any interesting stuff here. 
+You won't find any interesting stuff ~here~. 
 
-Head over to http://www.raywenderlich.com and check out the great iOS et al. tutorials!
+Head over to http://www.raywenderlich.com and check out their great iOS/Swift et al. tutorials!
 
 ## Apprentice
 From the [iOS Apprentice](http://www.raywenderlich.com/store/ios-apprentice) Series. As I found so many best practice information in this (paid) book, I decided to go through the entire series though a lot of stuff is intended for complete programming beginners.
