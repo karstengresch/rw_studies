@@ -17,4 +17,8 @@ class CoreDataStack {
     self.modelName = modelName
   }
   
+  private lazy var StoreContainer: NSPersistentContainer {
+    
+  }
+  
 }
