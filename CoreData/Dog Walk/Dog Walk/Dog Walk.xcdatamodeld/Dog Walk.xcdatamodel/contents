@@ -5,9 +5,10 @@
     </entity>
     <entity name="Walk" representedClassName="Walk" syncable="YES" codeGenerationType="class">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="walks" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Walk" syncable="YES"/>
     </entity>
     <elements>
         <element name="Dog" positionX="-63" positionY="-18" width="128" height="60"/>
-        <element name="Walk" positionX="-54" positionY="0" width="128" height="60"/>
+        <element name="Walk" positionX="-54" positionY="0" width="128" height="75"/>
     </elements>
 </model>
