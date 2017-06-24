@@ -30,6 +30,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   lazy var coreDataStack = CoreDataStack(modelName: "Dog Walk")
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    guard let navigationController = window?.rootViewController as? UINavigationController, let viewController = navigationController.topViewController as? ViewController
+    else {
+      <#statements#>
+    }
+    
+    viewController.managedContext = coreDataStack.managedContext
     return true
   }
 }
