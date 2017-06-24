@@ -38,4 +38,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     viewController.managedContext = coreDataStack.managedContext
     return true
   }
+  
+  func applicationDidEnterBackground(_ application: UIApplication) {
+    coreDataStack.saveContext()
+  }
 }
