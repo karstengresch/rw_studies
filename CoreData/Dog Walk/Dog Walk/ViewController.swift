@@ -35,7 +35,8 @@ class ViewController: UIViewController {
     return formatter
   }()
   
-  
+  var currentDog = Dog?
+		
 
   // MARK: - IBOutlets
   @IBOutlet var tableView: UITableView!
