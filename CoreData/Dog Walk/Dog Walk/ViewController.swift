@@ -35,7 +35,7 @@ class ViewController: UIViewController {
     return formatter
   }()
   
-  var currentDog = Dog?
+  var currentDog: Dog?
 		
 
   // MARK: - IBOutlets
@@ -46,6 +46,25 @@ class ViewController: UIViewController {
     super.viewDidLoad()
 
     tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+    
+    let dogName = "Coscor"
+    let dogFetchRequest: NSFetchRequest<Dog> = Dog.fetchRequest()
+    dogFetchRequest.predicate = NSPredicate(format: "%K == %@", #keyPath(Dog.name), dogName)
+    
+    do {
+      let results = managedContext.fetch(dogFetchRequest)
+      
+      if results.count > 0 {
+        currentDog = results.first
+      } else {
+        currentDog = Dog(context: managedContext)
+        currentDog?.name = dogName
+      }
+      
+      try managedContext.save()
+    } catch let error as NSError {
+      print("Fetch request failed: \(error) - Error description: \(error.userInfo)")
+    }
   }
 }
 
