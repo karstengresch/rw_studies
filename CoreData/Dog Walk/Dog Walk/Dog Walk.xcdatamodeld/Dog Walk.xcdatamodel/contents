@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Dog" representedClassName="Dog" syncable="YES" codeGenerationType="class">
+    <entity name="Dog" representedClassName=".Dog" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="walks" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Walk" inverseName="walks" inverseEntity="Walk" syncable="YES"/>
     </entity>
-    <entity name="Walk" representedClassName="Walk" syncable="YES" codeGenerationType="class">
+    <entity name="Walk" representedClassName=".Walk" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="walks" optional="YES" maxCount="1" deletionRule="Nullify" ordered="YES" destinationEntity="Dog" inverseName="walks" inverseEntity="Dog" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Dog" positionX="-63" positionY="-18" width="128" height="75"/>
-        <element name="Walk" positionX="214" positionY="63" width="128" height="75"/>
+        <element name="Dog" positionX="-63" positionY="-18" width="128" height="69"/>
+        <element name="Walk" positionX="214" positionY="63" width="128" height="69"/>
     </elements>
 </model>

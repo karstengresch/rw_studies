@@ -34,7 +34,8 @@ class ViewController: UIViewController {
     formatter.timeStyle = .medium
     return formatter
   }()
-  var walks: [NSDate] = []
+  
+  
 
   // MARK: - IBOutlets
   @IBOutlet var tableView: UITableView!
