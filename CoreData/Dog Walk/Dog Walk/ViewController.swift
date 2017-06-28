@@ -90,9 +90,14 @@ extension ViewController: UITableViewDataSource {
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let date = walks[indexPath.row]
+    
     let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-    cell.textLabel?.text = dateFormatter.string(from: date as Date)
+    
+    guard let walk = currentDog?.walks?[indexPath.row] as? Walk, let walkDate = walk.date as? Date else {
+      return cell
+    }
+    
+    cell.textLabel?.text = dateFormatter.string(from: walkDate)
     return cell
   }
 
