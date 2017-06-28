@@ -81,6 +81,11 @@ extension ViewController {
 extension ViewController: UITableViewDataSource {
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    guard let walks = currentDog?.walks else {
+      return 1
+    }
+    
     return walks.count
   }
 
