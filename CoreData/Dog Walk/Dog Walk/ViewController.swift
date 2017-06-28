@@ -52,7 +52,7 @@ class ViewController: UIViewController {
     dogFetchRequest.predicate = NSPredicate(format: "%K == %@", #keyPath(Dog.name), dogName)
     
     do {
-      let results = managedContext.fetch(dogFetchRequest)
+      let results = try managedContext.fetch(dogFetchRequest)
       
       if results.count > 0 {
         currentDog = results.first
@@ -60,9 +60,9 @@ class ViewController: UIViewController {
         currentDog = Dog(context: managedContext)
         currentDog?.name = dogName
       }
-      
       try managedContext.save()
-    } catch let error as NSError {
+    }
+    catch let error as NSError {
       print("Fetch request failed: \(error) - Error description: \(error.userInfo)")
     }
   }
@@ -72,7 +72,7 @@ class ViewController: UIViewController {
 extension ViewController {
 
   @IBAction func add(_ sender: UIBarButtonItem) {
-    walks.append(NSDate())
+    // walks.append(NSDate())
     tableView.reloadData()
   }
 }
@@ -93,7 +93,7 @@ extension ViewController: UITableViewDataSource {
     
     let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
     
-    guard let walk = currentDog?.walks?[indexPath.row] as? Walk, let walkDate = walk.date as? Date else {
+    guard let walk = currentDog?.walks?[indexPath.row] as? Walk, let walkDate = walk.date as Date? else {
       return cell
     }
     

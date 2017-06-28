@@ -9,7 +9,7 @@
         <relationship name="walks" optional="YES" maxCount="1" deletionRule="Nullify" ordered="YES" destinationEntity="Dog" inverseName="walks" inverseEntity="Dog" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Dog" positionX="-63" positionY="-18" width="128" height="69"/>
-        <element name="Walk" positionX="214" positionY="63" width="128" height="69"/>
+        <element name="Dog" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="Walk" positionX="214" positionY="63" width="128" height="75"/>
     </elements>
 </model>

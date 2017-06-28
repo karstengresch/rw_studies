@@ -22,10 +22,11 @@ class CoreDataStack {
     
     container.loadPersistentStores { (storeDescription, error) in
     if let error = error as NSError?
-    { print("Unresolved error: \(error.userInfo), \(error.userInfo)") }
+    {
+      print("Unresolved error: \(error.userInfo), \(error.userInfo)") }
     }
       return container
-    }()
+    } ()
   
   lazy var managedContext: NSManagedObjectContext = {
     return self.storeContainer.viewContext
