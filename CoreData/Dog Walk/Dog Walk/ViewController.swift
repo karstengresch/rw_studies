@@ -72,7 +72,7 @@ class ViewController: UIViewController {
 extension ViewController {
 
   @IBAction func add(_ sender: UIBarButtonItem) {
-    // walks.append(NSDate())
+    // walks.append(NSDate()) 
     tableView.reloadData()
   }
 }
