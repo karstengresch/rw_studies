@@ -2,7 +2,7 @@
 //  Dog+CoreDataClass.swift
 //  Dog Walk
 //
-//  Created by Karsten Gresch on 26.06.17.
+//  Created by Karsten Gresch on 02.07.17.
 //  Copyright © 2017 Razeware. All rights reserved.
 //
 
