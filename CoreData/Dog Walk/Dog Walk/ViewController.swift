@@ -74,7 +74,18 @@ extension ViewController {
     
     let walk = Walk(context: managedContext)
     walk.date = NSDate()
-    // walks.append(NSDate()) 
+    
+    if let dog = currentDog, let walks = dog.walks?.mutableCopy() as? NSMutableOrderedSet {
+      walks.add(walk)
+      dog.walks = walks
+    }
+    
+    do {
+      try managedContext.save()
+    } catch let error as NSError {
+       print("Save request failed: \(error) - Error description: \(error.userInfo)")
+    }
+    
     tableView.reloadData()
   }
 }
