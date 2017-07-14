@@ -71,6 +71,9 @@ class ViewController: UIViewController {
 extension ViewController {
 
   @IBAction func add(_ sender: UIBarButtonItem) {
+    
+    let walk = Walk(context: managedContext)
+    walk.date = NSDate()
     // walks.append(NSDate()) 
     tableView.reloadData()
   }
