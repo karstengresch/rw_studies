@@ -27,7 +27,7 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
-  lazy var coreDataStack = CoreDataStack(modelName: "DogWalk")
+  lazy var coreDataStack = CoreDataStack(modelName: "Dog Walk")
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     guard let navigationController = window?.rootViewController as? UINavigationController, let viewController = navigationController.topViewController as? ViewController

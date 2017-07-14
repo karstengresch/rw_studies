@@ -15,10 +15,14 @@ class CoreDataStack {
   
   init(modelName: String) {
     self.modelName = modelName
-    print("Model name is: \(modelName)")
   }
+
+  lazy var managedContext: NSManagedObjectContext = {
+    return self.storeContainer.viewContext
+  } ()
   
   private lazy var storeContainer: NSPersistentContainer = {
+    print("Model name is: \(self.modelName)")
     let container = NSPersistentContainer(name: self.modelName)
     
     container.loadPersistentStores { (storeDescription, error) in
@@ -28,11 +32,6 @@ class CoreDataStack {
     }
       return container
     } ()
-  
-  lazy var managedContext: NSManagedObjectContext = {
-    return self.storeContainer.viewContext
-  } ()
-  
   
   func saveContext() {
     guard managedContext.hasChanges else { return }
