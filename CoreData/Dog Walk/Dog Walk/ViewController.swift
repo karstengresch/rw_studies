@@ -131,6 +131,7 @@ extension ViewController: UITableViewDataSource {
     
     do {
       try managedContext.save()
+      tableView.deleteRows(at: [indexPath], with: .automatic)
     } catch let error as NSError {
       print("Saving error: \(error), description: \(error.userInfo)")
     }
