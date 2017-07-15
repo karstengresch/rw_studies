@@ -129,7 +129,11 @@ extension ViewController: UITableViewDataSource {
     
     managedContext.delete(walkToRemove)
     
-    
+    do {
+      try managedContext.save()
+    } catch let error as NSError {
+      print("Saving error: \(error), description: \(error.userInfo)")
+    }
     
   }
 }
