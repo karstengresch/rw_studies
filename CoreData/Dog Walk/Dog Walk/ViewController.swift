@@ -123,9 +123,12 @@ extension ViewController: UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-    guard letWalkToRemove = currentDog?.walks?[indexPath.row] as? Walk, editingStyle == .delete else {
+    guard let walkToRemove = currentDog?.walks?[indexPath.row] as? Walk, editingStyle == .delete else {
       return
     }
+    
+    managedContext.delete(walkToRemove)
+    
     
     
   }
