@@ -43,7 +43,10 @@ class ViewController: UIViewController {
     
     guard let model = coreDataStack.managedContext.persistentStoreCoordinator?.managedObjectModel,
       let fetchRequest = model.fetchRequestTemplate(forName: "FetchRequest") as? NSFetchRequest<Venue>
-      else { return }
+      else {
+        return }
+    self.fetchRequest = fetchRequest
+    
   }
 
   // MARK: - Navigation
