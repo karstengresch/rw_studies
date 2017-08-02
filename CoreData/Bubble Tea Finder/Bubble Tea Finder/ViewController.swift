@@ -47,7 +47,7 @@ class ViewController: UIViewController {
       else {
         return }
     self.fetchRequest = fetchRequest
-    
+    fetchAndReload()
     
   }
 
@@ -78,5 +78,15 @@ extension ViewController: UITableViewDataSource {
     cell.textLabel?.text = "Bubble Tea Venue"
     cell.detailTextLabel?.text = "Price Info"
     return cell
+  }
+}
+
+extension ViewController {
+  func fetchAndReload() {
+    
+    do {
+    
+    }
+    
   }
 }
