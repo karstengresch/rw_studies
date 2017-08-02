@@ -24,7 +24,6 @@
 		FEE9F2821D73BBFC0042F5B5 /* PriceInfo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE9F2781D73BBFC0042F5B5 /* PriceInfo+CoreDataClass.swift */; };
 		FEE9F2831D73BBFC0042F5B5 /* PriceInfo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE9F2791D73BBFC0042F5B5 /* PriceInfo+CoreDataProperties.swift */; };
 		FEE9F2851D73BC6C0042F5B5 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE9F2841D73BC6C0042F5B5 /* CoreDataStack.swift */; };
-		FEE9F2871D73C15F0042F5B5 /* seed.json in Resources */ = {isa = PBXBuildFile; fileRef = FEE9F2861D73C15F0042F5B5 /* seed.json */; };
 		FEE9F2891D73C1750042F5B5 /* attribution.txt in Resources */ = {isa = PBXBuildFile; fileRef = FEE9F2881D73C1750042F5B5 /* attribution.txt */; };
 		FEF42F5F1D73CD2400CE2FB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEF42F5E1D73CD2400CE2FB3 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -49,7 +48,6 @@
 		FEE9F2781D73BBFC0042F5B5 /* PriceInfo+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PriceInfo+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FEE9F2791D73BBFC0042F5B5 /* PriceInfo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PriceInfo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FEE9F2841D73BC6C0042F5B5 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		FEE9F2861D73C15F0042F5B5 /* seed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = seed.json; sourceTree = "<group>"; };
 		FEE9F2881D73C1750042F5B5 /* attribution.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = attribution.txt; sourceTree = "<group>"; };
 		FEF42F5E1D73CD2400CE2FB3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,7 +88,6 @@
 				FEE9F2841D73BC6C0042F5B5 /* CoreDataStack.swift */,
 				FEE9F25C1D73B9520042F5B5 /* ViewController.swift */,
 				FE81048B1D73C28200852759 /* FilterViewController.swift */,
-				FEE9F2861D73C15F0042F5B5 /* seed.json */,
 				FEE9F2881D73C1750042F5B5 /* attribution.txt */,
 				FEF42F5E1D73CD2400CE2FB3 /* Main.storyboard */,
 				FEE9F26F1D73BBBC0042F5B5 /* NSManagedObject */,
@@ -146,7 +143,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = Razeware;
 				TargetAttributes = {
 					FEE9F2561D73B9520042F5B5 = {
@@ -181,7 +178,6 @@
 				FEE9F2681D73B9520042F5B5 /* LaunchScreen.storyboard in Resources */,
 				FEF42F5F1D73CD2400CE2FB3 /* Main.storyboard in Resources */,
 				FEE9F2651D73B9520042F5B5 /* Assets.xcassets in Resources */,
-				FEE9F2871D73C15F0042F5B5 /* seed.json in Resources */,
 				FEE9F2891D73C1750042F5B5 /* attribution.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
