@@ -40,6 +40,10 @@ class ViewController: UIViewController {
   // MARK: - View Life Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    guard let model = coreDataStack.managedContext.persistentStoreCoordinator?.managedObjectModel,
+      let fetchRequest = model.fetchRequestTemplate(forName: "FetchRequest") as? NSFetchRequest<Venue>
+      else { return }
   }
 
   // MARK: - Navigation
