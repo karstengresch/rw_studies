@@ -21,6 +21,10 @@
  */
 
 import UIKit
+import CoreData
+
+var fetchRequest: NSFetchRequest<Venue>!
+var venues: [Venue]!
 
 class ViewController: UIViewController {
 
