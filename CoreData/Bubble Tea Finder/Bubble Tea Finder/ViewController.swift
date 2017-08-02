@@ -23,11 +23,12 @@
 import UIKit
 import CoreData
 
-var fetchRequest: NSFetchRequest<Venue>!
-var venues: [Venue]!
 
 class ViewController: UIViewController {
 
+  var fetchRequest: NSFetchRequest<Venue>!
+  var venues: [Venue]!
+  
   // MARK: - Properties
   private let filterViewControllerSegueIdentifier = "toFilterViewController"
   fileprivate let venueCellIdentifier = "VenueCell"
@@ -46,6 +47,7 @@ class ViewController: UIViewController {
       else {
         return }
     self.fetchRequest = fetchRequest
+    
     
   }
 
