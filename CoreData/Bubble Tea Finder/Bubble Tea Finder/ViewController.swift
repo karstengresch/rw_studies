@@ -85,7 +85,12 @@ extension ViewController {
   func fetchAndReload() {
     
     do {
-    
+      venues =
+        try
+          coreDataStack.managedContext.fetch(fetchRequest)
+          tableView.reloadData() }
+    catch let error as NSError {
+      print("Could not fetch \(error), \(error.userInfo)")
     }
     
   }
