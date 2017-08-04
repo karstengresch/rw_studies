@@ -21,8 +21,11 @@
  */
 
 import UIKit
+import CoreData
 
 class FilterViewController: UITableViewController {
+  
+  var coreDataStack: CoreDataStack!
 
   @IBOutlet weak var firstPriceCategoryLabel: UILabel!
   @IBOutlet weak var secondPriceCategoryLabel: UILabel!
