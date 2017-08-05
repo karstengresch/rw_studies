@@ -51,11 +51,14 @@ class ViewController: UIViewController {
     
   }
 
-  // MARK: - Navigation
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier == filterViewControllerSegueIdentifier {
-      
+    guard segue.identifier == filterViewControllerSegueIdentifier,
+      let navigationController = segue.destination as? UINavigationController,
+      let filterViewController = navigationController.topViewController as? FilterViewController
+    else {
+      return
     }
+    filterViewController.coreDataStack = coreDataStack
   }
 }
 
