@@ -26,6 +26,9 @@ import CoreData
 class FilterViewController: UITableViewController {
   
   var coreDataStack: CoreDataStack!
+  lazy var cheapVenuePredicate: NSPredicate {
+    
+  }
 
   @IBOutlet weak var firstPriceCategoryLabel: UILabel!
   @IBOutlet weak var secondPriceCategoryLabel: UILabel!
