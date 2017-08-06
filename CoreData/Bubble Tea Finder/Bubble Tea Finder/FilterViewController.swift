@@ -27,7 +27,7 @@ class FilterViewController: UITableViewController {
   
   var coreDataStack: CoreDataStack!
   lazy var cheapVenuePredicate: NSPredicate {
-    
+    return NSPredicate()
   }
 
   @IBOutlet weak var firstPriceCategoryLabel: UILabel!
