@@ -26,7 +26,7 @@ import CoreData
 class FilterViewController: UITableViewController {
   
   var coreDataStack: CoreDataStack!
-  lazy var cheapVenuePredicate: NSPredicate {
+  lazy var cheapVenuePredicate: NSPredicate = {
     return NSPredicate(format: "%K == %@", #keyPath(Venue.priceInfo.priceCategory), "$")
   }
 
