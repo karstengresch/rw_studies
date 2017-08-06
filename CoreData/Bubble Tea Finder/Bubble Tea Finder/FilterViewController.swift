@@ -27,7 +27,7 @@ class FilterViewController: UITableViewController {
   
   var coreDataStack: CoreDataStack!
   lazy var cheapVenuePredicate: NSPredicate {
-    return NSPredicate(format: "%K == %@", #keyPath(Venue.priceInfo.priceCategory), "")
+    return NSPredicate(format: "%K == %@", #keyPath(Venue.priceInfo.priceCategory), "$")
   }
 
   @IBOutlet weak var firstPriceCategoryLabel: UILabel!
