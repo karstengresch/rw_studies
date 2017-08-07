@@ -75,5 +75,7 @@ extension FilterViewController {
 }
 
 extension FilterViewController {
-  
+  func populateCheapVenueCountLabel() {
+    
+  }
 }
