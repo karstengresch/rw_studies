@@ -59,6 +59,7 @@ class FilterViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     populateCheapVenueCountLabel()
+    populateModerateVenueCountLabel()
 
   }
 }
