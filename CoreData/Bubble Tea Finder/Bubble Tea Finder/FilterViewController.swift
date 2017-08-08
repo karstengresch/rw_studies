@@ -82,6 +82,7 @@ extension FilterViewController {
 
 extension FilterViewController {
   func populateCheapVenueCountLabel() {
+
     let fetchRequest = NSFetchRequest<NSNumber>(entityName: "Venue")
     fetchRequest.resultType = .countResultType
     fetchRequest.predicate = cheapVenuePredicate
