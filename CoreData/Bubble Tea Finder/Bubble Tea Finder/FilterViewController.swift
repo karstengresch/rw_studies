@@ -123,5 +123,8 @@ extension FilterViewController {
 }
 
 extension FilterViewController {
+  func populateExpensiveVenueCountLabel() {
+    
+  }
   
 }
