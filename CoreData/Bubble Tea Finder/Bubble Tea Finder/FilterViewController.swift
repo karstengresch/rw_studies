@@ -66,7 +66,6 @@ class FilterViewController: UITableViewController {
     populateCheapVenueCountLabel()
     populateModerateVenueCountLabel()
     populateExpensiveVenueCountLabel()
-
   }
 }
 
