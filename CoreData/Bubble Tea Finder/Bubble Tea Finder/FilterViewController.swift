@@ -34,8 +34,8 @@ class FilterViewController: UITableViewController {
     return NSPredicate(format: "%K == %@", #keyPath(Venue.priceInfo.priceCategory), "$$")
   }()
   
-  lazy var moderateVenuePredicate: NSPredicate = {
-    return NSPredicate()
+  lazy var expensiveVenuePredicate: NSPredicate = {
+    return NSPredicate(format: "%K == %@", #keyPath(Venue.priceInfo.priceCategory), "$$$")
   } ()
   
 
