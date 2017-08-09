@@ -124,7 +124,7 @@ extension FilterViewController {
 
 extension FilterViewController {
   func populateExpensiveVenueCountLabel() {
-    
+    let fetchRequest = NSFetchRequest<Venue> = Venue.fetchRequest()
   }
   
 }
