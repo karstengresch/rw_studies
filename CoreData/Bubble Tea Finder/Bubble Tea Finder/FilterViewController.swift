@@ -119,7 +119,7 @@ extension FilterViewController {
     catch let error as NSError {
       print("Count not fetched \(error), \(error.userInfo)")
     }
-  }
+   }
 }
 
 extension FilterViewController {
@@ -130,13 +130,10 @@ extension FilterViewController {
     do {
       let count =
       try coreDataStack.managedContext.count(for: fetchRequest)
-      thirdPriceCategoryLabel.text = = "\(count) bubble tea places"
-    } catch <#pattern#> {
-      <#statements#>
+      thirdPriceCategoryLabel.text = "\(count) bubble tea places"
+    } catch let error as  NSError {
+      print("Count not fetched \(error), \(error.userInfo)")
     }
-    
-    
-    
   }
   
 }
