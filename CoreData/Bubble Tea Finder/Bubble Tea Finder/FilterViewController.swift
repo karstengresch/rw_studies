@@ -65,6 +65,7 @@ class FilterViewController: UITableViewController {
     super.viewDidLoad()
     populateCheapVenueCountLabel()
     populateModerateVenueCountLabel()
+    populateExpensiveVenueCountLabel()
 
   }
 }
@@ -130,5 +131,5 @@ extension FilterViewController {
     } catch let error as  NSError {
       print("Count not fetched \(error), \(error.userInfo)")
     }
-  }  
+  }
 }
