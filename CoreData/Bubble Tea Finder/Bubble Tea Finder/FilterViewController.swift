@@ -114,7 +114,7 @@ extension FilterViewController {
       let countResult =
         try coreDataStack.managedContext.fetch(fetchRequest)
       let count = countResult.first!.intValue
-      firstPriceCategoryLabel.text = "\(count) bubble tea places"
+      secondPriceCategoryLabel.text = "\(count) bubble tea places"
     }
     catch let error as NSError {
       print("Count not fetched \(error), \(error.userInfo)")
@@ -124,7 +124,19 @@ extension FilterViewController {
 
 extension FilterViewController {
   func populateExpensiveVenueCountLabel() {
-    let fetchRequest = NSFetchRequest<Venue> = Venue.fetchRequest()
+    let fetchRequest: NSFetchRequest<Venue> = Venue.fetchRequest()
+    fetchRequest.predicate = expensiveVenuePredicate
+    
+    do {
+      let count =
+      try coreDataStack.managedContext.count(for: fetchRequest)
+      thirdPriceCategoryLabel.text = = "\(count) bubble tea places"
+    } catch <#pattern#> {
+      <#statements#>
+    }
+    
+    
+    
   }
   
 }
