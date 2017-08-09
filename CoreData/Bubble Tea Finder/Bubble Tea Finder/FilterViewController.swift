@@ -35,6 +35,7 @@ class FilterViewController: UITableViewController {
   }()
   
   lazy var moderateVenuePredicate: NSPredicate = {
+    return NSPredicate()
   } ()
   
 
