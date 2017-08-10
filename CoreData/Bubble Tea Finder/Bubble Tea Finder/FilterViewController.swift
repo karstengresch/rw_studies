@@ -130,4 +130,10 @@ extension FilterViewController {
       print("Count not fetched \(error), \(error.userInfo)")
     }
   }
+  
+  func populateDealsCountLabel() {
+    
+  }
+  
+  
 }
