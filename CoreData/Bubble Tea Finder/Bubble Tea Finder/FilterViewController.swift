@@ -134,6 +134,7 @@ extension FilterViewController {
   func populateDealsCountLabel() {
     let fetchRequest = NSFetchRequest<NSDictionary>(entityName: "Venue")
     fetchRequest.resultType = .dictionaryResultType
+    let sumExpressionDescription = NSExpressionDescription()
     
   }
   
