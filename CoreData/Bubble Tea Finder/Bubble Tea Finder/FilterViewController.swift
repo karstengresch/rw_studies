@@ -138,7 +138,7 @@ extension FilterViewController {
     sumExpressionDescription.name = "sumDeals"
     
     let specialCountExpression = NSExpression(forKeyPath: #keyPath(Venue.specialCount))
-      sumExpressionDescription.expression = NSExpression(forFunction: "sum:", arguments: [sumExpressionDescription])
+      sumExpressionDescription.expression = NSExpression(forFunction: "sum:", arguments: [specialCountExpression])
     sumExpressionDescription.expressionResultType = .integer32AttributeType
     fetchRequest.propertiesToFetch = [sumExpressionDescription]
     
