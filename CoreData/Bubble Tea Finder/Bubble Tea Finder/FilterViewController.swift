@@ -140,6 +140,17 @@ extension FilterViewController {
     let specialCountExpression = NSExpression(forKeyPath: #keyPath(Venue.specialCount))
       sumExpressionDescription.expression = NSExpression(forFunction: "sum:", arguments: [sumExpressionDescription])
     sumExpressionDescription.expressionResultType = .integer32AttributeType
+    fetchRequest.propertiesToFetch = [sumExpressionDescription]
+    
+    do {
+      let results = try coreDataStack.managedContext.fetch(fetchRequest)
+      let resultDictionary = results.first!
+      let numberOfDeals = resultDictionary["sumDeals"]!
+      numDealsLabel.text = ("\(numberOfDeals) total deals")
+      
+    } catch let error as NSError {
+        print("Could not fetch \(error), \(error.userInfo)")
+    }
     
   }
   
