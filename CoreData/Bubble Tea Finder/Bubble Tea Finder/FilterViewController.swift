@@ -135,6 +135,11 @@ extension FilterViewController {
     let fetchRequest = NSFetchRequest<NSDictionary>(entityName: "Venue")
     fetchRequest.resultType = .dictionaryResultType
     let sumExpressionDescription = NSExpressionDescription()
+    sumExpressionDescription.name = "sumDeals"
+    
+    let specialCountExpression = NSExpression(forKeyPath: #keyPath(Venue.specialCount))
+      sumExpressionDescription.expression = NSExpression(forFunction: "sum:", arguments: [sumExpressionDescription])
+    sumExpressionDescription.expressionResultType = .integer32AttributeType
     
   }
   
