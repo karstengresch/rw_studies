@@ -24,7 +24,11 @@ import UIKit
 import CoreData
 
 protocol FilterViewControllerDelegate: class {
-  func filterViewController()
+  func filterViewController(
+    filter: FilterViewController,
+    didSelectPredicate predicate: NSPredicate?,
+    sortDescriptor: NSSortDescriptor?
+  )
 }
 
 class FilterViewController: UITableViewController {
