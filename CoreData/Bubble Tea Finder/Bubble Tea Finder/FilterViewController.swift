@@ -24,7 +24,7 @@ import UIKit
 import CoreData
 
 protocol FilterViewControllerDelegate: class {
-  
+  func filterViewController()
 }
 
 class FilterViewController: UITableViewController {
