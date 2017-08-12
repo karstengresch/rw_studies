@@ -23,6 +23,10 @@
 import UIKit
 import CoreData
 
+protocol FilterViewControllerDelegate: class {
+  
+}
+
 class FilterViewController: UITableViewController {
   
   var coreDataStack: CoreDataStack!
