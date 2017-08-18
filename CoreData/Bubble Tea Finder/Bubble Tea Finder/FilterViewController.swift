@@ -108,6 +108,7 @@ extension FilterViewController {
     default: break
     }
 
+    cell.accessoryType = .checkmark
   }
 }
 
