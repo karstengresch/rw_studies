@@ -103,7 +103,8 @@ extension FilterViewController {
       selectedPredicate = cheapVenuePredicate
     case moderateVenueCell:
       selectedPredicate = moderateVenuePredicate
-  
+    case expensiveVenueCell:
+      selectedPredicate = expensiveVenuePredicate
     default: break
     }
 
