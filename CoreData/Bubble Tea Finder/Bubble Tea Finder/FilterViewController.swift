@@ -85,7 +85,7 @@ class FilterViewController: UITableViewController {
 extension FilterViewController {
 
   @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
-    FilterViewControllerDelegate?.filterViewController(filter: self, didSelectPredicate: selectedPredicate, sortDescriptor: selectedSortDescriptor)
+    filterViewControllerDelegate?.filterViewController(filter: self, didSelectPredicate: selectedPredicate, sortDescriptor: selectedSortDescriptor)
     dismiss(animated: true)
   }
 }
