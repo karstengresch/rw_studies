@@ -101,6 +101,9 @@ extension FilterViewController {
     switch cell {
     case cheapVenueCell:
       selectedPredicate = cheapVenuePredicate
+    case moderateVenueCell:
+      selectedPredicate = moderateVenuePredicate
+  
     default: break
     }
 
