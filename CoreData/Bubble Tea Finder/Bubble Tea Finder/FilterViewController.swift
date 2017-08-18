@@ -99,8 +99,8 @@ extension FilterViewController {
     }
     
     switch cell {
-    case <#pattern#>:
-      <#code#>
+    case cheapVenueCell:
+      selectedPredicate = cheapVenuePredicate
     default:
       <#code#>
     }
