@@ -104,6 +104,15 @@ extension ViewController {
 
 extension ViewController: FilterViewControllerDelegate {
   func filterViewController(filter: FilterViewController, didSelectPredicate predicate: NSPredicate?, sortDescriptor: NSSortDescriptor?) {
+    fetchRequest.predicate = nil // wondering why necessary - setting to nil normally considered code smell
+    fetchRequest.sortDescriptors = nil
+    fetchRequest.predicate = predicate
+    
+    if let sortDescriptorOptional = sortDescriptor {
+      fetchRequest.sortDescriptors = [sortDescriptorOptional]
+    }
+    
+    fetchAndReload()
     
   }
 }
