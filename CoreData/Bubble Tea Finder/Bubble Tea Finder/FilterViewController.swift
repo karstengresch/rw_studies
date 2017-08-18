@@ -98,7 +98,12 @@ extension FilterViewController {
       return
     }
     
-    
+    switch cell {
+    case <#pattern#>:
+      <#code#>
+    default:
+      <#code#>
+    }
 
   }
 }
