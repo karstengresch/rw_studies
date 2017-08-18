@@ -101,3 +101,10 @@ extension ViewController {
     
   }
 }
+
+extension ViewController: FilterViewControllerDelegate {
+  func filterViewController(filter: FilterViewController, didSelectPredicate predicate: NSPredicate?, sortDescriptor: NSSortDescriptor?) {
+    
+  }
+}
+
