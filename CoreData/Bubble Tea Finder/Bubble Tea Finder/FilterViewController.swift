@@ -101,8 +101,7 @@ extension FilterViewController {
     switch cell {
     case cheapVenueCell:
       selectedPredicate = cheapVenuePredicate
-    default:
-      <#code#>
+    default: break
     }
 
   }
