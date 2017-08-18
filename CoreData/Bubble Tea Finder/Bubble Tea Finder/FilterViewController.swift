@@ -93,6 +93,12 @@ extension FilterViewController {
 // MARK - UITableViewDelegate
 extension FilterViewController {
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+    guard let cell = tableView.cellForRow(at: indexPath) else {
+      return
+    }
+    
+    
 
   }
 }
