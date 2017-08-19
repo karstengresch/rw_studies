@@ -54,6 +54,10 @@ class FilterViewController: UITableViewController {
     return NSPredicate(format: "%K < 500", #keyPath(Venue.location.distance))
   }()
   
+  lazy var hasUserTipsPredicate: NSPredicate = {
+    return NSPredicate(format: "", #keyPath())
+  }()
+  
   weak var filterViewControllerDelegate: FilterViewControllerDelegate?
   var selectedSortDescriptor: NSSortDescriptor?
   var selectedPredicate: NSPredicate?
