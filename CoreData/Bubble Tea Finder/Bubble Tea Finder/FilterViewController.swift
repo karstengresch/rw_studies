@@ -47,7 +47,11 @@ class FilterViewController: UITableViewController {
   } ()
   
   lazy var offeringDealPredicate: NSPredicate = {
-    return NSPredicate(format: "%K > 0", #keyPath(Venue.location.distance))
+    return NSPredicate(format: "%K > 0", #keyPath(Venue.specialCount))
+  }()
+  
+  lazy var walkingDistancePredicate: NSPredicate = {
+    return NSPredicate(format: "%K < 500", #keyPath(Venue.location.distance))
   }()
   
   weak var filterViewControllerDelegate: FilterViewControllerDelegate?
