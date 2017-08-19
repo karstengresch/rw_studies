@@ -111,13 +111,21 @@ extension FilterViewController {
     }
     
     switch cell {
-    case cheapVenueCell:
-      selectedPredicate = cheapVenuePredicate
-    case moderateVenueCell:
-      selectedPredicate = moderateVenuePredicate
-    case expensiveVenueCell:
-      selectedPredicate = expensiveVenuePredicate
-    default: break
+    
+      case cheapVenueCell:
+        selectedPredicate = cheapVenuePredicate
+      case moderateVenueCell:
+        selectedPredicate = moderateVenuePredicate
+      case expensiveVenueCell:
+        selectedPredicate = expensiveVenuePredicate
+      case offeringDealCell:
+        selectedPredicate = offeringDealPredicate
+      case walkingDistanceCell:
+        selectedPredicate = walkingDistancePredicate
+      case userTipsCell:
+        selectedPredicate = hasUserTipsPredicate
+      
+      default: break
     }
 
     cell.accessoryType = .checkmark
