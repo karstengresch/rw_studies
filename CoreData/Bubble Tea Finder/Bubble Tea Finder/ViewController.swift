@@ -59,6 +59,7 @@ class ViewController: UIViewController {
       return
     }
     filterViewController.coreDataStack = coreDataStack
+    filterViewController.filterViewControllerDelegate = self
   }
 }
 
