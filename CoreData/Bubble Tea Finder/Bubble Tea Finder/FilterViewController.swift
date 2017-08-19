@@ -46,6 +46,10 @@ class FilterViewController: UITableViewController {
     return NSPredicate(format: "%K == %@", #keyPath(Venue.priceInfo.priceCategory), "$$$")
   } ()
   
+  lazy var offeringDealPredicate: NSPredicate = {
+    return NSPredicate(format: "%K > 0", #keyPath(Venue.location.distance))
+  }()
+  
   weak var filterViewControllerDelegate: FilterViewControllerDelegate?
   var selectedSortDescriptor: NSSortDescriptor?
   var selectedPredicate: NSPredicate?
