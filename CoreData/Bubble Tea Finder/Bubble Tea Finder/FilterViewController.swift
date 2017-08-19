@@ -55,7 +55,7 @@ class FilterViewController: UITableViewController {
   }()
   
   lazy var hasUserTipsPredicate: NSPredicate = {
-    return NSPredicate(format: "", #keyPath())
+    return NSPredicate(format: "%K > 0", #keyPath(Venue.stats.tipCount))
   }()
   
   weak var filterViewControllerDelegate: FilterViewControllerDelegate?
