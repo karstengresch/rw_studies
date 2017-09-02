@@ -19,7 +19,7 @@ class AllLists10ViewController: UITableViewController, ListDetailViewControllerD
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(true)
     
-    navigationControlsiler?.delegate = self
+    navigationController?.delegate = self
     
     let index = dataModel10.indexOfSelectedChecklist10
     
