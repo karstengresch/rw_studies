@@ -27,6 +27,8 @@
 		3D52766F1F08563900DDF832 /* Walk+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Walk+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3D5276701F08563900DDF832 /* Dog+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dog+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3D5276711F08563900DDF832 /* Dog+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dog+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3DBD4A2C1F5EA76C0087ED71 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		3DBD4A2D1F5EA76D0087ED71 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		FEAB7CA51D7385CB00570B31 /* Dog Walk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dog Walk.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEAB7CA81D7385CB00570B31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEAB7CAA1D7385CB00570B31 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				FEAB7CAD1D7385CB00570B31 /* Base */,
+				3DBD4A2C1F5EA76C0087ED71 /* de */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				FEAB7CB51D7385CB00570B31 /* Base */,
+				3DBD4A2D1F5EA76D0087ED71 /* de */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -193,6 +197,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -244,6 +249,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
